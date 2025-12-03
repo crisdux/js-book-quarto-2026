@@ -1,0 +1,47 @@
+# Capítulo 1: Arreglos {.unnumbered}
+
+## Reto #1 {#sec-array-1}
+
+::: {.callout-note title="¿Qué crees que imprime el siguiente código?" collapse="false"}
+```js
+const arreglo = [true, 33, 9, "-2"];
+
+const f = (arr) => {
+  return arr.map(Number)
+}
+const res = f(arreglo)
+console.log(res) // ¿?
+```
+
+**Pista:** Piensa en cómo `Number()` convierte diferentes tipos.
+
+* A. `[1, 33, 9, -2]`
+* B. `[boolean, 33, 9, string]`
+* C. `[null, 33, 9, null]`
+* D. `[undefined, 33, 9, undefined]`
+
+**[Ver solución](#sec-sol-array-1)**
+
+:::
+
+
+# Soluciones 
+## Solución Reto #1 {#sec-sol-array-1}
+
+::: {.callout-tip title="Solución" collapse="true"}
+
+La respuesta del [Reto #1](#sec-array-1) es:
+
+**A. `[1, 33, 9, -2]`**
+
+---
+
+**Explicación:**
+
+El objeto `Number` de javascript puede convertir los los valores de un arreglo a números, pero hay que tener cuidado con tipos boolean, `undefined` o `null`.
+
+Este hack es muy útil cuando tenemos un arreglo de strings que queremos convertir a números.
+
+:::
+
+
