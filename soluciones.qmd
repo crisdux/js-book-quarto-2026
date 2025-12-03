@@ -1,0 +1,52 @@
+# Soluciones {.unnumbered} 
+## Reto #1 {#sec-sol-array-1}
+
+::: {.callout-tip title="Solución" collapse="true"}
+
+La respuesta del [Reto #1](#sec-array-1) es:
+
+**A. `[1, 33, 9, -2]`**
+
+---
+
+**Explicación:**
+
+El objeto `Number` de javascript puede convertir los los valores de un arreglo a números, pero hay que tener cuidado con tipos boolean, `undefined` o `null`.
+
+Este hack es muy útil cuando tenemos un arreglo de strings que queremos convertir a números.
+
+:::
+
+## Reto #2 {#sec-sol-array-2}
+
+::: {.callout-tip title="Solución" collapse="true"}
+
+La respuesta del [Reto #2](#sec-array-2) es:
+
+**D. `Pera`**
+
+---
+
+**Explicación:**
+
+Para usar la desestructuración en arreglos es importante tener en cuenta los índices de los elementos. Por ello para acceder a Pera en el arreglo frutas hariamos algo como:
+
+```js
+const [, , , pear]  = fruits;
+```
+
+Donde cada `,` representa el salto de un índice del arreglo.
+
+Para una sistaxis mas breve podemos usar esto:
+
+```js
+const { 3:pear } = fruits;
+```
+
+Donde el `3` representa las posiciones que deseamos saltar.
+
+Nota que aunque frutas sea un arreglo usamos `{}` para la desestructuración.
+
+:::
+
+

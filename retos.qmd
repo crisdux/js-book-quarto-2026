@@ -1,0 +1,65 @@
+# Retos {.unnumbered}
+
+## Reto #1 {#sec-array-1}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué crees que imprime el siguiente código?**
+
+```js
+const array = [true, 33, 9, "-2"];
+
+const f = (arr) => {
+  return arr.map(Number)
+}
+const result = f(array)
+console.log(result)
+```
+
+**Pista:** Piensa en cómo `Number()` convierte diferentes tipos.
+
+* A. `[1, 33, 9, -2]`
+* B. `[boolean, 33, 9, string]`
+* C. `[null, 33, 9, null]`
+* D. `[undefined, 33, 9, undefined]`
+
+**[Ver solución](#sec-sol-array-1)**
+
+---
+
+## Reto #2 {#sec-array-2}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué crees que imprime el siguiente código?**
+
+```js
+const fruits = ["Mango", "Manzana", "Naranja", "Pera"];
+const { 3:pear } = fruits;
+console.log(pear);
+```
+
+**Pista:** Es simplemente una desestucturación de arreglos.
+
+* A. `Uncaught TypeError : cannot read property`
+* B. `TypeError: null is not an object (evaluating)`
+* C. `Naranja`
+* D. `Pera`
+
+**[Ver solución](#sec-sol-array-2)**
+
+
+
+
+
+
+
+
+
+
+
+

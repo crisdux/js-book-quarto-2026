@@ -12,7 +12,8 @@ book:
     - agradecimientos.qmd
     - about.qmd
     - references.qmd
-    - arreglos.qmd
+    - retos.qmd
+    - soluciones.qmd
 
 bibliography: references.bib
 
