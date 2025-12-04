@@ -94,3 +94,23 @@ Siendo `null` y `undefined` valores falsy, ¿por qué pasa esto?
 
 ---
 
+## Reto #5:  {#sec-array-5}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Puedes explicar el siguiente código?**
+
+```js
+console.log(NaN === NaN) // false
+```
+
+¿Por qué pasa esto?
+
+**Pista:** Piensa en la naturaleza de `NaN`. 
+
+**[Ver solución](#sec-sol-array-5)**
+
+---
+

@@ -115,4 +115,20 @@ Esto para evitar que javascript haga **coerciones de tipos** y obtengamos result
 
 --- 
 
+# Reto #5 {#sec-sol-array-5}
 
+**Explicación:**
+
+`NaN` o "Not a Number" es el resultado que nos lanza javascript cuando intentamos hacer una operación que no tiene sentido, y por ende el resultado no será un número, por ejemplo:
+
+```js
+console.log(Math.sqrt(-1)) // NaN
+console.log(10 / "hola") // NaN
+console.log(Number("hola")) // NaN
+```
+
+Obtener la raiz cuadrada de `-1`, dividir un entero entre una cadena y convertir una cadena a un número son algunas operaciones que nos dan `NaN`.
+
+Ahora bien, cuando intentamos hacer `console.log(NaN === NaN)`, aún usando el operador `===` obtenemos `false` ya que el `NaN` de una operación no puede ser igual al `NaN` de otra. Dos `NaN` nunca serán iguales por este motivo. 
+
+En conclusión, no existe ningún valor en javascript que igualado a `NaN` sea `true`, ni siquiera el mismo `NaN`. Esto es una característica propia del lenguaje.
