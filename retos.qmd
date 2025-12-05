@@ -114,3 +114,33 @@ console.log(NaN === NaN) // false
 
 ---
 
+## Reto #6: Copia de objetos por referencia  {#sec-array-6}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Puedes explicar el siguiente código?**
+
+```js
+let c = { greeting: "Hey!" };
+let d;
+
+d = c;
+c.greeting = "Hello";
+console.log(d.greeting);
+```
+
+**Pista:** Recordar las diferencias de las copias por valor y copias por referencia.
+
+* A. `Hello`
+* B. `undefined`
+* C. `ReferenceError`
+* D. `TypeError`
+
+**[Ver solución](#sec-sol-array-6)**
+
+---
+
+
+

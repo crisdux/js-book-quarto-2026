@@ -1,7 +1,6 @@
 # Soluciones {.unnumbered} 
+
 ## Reto #1 {#sec-sol-array-1}
-
-
 
 La respuesta del [Reto #1](#sec-array-1) es:
 
@@ -13,6 +12,7 @@ El objeto `Number` de javascript puede convertir los los valores de un arreglo a
 
 Este hack es muy útil cuando tenemos un arreglo de strings que queremos convertir a números.
 
+---
 
 ## Reto #2 {#sec-sol-array-2}
 
@@ -132,3 +132,49 @@ Obtener la raiz cuadrada de `-1`, dividir un entero entre una cadena y convertir
 Ahora bien, cuando intentamos hacer `console.log(NaN === NaN)`, aún usando el operador `===` obtenemos `false` ya que el `NaN` de una operación no puede ser igual al `NaN` de otra. Dos `NaN` nunca serán iguales por este motivo. 
 
 En conclusión, no existe ningún valor en javascript que igualado a `NaN` sea `true`, ni siquiera el mismo `NaN`. Esto es una característica propia del lenguaje.
+
+---
+
+## Reto #6 {#sec-sol-array-6}
+
+La respuesta del [Reto #6](#sec-array-6) es:
+
+**A. `Hello`**
+
+**Explicación:**
+
+Cuando aplicamos el operador de asignación `=` entre objetos pensado que así lograremos obtener una copia del mismo estamos cayendo en un **error de novato**.
+
+Recuerda que los objetos se manejan segun su **referencia** y no por su **valor** como lo hacen los tipos primitivos del lenguaje, esto significa que al hacer esto:
+
+```js
+let c = { greeting: "Hey!" };
+let d;
+
+d = c;
+```
+
+No solo estamos copiando los valores del objeto `c` al objeto `d` sino que también copiamos su **referencia en memoria**. Esta referencia es la dirección donde dicho objeto se almacenerá en el disco duro del ordenador; en JavaScript al ser un lenguaje de alto nivel no podemos acceder a dichas direcciones como en lenguajes de bajo nivel como por ejemplo **lenguaje ensamblador**.
+
+Dicho en otras palabras, las direcciones de memoria del objeto `c` y del objeto `d` son las mismas, apuntan a la misma dirección, por ello, cuando intentamos modificar el objeto `c`:
+
+```js
+c.greeting = "Hello";
+```
+
+En realidad, estamos modificando ambos objetos.
+
+Para crear copias de objetos de manera segura se recomienda usar el **spread operator** con su sintaxis de tres puntos `...`
+
+```js
+let c = { greeting: "Hey!" };
+let d;
+
+d = {...c};
+
+c.greeting = "Hello";
+console.log(d.greeting); // Hey!
+console.log(c.greeting); // Hello
+```
+
+Este método solo sirve para copiar objetos en el primer nivel, si deseamos realizar copias de objetos anidados se puede recurrir a otras alternativas como por ejemplo `JSON.stringify`.
