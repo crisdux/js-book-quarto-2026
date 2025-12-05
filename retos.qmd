@@ -94,7 +94,7 @@ Siendo `null` y `undefined` valores falsy, ¿por qué pasa esto?
 
 ---
 
-## Reto #5:  {#sec-array-5}
+## Reto #5: Igualdad estricta con `NaN` {#sec-array-5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -195,5 +195,83 @@ console.log(b === c);
 
 ---
 
+## Reto #9: Una curiosidad sobre funciones  {#sec-array-9}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+function bark() {
+  console.log("Woof!");
+}
+
+bark.animal = "dog";
+```
+
+**Pista:** Todo en JavaScript es una función.
+
+* A: `No pasa nada, es totalmente correcto.`
+* B: `SyntaxError. No es posible agregar propiedades a una función de esta manera.`
+* C: `undefined`
+* D: `ReferenceError`
+
+**[Ver solución](#sec-sol-array-9)**
+
+---
+
+## Reto #10: Variables sin `var`, `let` o `const` {#sec-array-10}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+let greeting;
+greetign = {}; // Typo!
+console.log(greetign);
+```
+
+**Pista:** ¿Qué pasa cuando declaramos una variable sin `var`, `let` o `const`?
+
+* A: `{}`
+* B: `ReferenceError: greetign is not defined`
+* C: `undefined`
+* D. `Ninguna de las anteriores`
+
+**[Ver solución](#sec-sol-array-10)**
+
+---
 
 
+## Reto #11: Operadores `+` y `-` con cadenas y números {#sec-array-11}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const x = "111"
+const y = 11
+let z = "1"
+
+console.log(x + y)
+console.log(y - z)
+```
+
+**Pista:** Diferenciar cuando hacer una suma artimética de una concatenación de cadenas.
+
+* A. `122`, `1`
+* B. `11111`, `1`
+* C. `11111`, `10`
+* D. `122`, `111`
+
+**[Ver solución](#sec-sol-array-11)**
+
+---
