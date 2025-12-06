@@ -230,3 +230,95 @@ Al igual que el caso anterior, intentamos comparar de manera estricta un objeto 
 **Conclusión: trata de usar simpre `===`.**
 
 ---
+
+## Reto #9 {#sec-sol-array-9}
+
+La respuesta del [Reto #9](#sec-array-9) es:
+
+**A. `No pasa nada, es totalmente correcto.`**
+
+**Explicación:**
+
+WTF! Cuando vi que hacer esto es posible casi me caigo de la silla. Expliquemos por que:
+
+Oiste o leiste alguna vez esta frase: **"Todo en JavaScript es un objeto"** Dejame decirte que no es mentira, literalmente todo es un objeto, todo lo que no sea un tipo primitivo en JavaScript es un objeto, desde arreglos, los propios objetos claro, las promesas, y también las **funciones**.
+
+En el ejemplo, la función `bark()` funciona completamente bien:
+
+```js
+function bark() {
+  console.log("Woof!");
+}
+console.log(bark()) // Woof!
+```
+
+Y si intentamos acceder a la propiedad `animal` no tendremos ningún problema:
+
+```js
+function bark() {
+  return "Woof!"
+}
+
+bark.animal = "dog";
+console.log(bark.animal); // dog
+```
+Este es un comportamiento muy jocoso del lenguaje y esta bueno saber que es posible hacer estas cosas aunque no tenga muchos casos de uso.
+
+---
+
+## Reto #10 {#sec-sol-array-10}
+
+La respuesta del [Reto #10](#sec-array-10) es:
+
+**A. `{}`**
+
+**Explicación:**
+
+En la primera línea declaramos `let greeting;`, al declarar una variable con `let` sin inicializarla, esta toma el valor de `undefined`.
+
+En la segunda línea, se comete un error de tipeo `greetign = {};`, pero como la variable no esta declarada ni con `var`, `let` o `const`; Javascript tras bambalinas hace algo como lo siguiente aunque el programador no lo vea:
+
+```js
+var greetign = {}; // Typo!
+```
+
+Entonces `greetign` se crea como **variable global**, en el navegador en el objeto `window` y en un entorno de Node.js en el objeto `global`.
+
+El código final se veria así:
+
+```js
+let greeting; // undefined
+var greetign = {}; // Typo!
+console.log(greetign); // {}
+```
+
+::: {.callout-tip}
+## Tip
+
+Siempre declara tus variables con `let` o `const`. Deja que `var` muera y no la uses mas.
+:::
+
+---
+
+## Reto #11 {#sec-sol-array-11}
+
+La respuesta del [Reto #11](#sec-array-11) es:
+
+**C. `11111`, `10`**
+
+**Explicación:**
+
+Vayamos por partes.
+
+En el primer `console.log(x + y)`:
+Intentamos sumas las variables `x` y `y`, pero `x` es una cadena y `y` es un número, por **coersión de tipos** la operación ya no será una suma aritmética sino una concatenación de cadenas. Dicho en otras palabras la variable `y` sera convetida implicitamente por el interprete de JavaScript a cadena, por lo que el resultado será `11111`.
+
+En el segundo `console.log(y - z)`:
+Intentamos restar las variables `y` y `z`, pero `y` es una cadena y `z` es un número, por **coersión de tipos** la operación será una resta artimética de toda la vida. Dicho en otras palabras la variable `z` sera convetida implicitamente por el interprete de JavaScript a número, por lo que el resultado será `10`.
+
+::: {.callout-tip}
+## Tip
+En JavaScript el operador `+` puede significar una suma o una concatenación según el caso de uso, pero el operador `-` siempre significara una resta artimética.
+:::
+---
+
