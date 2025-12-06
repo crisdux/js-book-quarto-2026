@@ -94,3 +94,53 @@ Siendo `null` y `undefined` valores falsy, ¿por qué pasa esto?
 
 ---
 
+## Reto #5:  {#sec-array-5}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Puedes explicar el siguiente código?**
+
+```js
+console.log(NaN === NaN) // false
+```
+
+¿Por qué pasa esto?
+
+**Pista:** Piensa en la naturaleza de `NaN`. 
+
+**[Ver solución](#sec-sol-array-5)**
+
+---
+
+## Reto #6: Copia de objetos por referencia  {#sec-array-6}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Puedes explicar el siguiente código?**
+
+```js
+let c = { greeting: "Hey!" };
+let d;
+
+d = c;
+c.greeting = "Hello";
+console.log(d.greeting);
+```
+
+**Pista:** Recordar las diferencias de las copias por valor y copias por referencia.
+
+* A. `Hello`
+* B. `undefined`
+* C. `ReferenceError`
+* D. `TypeError`
+
+**[Ver solución](#sec-sol-array-6)**
+
+---
+
+
+
