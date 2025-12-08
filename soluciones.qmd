@@ -552,5 +552,80 @@ La función `setInterval` es una `Web API` que recibe un intervalo en milisegund
 
 ---
 
+## Reto #24 {#sec-sol-array-24}
 
+La respuesta del [Reto #24](#sec-array-24) es:
 
+**A. `["O", "s", "c", "a", "r"]`**
+
+**Explicación:**
+
+Un `string` es un elemento iterable en JavaScript, por ende es posible usar el `spread operator` directamente obteniendo la propagación de la cadena letra por letra.
+
+---
+
+## Reto #25 {#sec-sol-array-25}
+
+La respuesta del [Reto #25](#sec-array-25) es:
+
+**D. `[{ name: "Lydia" }]`**
+
+**Explicación:**
+
+Cuando hacemos:
+
+```js
+const members = [person];
+```
+
+En realidad estamos realizando una copia a la referencia de `person`, tanto `person` como `members` apuntan a la misma referencia del objeto en memoria.
+
+Por este motivo al hacer:
+
+```js
+person = null;
+```
+
+Cambiamos el valor de `person` a `null` pero `members` conserva la referencia al objeto y por ello también su valor.
+
+---
+
+## Reto #26 {#sec-sol-array-26}
+
+La respuesta del [Reto #26](#sec-array-26) es:
+
+**B. `"name"`, `"age"`**
+
+**Explicación:**
+
+El bucle `for...in` en JavaScript aplicado sobre un objeto nos brinda las llaves del objeto per se. Recuerda que aunque no lo veamos el lenguaje interpreta las llaves de los objetos como un `string` a no ser que dichas llaves sean de tipo `symbol`. 
+
+Si vemos esto:
+
+```js
+const person = {
+  name: "Lydia",
+  age: 21
+};
+```
+
+JavaScript verá esto:
+
+```js
+const person = {
+  "name": "Lydia",
+  "age": 21
+};
+
+```
+Es por este motivo que cuando ejecutamos: 
+
+```js
+for (const item in person) {
+  console.log(item);
+}
+```
+
+La variable `item` tendrá el valor de cada llave del objeto en cada iteración; en el ejemplo al tener solo 2 llaves, primer `item` valdrá `name` y luego `age`.
+
+---

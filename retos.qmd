@@ -594,3 +594,83 @@ setInterval(() => console.log("Hi"), 1000);
 **[Ver solución](#sec-sol-array-23)**
 
 ---
+
+## Reto #24: Uso del spread operator {#sec-array-24}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log([..."Oscar"])
+```
+
+**Pista:** El **spread operator** permite expandir un iterable en sus elementos.
+
+* A. `["O", "s", "c", "a", "r"]`
+* B. `["Oscar"]`
+* C. `[[], "Oscar"]`
+* D. `[["O", "s", "c", "a", "r"]]`
+
+**[Ver solución](#sec-sol-array-24)**
+
+---
+
+## Reto #25: Objeto por referencia {#sec-array-25}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+let person = { name: "Carmen" };
+const members = [person];
+person = null;
+
+console.log(members);
+```
+
+**Pista:** Los objetos pasan sus valores por referencia.
+
+* A. `null`
+* B. `[null]`
+* C. `[{}]`
+* D. `[{ name: "Carmen" }]`
+
+**[Ver solución](#sec-sol-array-25)**
+
+---
+
+## Reto #26: El bucle `for...in` con objetos {#sec-array-26}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const person = {
+  name: "Carla",
+  age: 26
+};
+
+for (const item in person) {
+  console.log(item);
+}
+```
+
+**Pista:** El bucle `for...in` no itera sobre los valores de un objeto.
+
+* A. `{ name: "Carla" }`, `{ age: 26 }`
+* B. `"name"`, `"age"`
+* C. `"Carla"`, `26`
+* D. `["name", "Carla"]`, `["age", 26]`
+
+**[Ver solución](#sec-sol-array-26)**
+
+---
