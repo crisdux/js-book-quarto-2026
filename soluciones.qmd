@@ -630,3 +630,94 @@ La variable `item` tendrá el valor de cada llave del objeto en cada iteración;
 
 ---
 
+## Reto #27 {#sec-sol-array-27}
+
+La respuesta del [Reto #27](#sec-array-27) es:
+
+**B. `"75"`**
+
+**Explicación:**
+
+El código JavaScript se ejecuta de arriba hacia abajo y de izquierda a derecha.
+
+Primero realizamos la suma `3 + 4`, puesto que ambos son  de tipo `number` obtenemos `7`.
+
+Ahora tenemos `7 + "5"`, como `"5"` es de tipo `string`, ahora realizamos una concatenación de valores y por `coerción de tipos` el resultado final seria `"75"` como `string`.
+
+---
+
+## Reto #28 {#sec-sol-array-28}
+
+La respuesta del [Reto #28](#sec-array-28) es:
+
+**C. `7`**
+
+**Explicación:**
+
+`parseInt` convierte un valor a tipo `number` de una base concreta (base binaria, octal, decimal, etc).
+
+En el ejemplo intentamos convertir `"7*6"` a base `10`, osea, a base decimal.
+
+`parseInt` toma los valores validos de izquierda a derecha, dicho esto, solo tomará el valor `7` (el `*` y todo lo que le precede no es un valor valido para `parseInt`).
+
+En conclusión, solo convierte al `7` de `string` a `number`. 
+
+---
+
+## Reto #29 {#sec-sol-array-29}
+
+La respuesta del [Reto #29](#sec-array-29) es:
+
+**C. `[undefined, undefined, undefined]`**
+
+**Explicación:**
+
+El método `map` es propio del paradigma de la programación funcional. Este método siempre retorna una nuevo arreglo.
+
+En el ejemplo puesto que estamos iterando sobre un arreglo de números, la condición evaluerá `true` para cada uno de los elementos del arreglo, pero hay 2 sentencias `return`. JavaScript ignora todo el código que esta después del primer `return` que encuntra. Dicho esto, tendriamos algo así:
+
+```js
+[1, 2, 3].map(num => {
+  if (typeof num === "number") return;
+});
+```
+Ahora, si bien la condición se evalua a `true`, el `return` no devuelve nada, simplemente hace que el código se salga del `map`.
+
+Cuando no devolvemos nada en `return`, `map` regresa siempre `undefined`.
+
+Al tener 3 elementos en el arreglo, y recordando siempre que `map` regresa un nuevo arreglo, obtenemos como resultado final un arreglo de 3 `undefined`
+
+---
+
+## Reto #30 {#sec-sol-array-30}
+
+La respuesta del [Reto #30](#sec-array-30) es:
+
+**A. `60`, `40`**
+
+**Explicación:**
+
+Las variables declaradas con `let` y `const` tienen un contexto de bloque, esto significa que solo podrán ser accedidas dentro del bloque de llaves donde fueron declaradas, por ejemplo dentro de un bloque `if` o dentro de una función.
+
+Esta premisa se cumple siempre y cuando esten declaradas dentro de un bloque, si una variable esta fuera de todo bloque entonces se dice que es una variable global y por ende puede ser accedida desde cualquier parte del código.
+
+`let x = 10` es una variable global, puesto que no esta encerrada en ningún tipo de bloque.
+
+Dentro del `if` :
+
+```js
+console.log(x + y + z);
+```
+En el bloque del `if` no se tiene acceso a ninguna variable `x`, por lo tanto javascript subirá al siguiente contexto para buscar una variable `x`, al encontrarla recien realiza la suma `x + y + z` que sería `60`.
+
+En el último `console`:
+
+```js
+console.log(x + z);
+```
+La variable `x` esta en el contexto global, por ende accedemos a su valor sin problema alguno.
+
+La variable `z` esta dentro del bloque `if` y no deberiamos poder acceder a ella, pero `z` esta declarada con `var`, esto la convierte en una variable con contexto de función y no de bloque, entonces accedemos a su valor, para poder sumar `x + z` que sería `40`.
+
+
+---
