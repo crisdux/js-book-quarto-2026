@@ -675,3 +675,104 @@ for (const item in person) {
 
 ---
 
+## Reto #27: ¿Concatenaciones o sumas aritméticas? {#sec-array-27}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(3 + 4 + "5");
+```
+
+**Pista:** Los números se suman, las cadenas se concatenan.
+
+* A. `"345"`
+* B. `"75"`
+* C. `12`
+* D. `75`
+
+**[Ver solución](#sec-sol-array-27)**
+
+---
+
+## Reto #28: Conversiones con `parseInt()` {#sec-array-28}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const num = parseInt("7*6", 10);
+console.log(num); 
+```
+
+**Pista:** `parseInt()` convierte un número a una base númerica.
+
+* A. `42`
+* B. `"42"`
+* C. `7`
+* D. `NaN`
+
+**[Ver solución](#sec-sol-array-28)**
+
+---
+
+## Reto #29: Transformaciones de arreglos con `map()` {#sec-array-29}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+[1, 2, 3].map(num => {
+  if (typeof num === "number") return;
+  return num * 2;
+});
+```
+
+**Pista:** 
+
+* A. `[]`
+* B. `[null, null, null]`
+* C. `[undefined, undefined, undefined]`
+* D. `[ 3 huecos vacíos ]`
+
+**[Ver solución](#sec-sol-array-29)**
+
+---
+
+## Reto #30: Alcance de variables {#sec-array-30}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+let x = 10;
+if (true) {
+  let y = 20;
+  var z = 30;
+  console.log(x + y + z);
+}
+console.log(x + z);
+```
+
+**Pista:** Diferenciar los diferentes alcances de las variables con `let` y `var`.
+
+* A. `60`, `40`
+* B. `undefined`, `10`
+* C. `50`, `10`
+* D. `null`, `40`
+
+**[Ver solución](#sec-sol-array-30)**
+
+---
