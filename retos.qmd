@@ -1072,3 +1072,85 @@ console.log(result);
 **[Ver solución](#sec-sol-array-40)**
 
 ---
+
+## Reto #41: `for...of` vs `for...in`  {#sec-array-41}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const bands = ["Radiohead", "Coldplay", "Nirvana", "Oasis"]
+
+for (let item in bands) {
+  console.log(item)
+}
+
+for (let item of bands) {
+  console.log(item)
+}
+```
+
+**Pista:** Ambos sirven para iterar pero no son lo mismo.
+
+* A. `0 1 2` y `"Radiohead" "Coldplay" "Nirvana"`
+* B. `"Radiohead" "Coldplay" "Nirvana"` y `"Radiohead" "Coldplay" "Nirvana"`
+* C. `"Radiohead" "Coldplay" "Nirvana"` y `0 1 2`
+* D. `0 1 2` y `{0: "Radiohead", 1: "Coldplay", 2: "Nirvana"}`
+
+**[Ver solución](#sec-sol-array-41)**
+
+---
+
+## Reto #42: Expresiones en elementos de arreglos {#sec-array-42}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const list = [1 + 2, 1 * 2, 1 / 2]
+console.log(list)
+```
+
+**Pista:** 
+
+* A. `["1 + 2", "1 * 2", "1 / 2"]`
+* B. `["12", 2, 0.5]`
+* C. `[3, 2, 0.5]`
+* D. `[1, 1, 1]`
+
+**[Ver solución](#sec-sol-array-42)**
+
+---
+
+## Reto #43: Olvide el parámetro de la función {#sec-array-43}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+function sayHi(name) {
+  return `Hi there, ${name}`
+}
+
+console.log(sayHi())
+```
+
+**Pista:** 
+
+* A. `Hi there`
+* B. `Hi there, undefined`
+* C. `Hi there, null`
+* D. `ReferenceError`
+
+**[Ver solución](#sec-sol-array-43)**
+
+---
