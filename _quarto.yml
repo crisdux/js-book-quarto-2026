@@ -2,9 +2,6 @@ project:
   type: book
 
 book:
-  title: "Domina JavaScript. 100 retos de programación"
-  author: "Cristian Fernando Villca Gutierrez"
-  date: "1/12/2025"
   chapters:
     - index.qmd
     - intro.qmd
