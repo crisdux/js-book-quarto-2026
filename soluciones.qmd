@@ -926,3 +926,43 @@ function addToList(item, list) {
 ```
 
 ---
+
+## Reto #41 {#sec-sol-array-41}
+
+La respuesta del [Reto #41](#sec-array-41) es:
+
+**A. `0 1 2` y `"Radiohead" "Coldplay" "Nirvana"`**
+
+**Explicación:**
+
+Con el bucle _for-in_, podemos iterar sobre propiedades **enumerables**. Los enumerables en el arreglo son justamente sus índices. Por ello es `0` `1` `2`.
+
+Con un bucle _for-of_, podemos iterar sobre **iterables**. Un arreglo por definición es un iterable, en cada iteración la variable `item` es igual al elemento sobre el cual se itera en ese momento. Por ello es `"Radiohead"` `"Coldplay"` `"Nirvana"`.
+
+En la practica los bucles _for-of_ son más usados y usualmente en raras ocaciones se ven bucles _for-in_.
+
+---
+
+## Reto #42 {#sec-sol-array-42}
+
+La respuesta del [Reto #42](#sec-array-42) es:
+
+**C. `[3, 2, 0.5]`**
+
+**Explicación:**
+
+Los arreglos en javascript pueden soportar cualquier tipo de dato incluyendo expresiones a ser evaluadas, por ello todas las operaciones aritméticas se resuelven y acomodan en los índices correspondientes del arreglo.
+
+---
+
+## Reto #43 {#sec-sol-array-43}
+
+La respuesta del [Reto #43](#sec-array-43) es:
+
+**B. `Hi there, undefined`**
+
+**Explicación:**
+
+En javascript los parámetros tienen por defecto el valor `undefined`, esto quiere decir que sino pasamos ningún parámetro a una función que los necesite tendremos `undefined`.
+
+---
