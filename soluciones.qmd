@@ -1084,3 +1084,85 @@ console.log(getItems(["banana", "apple"], "pear", "orange"))
 Obtemos por consola: `["banana", "apple", "orange", "pear"]`
 
 ---
+
+
+## Reto #51 {#sec-sol-array-51}
+
+La respuesta del [Reto #51](#sec-array-51) es:
+
+**B. `a is bigger`, `undefined` y `b is bigger`, `undefined`**
+
+**Explicación:**
+
+Después de una expresión JavaScript pone automáticamente un punto y coma para indicar al interprete que dicha expresión finalizo en una línea de código en concreto. Esto se denomina **Insercción automática de punto y coma**.
+
+Al llegar al `return` el programador ve esto:
+
+```js
+  return 
+  a + b
+```
+
+Pero el interprete reconoce la palabra `return` con el fin de una expresión, por lo tanto, aunque no lo veas, JavaScript hará esto:
+
+```js
+  return;
+  a + b; // jamás llegamos a ejecutar esta línea
+```
+
+Y ya sabemos que en una función al encontrar la palabra `return` todo el código posterior que pueda haber no se ejecuta, ni si quiera se evalua, entonces jamás se llegara a hacer la operación `a + b`.
+
+Cuando una función no retorna nada explicitamente, javascript hace que el `return` arroje un `undefined` de manera implicita.
+
+---
+
+## Reto #52 {#sec-sol-array-52}
+
+La respuesta del [Reto #52](#sec-array-52) es:
+
+**D. `{Symbol('a'): 'b'}` y `[]`**
+
+**Explicación:**
+
+Una variable de tipo `Symbol` cumple con 3 características principales:
+
+* No es un elemento enumerable.
+* Permite representar valores completamente únicos en el código, útil para crear llaves de objetos y evitar colisiones.
+* Podemos crear propiedades "ocultas" en objetos.
+
+El primer `console.log` imprime el objeto en su totalidad, incluyendo los valores no enumerables, por ello podemos ver la `key` de tipo `Symbol` y su valor un `string` con valor `b`.
+
+Al intentar obtener las `keys` del objeto con `Object.keys` obtendremos un arreglo vacío justamente por que el `Symbol` no es un elemento que se pueda enumerar, de esta manera es posible "ocultar" ciertas propiedades de un objeto.
+
+---
+
+## Reto #53 {#sec-sol-array-53}
+
+La respuesta del [Reto #53](#sec-array-53) es:
+
+**A. `[1, [2, 3, 4]]` y `SyntaxError`**
+
+**Explicación:**
+
+* En la función `getList`:
+
+Tenemos una desestructuración de arreglos en la lista de parámetros de la función y además `y` es un parámetro de tipo REST. 
+
+Por ende, al pasar el argumento `list`, `x` será igual al primer elemento del arreglo, ósea, `1`. `y` como es de tipo REST será un arreglo con todos los elementos restantes de `list`, ósea, `[2, 3, 4]`.
+La función regresa un nuevo arreglo `[x, y]`, entonces tendríamos un arreglo anidado y como resultado `[1, [2, 3, 4]]`
+
+* En la función `getUser`:
+
+Recibe un único parámetro `user` que es un objeto y luego lo regresa. 
+
+Las funciones de tipo flecha tiene la característica denominada **return implícito** con esto se logra escribir funciones más compactas y de una sola línea, pero cuando intentamos usar un **return implícito** para devolver un objeto es **obligatorio** usar paréntesis para envolver al objeto en cuestión, sino hacemos esto el interprete nos arrojará un `SyntaxError`.
+
+Para que el **return implícito** tenga sentido tendríamos que usar paréntesis para envolver el objeto:
+
+```js
+const getUser = user => ({ name: user.name, age: user.age })
+const user = { name: "Messi", age: 40 }
+console.log(getUser(user)); // {name: "Messi", age: 40}
+```
+
+---

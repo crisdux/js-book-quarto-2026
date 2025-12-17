@@ -1354,3 +1354,95 @@ getItems(["banana", "apple"], "pear", "orange")
 **[Ver solución](#sec-sol-array-50)**
 
 ---
+
+## Reto #51: Una función rara {#sec-array-51}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+function nums(a, b) {
+  if
+  (a > b)
+  console.log('a is bigger')
+  else 
+  console.log('b is bigger')
+  return 
+  a + b
+}
+
+console.log(nums(4, 2))
+console.log(nums(1, 2))
+```
+
+**Pista:** Notar que no existe ningún punto y coma en núnguna línea de código de la función.
+
+* A. `a is bigger, 6 y b is bigger, 3`
+* B. `a is bigger, undefined y b is bigger, undefined`
+* C. `undefined y undefined`
+* D. `SyntaxError`
+
+**[Ver solución](#sec-sol-array-51)**
+
+---
+
+## Reto #52: El primitivo `Symbol` {#sec-array-52}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Avanzado**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const info = {
+  [Symbol('a')]: 'b'
+}
+
+console.log(info)
+console.log(Object.keys(info))
+```
+
+**Pista:** `Symbol` es un primitivo relativamente nuevo en JavaScript que permite crear valores únicos e irrepetibles. 
+
+* A. `{Symbol('a'): 'b'}` y `["{Symbol('a')"]`
+* B. `{}` y `[]`
+* C. `{ a: "b" }` y `["a"]`
+* D. `{Symbol('a'): 'b'}` y `[]`
+
+**[Ver solución](#sec-sol-array-52)**
+
+---
+
+## Reto #53: {#sec-array-53}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const getList = ([x, ...y]) => [x, y]
+const getUser = user => { name: user.name, age: user.age }
+
+const list = [1, 2, 3, 4]
+const user = { name: "Messi", age: 40 }
+
+console.log(getList(list))
+console.log(getUser(user))
+```
+
+**Pista:** Cuidado con la sintaxis de **return implícito** en las funciones flecha.
+
+* A. `[1, [2, 3, 4]]` y `SyntaxError`
+* B. `[1, [2, 3, 4]]` y `{ name: "Messi", age: 40 }`
+* C. `[1, 2, 3, 4]` y `{ name: "Messi", age: 40 }`
+* D. `SyntaxError` y `{ name: "Messi", age: 40 }`
+
+**[Ver solución](#sec-sol-array-53)**
+
+---
