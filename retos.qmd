@@ -1446,3 +1446,81 @@ console.log(getUser(user))
 **[Ver solución](#sec-sol-array-53)**
 
 ---
+
+
+
+
+## Reto #54: Invocar una variable como función {#sec-array-54}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const name = "Pepe"
+console.log(name())
+```
+
+**Pista:** Las variables no pueden ser invocadas como funciones, ¿o si pueden?
+
+* A. ´SyntaxError`
+* B. ´ReferenceError`
+* C. ´TypeError`
+* D. ´undefined`
+
+**[Ver solución](#sec-sol-array-54)**
+
+--- 
+
+## Reto #55: Backticks y el operador de corto circuito `and` {#sec-array-55}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const output = `${[] && 'Im'}possible!
+You should${'' && `n't`} see a therapist after so much JavaScript lol`
+```
+
+**Pista:** Recordar las tablas de verdad para saber cuando se ejecuta el operador de corto circuito.
+
+* A. `possible! You should see a therapist after so much JavaScript lol`
+* B. `Impossible! You should see a therapist after so much JavaScript lol`
+* C. `possible! You shouldn't see a therapist after so much JavaScript lol`
+* D. `Impossible! You shouldn't see a therapist after so much JavaScript lol`
+
+**[Ver solución](#sec-sol-array-55)**
+
+---
+
+## Reto #56: El operador de corto circuito `or` {#sec-array-56}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const one = (false || {} || null)
+const two = (null || false || "")
+const three = ([] || 0 || true)
+
+console.log(one, two, three)
+```
+
+**Pista:** El operador de corto circuito ´or´ se ejecuta con valores **falsy**.
+
+* A. `false` `null` `[]`
+* B. `null` `""` `true`
+* C. `{}` `""` `[]`
+* D. `null` `null` `true`
+
+**[Ver solución](#sec-sol-array-56)**
+
+---

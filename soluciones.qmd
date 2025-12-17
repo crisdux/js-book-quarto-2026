@@ -1166,3 +1166,107 @@ console.log(getUser(user)); // {name: "Messi", age: 40}
 ```
 
 ---
+
+## Reto #54 {#sec-sol-array-54}
+
+La respuesta del [Reto #54](#sec-array-54) es:
+
+**C. `TypeError`**
+
+**Explicación:**
+
+`name` no es ni hace referencia a una función, no tiene sentido intentar invocar a un `string` como si fuera una función. 
+
+No pude ser un `SyntaxError` porque no se cometio ningún error de tipeo, el código no esta mal escrito pero tampoco es un código valido.
+
+No puede ser `ReferenceError` porque no hay problemas de referencia al intentar acceder a la variable `name`.
+
+Se genera una excepción de tipo `TypeError` cuando un valor no es del tipo esperado, entonces se lanza un `TypeError: name is not a function!`
+
+---
+
+## Reto #55 {#sec-sol-array-55}
+
+La respuesta del [Reto #55](#sec-array-55) es:
+
+**B. `Impossible! You should see a therapist after so much JavaScript lol`**
+
+**Explicación:**
+
+Muchas cosas que analizar en este ejemplo.
+
+La sintaxis de backticks, comillas simples invertidas o comillas francesas (alt+96) sirven para evaluar expresiones dentro de cadenas de texto.
+
+**Primera expresión a evaluar:** 
+
+En `${[] && 'Im'}` tenemos el operador de **corto circuito** `&&`. 
+
+Para usar los operadores de corto circuito debemos tener en cuanta los valores `truthy` y `falsy`. 
+
+Si la primera parte de la expresión evalua como `truthy` entonces ejecutamos la segunda parte de la expresión. 
+
+Los valores `truthy` son:
+
+* `true`
+* `{}`
+* `[]`
+* Cualquier valor de tipo `number` (`42`, `-56`, `1.5`, `-6.33`)
+* Cualquier `string` que no sea vacio (`"0"`, `"Hola mundo"`, `"false"`)
+* El objeto `Date` (`new Date()`)
+
+Volviendo al ejemplo, un arreglo vacio `[]` es `truthy` entonces se ejecuta la segunda parte de la expresion, osea, el `string` `'Im'`.
+
+**Segunda expresión a evaluar:** 
+
+En `${ '' && `n't`}` nuevamente tenemos el **operador de corto circuito** `&&`, esta vez la primera parte de la expresión es un valor `falsy`.
+
+Los valores `falsy` son:
+
+* `false`
+* `0`
+* `""` (cualquier cadena vacía)
+* `undefined`
+* `null`
+* `NaN`
+
+La primera parte de la expresión es una cadena vacia que vendría a representar un valor `falsy` y por ello la segunda parte de la expresión `n't` no se ejecuta.
+
+En conclusión, la respuesta es: `Impossible! You should see a therapist after so much JavaScript lol`
+
+---
+
+## Reto #56 {#sec-sol-array-56}
+
+La respuesta del [Reto #56](#sec-array-56) es:
+
+**C. `{}` `""` `[]`**
+
+**Explicación:**
+
+En JavaScript el código se lee de arriba hacia abajo y de izquierda a derecha.
+
+* **Para la variable `one`**:
+
+`false || {} || null`
+
+Primero evaluamos `false || {}` y obtenemos `{}`.
+
+Entonces nos queda `{} || null` y como las llaves vacias es un valor `truthy` entonces el `null` no se evalua dando como resultado `{}`.
+
+* **Para la variable `two`**:
+
+`null || false || ""`
+
+Primero evaluamos `null || false`, `null` es `falsy` entonces si ejecutamos `false`.
+
+Entonces nos queda `false || ""`, y obtenemos como resultado la cadena vacia `""`
+
+* **Para la variable `three`**:
+
+`[] || 0 || true`
+
+Primero evaluamos `[] || 0`, el arreglo vacio es un valor `truthy` por lo que `0` no se ejecuta.
+
+Entonces nos queda `[] || true`, nuevamente el arreglo vacio es `truthy` y esta vez es `true` quien no se llega a ejecutar, entonces el resultado es `[]`.
+
+---
