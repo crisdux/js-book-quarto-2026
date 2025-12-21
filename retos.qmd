@@ -2367,53 +2367,59 @@ console.log(test.for);
 
 ---
 
-## Reto #86: {#sec-array-86}
+## Reto #86: Interpolación de cadenas clásico {#sec-array-86}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+**Básico**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
+let name = "Cris";
+let age = 25;
 
+console.log("My name is %s and I am %d", name, age);
 ```
 
-**Pista:** 
+**Pista:** Cuidado con los comodines `%s` y `%d`.
 
-* A. `multiply`
-* B. `test`
-* C. `Ambas`
-* D. `Ninguna`
+* A. `My name is %s and I am %d`
+* B. `SyntaxError`
+* C. `My name is Cris and I am 25`
+* D. `Ninguna de las anteriores`
 
 **[Ver solución](#sec-sol-array-86)**
 
 ---
 
-## Reto #87: {#sec-array-87}
+## Reto #87: Desestructuración de arreglos y `length` {#sec-array-87}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+**Básico**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-
+const names = ["Ana", "Sofia", "Carmen", ...["Cris"]];
+const [, , , myName] = names;
+console.log(myName["length"]);
 ```
 
-**Pista:** 
+**Pista:** En una desestructuración de arreglos es muy importante tener en cuenta que los elementos estan debidamente indexados y el orden de los mismos si importan.
 
-* A. `multiply`
-* B. `test`
-* C. `Ambas`
-* D. `Ninguna`
+* A. `SyntaxError`
+* B. `6`
+* C. `5`
+* D. `4`
+
 
 **[Ver solución](#sec-sol-array-87)**
 
 ---
 
-## Reto #88: {#sec-array-88}
+## Reto #88: `forEach` y `console.count` {#sec-array-88}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -2422,21 +2428,33 @@ console.log(test.for);
 **¿Qué imprime este código?**
 
 ```js
-
+const fruits  = ["orange", "pear", "watermelon", "banana", "strawberries"];
+fruits.forEach(() => {
+  console.count();
+});
 ```
 
-**Pista:** 
+**Pista:** `console.count` es un método que cuenta las veces que se ejecuta una acción, en este caso una función.
 
-* A. `multiply`
-* B. `test`
-* C. `Ambas`
-* D. `Ninguna`
+* A. `5`
+* B. `SyntaxisError`
+* C. 
+
+```js
+default:1
+default:2
+default:3
+default:4
+default:5
+```
+
+* D. `Ninguna de las anteriores`
 
 **[Ver solución](#sec-sol-array-88)**
 
 ---
 
-## Reto #89: {#sec-array-89}
+## Reto #89: Nuavamente la Temporal Dead Zone {#sec-array-89}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -2445,21 +2463,28 @@ console.log(test.for);
 **¿Qué imprime este código?**
 
 ```js
-
+function test(){
+  let name = "Alex";
+  if(true){
+    console.log(nombre);
+    let name = "Oscar";
+  }
+}
+console.log(test());
 ```
 
-**Pista:** 
+**Pista:** Cuidado con intentar acceder a una variable antes de su declaración.
 
-* A. `multiply`
-* B. `test`
-* C. `Ambas`
-* D. `Ninguna`
+* A. `Alex`
+* B. `ReferenceError: Cannot access 'name' before initialization`
+* C. `Oscar`
+* D. `SyntaxError`
 
 **[Ver solución](#sec-sol-array-89)**
 
 ---
 
-## Reto #90: {#sec-array-90}
+## Reto #90: Conociendo `at` {#sec-array-90}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -2468,15 +2493,20 @@ console.log(test.for);
 **¿Qué imprime este código?**
 
 ```js
-
+const teachers = ["Oscar", "Nico", "Freddy", "Christian", "Angela"];
+console.log(teachers.at(1)); //?
+console.log(teachers.at(-1)); //?
+console.log(teachers.at(10)); //?
+console.log(teachers.at(3.8)); //?
+console.log(teachers.at(-3.3)); //?
 ```
 
-**Pista:** 
+**Pista:** `at` es un método relativamente nuevo que permite acceder a un elemento de un array por su índice. 
 
-* A. `multiply`
-* B. `test`
-* C. `Ambas`
-* D. `Ninguna`
+* A. `Nico Angela undefined Christian Freddy`
+* B. `Oscar undefined undefined Freddy undefined`
+* C. `Nico SyntaxError null Christian SyntaxError`
+* D. `Nico null undefined undefined null`
 
 **[Ver solución](#sec-sol-array-90)**
 
@@ -2589,4 +2619,126 @@ console.log(test.for);
 **Pista:** 
 
 * A. `multiply`
-* B
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-95)**
+
+---
+
+## Reto #96: {#sec-array-96}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-96)**
+
+---
+
+## Reto #97: {#sec-array-97}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-97)**
+
+---
+
+## Reto #98: {#sec-array-98}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-98)**
+
+---
+
+## Reto #99: {#sec-array-99}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-99)**
+
+---
+
+## Reto #100: {#sec-array-100}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-100)**
+
+---
+
