@@ -1011,11 +1011,11 @@ La respuesta del [Reto #47](#sec-array-47) es:
 
 **Explicación:**
 
-Desde ES6 es posible usar parámetros por defecto (siempre y cuando sean los últimos declarados en la función).
+Desde ES6 es posible usar parámetros por defecto siempre y cuando sean los últimos declarados en la función.
 
-En este caso el parámetro por defecto `num1` es el mismo que el primer parámetro, no hay ningun problema simpre y cuando este declarado al final de la lista de parámetros de la función.
+En este caso el parámetro por defecto `num1` es el mismo que el primer parámetro, no hay ningún problema simpre y cuando este declarado al final de la lista de parámetros de la función.
 
-Pasamos el argumento `10` a la función `sum`, esto significa que `num2` deberá usar su valor por defecto que seria el mismo de `num1`, osea `10`; entonces `10 + 10` nos da el resultado final `20`.
+Pasamos el argumento `10` a la función `sum`, esto significa que `num2` deberá usar su valor por defecto que sería el mismo de `num1`, osea `10`; entonces `10 + 10` nos da el resultado final `20`.
 
 ---
 
@@ -1034,7 +1034,7 @@ let newList = [1, 2, 3].push(4)
 console.log(typeof newList); // number
 ```
 
-Después de aplicar por primera vez el método `push`, `newList` ahora ya no es un arreglo, sino un primitivo de tipo `number` entonces cuando intentamos aplicar `push` por segunda vez tratamos de implementar un método propio de los arreglos a una variable de tipo `number`, es justo aqui donde salta el error.
+Después de aplicar por primera vez el método `push`, `newList` ahora ya no es un arreglo, sino un primitivo de tipo `number` entonces cuando intentamos aplicar `push` por segunda vez tratamos de implementar un método propio de los arreglos a una variable de tipo `number`, es justo aquí es donde se genera el error.
 
 ---
 
@@ -1056,7 +1056,7 @@ Con el bucle `for...of` iteramos sobre el objeto desestructurando los valores co
 
 El primer sub arreglo es `[ "name", "Robert" ]` donde `x` toma el valor `name` y `y` toma el valor `Robert`.
 
-El segundo arreglo es `[ 'age', 30 ]` donde `x` toma el valor `age` y `y` toma el valor `30`.
+El segundo arreglo es `[ 'age', 30 ]` donde `x` toma el valor `age` e `y` toma el valor `30`.
 
 ---
 
@@ -1068,7 +1068,7 @@ La respuesta del [Reto #50](#sec-array-50) es:
 
 **Explicación:**
 
-Cuando vemos en la lista de parámetros de una función la sintaxis de tres puntos `...` nos referimos a lo que se denomina un **paramétro de tipo REST**. En el cuerpo de la función este tipo de parámetro se trata como un arreglo pero siempre debe estar declarado al final de la lista de parámetros, caso contrario tendremos un error de sintaxis.
+Cuando vemos en la lista de parámetros de una función la sintaxis de tres puntos `...` nos referimos a lo que se denomina un **paramétro de tipo REST**. En el cuerpo de la función este tipo de parámetro se trata como un arreglo pero **siempre debe estar declarado al final de la lista de parámetros**, caso contrario tendremos un error de sintaxis.
 
 Si volvemos a escribir la función pero esta vez teniendo en cuenta lo anterior dicho:
 
@@ -1092,13 +1092,13 @@ La respuesta del [Reto #51](#sec-array-51) es:
 
 **Explicación:**
 
-Después de una expresión JavaScript pone automáticamente un punto y coma para indicar al interprete que dicha expresión finalizo en una línea de código en concreto. Esto se denomina **Insercción automática de punto y coma**.
+Después de una expresión JavaScript pone automáticamente un punto y coma para indicar al interprete que dicha expresión finalizo en una línea de código en concreto. Esto se denomina **Inserción automática de punto y coma**.
 
 Al llegar al `return` el programador ve esto:
 
 ```js
-  return 
-  a + b
+return 
+a + b
 ```
 
 Pero el interprete reconoce la palabra `return` con el fin de una expresión, por lo tanto, aunque no lo veas, JavaScript hará esto:
@@ -1110,7 +1110,7 @@ Pero el interprete reconoce la palabra `return` con el fin de una expresión, po
 
 Y ya sabemos que en una función al encontrar la palabra `return` todo el código posterior que pueda haber no se ejecuta, ni si quiera se evalua, entonces jamás se llegara a hacer la operación `a + b`.
 
-Cuando una función no retorna nada explicitamente, javascript hace que el `return` arroje un `undefined` de manera implicita.
+Cuando una función no retorna nada explicitamente, JavaScript hace que el `return` arroje un `undefined` de manera implicita.
 
 ---
 
@@ -1128,7 +1128,7 @@ Una variable de tipo `Symbol` cumple con 3 características principales:
 * Permite representar valores completamente únicos en el código, útil para crear llaves de objetos y evitar colisiones.
 * Podemos crear propiedades "ocultas" en objetos.
 
-El primer `console.log` imprime el objeto en su totalidad, incluyendo los valores no enumerables, por ello podemos ver la `key` de tipo `Symbol` y su valor un `string` con valor `b`.
+El primer `console.log` imprime el objeto en su totalidad, incluyendo los valores no enumerables, por ello podemos ver la `key` de tipo `Symbol` que es un `string` con valor `b`.
 
 Al intentar obtener las `keys` del objeto con `Object.keys` obtendremos un arreglo vacío justamente por que el `Symbol` no es un elemento que se pueda enumerar, de esta manera es posible "ocultar" ciertas propiedades de un objeto.
 
@@ -1146,7 +1146,8 @@ La respuesta del [Reto #53](#sec-array-53) es:
 
 Tenemos una desestructuración de arreglos en la lista de parámetros de la función y además `y` es un parámetro de tipo REST. 
 
-Por ende, al pasar el argumento `list`, `x` será igual al primer elemento del arreglo, ósea, `1`. `y` como es de tipo REST será un arreglo con todos los elementos restantes de `list`, ósea, `[2, 3, 4]`.
+Por ende, al pasar el argumento `list`, `x` será igual al primer elemento del arreglo, ósea, `1`. Entonces como `y` es de tipo REST será un arreglo con todos los elementos restantes de `list`, ósea, `[2, 3, 4]`.
+
 La función regresa un nuevo arreglo `[x, y]`, entonces tendríamos un arreglo anidado y como resultado `[1, [2, 3, 4]]`
 
 * En la función `getUser`:
@@ -1209,14 +1210,14 @@ Los valores `truthy` son:
 * `{}`
 * `[]`
 * Cualquier valor de tipo `number` (`42`, `-56`, `1.5`, `-6.33`)
-* Cualquier `string` que no sea vacio (`"0"`, `"Hola mundo"`, `"false"`)
+* Cualquier `string` que no sea vacío (`"0"`, `"Hola mundo"`, `"false"`)
 * El objeto `Date` (`new Date()`)
 
-Volviendo al ejemplo, un arreglo vacio `[]` es `truthy` entonces se ejecuta la segunda parte de la expresion, osea, el `string` `'Im'`.
+Volviendo al ejemplo, un arreglo vacio `[]` es `truthy` entonces se ejecuta la segunda parte de la expresión, osea, el `string` `'Im'`.
 
 **Segunda expresión a evaluar:** 
 
-En `${ '' && `n't`}` nuevamente tenemos el **operador de corto circuito** `&&`, esta vez la primera parte de la expresión es un valor `falsy`.
+En `${'' && `n't`}` nuevamente tenemos el **operador de corto circuito** `&&`, esta vez la primera parte de la expresión es un valor `falsy`.
 
 Los valores `falsy` son:
 

@@ -1222,7 +1222,7 @@ console.log(checkAge(21))
 
 ---
 
-## Reto #46: I want pizza {#sec-array-46}
+## Reto #46: Quiero pizza {#sec-array-46}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -1328,7 +1328,7 @@ for (const [x, y] of Object.entries(person)) {
 
 ---
 
-## Reto #50: Parametros REST en funciones modernas {#sec-array-50}
+## Reto #50: Parámetros REST en funciones modernas {#sec-array-50}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -1378,11 +1378,11 @@ console.log(nums(4, 2))
 console.log(nums(1, 2))
 ```
 
-**Pista:** Notar que no existe ningún punto y coma en núnguna línea de código de la función.
+**Pista:** Notar que no existe ningún punto y coma en ninguna línea de código de la función.
 
-* A. `a is bigger, 6 y b is bigger, 3`
-* B. `a is bigger, undefined y b is bigger, undefined`
-* C. `undefined y undefined`
+* A. `a is bigger, 6` y `b is bigger, 3`
+* B. `a is bigger, undefined` y `b is bigger, undefined`
+* C. `undefined` y `undefined`
 * D. `SyntaxError`
 
 **[Ver solución](#sec-sol-array-51)**
@@ -1417,7 +1417,7 @@ console.log(Object.keys(info))
 
 ---
 
-## Reto #53: Cuidado con el return implicito de las funciones {#sec-array-53}
+## Reto #53: Cuidado con el return implícito de las funciones {#sec-array-53}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -1447,9 +1447,6 @@ console.log(getUser(user))
 
 ---
 
-
-
-
 ## Reto #54: Invocar una variable como función {#sec-array-54}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
@@ -1465,10 +1462,10 @@ console.log(name())
 
 **Pista:** Las variables no pueden ser invocadas como funciones, ¿o si pueden?
 
-* A. ´SyntaxError`
-* B. ´ReferenceError`
-* C. ´TypeError`
-* D. ´undefined`
+* A. `SyntaxError`
+* B. `ReferenceError`
+* C. `TypeError`
+* D. `undefined`
 
 **[Ver solución](#sec-sol-array-54)**
 
