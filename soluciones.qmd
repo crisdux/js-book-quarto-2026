@@ -2011,7 +2011,28 @@ Recibe como parámetro un número que representa en este ejemplo el índice al c
 
 La respuesta del [Reto #91](#sec-array-91) es:
 
-**C. `Ambas`**
+**D. `false` `false` `true`**
+
+Este ejemplo es bien sencillo pero abarca varios temas interesantes de javascript.
+
+La función se encarga de verificar si un arreglo esta vacío o no, para ello hacemos una doble verificación:
+
+Primero, corroboramos que el parámetro `arr` sea un arreglo, la manera más eficiente de hacerlo es usando el método `isArray` del objeto `Array` el cual regresa `true` si es un arreglo y `false` sino lo es. 
+
+Segundo, corroboramos que la longitud del arreglo sea 0 y convertimos esa salida a boolean para poder hacer una comparación de boeleanos con el operador de corto circuito `&&`
+
+Veamos caso por caso:
+
+* `[1,2,3]`, es un arreglo pero no esta vacío. 
+Entonces tendriamos: `true` && `false`, que evalua a `false`.
+
+* `[0]`, es un arreglo y tampoco esta vacío.
+Entonces tendriamos: `true` && `false`, que evalua a `false`.
+
+* `[]` es un arreglo y si esta vacío.
+Entonces tendriamos: `true` && `true`, que evalua a `true`.
+
+Conclusión: `false` `false` `true`.
 
 **Explicación:**
 
@@ -2021,9 +2042,27 @@ La respuesta del [Reto #91](#sec-array-91) es:
 
 La respuesta del [Reto #92](#sec-array-92) es:
 
-**C. `Ambas`**
+**A. `true` `false`**
 
 **Explicación:**
+
+`JSON.stringify` convierte al los arreglos en cadenas.
+
+Para los arreglos `a` y `b` tendríamos:
+
+```js
+console.log("[1, 2, 3]" === "[1, 2, 3]"); //true
+```
+
+Para los arreglos `a` y `c` tendríamos:
+
+```js
+console.log("[1, 2, 3]" === "[1, 2, "3"]"); //false
+```
+
+Son simples comparaciones de primitivos, en este caso de cadenas.
+
+Usar `JSON.stringify` es muy común cuando se quiere verificar si 2 arreglos son iguales o no.
 
 ---
 
@@ -2031,9 +2070,26 @@ La respuesta del [Reto #92](#sec-array-92) es:
 
 La respuesta del [Reto #93](#sec-array-93) es:
 
-**C. `Ambas`**
+**D. `"1, 2, 34, 5, 6"`**
 
 **Explicación:**
+
+Los operadores de JavaScript, como por ejemplo el operador suma (+), están diseñados para tipos de datos primitivos, especialmente para cadenas de caracteres y números.
+
+Cuando intentamos usar dichos operadores para tipos no primitivos, JavaScript hará su mayor esfuerzo para devolver un resultado lógico, pero la mayoría de las veces obtendremos salidas no esperadas o ambiguas.
+
+Lo primero que tratará de hacer el interprete de JavaScript es tratar de convertir los arreglos a cadenas, aunque no lo veamos hará algo como esto:
+
+```js
+const a = [1, 2, 3];
+let b = [4, 5, 6];
+console.log(a.toString() + b.toString()); 
+//"1, 2, 3" + "4, 5, 6"
+```
+
+La operación de "suma de arreglos" al final se convierte en una concatenación de cadenas.
+
+Para realizar una concatenación de arreglos podemos usar el operador spread `...` o métodos como `concat`.
 
 ---
 
@@ -2041,9 +2097,17 @@ La respuesta del [Reto #93](#sec-array-93) es:
 
 La respuesta del [Reto #94](#sec-array-94) es:
 
-**C. `Ambas`**
+**B. `false`, `true`**
 
 **Explicación:**
+
+El operador de igualdad estricta es muy potente, pero ¿sabias que existe uno aún mejor?
+
+`Object.is` recibe 2 parámetros y hace una comparación profunda entre ellos, pero va un poco más lejos.
+
+Casos como: `0 === -0` y `NaN === NaN` son mejor manejados con `Object.is`.
+
+Cuando comparamos un `NaN` vs otro `NaN` usando `===` obtenemos siempre `false` lo que no tiene mucho sentido, en estos casos es mejor usar `Object.is`.
 
 ---
 
@@ -2051,9 +2115,19 @@ La respuesta del [Reto #94](#sec-array-94) es:
 
 La respuesta del [Reto #95](#sec-array-95) es:
 
-**C. `Ambas`**
+**D. `Todos los ejemplos`**
 
 **Explicación:**
+
+En JavaScript existen 4 maneras de obtener un `undefined` como resultado:
+
+* Cuando declaramos una variable con `let` o `var` sin inicializarla, como en el ejemplo #1.
+
+* Cuando en la llamada de una función omitimos parámetros obligatorios, como en el ejemplo #2.
+
+* Cuando intenamos acceder a una propiedad de un objeto que no existe, como en el ejemplo #3.
+
+* Cuando llamamos a una función que no tiene la sentencia `return` en su cuerpo, como en el ejemplo #4.
 
 ---
 
