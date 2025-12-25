@@ -2079,4 +2079,470 @@ console.log(numbers);
 
 ---
 
+## Reto #76: ¿`typeof` para arreglos?  {#sec-array-76}
 
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const arr = [];
+console.log(Array.isArray(arr));
+```
+
+**Pista:** `Array.isArray` es un método que nos permite comprobar si una variable es un arreglo o no.
+
+* A. `true`
+* B. `false`
+* C. `[]`
+* D. `ReferenceError`
+
+**[Ver solución](#sec-sol-array-76)**
+
+---
+
+## Reto #77: `null` vs `object`  {#sec-array-77}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(typeof null == 'object');
+```
+
+**Pista:** Este reto representa un bug clásico de JavaScript. Cuidado al comparar `null` con `object`.
+
+* A. `true`
+* B. `false`
+* C. `TypeError`
+* D. `undefined`
+
+**[Ver solución](#sec-sol-array-77)**
+
+---
+
+## Reto #78: Multiples maneras de expandir cadenas {#sec-array-78}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const name = "Alejandro";
+
+console.log(name.split(""));
+console.log([...name]);
+console.log(Array.from(name));
+```
+
+**Pista:** Existen muchos caminos para llegar a Roma.
+
+* A. Los 3 imprimen: `['A','l','e','j','a','n','d','r','o']`
+* B. `['A','l','e','j','a','n','d','r','o']` , `[]`, `['A','l','e','j','a','n','d','r','o']`
+* C. `['Alejandro']` , `['A','l','e','j','a','n','d','r','o']`, 
+`['A','l','e','j','a','n','d','r','o']`
+* D. `Alejandro`, `Alejandro`, `Alejandro`
+
+**[Ver solución](#sec-sol-array-78)**
+
+---
+
+## Reto #79: Invertir una cadena con `split`, `reverse` y `join` {#sec-array-79}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log("hello".split("").reverse().join("")); 
+```
+
+**Pista:** Cuidado con imprimir una cadena o un arreglo. Ojo al ḿetodo `join`.
+
+* A. `['h','e','l','l','o'];`
+* B. `['o','l','l','e','h']`
+* C. `"hello"`
+* D. `"olleh"`
+
+**[Ver solución](#sec-sol-array-79)**
+
+---
+
+## Reto #80: Higher Order Functions {#sec-array-80}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+//A
+const multiply = a => b => a * b ;
+
+//B
+const test = (name, action) => {
+  return action(name); 
+}
+console.log(test("Ana", console.log)); 
+//Ana (por consola)
+```
+
+**Pista:** Las Higher Order Functions son aquellas que pueden recibir funciones como parámetros o regresar funciones.
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-80)**
+
+---
+
+## Reto #81: {#sec-array-81}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-81)**
+
+---
+
+## Reto #82: {#sec-array-82}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-82)**
+
+---
+
+## Reto #83: {#sec-array-83}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-83)**
+
+---
+
+## Reto #84: {#sec-array-84}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-84)**
+
+---
+
+## Reto #85: {#sec-array-85}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-85)**
+
+---
+
+## Reto #86: {#sec-array-86}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-86)**
+
+---
+
+## Reto #87: {#sec-array-87}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-87)**
+
+---
+
+## Reto #88: {#sec-array-88}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-88)**
+
+---
+
+## Reto #89: {#sec-array-89}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-89)**
+
+---
+
+## Reto #90: {#sec-array-90}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-90)**
+
+---
+
+## Reto #91: {#sec-array-91}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-91)**
+
+---
+
+## Reto #92: {#sec-array-92}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-92)**
+
+---
+
+## Reto #93: {#sec-array-93}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-93)**
+
+---
+
+## Reto #94: {#sec-array-94}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B. `test`
+* C. `Ambas`
+* D. `Ninguna`
+
+**[Ver solución](#sec-sol-array-94)**
+
+---
+
+## Reto #95: {#sec-array-95}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+
+```
+
+**Pista:** 
+
+* A. `multiply`
+* B
