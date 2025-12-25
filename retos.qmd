@@ -1511,12 +1511,12 @@ const three = ([] || 0 || true)
 console.log(one, two, three)
 ```
 
-**Pista:** El operador de corto circuito ´or´ se ejecuta con valores **falsy**.
+**Pista:** El operador de corto circuito `or` se ejecuta con valores **falsy**.
 
-* A. `false` `null` `[]`
-* B. `null` `""` `true`
-* C. `{}` `""` `[]`
-* D. `null` `null` `true`
+* A. `false`, `null`, `[]`
+* B. `null`, `""`, `true`
+* C. `{}`, `""`, `[]`
+* D. `null`, `null`, `true`
 
 **[Ver solución](#sec-sol-array-56)**
 
@@ -1644,7 +1644,7 @@ const colors = ["pink", "red", "blue"]
 console.log(colorConfig.colors[1])
 ```
 
-**Pista:** Recuerda que las propiedades de los objetos son accedidas por medio de `.` y los arreglos son accedidos por medio de `[]`.
+**Pista:** Recuerda que las propiedades de los objetos son accedidas por medio de notación de punto `.` y los arreglos son accedidos por medio de notación de corchetes `[]`.
 
 * A. `true`
 * B. `false`

@@ -1250,7 +1250,7 @@ En JavaScript el código se lee de arriba hacia abajo y de izquierda a derecha.
 
 Primero evaluamos `false || {}` y obtenemos `{}`.
 
-Entonces nos queda `{} || null` y como las llaves vacias es un valor `truthy` entonces el `null` no se evalua dando como resultado `{}`.
+Entonces nos queda `{} || null` y como las llaves vacías es un valor `truthy` entonces el `null` no se evalua dando como resultado `{}`.
 
 * **Para la variable `two`**:
 
@@ -1258,15 +1258,15 @@ Entonces nos queda `{} || null` y como las llaves vacias es un valor `truthy` en
 
 Primero evaluamos `null || false`, `null` es `falsy` entonces si ejecutamos `false`.
 
-Entonces nos queda `false || ""`, y obtenemos como resultado la cadena vacia `""`
+Entonces nos queda `false || ""`, y obtenemos como resultado la cadena vacía `""`
 
 * **Para la variable `three`**:
 
 `[] || 0 || true`
 
-Primero evaluamos `[] || 0`, el arreglo vacio es un valor `truthy` por lo que `0` no se ejecuta.
+Primero evaluamos `[] || 0`, el arreglo vacío es un valor `truthy` por lo que `0` no se ejecuta.
 
-Entonces nos queda `[] || true`, nuevamente el arreglo vacio es `truthy` y esta vez es `true` quien no se llega a ejecutar, entonces el resultado es `[]`.
+Entonces nos queda `[] || true`, nuevamente el arreglo vacío es `truthy` y esta vez es `true` quien no se llega a ejecutar, entonces el resultado es `[]`.
 
 ---
 
@@ -1278,7 +1278,7 @@ La respuesta del [Reto #57](#sec-array-57) es:
 
 **Explicación:**
 
-`firstFunction` es una función simple que llama a `myPromise` usando el método `then` propio de las promesas. Por **Event Loop** las promesas pasan al **Task Queue** entonces primero ejecutamos el `console.log` y mostramos `second` por consola, ahora el **Call Stack** esta vacio y la promesa que estaba en la **Task Queue** pasa al **Call Stack** y resolvemos la promesa mostrando `'I have resolved!'`.
+`firstFunction` es una función simple que llama a `myPromise` usando el método `then` propio de las promesas. Por **Event Loop** las promesas pasan al **Task Queue** entonces primero ejecutamos el `console.log` y mostramos `second` por consola, ahora el **Call Stack** esta vacío y la promesa que estaba en la **Task Queue** pasa al **Call Stack** y resolvemos la promesa mostrando `'I have resolved!'`.
 
 
 `secondFunction` es una función asíncrona, al llamar a `myPromise` con `await` esperamos el tiempo necesario para que la promesa se ejecute, entonces mostramos primero por consola `'I have resolved!'` y luego `second`.
@@ -1291,7 +1291,7 @@ Cuando tenemos sintaxis `async await` escribimos código de manera síncrona per
 
 La respuesta del [Reto #58](#sec-array-58) es:
 
-**C. `3`, `Lydia2`, `[Object object]2`**
+**C. `3`, `Cris2`, `[Object object]2`**
 
 **Explicación:**
 
