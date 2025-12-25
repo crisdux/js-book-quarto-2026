@@ -1946,3 +1946,137 @@ console.log(objeto3.valor);
 
 ---
 
+
+## Reto #71: `const` en primitivos y objetos {#sec-array-71}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const name = "Cristian";
+name = "Fernando";
+console.log(name)
+
+const person = {
+  id: 1,
+  name: "Cristian",
+};
+
+person.name = "Fernando";
+console.log(person.name);
+```
+
+**Pista:** `const` actua diferente en objetos y primitivos.
+
+* A. `Fernando`, `Fernando`
+* B. `Cristian`, `TypeError`
+* C. `Cristian`, `Fernando`
+* D. `TypeError`, `Fernando`
+
+**[Ver solución](#sec-sol-array-71)**
+
+---
+
+## Reto #72: `length` en cadenas y arreglos {#sec-array-72}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const band = "Coldplay";
+const songs = ["Yellow", "Fix You", "Trouble"];
+
+console.log(band["length"]);
+console.log(songs["len"+"gth"]);
+```
+
+**Pista:** `length` sirve para calcular la longitud de un iterable como una cadena o un arreglo.
+
+* A. `length`, `3`
+* B. `8`, `SyntaxError`
+* C. `8`, `3`
+* D. `SyntaxError`, `SyntaxError`
+
+
+**[Ver solución](#sec-sol-array-72)**
+
+---
+
+## Reto #73: Corto circuito y nullish coalescing operator  {#sec-array-73}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(undefined || "0" || null || (undefined ?? 0))
+```
+
+**Pista:** El operador `??` se ejecuta solo si evalua como `undefined` o `null`.
+
+* A. `0`
+* B. `"0"`
+* C. `undefined`
+* D. `null`
+
+**[Ver solución](#sec-sol-array-73)**
+
+---
+
+## Reto #74: Restas de cadenas y números {#sec-array-74}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(typeof("22" - 0))
+```
+
+**Pista:** El operdor `-` siempre representa una resta aritmética en JavaScript.
+
+* A. `number`
+* B. `string`
+* C. `object`
+* D. `TypeError`
+
+**[Ver solución](#sec-sol-array-74)**
+
+---
+
+## Reto #75: `length` como un setter {#sec-array-75}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+numbers.length = 0;
+console.log(numbers);
+```
+
+**Pista:** `length` no solo sirve para calcular la longitud de un iterable, también puede usarse para establecer el número de elementos.
+
+* A. `1`
+* B. `0`
+* C. `[]`
+* D. `[1]`
+
+**[Ver solución](#sec-sol-array-75)**
+
+---
+
+
