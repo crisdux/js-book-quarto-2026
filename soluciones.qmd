@@ -1916,9 +1916,15 @@ Solo se consciente que es posible.
 
 La respuesta del [Reto #86](#sec-array-86) es:
 
-**C. `Ambas`**
+**C. `Mi nombre es Cris y tengo 25`**
 
 **Explicación:**
+
+En JavaScript como en Java y otros lenguajes de programación es posible usar **sustituciones de variables** con el operador `%` seguido de un caracter que especifica el tipo de dato que se pretende imprimir.
+
+En este caso, `$s` reemplaza un `string` (`"Cris"`) y `%d` reemplaza un valor decimal o dígito numérico (`25`). 
+
+Este método de imprimir por consola no es muy usado, ni siquiera es conocido, pero esta bueno saber que existe. 
 
 ---
 
@@ -1926,9 +1932,15 @@ La respuesta del [Reto #86](#sec-array-86) es:
 
 La respuesta del [Reto #87](#sec-array-87) es:
 
-**C. `Ambas`**
+**D. `4`**
 
 **Explicación:**
+
+Cuando pretendemos hacer una desestructuración de arreglos es súper importante tener en cuenta los índices del mismo. Usando la sintaxis de la `,` podemos saltar posiciones del arreglo hasta encontrar la propiedad que se desea obtener.
+
+En el ejemplo usamos 3 veces `,` por ello saltamos 3 posiciones del arreglo `names` para poder obtener (con spread operator) la cadena `Cris` del arreglo anidado.
+
+Finalmente aplicamos el método `length` con sintaxis de corchete.
 
 ---
 
@@ -1936,9 +1948,21 @@ La respuesta del [Reto #87](#sec-array-87) es:
 
 La respuesta del [Reto #88](#sec-array-88) es:
 
-**C. `Ambas`**
+**C.**
+
+```js
+default:1
+default:2
+default:3
+default:4
+default:5
+```
 
 **Explicación:**
+
+`console.count()` se encarga como su nombre lo dice de contar acciones que ocurren en el código, desde cuantas veces se repite un bucle (como en el ejemplo) hasta poder determinar cuantas veces se llamo a una función. 
+
+Puede llegar a ser útil para hacer un debbuging básico, no esta de más conocerla, quiza te saque de un apaño
 
 ---
 
@@ -1946,9 +1970,17 @@ La respuesta del [Reto #88](#sec-array-88) es:
 
 La respuesta del [Reto #89](#sec-array-89) es:
 
-**C. `Ambas`**
+**B. `ReferenceError: Cannot access 'nombre' before initialization`**
 
 **Explicación:**
+
+Dos aspectos a tomar en cuenta en este ejemplo.
+
+* Primero, recordar que las variables declaradas con `let` o `const` tienen **scope de bloque**.
+
+* Segundo, recordar que las variables declaradas con `let` o `const` no tienen **hoisting**, cuando intentamos acceder a una variable antes de su inicializción entra en la `Temporal Dead Zone`.
+
+La variable `name` no puede ser mostrada sin antes inicializarla, `name` esta  en su **Temporal Dead Zone**.
 
 ---
 
@@ -1956,9 +1988,22 @@ La respuesta del [Reto #89](#sec-array-89) es:
 
 La respuesta del [Reto #90](#sec-array-90) es:
 
-**C. `Ambas`**
+**A. `Nico Angela undefined Christian Freddy`**
 
 **Explicación:**
+
+El método `.at` es una nueva forma de poder acceder a elementos de arreglos o caracteres de cadenas.
+
+Recibe como parámetro un número que representa en este ejemplo el índice al cual se quiere acceder.
+
+* `.at(1)` regresa el item "Nico" puesto que tiene el índice 1. 
+
+* `.at(-1)` regresa el item "Angela", es una manera elegante de acceder al último item de un arreglo.
+
+* `.at(10)` regresa `undefiend` puesto que no existe un item con dicho índice en el arreglo.
+
+* `.at(3.8)` y `.at(-3.3)` solo tomaran la parte entera del parámetro, por ende tendremos `.at(3)` que regresa "Christian".
+ * `at.(-3)` que regresa "Freddy".
 
 ---
 
