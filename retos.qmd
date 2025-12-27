@@ -2054,7 +2054,7 @@ console.log(typeof("22" - 0))
 ## Reto #75: `length` como un setter {#sec-array-75}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+**Intermedio**
 :::
 
 **¿Qué imprime este código?**

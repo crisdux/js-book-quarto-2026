@@ -1612,8 +1612,7 @@ La respuesta del [Reto #72](#sec-array-72) es:
 
 Tanto cadenas como arreglos son iterables, entonces podemos usar la nomenclatura de corchetes para acceder a sus valores.
 
-Todo lo que este dentro de los corchetes será evaluado como expresión, entonces ambos casos se ejecutaran correctamente, el primero solo ejecuta el método `length` y el segundo concatena ambas cadenas para finalmente ejecutar `length` para el arreglo.
-
+Todo lo que este dentro de los corchetes será evaluado como expresión, entonces ambos casos se ejecutaran correctamente, el primero solo ejecuta el método `length` y el segundo concatena lascadenas `"len"+"gth"` para finalmente ejecutar `length` para el arreglo y calcular su correspondiente longitud.
 
 ---
 
@@ -1635,7 +1634,7 @@ Vamos paso por paso:
 
 `undefined` evalua como **falsy** entonces tendriamos `"0"`.
 
-Nos quedaria el siguiente código:
+Nos quedaría el siguiente código:
 
 ```js
 console.log("0" || null || (undefined ?? 0))
@@ -1644,7 +1643,7 @@ console.log("0" || null || (undefined ?? 0))
 * `"0" || null`:
 `"0"` no evalua como **falsy** entonces no se ejecuta el operador de corto circuito.
 
-Nos quedaria el siguiente código:
+Nos quedaría el siguiente código:
 
 ```js
 console.log("0" || (undefined ?? 0))
@@ -1654,7 +1653,7 @@ console.log("0" || (undefined ?? 0))
 
 Operando tenemos como resultado `0` por que `undefined` es un valor **nullish**.
 
-Nos quedaria el siguiente código:
+Nos quedaría el siguiente código:
 
 ```js
 console.log("0" || 0)
