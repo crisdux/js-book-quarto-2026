@@ -1821,7 +1821,9 @@ La respuesta del [Reto #81](#sec-array-81) es:
 
 `flat` es un **array method** que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada.
 
-Dicho en otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces. Es una buena alernativa a usar por ejemplo `reduce` para hacer lo mismo. No muchos desarrolladores conocen esta característica en el lenguaje.
+Dicho en otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces. Es una buena alernativa a usar por ejemplo `reduce` para hacer lo mismo. 
+
+No muchos desarrolladores conocen esta característica en el lenguaje.
 
 ---
 
@@ -1868,7 +1870,7 @@ Por este motivo, `name`, `lastName` y `age` son **variables de scope global** y 
 
 La respuesta del [Reto #84](#sec-array-84) es:
 
-**B. `El código es correcto, esta característica de JavaScript se denomina Trailing commas y es perfectamente válido.`**
+**B.`El código es correcto, esta característica de JavaScript se denomina Trailing commas y es perfectamente válido.`**
 
 **Explicación:**
 
@@ -1885,6 +1887,7 @@ const dog = {
   name:"Boby",
   age:7,
 };
+
 const {name, age,} = dog;
 
 const numbers = [1,2,3,4,5,];
@@ -1893,6 +1896,7 @@ const [one,two,] = numbers;
 const greeting = (name,)=>{
   return `Hello ${name}`
 }
+
 console.log(greeting("Cris",)); // Hello Cris
 
 ```
@@ -1903,7 +1907,7 @@ console.log(greeting("Cris",)); // Hello Cris
 
 La respuesta del [Reto #85](#sec-array-85) es:
 
-**B. `Es un bucle`**
+**B. `It's a loop`**
 
 **Explicación:**
 

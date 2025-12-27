@@ -2278,7 +2278,7 @@ RangeError: repeat count must be non-negative numbers
 
 ---
 
-## Reto #83: `var`, `let` y `const` y el alcance global {#sec-array-83}
+## Reto #83: `var`, `let`, `const` y el alcance global {#sec-array-83}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -2358,7 +2358,7 @@ console.log(test.for);
 **Pista:** Cuidado con el uso de palabras reservadas como nombres de `keys` en objetos.
 
 * A. `SyntaxError: unexpected token: keyword 'for'`
-* B. `Es un bucle`
+* B. `It's a loop`
 * C. `ReferenceError`
 * D. `Ninguna de las anteriores`
 
