@@ -1742,16 +1742,16 @@ Este bug es bastante conocido en programadores experimentados y usado en entrevi
 
 La respuesta del [Reto #78](#sec-array-78) es:
 
-**A. Los 3 imprimen: `['A','l','e','j','a','n','d','r','o']`**
+**A. Los 3 imprimen: `['P','e','p','e']`**
 
 **Explicación:**
 
 * `split` es un **String Method** que se encarga de convertir una cadena en arreglo, donde cada elemento del arreglo lo determina el separador que recibe `split` como parámetro. 
-Como le pasamos una cadena vacía entonces `Alejandro` se convierte en `['A','l','e','j','a','n','d','r','o']`.
+Como le pasamos una cadena vacía entonces `Pepe` se convierte en `['P','e','p','e']`.
 
-* Spread Operator (`...`) expandirá o propagará la cadena `Alejandro` en `['A','l','e','j','a','n','d','r','o']`. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
+* Spread Operator (`...`) expandirá o propagará la cadena `Pepe` en `['P','e','p','e']`. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
 
-* `Array.from` es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa `['A','l','e','j','a','n','d','r','o']`.
+* `Array.from` es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa `['P','e','p','e']`.
 
 
 ---
@@ -1807,7 +1807,7 @@ function multiply(a){
 
 Acá se observa mejor que `multiply` regresa una función anónima que realiza la operación del producto, es mucho más sencillo usar retornos implícitos para poder escribir lo mismo en una sola línea como en el ejemplo original.
 
-`test` recibe 2 parámetros, uno de ellos es una función que en el ejemplo es `console.log` de javascript nativo, esto es motivo suficiente para que sea considerada una **Higher Order Function**.
+`test` recibe 2 parámetros, uno de ellos es una función que en el ejemplo es `console.log` de JavaScript nativo, esto es motivo suficiente para que sea considerada una **Higher Order Function**.
 
 ---
 

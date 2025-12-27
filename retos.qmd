@@ -2132,7 +2132,7 @@ console.log(typeof null == 'object');
 **¿Qué imprime este código?**
 
 ```js
-const name = "Alejandro";
+const name = "Pepe";
 
 console.log(name.split(""));
 console.log([...name]);
@@ -2141,11 +2141,12 @@ console.log(Array.from(name));
 
 **Pista:** Existen muchos caminos para llegar a Roma.
 
-* A. Los 3 imprimen: `['A','l','e','j','a','n','d','r','o']`
-* B. `['A','l','e','j','a','n','d','r','o']` , `[]`, `['A','l','e','j','a','n','d','r','o']`
-* C. `['Alejandro']` , `['A','l','e','j','a','n','d','r','o']`, 
-`['A','l','e','j','a','n','d','r','o']`
-* D. `Alejandro`, `Alejandro`, `Alejandro`
+* A. Los 3 imprimen: `['P','e','p','e']`
+* B. `['P','e','p','e']` , `[]`, 
+`['P','e','p','e']`
+* C. `['Pepe']` , `['P','e','p','e']`, 
+`['P','e','p','e']`
+* D. `Pepe`, `Pepe`, `Pepe`
 
 **[Ver solución](#sec-sol-array-78)**
 
@@ -2163,7 +2164,7 @@ console.log(Array.from(name));
 console.log("hello".split("").reverse().join("")); 
 ```
 
-**Pista:** Cuidado con imprimir una cadena o un arreglo. Ojo al ḿetodo `join`.
+**Pista:** Cuidado con imprimir una cadena o un arreglo. Ojo al método `join`.
 
 * A. `['h','e','l','l','o'];`
 * B. `['o','l','l','e','h']`
@@ -2190,6 +2191,7 @@ const multiply = a => b => a * b ;
 const test = (name, action) => {
   return action(name); 
 }
+
 console.log(test("Ana", console.log)); 
 //Ana (por consola)
 ```
