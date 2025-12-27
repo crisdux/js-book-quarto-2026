@@ -2676,7 +2676,7 @@ console.log(y())
 **¿Qué imprime este código?**
 
 ```js
-const add = (a,b) => {
+const add = (a, b) => {
   if(!a || !b){
     throw new Error("missing parameters");
   }
@@ -2729,47 +2729,13 @@ console.log(toBolean(Symbol("I'am a symbol")));
 
 ---
 
-## Reto #98: {#sec-array-98}
+## Reto #98: El tipo `Symbol` como llaves de objetos {#sec-array-98-en}
 
-::: {.callout-caution title="Dificultad" collapse="true"}
+::: {.callout-caution title="Difficulty" collapse="true"}
 **Avanzado**
 :::
 
 **¿Qué imprime este código?**
-
-```js
-const nombre = Symbol("primer nombre");
-const apellido = Symbol("apellido paterno");
-
-const persona = {
-  id: 1,
-  [nombre]: "Cristian",
-  [apellido]: "Villca",
-  peso: 82,
-  estatura: 180,
-};
-
-console.log(Object.keys(persona));
-```
-
-**Pista:** 
-
-A. [ 'id', 'peso', 'estatura' ]
-B. [ 'id', 'nombre', 'apellido', 'peso', 'estatura' ]
-C. [ 'nombre', 'apellido' ]
-D. Ninguno de los anteriores
-
-**[Ver solución](#sec-sol-array-98)**
-
----
-
-## Challenge #98: El tipo `Symbol` como llaves de objetos {#sec-array-98-en}
-
-::: {.callout-caution title="Difficulty" collapse="true"}
-**Advanced**
-:::
-
-**What does this code print?**
 
 ```js
 const firstName = Symbol("first name");
@@ -2786,14 +2752,14 @@ const person = {
 console.log(Object.keys(person));
 ```
 
-**Hint:** Los valores `Symbol` son únicos en un programa, muy útiles para crear propiedades privadas en objetos.
+**Pista:** Los valores `Symbol` son únicos en un programa, muy útiles para crear propiedades privadas en objetos.
 
 * A. `[ 'id', 'weight', 'height' ]`
 * B. `[ 'id', 'firstName', 'lastName', 'weight', 'height' ]`
 * C. `[ 'firstName', 'lastName' ]`
 * D. `Ninguna de las anteriores`
 
-**[See solution](#sec-sol-array-98)**
+**[Ver solución](#sec-sol-array-98)**
 
 ---
 
@@ -2823,7 +2789,7 @@ console.log((() => "hi")() || (false && true));
 
 ---
 
-## Reto #100: Redondeo de números con el objeto `Math`{#sec-array-100}
+## Reto #100: Redondeo de números con el objeto `Math` {#sec-array-100}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**

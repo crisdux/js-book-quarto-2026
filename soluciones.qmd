@@ -2187,6 +2187,9 @@ Valores como `NaN`, cadenas vacías o `0` al ser considerados valores `falsy` in
 
 A continuación una tabla que resume todas las posibles conversiones a boolean:
 
+\begin{center}
+Tabla 1: Conversión de valores a Boolean
+\end{center}
 
 | `x`              | `Boolean(x)`                      |
 | ---------------- | --------------------------------- |
@@ -2217,7 +2220,7 @@ Las variables de tipo `Symbol` son relativamente nuevas y tienen peculiaridades 
 
 Por este motivo las propiedades `name` y `lastname` no se muestran al ejecutar `Object.keys(person)`, esto puede ser de mucha útilidad para no contaminar nuestros objetos de manera arbitraria y poder tener un código mas profesional y limpio en nuestros desarrollos aprovechando las últimas caracteristicas del lenguaje.
 
-Por si te lo preguntabas, ¿entonces como podemos acceder a las propiedades que son `Symbol` dentro de los objetos? Podemos hacer esto:
+Si te lo preguntabas, ¿entonces como podemos acceder a las propiedades que son `Symbol` dentro de los objetos? Podemos hacer lo siguiente:
 
 ```js
 console.log(Object.getOwnPropertySymbols(persona)); 
