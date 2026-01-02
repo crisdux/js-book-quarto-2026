@@ -3,14 +3,21 @@ project:
 
 book:
   chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - agradecimientos.qmd
-    - about.qmd
-    - references.qmd
-    - retos.qmd
-    - soluciones.qmd
+    # Secciones Preliminares (sin numerar)
+    - index.qmd              # Prefacio
+    - prologo.qmd            # Prólogo
+    - resumen.qmd            # Resumen
+    - agradecimientos.qmd    # Agradecimientos
+    - autor.qmd              # Acerca del Autor
+    
+    # Capítulos Principales (numerados)
+    - intro.qmd              # Capítulo 1: Introducción
+    - retos.qmd              # Capítulo 2: Retos
+    - soluciones.qmd         # Capítulo 3: Soluciones
+    
+    # Apéndices y Referencias (sin numerar)
+    - glosario.qmd           # Glosario
+    - references.qmd         # Referencias
 
 bibliography: references.bib
 

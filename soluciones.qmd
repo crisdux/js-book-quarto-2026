@@ -1,4 +1,4 @@
-# Soluciones {.unnumbered} 
+# Soluciones
 
 ## Reto #1 {#sec-sol-array-1}
 

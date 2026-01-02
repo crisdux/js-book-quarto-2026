@@ -1,4 +1,4 @@
-# Retos {.unnumbered}
+# Retos
 
 ## Reto #1: Conversión rápida a number {#sec-array-1}
 
