@@ -1,8 +1,8 @@
 # Soluciones - Objetos
 
-## Reto 6.1 {#sec-sol-cap10-reto1}
+## Reto 6.1 {#sec-sol-cap6-reto1}
 
-La respuesta del [Reto 6.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 6.1](#sec-cap6-reto1) es:
 
 **A. `Hello`**
 
@@ -47,9 +47,9 @@ Este método solo sirve para copiar objetos en el primer nivel, si deseamos real
 
 ---
 
-## Reto 6.2 {#sec-sol-cap7-reto2}
+## Reto 6.2 {#sec-sol-cap6-reto2}
 
-La respuesta del [Reto 6.2](#sec-cap7-reto2) es:
+La respuesta del [Reto 6.2](#sec-cap6-reto2) es:
 
 **C: `true`, `true`, `false`, `true`**
 
@@ -79,9 +79,9 @@ Esto no funciona como en un objeto, recuerda que un `set` es como un tipo de arr
 
 ---
 
-## Reto 6.3 {#sec-sol-cap7-reto3}
+## Reto 6.3 {#sec-sol-cap6-reto3}
 
-La respuesta del [Reto 6.3](#sec-cap7-reto3) es:
+La respuesta del [Reto 6.3](#sec-cap6-reto3) es:
 
 **C: `{ a: "three", b: "two" }`**
 
@@ -91,9 +91,9 @@ Cuando en un objeto tenemos keys repetidas, estas se sobre escriben respetando e
 
 ---
 
-## Reto 6.4 {#sec-sol-cap7-reto4}
+## Reto 6.4 {#sec-sol-cap6-reto4}
 
-La respuesta del [Reto 6.4](#sec-cap7-reto4) es:
+La respuesta del [Reto 6.4](#sec-cap6-reto4) es:
 
 **A. "Just give Lydia pizza already!"**
 
@@ -117,9 +117,9 @@ Obtendremos un error, `giveLydiaPizza` solo se puede usar con un `string`.
 
 ---
 
-## Reto 6.5 {#sec-sol-cap7-reto5}
+## Reto 6.5 {#sec-sol-cap6-reto5}
 
-La respuesta del [Reto 6.5](#sec-cap7-reto5) es:
+La respuesta del [Reto 6.5](#sec-cap6-reto5) es:
 
 **D. `[{ name: "Carmen" }]`**
 
@@ -143,9 +143,9 @@ Cambiamos el valor de `person` a `null` pero `members` conserva la referencia al
 
 ---
 
-## Reto 6.6 {#sec-sol-cap7-reto6}
+## Reto 6.6 {#sec-sol-cap6-reto6}
 
-La respuesta del [Reto 6.6](#sec-cap7-reto6) es:
+La respuesta del [Reto 6.6](#sec-cap6-reto6) es:
 
 **B. `"name"`, `"age"`**
 
@@ -183,9 +183,9 @@ La variable `item` tendrá el valor de cada llave del objeto en cada iteración;
 
 ---
 
-## Reto 6.7 {#sec-sol-cap7-reto7}
+## Reto 6.7 {#sec-sol-cap6-reto7}
 
-La respuesta del [Reto 6.7](#sec-cap7-reto7) es:
+La respuesta del [Reto 6.7](#sec-cap6-reto7) es:
 
 **B. { admin: true, name: "Hernan", age: 21 }**
 
@@ -207,30 +207,6 @@ Justamente el **spread operator** se encarga de expandir `user` para evitar el a
 
 La respuesta del [Reto 6.8](#sec-cap6-reto8) es:
 
-**C. `20`, `20`, `20`, `40`**
-
-**Explicación:**
-
-Hay que concentrarse en el orden en que se llaman las funciones para comprender que es lo que pasa acá.
-
-**Primera llamada:**
-A `multiply` no le pasamos ningún parámetro, por ende, toma el parámetro por defecto `x` que es un objeto desestructurado cuya key `number` tiene el valor de `10`. Entonces `x.number *= 2` nos retorna `20`.
-
-**Segunda llamada:**
-Similar a la primera llamada, hacemos lo mismo, entonces obtenemos nuevamente `20`.
-
-**Tercera llamada:**
-A `multiply` en su llamada le pasamos el argumento `value` por lo que la función ahora ignora el parámetro por defecto. `number` es nuevamente `10`, por ello el resultado de la multiplicación nuevamente será `20`.
-
-**Cuarta llamada:**
-Similar a la tercera llamada, pero el valor de `value` actual es `20` que fue el resultado de la tercera llamada, entonces ahora `x.number *= 2`, será `40`.
-
----
-
-## Reto 6.9 {#sec-sol-cap6-reto9}
-
-La respuesta del [Reto 6.9](#sec-cap6-reto9) es:
-
 **A. `name Robert` y `age 30`**
 
 **Explicación:**
@@ -249,9 +225,9 @@ El segundo arreglo es `[ 'age', 30 ]` donde `x` toma el valor `age` e `y` toma e
 
 ---
 
-## Reto 6.10 {#sec-sol-cap10-reto10}
+## Reto 6.9 {#sec-sol-cap6-reto9}
 
-La respuesta del [Reto 6.10](#sec-cap10-reto10) es:
+La respuesta del [Reto 6.9](#sec-cap6-reto9) es:
 
 **C. `3`, `Cris2`, `[Object object]2`**
 
@@ -269,9 +245,9 @@ Recuerda que en JavaScript el operador `+` puede ser usado para sumar números y
 
 ---
 
-## Reto 6.11 {#sec-sol-cap10-reto11}
+## Reto 6.10 {#sec-sol-cap6-reto10}
 
-La respuesta del [Reto 6.11](#sec-cap10-reto11) es:
+La respuesta del [Reto 6.10](#sec-cap6-reto10) es:
 
 **B. `They are the same!`**
 
@@ -283,9 +259,9 @@ Los objetos se pasan por referencia. En el ejemplo, `person1` y `person2` apunta
 
 ---
 
-## Reto 6.12 {#sec-sol-cap10-reto12}
+## Reto 6.11 {#sec-sol-cap6-reto11}
 
-La respuesta del [Reto 6.12](#sec-cap10-reto12) es:
+La respuesta del [Reto 6.11](#sec-cap6-reto11) es:
 
 **A. `['pizza', 'chocolat', 'avocat', 'egg']`**
 
@@ -315,9 +291,9 @@ En ningún momento modificamos de ninguna manera el array `food`, por ende sigue
 
 ---
 
-## Reto 6.13 {#sec-sol-cap10-reto13}
+## Reto 6.12 {#sec-sol-cap6-reto12}
 
-La respuesta del [Reto 6.13](#sec-cap10-reto13) es:
+La respuesta del [Reto 6.12](#sec-cap6-reto12) es:
 
 **C. `{ name:"not name" }`**
 
@@ -331,9 +307,9 @@ Llamamos a la función `getName` pasandole un objeto vacío, entonces todas sus 
 
 ---
 
-## Reto 6.14 {#sec-sol-cap10-reto14}
+## Reto 6.13 {#sec-sol-cap6-reto13}
 
-La respuesta del [Reto 6.14](#sec-cap10-reto14) es:
+La respuesta del [Reto 6.13](#sec-cap6-reto13) es:
 
 **A. `Pedro`**
 
@@ -345,9 +321,9 @@ Esta es una de las formas mas comunues de actualizar valores de un objeto en Jav
 
 ---
 
-## Reto 6.15 {#sec-sol-cap10-reto15}
+## Reto 6.14 {#sec-sol-cap6-reto14}
 
-La respuesta del [Reto 6.15](#sec-cap10-reto15) es:
+La respuesta del [Reto 6.14](#sec-cap6-reto14) es:
 
 **B. `true`, `false`**
 
@@ -385,9 +361,9 @@ Existe una explicación mas profunda sobre porque `in` funciona de esta manera y
 
 ---
 
-## Reto 6.16 {#sec-sol-cap10-reto16}
+## Reto 6.15 {#sec-sol-cap6-reto15}
 
-La respuesta del [Reto 6.16](#sec-cap10-reto16) es:
+La respuesta del [Reto 6.15](#sec-cap6-reto15) es:
 
 **A. `Radiohead`**
 
@@ -405,9 +381,9 @@ Por este motivo, cuando hacemos `console.log(band["na"+"me"])` el lenguaje evalu
 
 ---
 
-## Reto 6.17 {#sec-sol-cap10-reto17}
+## Reto 6.16 {#sec-sol-cap6-reto16}
 
-La respuesta del [Reto 6.17](#sec-cap10-reto17) es:
+La respuesta del [Reto 6.16](#sec-cap6-reto16) es:
 
 **B.`El código es correcto, esta característica de JavaScript se denomina Trailing commas y es perfectamente válido.`**
 
@@ -442,9 +418,9 @@ console.log(greeting("Cris",)); // Hello Cris
 
 ---
 
-## Reto 6.18 {#sec-sol-cap10-reto18}
+## Reto 6.17 {#sec-sol-cap6-reto17}
 
-La respuesta del [Reto 6.18](#sec-cap10-reto18) es:
+La respuesta del [Reto 6.17](#sec-cap6-reto17) es:
 
 **B. `It's a loop`**
 
@@ -458,9 +434,9 @@ Solo se consciente que es posible.
 
 ---
 
-## Reto 6.19 {#sec-sol-cap10-reto19}
+## Reto 6.18 {#sec-sol-cap6-reto18}
 
-La respuesta del [Reto 6.19](#sec-cap10-reto19) es:
+La respuesta del [Reto 6.18](#sec-cap6-reto18) es:
 
 **A. `[ 'id', 'weight', 'height' ]`**
 
@@ -476,3 +452,105 @@ Si te lo preguntabas, ¿entonces como podemos acceder a las propiedades que son 
 console.log(Object.getOwnPropertySymbols(persona)); 
 // [ Symbol(firstName'), Symbol(lastName) ]
 ```
+
+---
+
+## Reto 6.19 {#sec-sol-cap6-reto19}
+
+La respuesta del [Reto 6.19](#sec-cap6-reto19) es:
+
+**D. `TypeError`**
+
+**Explicación:**
+
+En JavaScript existen 2 maneras de acceder a las propiedades de los objetos, por notación del punto o por notación de corchetes.
+
+Cuando hacemos `colorConfig.colors[1]` literalmente estamos buscando una propiedad `colors` en el objeto `colorConfig` y como no existe esta propiedad entonces obtenemos un `undefiend`, entonces ahora JavaScript intentará hacer `undefined[1]` y esto no es un código valido, por ello la consola muestra un `TypeError`.
+
+Cuando queremos usar variables para hacer lo que se denomina **acceso a propiedades dinámicas de objetos** necesitamos usar la notación de corchetes: `colorConfig[colors[1]]` que nos devolverá `true`, el valor de la propiedad `red` del objeto `colorConfig`.
+
+---
+
+## Reto 6.20 {#sec-sol-cap6-reto20}
+
+La respuesta del [Reto 6.20](#sec-cap6-reto20) es:
+
+**B. `4`, `3`, `Error: missing parameters`**
+
+**Explicación:**
+
+**Primer caso:**
+
+Simple suma de números enteros.
+
+**Segundo caso:**
+
+Por inferencia de tipos, el parámetro `true` se convierte en `1`, por ello el resultado es `3`.
+
+**Tercer caso:**
+
+En el `if` usamos el operador de negación para la validación de parámetros, esto hace que los valores falsy también se vean afectados y nos arroje la excepción. Para arreglar esto podríamos hacer lo siguiente:
+
+```js
+const sumar = (a,b) => {
+  if(a === undefined || b === undefined){
+    throw new Error("faltan parametros");
+  }
+  return a + b;
+}
+```
+De esa manera no solo cuando alguno de los parámtros no este definido en la llamada de la función se lanza la excepción.
+
+---
+
+## Reto 6.21 {#sec-sol-cap6-reto21}
+
+La respuesta del [Reto 6.21](#sec-cap6-reto21) es:
+
+**C. `Hmm... You don't have an age I guess`**
+
+**Explicación:**
+
+Cuando comparamos objetos hay que tener mucho cuidado.
+
+Comparar primitivos es sencillo, pero recuerda que los objetos se almacenan en memoria teniendo en cuenta su **referencia** y no su **valor**.
+
+Dicho esto, el objeto que pasamos como argumento a `checkAge` es el objeto `{ age: 18 }`, este es diferente al objeto que evaluamos en los `if` de la función, por más que usemos comparación estricta, seguirán siendo objetos diferentes **por que sus referencias son diferentes**:
+
+```js
+{ age: 18 } == { age: 18 } //false
+{ age: 18 } === { age: 18 } //false
+```
+
+Entonces nunca se cumple ni la condición del `if` ni del `else if` y se ejecuta el `else` directamente, imprimiendo `Hmm... You don't have an age I guess` como resultado final.
+
+---
+
+## Reto 6.22 {#sec-sol-cap6-reto22}
+
+La respuesta del [Reto 6.22](#sec-cap6-reto22) es:
+
+**A. `true`, `false`, `15`, `10`**
+
+**Explicación:**
+
+Al trabajar con objetos en JavaScript hay que difereciar 2 aspectos fundamentales: **tener 2 referencias la mismo objeto** y **tener 2 objetos diferentes pero con las mismas propiedades**.
+
+Al crear `object1` estamos reservando un espacio en memoria para guardar dicho objeto.
+
+Cuando asignamos `object1` a `object2` lo único que hacemos es que ambos objetos apunten a la misma dirección de memoria donde esta almacenado el `object1`. En otras palabras, tanto `object1` y `object2` no son independientes el uno del otro, si modificamos uno el otro también se vera afectado.
+
+Como ambos apuntan a la misma dirección de memoria entonces al usar el operador débil de comparación `==` obtenemos `true`.
+
+Pero si comparamos el `object1` contra el `object3` tendremos `false` puesto que si bien ambos tienen las mismas propiedades, estan almacenados en direcciones de memoria diferentes.
+
+Para finalizar, cuando hacemos:
+
+```js
+object1.value = 15;
+console.log(object2.value);
+console.log(object3.value);
+```
+Modificamos `value` de `object1` pero como apuntan a la misma dirección de momoria entonces también modificamos el valor del `object2` a `15`.
+
+El `object3` no sufre ningún cambio.

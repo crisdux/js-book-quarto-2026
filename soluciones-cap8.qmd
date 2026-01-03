@@ -1,8 +1,8 @@
 # Soluciones - Estructuras de Control Modernas
 
-## Reto 8.1 {#sec-sol-cap10-reto1}
+## Reto 8.1 {#sec-sol-cap8-reto1}
 
-La respuesta del [Reto 8.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 8.1](#sec-cap8-reto1) es:
 
 **D: `"Oh no an error! Hello world!`**
 

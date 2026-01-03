@@ -1,8 +1,8 @@
 # Soluciones - Programación Asíncrona
 
-## Reto 9.1 {#sec-sol-cap10-reto1}
+## Reto 9.1 {#sec-sol-cap9-reto1}
 
-La respuesta del [Reto 9.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 9.1](#sec-cap9-reto1) es:
 
 **B. `First`, `Third`, `Second`**
 
@@ -31,7 +31,7 @@ Es complicado de entender al principio, te dejo una [demostración gráfica](htt
 
 ---
 
-## Reto 9.2 {#sec-sol-cap4-reto5}
+## Reto 9.2 {#sec-sol-cap9-reto2}
 
 La respuesta del [Reto 9.2](#sec-cap9-reto2) es:
 
@@ -43,7 +43,7 @@ La función `setInterval` es una `Web API` que recibe un intervalo en milisegund
 
 ---
 
-## Reto 9.3 {#sec-sol-cap10-reto13}
+## Reto 9.3 {#sec-sol-cap9-reto3}
 
 La respuesta del [Reto 9.3](#sec-cap9-reto3) es:
 
@@ -57,9 +57,9 @@ Cuando llamamos `getData()` no consumimos la promesa con `then`, solo llamamos a
 
 ---
 
-## Reto 9.4 {#sec-sol-cap10-reto2}
+## Reto 9.4 {#sec-sol-cap9-reto4}
 
-La respuesta del [Reto 9.4](#sec-cap10-reto2) es:
+La respuesta del [Reto 9.4](#sec-cap9-reto4) es:
 
 **D. `second`, `I have resolved!` y `I have resolved!`, `second`**
 

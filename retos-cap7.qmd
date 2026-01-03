@@ -1,6 +1,6 @@
 # Funciones
 
-## Reto 7.1: Una curiosidad sobre funciones {#sec-cap10-reto1}
+## Reto 7.1: Una curiosidad sobre funciones {#sec-cap7-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -27,7 +27,7 @@ bark.animal = "dog";
 Todo en JavaScript es una función.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap7-reto1)**
 
 
 ---
@@ -228,3 +228,70 @@ Las Higher Order Functions son aquellas que pueden recibir funciones como parám
 :::
 
 **[Ver solución](#sec-sol-cap7-reto7)**
+
+---
+
+## Reto 7.8: `typeof` y funciones {#sec-cap7-reto8}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const sayHi = () => {
+  return (() =>"Hi Javascript!")();
+}
+
+console.log(typeof sayHi());
+```
+
+**Opciones:**
+
+* A. `number`
+* B. `object`
+* C. `string`
+* D. `TypeError`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Ojo con el valor de retorno de la función `sayHi`.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto8)**
+
+---
+
+## Reto 7.9: Multiples llamadas a una función {#sec-cap7-reto9}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const value = { number: 10 };
+
+const multiply = (x = { ...value }) => {
+  console.log((x.number *= 2));
+};
+
+multiply();
+multiply();
+multiply(value);
+multiply(value);
+```
+
+**Opciones:**
+
+* A. `20`, `40`, `80`, `160`
+* B. `20`, `40`, `20`, `40`
+* C. `20`, `20`, `20`, `40`
+* D. `NaN`, `NaN`, `20`, `40`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Atención al objeto como parámetro en la función y los valores por defecto.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto9)**

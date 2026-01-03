@@ -8,13 +8,9 @@ La respuesta del [Reto 1.1](#sec-cap1-reto1) es:
 
 **Explicación:**
 
-El objeto `Number` de JavaScript puede convertir los los valores de un arreglo a números, pero hay que tener cuidado con tipos `boolean`, `undefined` o `null`.
+El objeto [Number](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number) de JavaScript puede convertir los los valores de un arreglo a números, pero hay que tener cuidado con tipos `boolean`, `undefined` o `null`.
 
 Este hack es muy útil cuando tenemos un arreglo de strings que queremos convertir a números.
-
-
-
-
 
 ---
 
@@ -32,9 +28,9 @@ En el segundo caso, intentamos negar un `string`, dicho `string` es un valor tru
 
 ---
 
-## Reto 1.3 {#sec-sol-cap2-reto9}
+## Reto 1.3 {#sec-sol-cap1-reto3}
 
-La respuesta del [Reto 1.3](#sec-cap2-reto9) es:
+La respuesta del [Reto 1.3](#sec-cap1-reto3) es:
 
 **B. `string`**
 
@@ -46,9 +42,9 @@ Esta pregunta es un poco trampa. Pero la respuesta es chistosa:
 
 ---
 
-## Reto 1.4 {#sec-sol-cap10-reto10}
+## Reto 1.4 {#sec-sol-cap1-reto4}
 
-La respuesta del [Reto 1.4](#sec-cap10-reto10) es:
+La respuesta del [Reto 1.4](#sec-cap1-reto4) es:
 
 **B. `false`, `false`, `true`**
 
@@ -66,7 +62,7 @@ Dicho de otra manera, el operador de doble negación realiza una conversión de 
 
 ---
 
-## Reto 1.5 {#sec-sol-cap2-reto9}
+## Reto 1.5 {#sec-sol-cap1-reto5}
 
 La respuesta del [Reto 1.5](#sec-cap1-reto5) es:
 
@@ -84,7 +80,7 @@ En conclusión, solo convierte al `7` de `string` a `number`.
 
 ---
 
-## Reto 1.6 {#sec-sol-cap10-reto10}
+## Reto 1.6 {#sec-sol-cap1-reto6}
 
 La respuesta del [Reto 1.6](#sec-cap1-reto6) es:
 
@@ -109,9 +105,9 @@ Ambas variables serán objetos creados por medio de estos contructores y no solo
 
 ---
 
-## Reto 1.7 {#sec-sol-cap2-reto7}
+## Reto 1.7 {#sec-sol-cap1-reto7}
 
-La respuesta del [Reto 1.7](#sec-cap2-reto7) es:
+La respuesta del [Reto 1.7](#sec-cap1-reto7) es:
 
 **D. `{Symbol('a'): 'b'}` y `[]`**
 
@@ -129,7 +125,7 @@ Al intentar obtener las `keys` del objeto con `Object.keys` obtendremos un arreg
 
 ---
 
-## Reto 1.8 {#sec-sol-cap1-reto5}
+## Reto 1.8 {#sec-sol-cap1-reto8}
 
 La respuesta del [Reto 1.8](#sec-cap1-reto8) es:
 
@@ -165,53 +161,9 @@ Entonces nos queda `[] || true`, nuevamente el arreglo vacío es `truthy` y esta
 
 ---
 
-## Reto 1.9 {#sec-sol-cap1-reto6}
+## Reto 1.9 {#sec-sol-cap1-reto9}
 
 La respuesta del [Reto 1.9](#sec-cap1-reto9) es:
-
-**D. `TypeError`**
-
-**Explicación:**
-
-En JavaScript existen 2 maneras de acceder a las propiedades de los objetos, por notación del punto o por notación de corchetes.
-
-Cuando hacemos `colorConfig.colors[1]` literalmente estamos buscando una propiedad `colors` en el objeto `colorConfig` y como no existe esta propiedad entonces obtenemos un `undefiend`, entonces ahora JavaScript intentará hacer `undefined[1]` y esto no es un código valido, por ello la consola muestra un `TypeError`.
-
-Cuando queremos usar variables para hacer lo que se denomina **acceso a propiedades dinámicas de objetos** necesitamos usar la notación de corchetes: `colorConfig[colors[1]]` que nos devolverá `true`, el valor de la propiedad `red` del objeto `colorConfig`.
-
----
-
-## Reto 1.10 {#sec-sol-cap10-reto1}
-
-La respuesta del [Reto 1.10](#sec-cap10-reto1) es:
-
-**C. `string`**
-
-**Explicación:**
-
-La función `sayHi` regresa una otra función de tipo flecha, dicha función es anónima y solo devuelve la cadena `Hi JavaScript`, el detalle acá es que esta función anónima una vez regresada es inmediatamente llamada.
-
-Entonces `sayHi` será igual a la cadena `Hi Javascript` y en conclusión su `typeof` igual a `string`.
-
-Podríamos ver también este ejemplo si extraemos la función anónima y escribimos en una función auxiliar por aparte, de la siguente manera:
-
-```js
-const aux = () => {
-  return "Hi Javascript!"
-}
-
-const sayHi = () => {
-  return aux();
-}
-
-console.log(typeof sayHi()); // string
-```
-
----
-
-## Reto 1.11 {#sec-sol-cap2-reto7}
-
-La respuesta del [Reto 1.11](#sec-cap1-reto11) es:
 
 **B. `"0"`**
 
@@ -256,9 +208,9 @@ Finalmente `"0"` como cadena no es un valor **falsy** entonces no podemos ejecut
 
 ---
 
-## Reto 1.12 {#sec-sol-cap7-reto5}
+## Reto 1.10 {#sec-sol-cap1-reto10}
 
-La respuesta del [Reto 1.12](#sec-cap7-reto5) es:
+La respuesta del [Reto 1.10](#sec-cap1-reto10) es:
 
 **A. `true`**
 
@@ -272,25 +224,9 @@ Este bug es bastante conocido en programadores experimentados y usado en entrevi
 
 ---
 
-## Reto 1.13 {#sec-sol-cap1-reto8}
+## Reto 1.11 {#sec-sol-cap1-reto11}
 
-La respuesta del [Reto 1.13](#sec-cap1-reto13) es:
-
-**D. `4`**
-
-**Explicación:**
-
-Cuando pretendemos hacer una desestructuración de arreglos es súper importante tener en cuenta los índices del mismo. Usando la sintaxis de la coma `,` podemos "saltar" posiciones del arreglo hasta encontrar la propiedad que se desea obtener.
-
-En el ejemplo usamos 3 veces `,` por ello saltamos 3 posiciones del arreglo `names` para poder obtener (con spread operator) la cadena `Cris` del arreglo anidado.
-
-Finalmente aplicamos el método `length` con sintaxis de corchete.
-
----
-
-## Reto 1.14 {#sec-sol-cap1-reto9}
-
-La respuesta del [Reto 1.14](#sec-cap1-reto14) es:
+La respuesta del [Reto 1.11](#sec-cap1-reto11) es:
 
 **A. `true`, `false`**
 
@@ -316,9 +252,9 @@ Usar `JSON.stringify` es muy común cuando se quiere verificar si dos arreglos s
 
 ---
 
-## Reto 1.15 {#sec-sol-cap7-reto2}
+## Reto 1.12 {#sec-sol-cap1-reto12}
 
-La respuesta del [Reto 1.15](#sec-cap7-reto2) es:
+La respuesta del [Reto 1.12](#sec-cap1-reto12) es:
 
 **B. `false`, `true`**
 
@@ -334,9 +270,9 @@ Cuando comparamos un `NaN` contra otro `NaN` usando `===` obtenemos siempre `fal
 
 ---
 
-## Reto 1.16 {#sec-sol-cap10-reto1}
+## Reto 1.13 {#sec-sol-cap1-reto13}
 
-La respuesta del [Reto 1.16](#sec-cap1-reto16) es:
+La respuesta del [Reto 1.13](#sec-cap1-reto13) es:
 
 **D. `Todos los ejemplos`**
 
@@ -352,43 +288,13 @@ En JavaScript existen 4 maneras de obtener un `undefined` como resultado:
 
 * Cuando llamamos a una función que no tiene la sentencia `return` en su cuerpo, como en el ejemplo #4.
 
----
-
-## Reto 1.17 {#sec-sol-cap10-reto11}
-
-La respuesta del [Reto 1.17](#sec-cap10-reto11) es:
-
-**B. `4`, `3`, `Error: missing parameters`**
-
-**Explicación:**
-
-**Primer caso:**
-
-Simple suma de números enteros.
-
-**Segundo caso:**
-
-Por inferencia de tipos, el parámetro `true` se convierte en `1`, por ello el resultado es `3`.
-
-**Tercer caso:**
-
-En el `if` usamos el operador de negación para la validación de parámetros, esto hace que los valores falsy también se vean afectados y nos arroje la excepción. Para arreglar esto podríamos hacer lo siguiente:
-
-```js
-const sumar = (a,b) => {
-  if(a === undefined || b === undefined){
-    throw new Error("faltan parametros");
-  }
-  return a + b;
-}
-```
-De esa manera no solo cuando alguno de los parámtros no este definido en la llamada de la función se lanza la excepción.
 
 ---
 
-## Reto 1.18 {#sec-sol-cap1-reto11}
 
-La respuesta del [Reto 1.18](#sec-cap1-reto18) es:
+## Reto 1.14 {#sec-sol-cap1-reto14}
+
+La respuesta del [Reto 1.14](#sec-cap1-reto14) es:
 
 **A. `true`, `false`, `false`, `true`, `true`**
 
@@ -422,9 +328,9 @@ Tabla 1: Conversión de valores a Boolean
 
 ---
 
-## Reto 1.19 {#sec-sol-cap2-reto8}
+## Reto 1.15 {#sec-sol-cap1-reto15}
 
-La respuesta del [Reto 1.19](#sec-cap2-reto8) es:
+La respuesta del [Reto 1.15](#sec-cap1-reto15) es:
 
 **C. `null`, `Symbol("hola")`, `string`, `"hi"`**
 

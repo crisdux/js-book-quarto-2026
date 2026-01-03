@@ -1,6 +1,6 @@
 # Cadenas
 
-## Reto 2.1: Quiero pizza {#sec-cap10-reto1}
+## Reto 2.1: Quiero pizza {#sec-cap2-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -23,11 +23,11 @@ console.log("I want pizza"[0])
 Las cadenas, al igual que los arreglos, son elementos iterables.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap2-reto1)**
 
 ---
 
-## Reto 2.2: Interpolación de cadenas {#sec-cap7-reto2}
+## Reto 2.2: Interpolación de cadenas {#sec-cap2-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -50,11 +50,11 @@ console.log(`${(x => x)('I love')} to program`)
 En las plantillas con backticks, todo lo que este dentro de `{}` se evalua como una expresión de JavaScript.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto2)**
+**[Ver solución](#sec-sol-cap2-reto2)**
 
 ---
 
-## Reto 2.3: Interpolación de cadenas clásico {#sec-cap7-reto3}
+## Reto 2.3: Interpolación de cadenas clásico {#sec-cap2-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -80,11 +80,11 @@ console.log("My name is %s and I am %d", name, age);
 Cuidado con los comodines `%s` y `%d`.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto3)**
+**[Ver solución](#sec-sol-cap2-reto3)**
 
 ---
 
-## Reto 2.4: Spread operator con cadenas {#sec-cap7-reto4}
+## Reto 2.4: Spread operator con cadenas {#sec-cap2-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -107,11 +107,11 @@ console.log([..."Oscar"])
 El **spread operator** permite expandir un iterable en sus elementos.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto4)**
+**[Ver solución](#sec-sol-cap2-reto4)**
 
 ---
 
-## Reto 2.5: Multiples maneras de expandir cadenas {#sec-cap4-reto5}
+## Reto 2.5: Multiples maneras de expandir cadenas {#sec-cap2-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -140,11 +140,11 @@ console.log(Array.from(name));
 Existen muchos caminos para llegar a Roma.
 :::
 
-**[Ver solución](#sec-sol-cap4-reto5)**
+**[Ver solución](#sec-sol-cap2-reto5)**
 
 ---
 
-## Reto 2.6: Backticks y el operador de corto circuito `and` {#sec-cap7-reto5}
+## Reto 2.6: Backticks y el operador de corto circuito `and` {#sec-cap2-reto6}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -168,7 +168,7 @@ You should${'' && `n't`} see a therapist after so much JavaScript lol`
 Recordar las tablas de verdad para saber cuando se ejecuta el operador de corto circuito.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto5)**
+**[Ver solución](#sec-sol-cap2-reto6)**
 
 ---
 
@@ -258,7 +258,7 @@ Diferenciar una suma artimética de una concatenación de cadenas.
 
 ---
 
-## Reto 2.10: `typeof` de expresiones extrañas {#sec-cap10-reto10}
+## Reto 2.10: `typeof` de expresiones extrañas {#sec-cap2-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -281,11 +281,11 @@ console.log(typeof([] + []));
 Recuerda el el operador `+` sirve para hacer concatenaciones de cadenas.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto10)**
+**[Ver solución](#sec-sol-cap2-reto10)**
 
 ---
 
-## Reto 2.11: `length` en cadenas y arreglos {#sec-cap10-reto11}
+## Reto 2.11: `length` en cadenas y arreglos {#sec-cap2-reto11}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -314,11 +314,11 @@ console.log(songs["len"+"gth"]);
 :::
 
 
-**[Ver solución](#sec-sol-cap10-reto11)**
+**[Ver solución](#sec-sol-cap2-reto11)**
 
 ---
 
-## Reto 2.12: El método `repeat` de las cadenas {#sec-cap10-reto12}
+## Reto 2.12: El método `repeat` de las cadenas {#sec-cap2-reto12}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -365,11 +365,11 @@ RangeError: repeat count must be non-negative numbers
 `repeat` es un método de cadenas poco conocido pero muy útil para repetir cadenas de manera controlada.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto12)**
+**[Ver solución](#sec-sol-cap2-reto12)**
 
 ---
 
-## Reto 2.13: Invertir una cadena con `split`, `reverse` y `join` {#sec-cap10-reto13}
+## Reto 2.13: Invertir una cadena con `split`, `reverse` y `join` {#sec-cap2-reto13}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -392,4 +392,4 @@ console.log("hello".split("").reverse().join(""));
 Cuidado con imprimir una cadena o un arreglo. Ojo al método `join`.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto13)**
+**[Ver solución](#sec-sol-cap2-reto13)**

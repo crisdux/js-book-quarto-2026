@@ -1,8 +1,8 @@
 # Soluciones - Arreglos
 
-## Reto 5.1 {#sec-sol-cap10-reto1}
+## Reto 5.1 {#sec-sol-cap5-reto1}
 
-La respuesta del [Reto 5.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 5.1](#sec-cap5-reto1) es:
 
 **D. `Pera`**
 
@@ -31,9 +31,9 @@ Nota que aunque frutas sea un arreglo usamos `{}` para la desestructuración.
 
 ---
 
-## Reto 5.2 {#sec-sol-cap7-reto2}
+## Reto 5.2 {#sec-sol-cap5-reto2}
 
-La respuesta del [Reto 5.2](#sec-cap7-reto2) es:
+La respuesta del [Reto 5.2](#sec-cap5-reto2) es:
 
 **C. `object`**
 
@@ -43,9 +43,9 @@ Cuando usamos la sintaxis de `...` en los parámetros de una función (REST para
 
 ---
 
-## Reto 5.3 {#sec-sol-cap7-reto3}
+## Reto 5.3 {#sec-sol-cap5-reto3}
 
-La respuesta del [Reto 5.3](#sec-cap7-reto3) es:
+La respuesta del [Reto 5.3](#sec-cap5-reto3) es:
 
 **C. `[1, 2, 3, 7 x empty, 11]`**
 
@@ -62,9 +62,9 @@ undefined, undefined, undefined, 11]
 
 ---
 
-## Reto 5.4 {#sec-sol-cap7-reto4}
+## Reto 5.4 {#sec-sol-cap5-reto4}
 
-La respuesta del [Reto 5.4](#sec-cap7-reto4) es:
+La respuesta del [Reto 5.4](#sec-cap5-reto4) es:
 
 **C. `[1, 2, 0, 1, 2, 3]`**
 
@@ -74,9 +74,9 @@ La respuesta del [Reto 5.4](#sec-cap7-reto4) es:
 
 ---
 
-## Reto 5.5 {#sec-sol-cap7-reto5}
+## Reto 5.5 {#sec-sol-cap5-reto5}
 
-La respuesta del [Reto 5.5](#sec-cap7-reto5) es:
+La respuesta del [Reto 5.5](#sec-cap5-reto5) es:
 
 **C. `[undefined, undefined, undefined]`**
 
@@ -99,9 +99,9 @@ Al tener 3 elementos en el arreglo, y recordando siempre que `map` regresa un nu
 
 ---
 
-## Reto 5.6 {#sec-sol-cap7-reto6}
+## Reto 5.6 {#sec-sol-cap5-reto6}
 
-La respuesta del [Reto 5.6](#sec-cap7-reto6) es:
+La respuesta del [Reto 5.6](#sec-cap5-reto6) es:
 
 **C. `"9001"`**
 
@@ -125,9 +125,9 @@ Finalmente convertimos el valor de `number` a `string`.
 
 ---
 
-## Reto 5.7 {#sec-sol-cap7-reto7}
+## Reto 5.7 {#sec-sol-cap5-reto7}
 
-La respuesta del [Reto 5.7](#sec-cap7-reto7) es:
+La respuesta del [Reto 5.7](#sec-cap5-reto7) es:
 
 **B. `2`**
 
@@ -146,9 +146,9 @@ function addToList(item, list) {
 
 ---
 
-## Reto 5.8 {#sec-sol-cap6-reto8}
+## Reto 5.8 {#sec-sol-cap5-reto8}
 
-La respuesta del [Reto 5.8](#sec-cap6-reto8) es:
+La respuesta del [Reto 5.8](#sec-cap5-reto8) es:
 
 **A. `0 1 2` y `"Radiohead" "Coldplay" "Nirvana"`**
 
@@ -162,9 +162,9 @@ En la practica los bucles _for...of_ son más usados y usualmente en raras ocaci
 
 ---
 
-## Reto 5.9 {#sec-sol-cap6-reto9}
+## Reto 5.9 {#sec-sol-cap5-reto9}
 
-La respuesta del [Reto 5.9](#sec-cap10-reto10) es:
+La respuesta del [Reto 5.9](#sec-cap5-reto9) es:
 
 **C. `[3, 2, 0.5]`**
 
@@ -174,9 +174,9 @@ Los arreglos en JavaScript pueden soportar cualquier tipo de dato incluyendo exp
 
 ---
 
-## Reto 5.10 {#sec-sol-cap10-reto10}
+## Reto 5.10 {#sec-sol-cap5-reto10}
 
-La respuesta del [Reto 5.10](#sec-cap10-reto11) es:
+La respuesta del [Reto 5.10](#sec-cap5-reto10) es:
 
 **D. `TypeError: newList.push is not a function`**
 
@@ -193,9 +193,9 @@ Después de aplicar por primera vez el método `push`, `newList` ahora ya no es 
 
 ---
 
-## Reto 5.11 {#sec-sol-cap10-reto11}
+## Reto 5.11 {#sec-sol-cap5-reto11}
 
-La respuesta del [Reto 5.11](#sec-cap10-reto12) es:
+La respuesta del [Reto 5.11](#sec-cap5-reto11) es:
 
 **D. `SyntaxError`**
 
@@ -216,9 +216,9 @@ Obtemos por consola: `["banana", "apple", "orange", "pear"]`
 
 ---
 
-## Reto 5.12 {#sec-sol-cap10-reto12}
+## Reto 5.12 {#sec-sol-cap5-reto12}
 
-La respuesta del [Reto 5.12](#sec-cap10-reto13) es:
+La respuesta del [Reto 5.12](#sec-cap5-reto12) es:
 
 **A. `[1, [2, 3, 4]]` y `SyntaxError`**
 
@@ -248,9 +248,9 @@ console.log(getUser(user)); // {name: "Messi", age: 40}
 
 ---
 
-## Reto 5.13 {#sec-sol-cap10-reto13}
+## Reto 5.13 {#sec-sol-cap5-reto13}
 
-La respuesta del [Reto 5.13](#sec-cap10-reto14) es:
+La respuesta del [Reto 5.13](#sec-cap5-reto13) es:
 
 **D. `splice`**
 
@@ -262,9 +262,9 @@ El resto de los métodos son usados mucho en programación funcional y por ende 
 
 ---
 
-## Reto 5.14 {#sec-sol-cap10-reto14}
+## Reto 5.14 {#sec-sol-cap5-reto14}
 
-La respuesta del [Reto 5.14](#sec-cap10-reto15) es:
+La respuesta del [Reto 5.14](#sec-cap5-reto14) es:
 
 **C. `[]`**
 
@@ -278,9 +278,9 @@ Saber esto es muy útil cuando tengamos qu eliminar algunos o todos los elemento
 
 ---
 
-## Reto 5.15 {#sec-sol-cap10-reto15}
+## Reto 5.15 {#sec-sol-cap5-reto15}
 
-La respuesta del [Reto 5.15](#sec-cap10-reto16) es:
+La respuesta del [Reto 5.15](#sec-cap5-reto15) es:
 
 **A. `true`**
 
@@ -296,9 +296,9 @@ Como los arreglos no son un tipo de dato per se en JavaScript, la mejor manera d
 
 ---
 
-## Reto 5.16 {#sec-sol-cap10-reto16}
+## Reto 5.16 {#sec-sol-cap5-reto16}
 
-La respuesta del [Reto 5.16](#sec-cap10-reto17) es:
+La respuesta del [Reto 5.16](#sec-cap5-reto16) es:
 
 **B. `[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]`**
 
@@ -312,9 +312,9 @@ No muchos desarrolladores conocen esta característica en el lenguaje.
 
 ---
 
-## Reto 5.17 {#sec-sol-cap10-reto17}
+## Reto 5.17 {#sec-sol-cap5-reto17}
 
-La respuesta del [Reto 5.17](#sec-cap10-reto18) es:
+La respuesta del [Reto 5.17](#sec-cap5-reto17) es:
 
 **C.**
 
@@ -334,9 +334,9 @@ Puede llegar a ser útil para hacer un debbuging básico, no esta de más conoce
 
 ---
 
-## Reto 5.18 {#sec-sol-cap10-reto18}
+## Reto 5.18 {#sec-sol-cap5-reto18}
 
-La respuesta del [Reto 5.18](#sec-cap10-reto19) es:
+La respuesta del [Reto 5.18](#sec-cap5-reto18) es:
 
 **A. `Nico Angela undefined Christian Freddy`**
 
@@ -357,9 +357,9 @@ Recibe como parámetro un número que representa en este ejemplo el índice al c
 
 ---
 
-## Reto 5.19 {#sec-sol-cap10-reto19}
+## Reto 5.19 {#sec-sol-cap5-reto19}
 
-La respuesta del [Reto 5.19](#sec-cap7-reto20) es:
+La respuesta del [Reto 5.19](#sec-cap5-reto19) es:
 
 **D. `false`, `false`, `true`**
 
@@ -388,9 +388,9 @@ Conclusión: `false`, `false`, `true`.
 
 ---
 
-## Reto 5.20 {#sec-sol-cap7-reto20}
+## Reto 5.20 {#sec-sol-cap5-reto20}
 
-La respuesta del [Reto 5.20](#sec-cap7-reto21) es:
+La respuesta del [Reto 5.20](#sec-cap5-reto20) es:
 
 **D. `"1, 2, 34, 5, 6"`**
 
@@ -412,3 +412,19 @@ console.log(a.toString() + b.toString());
 La operación de "suma de arreglos" al final se convierte en una concatenación de cadenas.
 
 Para realizar una concatenación de arreglos podemos usar el operador spread `...` o métodos como `concat`.
+
+---
+
+## Reto 5.21 {#sec-sol-cap5-reto21}
+
+La respuesta del [Reto 5.21](#sec-cap5-reto21) es:
+
+**D. `4`**
+
+**Explicación:**
+
+Cuando pretendemos hacer una desestructuración de arreglos es súper importante tener en cuenta los índices del mismo. Usando la sintaxis de la coma `,` podemos "saltar" posiciones del arreglo hasta encontrar la propiedad que se desea obtener.
+
+En el ejemplo usamos 3 veces `,` por ello saltamos 3 posiciones del arreglo `names` para poder obtener (con spread operator) la cadena `Cris` del arreglo anidado.
+
+Finalmente aplicamos el método `length` con sintaxis de corchete.

@@ -1,6 +1,6 @@
 # Programación Asíncrona
 
-## Reto 9.1: Simulando asincronía con `setTimeOut()` {#sec-cap10-reto1}
+## Reto 9.1: Simulando asincronía con `setTimeOut()` {#sec-cap9-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -29,12 +29,12 @@ baz();
 `setTimeout` es una Web API.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap9-reto1)**
 
 
 ---
 
-## Reto 9.2: Uso de `setInterval` {#sec-cap4-reto5}
+## Reto 9.2: Uso de `setInterval` {#sec-cap9-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -61,7 +61,7 @@ setInterval(() => console.log("Hi"), 1000);
 
 ---
 
-## Reto 9.3: Funciones asíncronas {#sec-cap10-reto13}
+## Reto 9.3: Funciones asíncronas {#sec-cap9-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -93,7 +93,7 @@ Las promesas son objetos especiales de JavaScript que solo tienen tres posibles 
 
 ---
 
-## Reto 9.4: Promesas y funciones asíncronas {#sec-cap10-reto2}
+## Reto 9.4: Promesas y funciones asíncronas {#sec-cap9-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -129,4 +129,4 @@ secondFunction()
 Recordar que cuando tenemos sintaxis `async await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto2)**
+**[Ver solución](#sec-sol-cap9-reto4)**

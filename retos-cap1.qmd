@@ -30,7 +30,6 @@ console.log(result)
 Piensa en cómo `Number()` convierte diferentes tipos de datos.
 :::
 
-
 **[Ver solución](#sec-sol-cap1-reto1)**
 
 ---
@@ -63,7 +62,7 @@ Recuerda los conceptos de valores falsy y truthy.
 
 ---
 
-## Reto 1.3: `typeof` de `typeof` {#sec-cap2-reto9}
+## Reto 1.3: `typeof` de `typeof` {#sec-cap1-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -86,11 +85,11 @@ console.log(typeof typeof 1);
 `typeof` retorna un primitivo. ¿Pero cuál?
 :::
 
-**[Ver solución](#sec-sol-cap2-reto9)**
+**[Ver solución](#sec-sol-cap1-reto3)**
 
 ---
 
-## Reto 1.4: El operador de doble negación {#sec-cap10-reto10}
+## Reto 1.4: El operador de doble negación {#sec-cap1-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -115,11 +114,11 @@ console.log(!!1);
 El operador `!!` convierte un valor en su equivalente booleano.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto10)**
+**[Ver solución](#sec-sol-cap1-reto4)**
 
 ---
 
-## Reto 1.5: Conversiones con `parseInt()` {#sec-cap2-reto9}
+## Reto 1.5: Conversiones con `parseInt()` {#sec-cap1-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -147,7 +146,7 @@ console.log(num);
 
 ---
 
-## Reto 1.6: `Number`, `Boolean`, `Symbol` {#sec-cap10-reto10}
+## Reto 1.6: `Number`, `Boolean`, `Symbol` {#sec-cap1-reto6}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -176,7 +175,7 @@ Cuidado con las comparaciones entre primitivos `Symbol`.
 
 ---
 
-## Reto 1.7: El primitivo `Symbol` {#sec-cap2-reto7}
+## Reto 1.7: El primitivo `Symbol` {#sec-cap1-reto7}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -204,11 +203,11 @@ console.log(Object.keys(info))
 `Symbol` es un primitivo relativamente nuevo en JavaScript que permite crear valores únicos e irrepetibles.
 :::
 
-**[Ver solución](#sec-sol-cap2-reto7)**
+**[Ver solución](#sec-sol-cap1-reto7)**
 
 ---
 
-## Reto 1.8: El operador de corto circuito `or` {#sec-cap1-reto5}
+## Reto 1.8: El operador de corto circuito `or` {#sec-cap1-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -239,75 +238,9 @@ El operador de corto circuito `or` se ejecuta con valores **falsy**.
 
 ---
 
-## Reto 1.9: Acceso a propiedades de objetos {#sec-cap1-reto6}
 
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
 
-**¿Qué imprime este código?**
-
-```js
-const colorConfig = {
-  red: true,
-  blue: false,
-  green: true,
-  black: true,
-  yellow: false,
-}
-
-const colors = ["pink", "red", "blue"]
-
-console.log(colorConfig.colors[1])
-```
-
-**Opciones:**
-
-* A. `true`
-* B. `false`
-* C. `undefined`
-* D. `TypeError`
-
-::: {.callout-tip title="Pista" collapse="true"}
-Recuerda que las propiedades de los objetos son accedidas por medio de notación de punto `.` y los arreglos son accedidos por medio de notación de corchetes `[]`.
-:::
-
-**[Ver solución](#sec-sol-cap1-reto9)**
-
----
-
-## Reto 1.10: `typeof` y funciones {#sec-cap10-reto1}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const sayHi = () => {
-  return (() =>"Hi Javascript!")();
-}
-
-console.log(typeof sayHi());
-```
-
-**Opciones:**
-
-* A. `number`
-* B. `object`
-* C. `string`
-* D. `TypeError`
-
-::: {.callout-tip title="Pista" collapse="true"}
-Ojo con el valor de retorno de la función `sayHi`.
-:::
-
-**[Ver solución](#sec-sol-cap10-reto1)**
-
----
-
-## Reto 1.11: Corto circuito y nullish coalescing operator {#sec-cap2-reto7}
+## Reto 1.9: Corto circuito y nullish coalescing operator {#sec-cap1-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -330,11 +263,11 @@ console.log(undefined || "0" || null || (undefined ?? 0))
 El operador `??` se ejecuta solo si evalua como `undefined` o `null`.
 :::
 
-**[Ver solución](#sec-sol-cap1-reto11)**
+**[Ver solución](#sec-sol-cap1-reto9)**
 
 ---
 
-## Reto 1.12: `null` vs `object` {#sec-cap7-reto5}
+## Reto 1.10: `null` vs `object` {#sec-cap1-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -357,41 +290,12 @@ console.log(typeof null == 'object');
 Este reto representa un bug clásico de JavaScript. Cuidado al comparar `null` con `object`.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto5)**
+**[Ver solución](#sec-sol-cap1-reto10)**
 
 ---
 
-## Reto 1.13: Desestructuración de arreglos y `length` {#sec-cap1-reto8}
 
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const names = ["Ana", "Sofia", "Carmen", ...["Cris"]];
-const [, , , myName] = names;
-console.log(myName["length"]);
-```
-
-**Opciones:**
-
-* A. `SyntaxError`
-* B. `6`
-* C. `5`
-* D. `4`
-
-::: {.callout-tip title="Pista" collapse="true"}
-En una desestructuración de arreglos es muy importante tener en cuenta que los elementos estan debidamente indexados y el orden de los mismos si importan.
-:::
-
-
-**[Ver solución](#sec-sol-cap1-reto13)**
-
----
-
-## Reto 1.14: `JSON.stringify` para convertir objetos a cadenas {#sec-cap1-reto9}
+## Reto 1.11: `JSON.stringify` para convertir objetos a cadenas {#sec-cap1-reto11}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -419,11 +323,11 @@ console.log(JSON.stringify(a) === JSON.stringify(c));
 `JSON.stringify` convierte un objeto en una cadena de texto.
 :::
 
-**[Ver solución](#sec-sol-cap1-reto14)**
+**[Ver solución](#sec-sol-cap1-reto11)**
 
 ---
 
-## Reto 1.15: Comparación de `NaN` con `Object.is` {#sec-cap7-reto2}
+## Reto 1.12: Comparación de `NaN` con `Object.is` {#sec-cap1-reto12}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -450,11 +354,11 @@ console.log(Object.is(a, b));
 `Object.is()` y `===` manejan `NaN` de formas diferentes.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto2)**
+**[Ver solución](#sec-sol-cap1-reto12)**
 
 ---
 
-## Reto 1.16: Trabajando con `undefined` {#sec-cap10-reto1}
+## Reto 1.13: Trabajando con `undefined` {#sec-cap1-reto13}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -501,48 +405,12 @@ console.log(y())
 :::
 
 
-**[Ver solución](#sec-sol-cap1-reto16)**
+**[Ver solución](#sec-sol-cap1-reto13)**
 
 ---
 
-## Reto 1.17: El objeto `Error` {#sec-cap10-reto11}
 
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const add = (a, b) => {
-  if(!a || !b){
-    throw new Error("missing parameters");
-  }
-  return a + b;
-}
-
-console.log(add(2, 2));
-console.log(add(2, true));
-console.log(add(2, 0));
-```
-
-**Opciones:**
-
-* A. `4`, `"2true"`, `2`
-* B. `4`, `3`, `Error: missing parameters`
-* C. `"22"`, `"3true"`, `"20"`
-* D. `4`, `3`, `2`
-
-::: {.callout-tip title="Pista" collapse="true"}
-Tener en cuenta los valores `falsy` y la coersión de tipos.
-:::
-
-
-**[Ver solución](#sec-sol-cap10-reto11)**
-
----
-
-## Reto 1.18: Convirtiendo valores a booleanos {#sec-cap1-reto11}
+## Reto 1.14: Convirtiendo valores a booleanos {#sec-cap1-reto14}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -571,11 +439,11 @@ console.log(toBolean(Symbol("I'am a symbol")));
 El objeto `Boolean` permite convertir valores a tipo boolean basandose en los valores `falsy` y `truthy`.
 :::
 
-**[Ver solución](#sec-sol-cap1-reto18)**
+**[Ver solución](#sec-sol-cap1-reto14)**
 
 ---
 
-## Reto 1.19: Operadores de corto circuito {#sec-cap2-reto8}
+## Reto 1.15: Operadores de corto circuito {#sec-cap1-reto15}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -601,4 +469,4 @@ console.log((() => "hi")() || (false && true));
 Los valores falsy y truthy son clave para resolver este reto.
 :::
 
-**[Ver solución](#sec-sol-cap2-reto8)**
+**[Ver solución](#sec-sol-cap1-reto15)**

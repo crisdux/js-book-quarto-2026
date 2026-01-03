@@ -1,8 +1,8 @@
 # Soluciones - El Alcance (Scope)
 
-## Reto 4.1 {#sec-sol-cap10-reto1}
+## Reto 4.1 {#sec-sol-cap4-reto1}
 
-La respuesta del [Reto 4.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 4.1](#sec-cap4-reto1) es:
 
 **A. `{}`**
 
@@ -35,9 +35,9 @@ Siempre declara tus variables con `let` o `const`. Deja que `var` muera y no la 
 
 ---
 
-## Reto 4.2 {#sec-sol-cap7-reto2}
+## Reto 4.2 {#sec-sol-cap4-reto2}
 
-La respuesta del [Reto 4.2](#sec-cap7-reto2) es:
+La respuesta del [Reto 4.2](#sec-cap4-reto2) es:
 
 **A. `60`, `40`**
 
@@ -67,9 +67,9 @@ La variable `z` esta dentro del bloque `if` y no deberiamos poder acceder a ella
 
 ---
 
-## Reto 4.3 {#sec-sol-cap7-reto3}
+## Reto 4.3 {#sec-sol-cap4-reto3}
 
-La respuesta del [Reto 4.3](#sec-cap7-reto3) es:
+La respuesta del [Reto 4.3](#sec-cap4-reto3) es:
 
 **A. `10`, `10`**
 
@@ -81,9 +81,9 @@ La primera función en llamarse es `increaseNumber` que solo se encarga de retor
 
 ---
 
-## Reto 4.4 {#sec-sol-cap7-reto4}
+## Reto 4.4 {#sec-sol-cap4-reto4}
 
-La respuesta del [Reto 4.4](#sec-cap7-reto4) es:
+La respuesta del [Reto 4.4](#sec-cap4-reto4) es:
 
 **A. `"C"`**
 
@@ -93,7 +93,7 @@ Al llamar a `getStatus` debemos tener el cuenta el scope de las variables, recue
 
 ---
 
-## Reto 4.5 {#sec-sol-cap7-reto4}
+## Reto 4.5 {#sec-sol-cap4-reto5}
 
 La respuesta del [Reto 4.5](#sec-cap4-reto5) es:
 
@@ -105,9 +105,9 @@ La respuesta del [Reto 4.5](#sec-cap4-reto5) es:
 
 ---
 
-## Reto 4.6 {#sec-sol-cap7-reto5}
+## Reto 4.6 {#sec-sol-cap4-reto6}
 
-La respuesta del [Reto 4.6](#sec-cap7-reto5) es:
+La respuesta del [Reto 4.6](#sec-cap4-reto6) es:
 
 **D. `ReferenceError`**
 
@@ -131,9 +131,9 @@ Por **hoisting** el resultado seria `undefined` puesto que la **Temporal Dead Zo
 
 ---
 
-## Reto 4.7 {#sec-sol-cap7-reto6}
+## Reto 4.7 {#sec-sol-cap4-reto7}
 
-La respuesta del [Reto 4.7](#sec-cap7-reto6) es:
+La respuesta del [Reto 4.7](#sec-cap4-reto7) es:
 
 **D. `TypeError`, `Fernando`**
 
@@ -149,9 +149,9 @@ Haciendo una analogía para comprederlo mejor, una persona, yo por ejemplo: Cris
 
 ---
 
-## Reto 4.8 {#sec-sol-cap7-reto7}
+## Reto 4.8 {#sec-sol-cap4-reto8}
 
-La respuesta del [Reto 4.8](#sec-cap7-reto7) es:
+La respuesta del [Reto 4.8](#sec-cap4-reto8) es:
 
 **A. `Camila`, `Rodriguez`, `25`**
 
@@ -163,9 +163,9 @@ Por este motivo, `name`, `lastName` y `age` son **variables de scope global** y 
 
 ---
 
-## Reto 4.9 {#sec-sol-cap6-reto8}
+## Reto 4.9 {#sec-sol-cap4-reto9}
 
-La respuesta del [Reto 4.9](#sec-cap6-reto8) es:
+La respuesta del [Reto 4.9](#sec-cap4-reto9) es:
 
 **B. `ReferenceError: Cannot access 'name' before initialization`**
 

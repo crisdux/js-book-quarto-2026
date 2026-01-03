@@ -1,6 +1,6 @@
 # El Alcance (Scope)
 
-## Reto 4.1: Variables sin `var`, `let` o `const` {#sec-cap10-reto1}
+## Reto 4.1: Variables sin `var`, `let` o `const` {#sec-cap4-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -25,12 +25,12 @@ console.log(greetign);
 ¿Qué pasa cuando declaramos una variable sin `var`, `let` o `const`? ¿Piensas que es posible hacer algo así o tendremos algún tipo de error por parte de JavaScript?
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap4-reto1)**
 
 
 ---
 
-## Reto 4.2: Alcance de variables {#sec-cap7-reto2}
+## Reto 4.2: Alcance de variables {#sec-cap4-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -59,11 +59,11 @@ console.log(x + z);
 Diferenciar los diferentes alcances de las variables con `let` y `var`.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto2)**
+**[Ver solución](#sec-sol-cap4-reto2)**
 
 ---
 
-## Reto 4.3: Alcance de variables y paso de parámetros {#sec-cap7-reto3}
+## Reto 4.3: Alcance de variables y paso de parámetros {#sec-cap4-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -95,11 +95,11 @@ console.log(num2);
 La variable `num` tiene alcance global.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto3)**
+**[Ver solución](#sec-sol-cap4-reto3)**
 
 ---
 
-## Reto 4.4: Otra vez el alcance de las variables {#sec-cap7-reto4}
+## Reto 4.4: Otra vez el alcance de las variables {#sec-cap4-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -134,11 +134,11 @@ setTimeout(() => {
 `var` tiene scope de función mientras que `const`scope de bloque.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto4)**
+**[Ver solución](#sec-sol-cap4-reto4)**
 
 ---
 
-## Reto 4.5: `const` y el alcance de bloque {#sec-cap7-reto4}
+## Reto 4.5: `const` y el alcance de bloque {#sec-cap4-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -174,7 +174,7 @@ El valor de una variable `const` solo existe en el bloque donde fue declarada.
 
 ---
 
-## Reto 4.6: Temporal Dead Zone {#sec-cap7-reto5}
+## Reto 4.6: Temporal Dead Zone {#sec-cap4-reto6}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -204,11 +204,11 @@ getName()
 Cuidado con los scopes de las variables, no es lo mismo una variable con scope global y una variable con scope de bloque.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto5)**
+**[Ver solución](#sec-sol-cap4-reto6)**
 
 ---
 
-## Reto 4.7: `const` en primitivos y objetos {#sec-cap7-reto6}
+## Reto 4.7: `const` en primitivos y objetos {#sec-cap4-reto7}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -241,11 +241,11 @@ console.log(person.name);
 `const` actua diferente en objetos y primitivos.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto6)**
+**[Ver solución](#sec-sol-cap4-reto7)**
 
 ---
 
-## Reto 4.8: `var`, `let`, `const` y el alcance global {#sec-cap7-reto7}
+## Reto 4.8: `var`, `let`, `const` y el alcance global {#sec-cap4-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -278,11 +278,11 @@ console.log(getPersonalData());
 Diferenciar entre alcance global y de bloque.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto7)**
+**[Ver solución](#sec-sol-cap4-reto8)**
 
 ---
 
-## Reto 4.9: Nuavamente la Temporal Dead Zone {#sec-cap6-reto8}
+## Reto 4.9: Nuavamente la Temporal Dead Zone {#sec-cap4-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -312,4 +312,4 @@ console.log(test());
 Cuidado con intentar acceder a una variable antes de su declaración.
 :::
 
-**[Ver solución](#sec-sol-cap6-reto8)**
+**[Ver solución](#sec-sol-cap4-reto9)**

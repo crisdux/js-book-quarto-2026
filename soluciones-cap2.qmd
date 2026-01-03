@@ -4,9 +4,9 @@
 
 ---
 
-## Reto 2.1 {#sec-sol-cap10-reto1}
+## Reto 2.1 {#sec-sol-cap2-reto1}
 
-La respuesta del [Reto 2.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 2.1](#sec-cap2-reto1) es:
 
 **B. `"I"`**
 
@@ -16,9 +16,9 @@ Las cadenas de texto en JavaScript son iterables, por ello, al igual que con los
 
 ---
 
-## Reto 2.2 {#sec-sol-cap7-reto2}
+## Reto 2.2 {#sec-sol-cap2-reto2}
 
-La respuesta del [Reto 2.2](#sec-cap7-reto2) es:
+La respuesta del [Reto 2.2](#sec-cap2-reto2) es:
 
 **A. `I love to program`**
 
@@ -41,9 +41,9 @@ Entonces, la función es llamada y regresa únicamente el parámetro que se le p
 
 ---
 
-## Reto 2.3 {#sec-sol-cap7-reto3}
+## Reto 2.3 {#sec-sol-cap2-reto3}
 
-La respuesta del [Reto 2.3](#sec-cap7-reto3) es:
+La respuesta del [Reto 2.3](#sec-cap2-reto3) es:
 
 **C. `Mi nombre es Cris y tengo 25`**
 
@@ -57,9 +57,9 @@ Este método de imprimir por consola no es muy usado, ni siquiera es conocido, p
 
 ---
 
-## Reto 2.4 {#sec-sol-cap7-reto4}
+## Reto 2.4 {#sec-sol-cap2-reto4}
 
-La respuesta del [Reto 2.4](#sec-cap7-reto4) es:
+La respuesta del [Reto 2.4](#sec-cap2-reto4) es:
 
 **A. `["O", "s", "c", "a", "r"]`**
 
@@ -69,9 +69,9 @@ Un `string` es un elemento iterable en JavaScript, por ende es posible usar el `
 
 ---
 
-## Reto 2.5 {#sec-sol-cap4-reto5}
+## Reto 2.5 {#sec-sol-cap2-reto5}
 
-La respuesta del [Reto 2.5](#sec-cap4-reto5) es:
+La respuesta del [Reto 2.5](#sec-cap2-reto5) es:
 
 **A. Los 3 imprimen: `['P','e','p','e']`**
 
@@ -86,9 +86,9 @@ Como le pasamos una cadena vacía entonces `Pepe` se convierte en `['P','e','p',
 
 ---
 
-## Reto 2.6 {#sec-sol-cap7-reto5}
+## Reto 2.6 {#sec-sol-cap2-reto6}
 
-La respuesta del [Reto 2.6](#sec-cap7-reto5) es:
+La respuesta del [Reto 2.6](#sec-cap2-reto6) es:
 
 **B. `Impossible! You should see a therapist after so much JavaScript lol`**
 
@@ -200,9 +200,9 @@ En JavaScript el operador `+` puede significar una suma o una concatenación seg
 
 ---
 
-## Reto 2.10 {#sec-sol-cap10-reto10}
+## Reto 2.10 {#sec-sol-cap2-reto10}
 
-La respuesta del [Reto 2.10](#sec-cap10-reto10) es:
+La respuesta del [Reto 2.10](#sec-cap2-reto10) es:
 
 **D. `string`**
 
@@ -218,9 +218,9 @@ console.log(typeof ("")); //string
 
 ---
 
-## Reto 2.11 {#sec-sol-cap10-reto11}
+## Reto 2.11 {#sec-sol-cap2-reto11}
 
-La respuesta del [Reto 2.11](#sec-cap10-reto11) es:
+La respuesta del [Reto 2.11](#sec-cap2-reto11) es:
 
 **C. `8`, `3`**
 
@@ -232,9 +232,9 @@ Todo lo que este dentro de los corchetes será evaluado como expresión, entonce
 
 ---
 
-## Reto 2.12 {#sec-sol-cap10-reto12}
+## Reto 2.12 {#sec-sol-cap2-reto12}
 
-La respuesta del [Reto 2.12](#sec-cap10-reto12) es:
+La respuesta del [Reto 2.12](#sec-cap2-reto12) es:
 
 **A.** 
 
@@ -257,9 +257,9 @@ El método `repeat` se encarga como su nombre lo dice de repetir `n` veces una c
 
 ---
 
-## Reto 2.13 {#sec-sol-cap10-reto13}
+## Reto 2.13 {#sec-sol-cap2-reto13}
 
-La respuesta del [Reto 2.13](#sec-cap10-reto13) es:
+La respuesta del [Reto 2.13](#sec-cap2-reto13) es:
 
 **D. `"olleh"`**
 

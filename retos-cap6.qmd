@@ -1,6 +1,6 @@
 # Objetos
 
-## Reto 6.1: Copia de objetos por referencia {#sec-cap10-reto1}
+## Reto 6.1: Copia de objetos por referencia {#sec-cap6-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -28,12 +28,12 @@ console.log(d.greeting);
 Recordar las diferencias de las copias por valor y copias por referencia.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap6-reto1)**
 
 
 ---
 
-## Reto 6.2: Objetos y conjuntos {#sec-cap7-reto2}
+## Reto 6.2: Objetos y conjuntos {#sec-cap6-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -62,11 +62,11 @@ set.has(1);
 Recuerda que un `set` no es lo mismo que un objeto.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto2)**
+**[Ver solución](#sec-sol-cap6-reto2)**
 
 ---
 
-## Reto 6.3: Una curiosidad sobre los objetos {#sec-cap7-reto3}
+## Reto 6.3: Una curiosidad sobre los objetos {#sec-cap6-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -90,11 +90,11 @@ console.log(obj);
 Los objetos son estructuras de datos no indexadas.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto3)**
+**[Ver solución](#sec-sol-cap6-reto3)**
 
 ---
 
-## Reto 6.4: Hablemos sobre prototipos {#sec-cap7-reto4}
+## Reto 6.4: Hablemos sobre prototipos {#sec-cap6-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -123,11 +123,11 @@ name.giveLydiaPizza();
 Los objetos son estructuras de datos no indexadas.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto4)**
+**[Ver solución](#sec-sol-cap6-reto4)**
 
 ---
 
-## Reto 6.5: Objeto por referencia {#sec-cap7-reto5}
+## Reto 6.5: Objeto por referencia {#sec-cap6-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -154,11 +154,11 @@ console.log(members);
 Los objetos pasan sus valores por referencia.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto5)**
+**[Ver solución](#sec-sol-cap6-reto5)**
 
 ---
 
-## Reto 6.6: El bucle `for...in` con objetos {#sec-cap7-reto6}
+## Reto 6.6: El bucle `for...in` con objetos {#sec-cap6-reto6}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -188,11 +188,11 @@ for (const item in person) {
 El bucle `for...in` no itera sobre los valores de un objeto.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto6)**
+**[Ver solución](#sec-sol-cap6-reto6)**
 
 ---
 
-## Reto 6.7: Spread operator con objetos {#sec-cap7-reto7}
+## Reto 6.7: Spread operator con objetos {#sec-cap6-reto7}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -218,47 +218,12 @@ console.log(admin);
 El **spread operator** expande las propiedades del objeto. 
 :::
 
-**[Ver solución](#sec-sol-cap7-reto7)**
+**[Ver solución](#sec-sol-cap6-reto7)**
+
 
 ---
 
-## Reto 6.8: Multiples llamadas a una función {#sec-cap6-reto8}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const value = { number: 10 };
-
-const multiply = (x = { ...value }) => {
-  console.log((x.number *= 2));
-};
-
-multiply();
-multiply();
-multiply(value);
-multiply(value);
-```
-
-**Opciones:**
-
-* A. `20`, `40`, `80`, `160`
-* B. `20`, `40`, `20`, `40`
-* C. `20`, `20`, `20`, `40`
-* D. `NaN`, `NaN`, `20`, `40`
-
-::: {.callout-tip title="Pista" collapse="true"}
-Atención al objeto como parámetro en la función y los valores por defecto.
-:::
-
-**[Ver solución](#sec-sol-cap6-reto8)**
-
----
-
-## Reto 6.9: `Object.entries` para iterar objetos {#sec-cap6-reto9}
+## Reto 6.8: `Object.entries` para iterar objetos {#sec-cap6-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -290,11 +255,11 @@ Notar la desestructuración de variables en el bucle `for...of`.
 :::
 
 
-**[Ver solución](#sec-sol-cap6-reto9)**
+**[Ver solución](#sec-sol-cap6-reto8)**
 
 ---
 
-## Reto 6.10: Conjuntos en JavaScript {#sec-cap10-reto10}
+## Reto 6.9: Conjuntos en JavaScript {#sec-cap6-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -325,11 +290,11 @@ for (let item of set) {
 Recordar que el operador `+` puede ser usado para sumar números y para concatenar cadenas de texto.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto10)**
+**[Ver solución](#sec-sol-cap6-reto9)**
 
 ---
 
-## Reto 6.11: Objetos y sus referencias {#sec-cap10-reto11}
+## Reto 6.10: Objetos y sus referencias {#sec-cap6-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -362,11 +327,11 @@ compareMembers(person)
 Cuidado con las referencias de los objetos.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto11)**
+**[Ver solución](#sec-sol-cap6-reto10)**
 
 ---
 
-## Reto 6.12: Acceso a propiedades de objetos y elementos de arreglos {#sec-cap10-reto12}
+## Reto 6.11: Acceso a propiedades de objetos y elementos de arreglos {#sec-cap6-reto11}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -394,11 +359,11 @@ console.log(food)
 La notación de punto sirve para acceder a propiedades de objetos y la notación de corchetes para acceder a elementos de arreglos.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto12)**
+**[Ver solución](#sec-sol-cap6-reto11)**
 
 ---
 
-## Reto 6.13: Logical Nullish Assignment {#sec-cap10-reto13}
+## Reto 6.12: Logical Nullish Assignment {#sec-cap6-reto12}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -425,11 +390,11 @@ console.log(getName({}))
 Recuerda que un valor **nullish** es aquel que evalua `undefined` o `null`.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto13)**
+**[Ver solución](#sec-sol-cap6-reto12)**
 
 ---
 
-## Reto 6.14: Actulizar propiedades de objetos {#sec-cap10-reto14}
+## Reto 6.13: Actulizar propiedades de objetos {#sec-cap6-reto13}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -457,11 +422,11 @@ console.log(persona.nombre);
 Podemos actualizar valores de una propiedad de un objeto con la notación de punto.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto14)**
+**[Ver solución](#sec-sol-cap6-reto13)**
 
 ---
 
-## Reto 6.15: Operador `in` y eliminación de propiedades {#sec-cap10-reto15}
+## Reto 6.14: Operador `in` y eliminación de propiedades {#sec-cap6-reto14}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -494,11 +459,11 @@ console.log("type of music" in band);
 `in` sirve para poder verificar si una propiedad existe en un objeto.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto15)**
+**[Ver solución](#sec-sol-cap6-reto14)**
 
 ---
 
-## Reto 6.16: Propiedades dinámicas de objetos {#sec-cap10-reto16}
+## Reto 6.15: Propiedades dinámicas de objetos {#sec-cap6-reto15}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -528,11 +493,11 @@ console.log(band["na"+"me"])
 La notación de corchetes en los objetos permite acceder a propiedades usando una expresión como clave.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto16)**
+**[Ver solución](#sec-sol-cap6-reto15)**
 
 ---
 
-## Reto 6.17: Trailing commas {#sec-cap10-reto17}
+## Reto 6.16: Trailing commas {#sec-cap6-reto16}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -559,11 +524,11 @@ const dog = {
 Esta sintaxis es común en lenguajes modernos para facilitar el control de versiones al añadir nuevos elementos sin modificar líneas anteriores.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto17)**
+**[Ver solución](#sec-sol-cap6-reto16)**
 
 ---
 
-## Reto 6.18: Algo raro pasa con las palabras reservadas {#sec-cap10-reto18}
+## Reto 6.17: Algo raro pasa con las palabras reservadas {#sec-cap6-reto17}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -591,11 +556,11 @@ console.log(test.for);
 Cuidado con el uso de palabras reservadas como nombres de `keys` en objetos.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto18)**
+**[Ver solución](#sec-sol-cap6-reto17)**
 
 ---
 
-## Reto 6.19: El tipo `Symbol` como llaves de objetos {#sec-array-98-en}
+## Reto 6.18: El tipo `Symbol` como llaves de objetos {#sec-cap6-reto18}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -629,4 +594,152 @@ console.log(Object.keys(person));
 Los valores `Symbol` son únicos en un programa, muy útiles para crear propiedades privadas en objetos.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto19)**
+**[Ver solución](#sec-sol-cap6-reto18)**
+
+---
+
+## Reto 6.19: Acceso a propiedades de objetos {#sec-cap6-reto19}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const colorConfig = {
+  red: true,
+  blue: false,
+  green: true,
+  black: true,
+  yellow: false,
+}
+
+const colors = ["pink", "red", "blue"]
+
+console.log(colorConfig.colors[1])
+```
+
+**Opciones:**
+
+* A. `true`
+* B. `false`
+* C. `undefined`
+* D. `TypeError`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda que las propiedades de los objetos son accedidas por medio de notación de punto `.` y los arreglos son accedidos por medio de notación de corchetes `[]`.
+:::
+
+**[Ver solución](#sec-sol-cap6-reto19)**
+
+---
+
+## Reto 6.20: El objeto `Error` {#sec-cap6-reto20}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const add = (a, b) => {
+  if(!a || !b){
+    throw new Error("missing parameters");
+  }
+  return a + b;
+}
+
+console.log(add(2, 2));
+console.log(add(2, true));
+console.log(add(2, 0));
+```
+
+**Opciones:**
+
+* A. `4`, `"2true"`, `2`
+* B. `4`, `3`, `Error: missing parameters`
+* C. `"22"`, `"3true"`, `"20"`
+* D. `4`, `3`, `2`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Tener en cuenta los valores `falsy` y la coersión de tipos.
+:::
+
+
+**[Ver solución](#sec-sol-cap6-reto20)**
+
+---
+
+## Reto 6.21: Comparación de objetos {#sec-cap6-reto21}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+function checkAge(data) {
+  if (data === { age: 18 }) {
+    console.log("You are an adult!");
+  } else if (data == { age: 18 }) {
+    console.log("You are still an adult.");
+  } else {
+    console.log(`Hmm... You don't have an age I guess`);
+  }
+}
+
+const result = checkAge({ age: 18 });
+console.log(result);
+```
+
+**Opciones:**
+
+* A. `You are an adult!`
+* B. `You are still an adult.`
+* C. `Hmm... You don't have an age I guess`
+* D. `Ninguna de las anteriores`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recordar que los objetos se almacenan en memoria teniendo en cuenta su **referencia** and no su **valor**.
+:::
+
+**[Ver solución](#sec-sol-cap6-reto21)**
+
+---
+
+## Reto 6.22: Más objetos y valores por referencia {#sec-cap6-reto22}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+let object1 = { value: 10 };
+let object2 = object1;
+let object3 = { value: 10 };
+
+console.log(object1 == object2);
+console.log(object1 == object3);
+
+object1.value = 15;
+console.log(object2.value);
+console.log(object3.value);
+```
+
+**Opciones:**
+
+* A. `true`, `false`, `15`, `10`
+* B. `false`, `true`, `10`, `20`
+* C. `true`, `true`, `15`, `20`
+* D. `false`, `false`, `20`, `15`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda cómo funcionan las referencias en JavaScript con los objetos. Piensa en cómo se comportan las asignaciones de objetos y las comparaciones de igualdad con el operador `==`.
+:::
+
+**[Ver solución](#sec-sol-cap6-reto22)**

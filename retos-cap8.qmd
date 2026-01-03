@@ -1,6 +1,6 @@
 # Estructuras de Control Modernas
 
-## Reto 8.1: Excepciones con `try...catch` {#sec-cap10-reto1}
+## Reto 8.1: Excepciones con `try...catch` {#sec-cap8-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -36,7 +36,7 @@ sayHi();
 La sentencia `catch` siempre atrapa los errores.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap8-reto1)**
 
 
 ---

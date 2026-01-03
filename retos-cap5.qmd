@@ -1,6 +1,6 @@
 # Arreglos
 
-## Reto 5.1: Desestructuración de arreglos {#sec-cap10-reto1}
+## Reto 5.1: Desestructuración de arreglos {#sec-cap5-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -25,13 +25,13 @@ console.log(pear);
 Es simplemente una desestructuración de arreglos.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap5-reto1)**
 
 
 
 ---
 
-## Reto 5.2: Parámetros REST {#sec-cap7-reto2}
+## Reto 5.2: Parámetros REST {#sec-cap5-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -58,11 +58,11 @@ getAge(21);
 Los parámetros REST permiten pasar un número variable de argumentos a una función.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto2)**
+**[Ver solución](#sec-sol-cap5-reto2)**
 
 ---
 
-## Reto 5.3: Posiciones indexadas de un arreglo {#sec-cap7-reto3}
+## Reto 5.3: Posiciones indexadas de un arreglo {#sec-cap5-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -87,11 +87,11 @@ console.log(numbers);
 Los arreglos en JavaScript son muy permisivos.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto3)**
+**[Ver solución](#sec-sol-cap5-reto3)**
 
 ---
 
-## Reto 5.4: Entendiendo `reduce` con matrices {#sec-cap7-reto4}
+## Reto 5.4: Entendiendo `reduce` con matrices {#sec-cap5-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -119,11 +119,11 @@ Los arreglos en JavaScript son muy permisivos.
 El segundo parámetro de `reduce` es el valor inicial de `acc`.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto4)**
+**[Ver solución](#sec-sol-cap5-reto4)**
 
 ---
 
-## Reto 5.5: Transformaciones de arreglos con `map()` {#sec-cap7-reto5}
+## Reto 5.5: Transformaciones de arreglos con `map()` {#sec-cap5-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -149,11 +149,11 @@ El segundo parámetro de `reduce` es el valor inicial de `acc`.
 Ojo con la sentencia `return`
 :::
 
-**[Ver solución](#sec-sol-cap7-reto5)**
+**[Ver solución](#sec-sol-cap5-reto5)**
 
 ---
 
-## Reto 5.6: Otra desestructuración de arreglos {#sec-cap7-reto6}
+## Reto 5.6: Otra desestructuración de arreglos {#sec-cap5-reto6}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -181,11 +181,11 @@ console.log(second.toString())
 Es posible omitir posiciones no deseadas del arreglo usando `,` en la desestructuración.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto6)**
+**[Ver solución](#sec-sol-cap5-reto6)**
 
 ---
 
-## Reto 5.7: `Array.push` {#sec-cap7-reto7}
+## Reto 5.7: Agregar elementos con `Array.push` {#sec-cap5-reto7}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -213,11 +213,11 @@ console.log(result);
 ¿El método `push` de los arreglos solo agrega un elemento al final de un arreglo?
 :::
 
-**[Ver solución](#sec-sol-cap7-reto7)**
+**[Ver solución](#sec-sol-cap5-reto7)**
 
 ---
 
-## Reto 5.8: `for...of` vs `for...in` {#sec-cap6-reto8}
+## Reto 5.8: `for...of` vs `for...in` {#sec-cap5-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -248,11 +248,11 @@ for (let item of bands) {
 Ambos sirven para iterar pero no son lo mismo.
 :::
 
-**[Ver solución](#sec-sol-cap6-reto8)**
+**[Ver solución](#sec-sol-cap5-reto8)**
 
 ---
 
-## Reto 5.9: Expresiones en elementos de arreglos {#sec-cap6-reto9}
+## Reto 5.9: Expresiones en elementos de arreglos {#sec-cap5-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -276,11 +276,11 @@ console.log(list)
 Los elementos de un arreglo pueden contener expresiones a ser evaluadas por el interprete de JavaScript.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto10)**
+**[Ver solución](#sec-sol-cap5-reto9)**
 
 ---
 
-## Reto 5.10: Otra vez el método `push` {#sec-cap10-reto10}
+## Reto 5.10: Otra vez el método `push` {#sec-cap5-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -305,11 +305,11 @@ console.log(newList.push(5))
 Notar que no estamos imprimiendo el arreglo `newList` suelto, sino usando el método `push`.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto11)**
+**[Ver solución](#sec-sol-cap5-reto10)**
 
 ---
 
-## Reto 5.11: Parámetros REST en funciones modernas {#sec-cap10-reto11}
+## Reto 5.11: Parámetros REST en funciones modernas {#sec-cap5-reto11}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -336,11 +336,11 @@ getItems(["banana", "apple"], "pear", "orange")
 Cuidado con el orden de los parámetros en las funciones.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto12)**
+**[Ver solución](#sec-sol-cap5-reto11)**
 
 ---
 
-## Reto 5.12: Cuidado con el return implícito de las funciones {#sec-cap10-reto12}
+## Reto 5.12: Cuidado con el return implícito de las funciones {#sec-cap5-reto12}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -370,11 +370,11 @@ console.log(getUser(user))
 Cuidado con la sintaxis de **return implícito** en las funciones flecha.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto13)**
+**[Ver solución](#sec-sol-cap5-reto12)**
 
 ---
 
-## Reto 5.13: Métodos de arreglo inmutables {#sec-cap10-reto13}
+## Reto 5.13: Métodos de arreglo inmutables {#sec-cap5-reto13}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -404,11 +404,11 @@ emojis.splice(1, 2, '.')
 Los métodos inmutables no modifican el arreglo original.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto14)**
+**[Ver solución](#sec-sol-cap5-reto13)**
 
 ---
 
-## Reto 5.14: `length` como un setter {#sec-cap10-reto14}
+## Reto 5.14: `length` como un setter {#sec-cap5-reto14}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -433,11 +433,11 @@ console.log(numbers);
 `length` no solo sirve para calcular la longitud de un iterable, también puede usarse para establecer el número de elementos.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto15)**
+**[Ver solución](#sec-sol-cap5-reto14)**
 
 ---
 
-## Reto 5.15: ¿`typeof` para arreglos? {#sec-cap10-reto15}
+## Reto 5.15: ¿`typeof` para arreglos? {#sec-cap5-reto15}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -461,11 +461,11 @@ console.log(Array.isArray(arr));
 `Array.isArray` es un método que nos permite comprobar si una variable es un arreglo o no.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto16)**
+**[Ver solución](#sec-sol-cap5-reto15)**
 
 ---
 
-## Reto 5.16: El método `flat` de los arreglos {#sec-cap10-reto16}
+## Reto 5.16: El método `flat` de los arreglos {#sec-cap5-reto16}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -489,11 +489,11 @@ console.log(numbers.flat());
 `flat` permite aplanar arreglos en JavaScript.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto17)**
+**[Ver solución](#sec-sol-cap5-reto16)**
 
 ---
 
-## Reto 5.17: `forEach` y `console.count` {#sec-cap10-reto17}
+## Reto 5.17: `forEach` y `console.count` {#sec-cap5-reto17}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -528,11 +528,11 @@ default:5
 `console.count` es un método que cuenta las veces que se ejecuta una acción, en este caso una función.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto18)**
+**[Ver solución](#sec-sol-cap5-reto17)**
 
 ---
 
-## Reto 5.18: Conociendo `at` {#sec-cap10-reto18}
+## Reto 5.18: Conociendo `Array.at` {#sec-cap5-reto18}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -561,11 +561,11 @@ console.log(teachers.at(-3.3));
 `at` es un método relativamente nuevo que permite acceder a un elemento de un array por su índice. 
 :::
 
-**[Ver solución](#sec-sol-cap10-reto19)**
+**[Ver solución](#sec-sol-cap5-reto18)**
 
 ---
 
-## Reto 5.19: Verificar si un arreglo esta vacío {#sec-cap10-reto19}
+## Reto 5.19: Verificar si un arreglo esta vacío {#sec-cap5-reto19}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -593,11 +593,11 @@ console.log(f([]));
 `length` verifica cuantos elementos tiene un arreglo.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto20)**
+**[Ver solución](#sec-sol-cap5-reto19)**
 
 ---
 
-## Reto 5.20: ¿Suma de arreglos? {#sec-cap7-reto20}
+## Reto 5.20: ¿Suma de arreglos? {#sec-cap5-reto20}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -622,4 +622,34 @@ console.log(a + b);
 REcuerda que el operador `+` concatena cadenas de texto o hace sumas aritmeticas.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto21)**
+**[Ver solución](#sec-sol-cap5-reto20)**
+
+---
+
+## Reto 5.21: Desestructuración de arreglos y `length` {#sec-cap5-reto21}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const names = ["Ana", "Sofia", "Carmen", ...["Cris"]];
+const [, , , myName] = names;
+console.log(myName["length"]);
+```
+
+**Opciones:**
+
+* A. `SyntaxError`
+* B. `6`
+* C. `5`
+* D. `4`
+
+::: {.callout-tip title="Pista" collapse="true"}
+En una desestructuración de arreglos es muy importante tener en cuenta que los elementos estan debidamente indexados y el orden de los mismos si importan.
+:::
+
+
+**[Ver solución](#sec-sol-cap5-reto21)**

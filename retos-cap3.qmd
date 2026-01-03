@@ -1,6 +1,6 @@
 # Operadores de Igualdad y Comparación
 
-## Reto 3.1: Igualdad débil vs Igualdad estricta {#sec-cap10-reto1}
+## Reto 3.1: Igualdad débil vs Igualdad estricta {#sec-cap3-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -17,12 +17,12 @@ console.log(false === 0) // false
 Notar la comparación de variables con igualdad débil e igualdad estricta.
 :::
 
-**[Ver solución](#sec-sol-cap10-reto1)**
+**[Ver solución](#sec-sol-cap3-reto1)**
 
 
 ---
 
-## Reto 3.2: Comparación de valores falsy {#sec-cap7-reto2}
+## Reto 3.2: Comparación de valores falsy {#sec-cap3-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -41,11 +41,11 @@ Siendo `null` y `undefined` valores falsy, ¿por qué pasa esto?
 Notar que todos los valores de la comparación son considerados valores falsy para el interprete de JavaScript 
 :::
 
-**[Ver solución](#sec-sol-cap7-reto2)**
+**[Ver solución](#sec-sol-cap3-reto2)**
 
 ---
 
-## Reto 3.3: Igualdad estricta con `NaN` {#sec-cap7-reto3}
+## Reto 3.3: Igualdad estricta con `NaN` {#sec-cap3-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -63,11 +63,11 @@ console.log(NaN === NaN) // false
 Piensa en la naturaleza de `NaN`. 
 :::
 
-**[Ver solución](#sec-sol-cap7-reto3)**
+**[Ver solución](#sec-sol-cap3-reto3)**
 
 ---
 
-## Reto 3.4: Comparaciones entre primitivos y objetos {#sec-cap7-reto4}
+## Reto 3.4: Comparaciones entre primitivos y objetos {#sec-cap3-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -96,78 +96,4 @@ console.log(b === c);
 Notar la diferencia entre `==` y `===`. Notar que `b` es un objeto y no primitivo.
 :::
 
-**[Ver solución](#sec-sol-cap7-reto4)**
-
----
-
-## Reto 3.5: Comparación de objetos {#sec-cap4-reto5}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-function checkAge(data) {
-  if (data === { age: 18 }) {
-    console.log("You are an adult!");
-  } else if (data == { age: 18 }) {
-    console.log("You are still an adult.");
-  } else {
-    console.log(`Hmm... You don't have an age I guess`);
-  }
-}
-
-const result = checkAge({ age: 18 });
-console.log(result);
-```
-
-**Opciones:**
-
-* A. `You are an adult!`
-* B. `You are still an adult.`
-* C. `Hmm... You don't have an age I guess`
-* D. `Ninguna de las anteriores`
-
-::: {.callout-tip title="Pista" collapse="true"}
-Recordar que los objetos se almacenan en memoria teniendo en cuenta su **referencia** y no su **valor**.
-:::
-
-**[Ver solución](#sec-sol-cap4-reto5)**
-
----
-
-## Reto 3.6: Más objetos y valores por referencia {#sec-cap7-reto5}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-let object1 = { value: 10 };
-let object2 = object1;
-let object3 = { value: 10 };
-
-console.log(object1 == object2);
-console.log(object1 == object3);
-
-object1.value = 15;
-console.log(object2.value);
-console.log(object3.value);
-```
-
-**Opciones:**
-
-* A. `true`, `false`, `15`, `10`
-* B. `false`, `true`, `10`, `20`
-* C. `true`, `true`, `15`, `20`
-* D. `false`, `false`, `20`, `15`
-
-::: {.callout-tip title="Pista" collapse="true"}
-Recuerda cómo funcionan las referencias en JavaScript con los objetos. Piensa en cómo se comportan las asignaciones de objetos y las comparaciones de igualdad con el operador `==`.
-:::
-
-**[Ver solución](#sec-sol-cap7-reto5)**
+**[Ver solución](#sec-sol-cap3-reto4)**

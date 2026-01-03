@@ -1,8 +1,8 @@
 # Soluciones - Funciones
 
-## Reto 7.1 {#sec-sol-cap10-reto1}
+## Reto 7.1 {#sec-sol-cap7-reto1}
 
-La respuesta del [Reto 7.1](#sec-cap10-reto1) es:
+La respuesta del [Reto 7.1](#sec-cap7-reto1) es:
 
 **A. `No pasa nada, es totalmente correcto.`**
 
@@ -173,3 +173,55 @@ function multiply(a){
 Acá se observa mejor que `multiply` regresa una función anónima que realiza la operación del producto, es mucho más sencillo usar retornos implícitos para poder escribir lo mismo en una sola línea como en el ejemplo original.
 
 `test` recibe 2 parámetros, uno de ellos es una función que en el ejemplo es `console.log` de JavaScript nativo, esto es motivo suficiente para que sea considerada una **Higher Order Function**.
+
+---
+
+## Reto 7.8 {#sec-sol-cap7-reto8}
+
+La respuesta del [Reto 7.8](#sec-cap7-reto8) es:
+
+**C. `string`**
+
+**Explicación:**
+
+La función `sayHi` regresa una otra función de tipo flecha, dicha función es anónima y solo devuelve la cadena `Hi JavaScript`, el detalle acá es que esta función anónima una vez regresada es inmediatamente llamada.
+
+Entonces `sayHi` será igual a la cadena `Hi Javascript` y en conclusión su `typeof` igual a `string`.
+
+Podríamos ver también este ejemplo si extraemos la función anónima y escribimos en una función auxiliar por aparte, de la siguente manera:
+
+```js
+const aux = () => {
+  return "Hi Javascript!"
+}
+
+const sayHi = () => {
+  return aux();
+}
+
+console.log(typeof sayHi()); // string
+```
+
+---
+
+## Reto 7.9 {#sec-sol-cap7-reto9}
+
+La respuesta del [Reto 7.9](#sec-cap7-reto9) es:
+
+**C. `20`, `20`, `20`, `40`**
+
+**Explicación:**
+
+Hay que concentrarse en el orden en que se llaman las funciones para comprender que es lo que pasa acá.
+
+**Primera llamada:**
+A `multiply` no le pasamos ningún parámetro, por ende, toma el parámetro por defecto `x` que es un objeto desestructurado cuya key `number` tiene el valor de `10`. Entonces `x.number *= 2` nos retorna `20`.
+
+**Segunda llamada:**
+Similar a la primera llamada, hacemos lo mismo, entonces obtenemos nuevamente `20`.
+
+**Tercera llamada:**
+A `multiply` en su llamada le pasamos el argumento `value` por lo que la función ahora ignora el parámetro por defecto. `number` es nuevamente `10`, por ello el resultado de la multiplicación nuevamente será `20`.
+
+**Cuarta llamada:**
+Similar a la tercera llamada, pero el valor de `value` actual es `20` que fue el resultado de la tercera llamada, entonces ahora `x.number *= 2`, será `40`.
