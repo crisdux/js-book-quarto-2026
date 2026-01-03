@@ -1,0 +1,395 @@
+# Cadenas
+
+## Reto 2.1: Quiero pizza {#sec-cap10-reto1}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log("I want pizza"[0])
+```
+
+**Opciones:**
+
+* A. `"""`
+* B. `"I"`
+* C. `SyntaxError`
+* D. `undefined`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Las cadenas, al igual que los arreglos, son elementos iterables.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto1)**
+
+---
+
+## Reto 2.2: Interpolación de cadenas {#sec-cap7-reto2}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(`${(x => x)('I love')} to program`)
+```
+
+**Opciones:**
+
+* A. `I love to program`
+* B. `undefined to program`
+* C. `${(x => x)('I love') to program`
+* D. `TypeError`
+
+::: {.callout-tip title="Pista" collapse="true"}
+En las plantillas con backticks, todo lo que este dentro de `{}` se evalua como una expresión de JavaScript.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto2)**
+
+---
+
+## Reto 2.3: Interpolación de cadenas clásico {#sec-cap7-reto3}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+let name = "Cris";
+let age = 25;
+
+console.log("My name is %s and I am %d", name, age);
+```
+
+**Opciones:**
+
+* A. `My name is %s and I am %d`
+* B. `SyntaxError`
+* C. `My name is Cris and I am 25`
+* D. `Ninguna de las anteriores`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Cuidado con los comodines `%s` y `%d`.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto3)**
+
+---
+
+## Reto 2.4: Spread operator con cadenas {#sec-cap7-reto4}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log([..."Oscar"])
+```
+
+**Opciones:**
+
+* A. `["O", "s", "c", "a", "r"]`
+* B. `["Oscar"]`
+* C. `[[], "Oscar"]`
+* D. `[["O", "s", "c", "a", "r"]]`
+
+::: {.callout-tip title="Pista" collapse="true"}
+El **spread operator** permite expandir un iterable en sus elementos.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto4)**
+
+---
+
+## Reto 2.5: Multiples maneras de expandir cadenas {#sec-cap4-reto5}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const name = "Pepe";
+
+console.log(name.split(""));
+console.log([...name]);
+console.log(Array.from(name));
+```
+
+**Opciones:**
+
+* A. Los 3 imprimen: `['P','e','p','e']`
+* B. `['P','e','p','e']` , `[]`, 
+`['P','e','p','e']`
+* C. `['Pepe']` , `['P','e','p','e']`, 
+`['P','e','p','e']`
+* D. `Pepe`, `Pepe`, `Pepe`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Existen muchos caminos para llegar a Roma.
+:::
+
+**[Ver solución](#sec-sol-cap4-reto5)**
+
+---
+
+## Reto 2.6: Backticks y el operador de corto circuito `and` {#sec-cap7-reto5}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const output = `${[] && 'Im'}possible!
+You should${'' && `n't`} see a therapist after so much JavaScript lol`
+```
+
+**Opciones:**
+
+* A. `possible! You should see a therapist after so much JavaScript lol`
+* B. `Impossible! You should see a therapist after so much JavaScript lol`
+* C. `possible! You shouldn't see a therapist after so much JavaScript lol`
+* D. `Impossible! You shouldn't see a therapist after so much JavaScript lol`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recordar las tablas de verdad para saber cuando se ejecuta el operador de corto circuito.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto5)**
+
+---
+
+## Reto 2.7: ¿Concatenaciones o sumas aritméticas? {#sec-cap2-reto7}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(3 + 4 + "5");
+```
+
+**Opciones:**
+
+* A. `"345"`
+* B. `"75"`
+* C. `12`
+* D. `75`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Los números se suman, las cadenas se concatenan.
+:::
+
+**[Ver solución](#sec-sol-cap2-reto7)**
+
+---
+
+## Reto 2.8: Restas de cadenas y números {#sec-cap2-reto8}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(typeof("22" - 0))
+```
+
+**Opciones:**
+
+* A. `number`
+* B. `string`
+* C. `object`
+* D. `TypeError`
+
+::: {.callout-tip title="Pista" collapse="true"}
+El operdor `-` siempre representa una resta aritmética en JavaScript.
+:::
+
+**[Ver solución](#sec-sol-cap2-reto8)**
+
+---
+
+## Reto 2.9: Operadores `+` y `-` con cadenas y números {#sec-cap2-reto9}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const x = "111"
+const y = 11
+let z = "1"
+
+console.log(x + y)
+console.log(y - z)
+```
+
+**Opciones:**
+
+* A. `122`, `10`
+* B. `"11111"`, `1`
+* C. `"11111"`, `10`
+* D. `122`, `"111"`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Diferenciar una suma artimética de una concatenación de cadenas.
+:::
+
+**[Ver solución](#sec-sol-cap2-reto9)**
+
+---
+
+## Reto 2.10: `typeof` de expresiones extrañas {#sec-cap10-reto10}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log(typeof([] + []));
+```
+
+**Opciones:**
+
+* A. `undefined`
+* B. `number`
+* C. `object`
+* D. `string`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda el el operador `+` sirve para hacer concatenaciones de cadenas.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto10)**
+
+---
+
+## Reto 2.11: `length` en cadenas y arreglos {#sec-cap10-reto11}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const band = "Coldplay";
+const songs = ["Yellow", "Fix You", "Trouble"];
+
+console.log(band["length"]);
+console.log(songs["len"+"gth"]);
+```
+
+**Opciones:**
+
+* A. `length`, `3`
+* B. `8`, `SyntaxError`
+* C. `8`, `3`
+* D. `SyntaxError`, `SyntaxError`
+
+
+::: {.callout-tip title="Pista" collapse="true"}
+`length` sirve para calcular la longitud de un iterable como una cadena o un arreglo.
+:::
+
+
+**[Ver solución](#sec-sol-cap10-reto11)**
+
+---
+
+## Reto 2.12: El método `repeat` de las cadenas {#sec-cap10-reto12}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log("--- Menu ---");
+console.log("tea" + ".".repeat(5) + ":" + "$1.50");
+console.log("coffee" + ".".repeat(3.2) + ":" + "$3.75");
+console.log("beer" + ".".repeat(-1) + ":" + "$5.00");
+```
+
+**Opciones:**
+
+* A. 
+
+```js
+--- Menu ---
+tea.....:$1.50
+coffee..:$3.75
+RangeError: repeat count must be non-negative
+```
+* B. 
+
+```js
+--- Menu ---
+tea.....:$1.50
+coffee..:$3.75
+beer....:$5.00
+```
+
+* C. 
+
+```js
+--- Menú ---
+té.....:$1.50
+RangeError: repeat count must be non-decimal numbers
+RangeError: repeat count must be non-negative numbers
+```
+
+::: {.callout-tip title="Pista" collapse="true"}
+`repeat` es un método de cadenas poco conocido pero muy útil para repetir cadenas de manera controlada.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto12)**
+
+---
+
+## Reto 2.13: Invertir una cadena con `split`, `reverse` y `join` {#sec-cap10-reto13}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+console.log("hello".split("").reverse().join("")); 
+```
+
+**Opciones:**
+
+* A. `['h','e','l','l','o'];`
+* B. `['o','l','l','e','h']`
+* C. `"hello"`
+* D. `"olleh"`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Cuidado con imprimir una cadena o un arreglo. Ojo al método `join`.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto13)**

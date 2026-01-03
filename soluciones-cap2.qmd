@@ -1,0 +1,282 @@
+# Soluciones - Cadenas
+
+
+
+---
+
+## Reto 2.1 {#sec-sol-cap10-reto1}
+
+La respuesta del [Reto 2.1](#sec-cap10-reto1) es:
+
+**B. `"I"`**
+
+**Explicación:**
+
+Las cadenas de texto en JavaScript son iterables, por ello, al igual que con los arreglos es posible acceder a sus caracteres individuales con la notación de corchetes.
+
+---
+
+## Reto 2.2 {#sec-sol-cap7-reto2}
+
+La respuesta del [Reto 2.2](#sec-cap7-reto2) es:
+
+**A. `I love to program`**
+
+**Explicación:**
+
+Al usar los **backtiks de ES6**, las expresiones se evaluan primero.
+
+En este caso la expresión completa es:
+
+```js
+${(x => x)('I love')}
+```
+
+Donde:
+* `(x => x)` es una función anónima de tipo flecha, que recibe un parámetro `x` y con un **return implícito** lo devuelve.
+
+* `('I love')` es la llamada a la función anónima, acá pasamos como argumento a la función la cadena `I love`.
+
+Entonces, la función es llamada y regresa únicamente el parámetro que se le pasa. Por ello la respuesta es `I love to program`.
+
+---
+
+## Reto 2.3 {#sec-sol-cap7-reto3}
+
+La respuesta del [Reto 2.3](#sec-cap7-reto3) es:
+
+**C. `Mi nombre es Cris y tengo 25`**
+
+**Explicación:**
+
+En JavaScript como en Java y otros lenguajes de programación es posible usar **sustituciones de variables** con el operador `%` seguido de un caracter que especifica el tipo de dato que se pretende imprimir.
+
+En este caso, `$s` reemplaza un `string` (`"Cris"`) y `%d` reemplaza un valor decimal o dígito numérico (`25`). 
+
+Este método de imprimir por consola no es muy usado, ni siquiera es conocido, pero esta bueno saber que existe.
+
+---
+
+## Reto 2.4 {#sec-sol-cap7-reto4}
+
+La respuesta del [Reto 2.4](#sec-cap7-reto4) es:
+
+**A. `["O", "s", "c", "a", "r"]`**
+
+**Explicación:**
+
+Un `string` es un elemento iterable en JavaScript, por ende es posible usar el `spread operator` directamente obteniendo la propagación de la cadena letra por letra.
+
+---
+
+## Reto 2.5 {#sec-sol-cap4-reto5}
+
+La respuesta del [Reto 2.5](#sec-cap4-reto5) es:
+
+**A. Los 3 imprimen: `['P','e','p','e']`**
+
+**Explicación:**
+
+* `split` es un **String Method** que se encarga de convertir una cadena en arreglo, donde cada elemento del arreglo lo determina el separador que recibe `split` como parámetro. 
+Como le pasamos una cadena vacía entonces `Pepe` se convierte en `['P','e','p','e']`.
+
+* Spread Operator (`...`) expandirá o propagará la cadena `Pepe` en `['P','e','p','e']`. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
+
+* `Array.from` es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa `['P','e','p','e']`.
+
+---
+
+## Reto 2.6 {#sec-sol-cap7-reto5}
+
+La respuesta del [Reto 2.6](#sec-cap7-reto5) es:
+
+**B. `Impossible! You should see a therapist after so much JavaScript lol`**
+
+**Explicación:**
+
+Muchas cosas que analizar en este ejemplo.
+
+La sintaxis de backticks, comillas simples invertidas o comillas francesas (alt+96) sirven para evaluar expresiones dentro de cadenas de texto.
+
+**Primera expresión a evaluar:** 
+
+En `${[] && 'Im'}` tenemos el operador de **corto circuito** `&&`. 
+
+Para usar los operadores de corto circuito debemos tener en cuanta los valores `truthy` y `falsy`. 
+
+Si la primera parte de la expresión evalua como `truthy` entonces ejecutamos la segunda parte de la expresión. 
+
+Los valores `truthy` son:
+
+* `true`
+* `{}`
+* `[]`
+* Cualquier valor de tipo `number` (`42`, `-56`, `1.5`, `-6.33`)
+* Cualquier `string` que no sea vacío (`"0"`, `"Hola mundo"`, `"false"`)
+* El objeto `Date` (`new Date()`)
+
+Volviendo al ejemplo, un arreglo vacio `[]` es `truthy` entonces se ejecuta la segunda parte de la expresión, osea, el `string` `'Im'`.
+
+**Segunda expresión a evaluar:** 
+
+En `${'' && `n't`}` nuevamente tenemos el **operador de corto circuito** `&&`, esta vez la primera parte de la expresión es un valor `falsy`.
+
+Los valores `falsy` son:
+
+* `false`
+* `0`
+* `""` (cualquier cadena vacía)
+* `undefined`
+* `null`
+* `NaN`
+
+La primera parte de la expresión es una cadena vacia que vendría a representar un valor `falsy` y por ello la segunda parte de la expresión `n't` no se ejecuta.
+
+En conclusión, la respuesta es: `Impossible! You should see a therapist after so much JavaScript lol`
+
+---
+
+## Reto 2.7 {#sec-sol-cap2-reto7}
+
+La respuesta del [Reto 2.7](#sec-cap2-reto7) es:
+
+**B. `"75"`**
+
+**Explicación:**
+
+El código JavaScript se ejecuta de arriba hacia abajo y de izquierda a derecha.
+
+Primero realizamos la suma `3 + 4`, puesto que ambos son  de tipo `number` obtenemos `7`.
+
+Ahora tenemos `7 + "5"`, como `"5"` es de tipo `string`, ahora realizamos una concatenación de valores y por `coerción de tipos` el resultado final es `"75"` como `string`.
+
+---
+
+## Reto 2.8 {#sec-sol-cap2-reto8}
+
+La respuesta del [Reto 2.8](#sec-cap2-reto8) es:
+
+**A. `number`**
+
+**Explicación:**
+
+Podemos convertir un `string` valido a `number` tan solo restandole `0`.
+
+Es un hack interesante y una alternativa valida a usar el objeto `Number`, la función `parseInt` o el operador `+`.
+
+El operador `-` solo cumple la tarea de realizar una resta en JavaScript, cuando se lo aplicamos a un `string` valido entonces el interprete tiene que convertir dicha cadena a `number` y luego realizar la operación, entonces nos aprovechamos de que el `0` es neutro aditivo para que la conversión sea exitosa.
+
+Si intentamos usar este hack con cadenas no numéricas la conversión se realiza pero obtendremos un `NaN` como resultado, así que mucho ojo con eso.
+
+```js
+console.log(typeof("aaa" - 0)); // number
+console.log(("aaa" - 0)); // NaN
+```
+
+Personalmente no recomiendo hacer conversiones de tipos usando este hack, hay mejores maneras de hacerlo. Considera a este reto meramente ilustrativo y didáctico.
+
+---
+
+## Reto 2.9 {#sec-sol-cap2-reto9}
+
+La respuesta del [Reto 2.9](#sec-cap2-reto9) es:
+
+**C. `"11111"`, `10`**
+
+**Explicación:**
+
+Vayamos por partes.
+
+En el primer `console.log(x + y)`:
+Intentamos sumar las variables `x` y `y`, pero `x` es una cadena y `y` es un número, por **coersión de tipos** la operación ya no será una suma aritmética sino una concatenación de cadenas. Dicho en otras palabras la variable `y` sera convetida implicitamente por el interprete de JavaScript a cadena, por lo que el resultado será `"11111"`.
+
+En el segundo `console.log(y - z)`:
+Intentamos restar las variables `y` y `z`, pero `y` es una cadena y `z` es un número, por **coersión de tipos** la operación será una resta artimética de toda la vida. Dicho en otras palabras la variable `z` sera convetida implicitamente por el interprete de JavaScript a número, por lo que el resultado será `10`.
+
+::: {.callout-tip}
+## Tip
+En JavaScript el operador `+` puede significar una suma o una concatenación según el caso de uso, pero el operador `-` siempre significara una resta artimética.
+:::
+
+---
+
+## Reto 2.10 {#sec-sol-cap10-reto10}
+
+La respuesta del [Reto 2.10](#sec-cap10-reto10) es:
+
+**D. `string`**
+
+**Explicación:**
+
+El operador `+` por lo general intentará realizar una concateneción, en este caso, el interprete de JavaScript, por **coerción de tipos** intentará convertir los arreglos a cadenas de texto, haciendo algo como esto aunque no lo veamos:
+
+```js
+console.log(typeof ([].toString() + [].toString())); 
+console.log(typeof ("" + ""));
+console.log(typeof ("")); //string
+```
+
+---
+
+## Reto 2.11 {#sec-sol-cap10-reto11}
+
+La respuesta del [Reto 2.11](#sec-cap10-reto11) es:
+
+**C. `8`, `3`**
+
+**Explicación:**
+
+Tanto cadenas como arreglos son iterables, entonces podemos usar la nomenclatura de corchetes para acceder a sus valores.
+
+Todo lo que este dentro de los corchetes será evaluado como expresión, entonces ambos casos se ejecutaran correctamente, el primero solo ejecuta el método `length` y el segundo concatena lascadenas `"len"+"gth"` para finalmente ejecutar `length` para el arreglo y calcular su correspondiente longitud.
+
+---
+
+## Reto 2.12 {#sec-sol-cap10-reto12}
+
+La respuesta del [Reto 2.12](#sec-cap10-reto12) es:
+
+**A.** 
+
+```js
+--- Menu ---
+tea.....:$1.50
+coffee..:$3.75
+RangeError: repeat count must be non-negative
+```
+
+**Explicación:**
+
+El método `repeat` se encarga como su nombre lo dice de repetir `n` veces una cadena bajo ciertas condiciones:
+
+* `n` debe ser un número entre `0` e infinito que no desborde el tamaño máximo para una cadena (`2^28 - 1`).
+
+* Sí `n` es un decimal (como en el ejemplo) entonces JavaScript redondea **hacia abajo** dicho número y ejecuta la operación con normalidad.
+
+* Sí `n` es un número negativo lanzará un `RangeError` indicando que no se pueden usar negativos.
+
+---
+
+## Reto 2.13 {#sec-sol-cap10-reto13}
+
+La respuesta del [Reto 2.13](#sec-cap10-reto13) es:
+
+**D. `"olleh"`**
+
+**Explicación:**
+
+Estos 3 métodos de cadenas se preguntan mucho en entrevistas.
+
+Veamos paso por paso que sucede:
+
+* Aplicamos `split`:
+
+`split` convierte una cadena en arreglo dependiendo del parámetro que se le pase, en este caso una cedena vacía: `['h','e','l','l','o']`.
+
+* Aplicamos `reverse`:
+
+`reverse` es un método de arreglos, invierte todos los elementos del arreglo: `['o','l','l','e','h']`.
+
+* Aplicamos `join`:
+
+`join` es un método de arreglos que convierte un arreglo en cadena nuevamente dependiendo del parámetro que se le pase, en este caso una cadena vacía:  `"olleh"`
