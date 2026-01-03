@@ -1,6 +1,6 @@
-# Objetos Globales y Utilidades
+# Programación Asíncrona
 
-## Reto 9.1: El segundo parámetro de `JSON.stringify` {#sec-cap9-reto1}
+## Reto 9.1: Simulando asincronía con `setTimeOut()` {#sec-cap10-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -9,101 +9,124 @@
 **¿Qué imprime este código?**
 
 ```js
-const settings = {
-  username: "asterion",
-  level: 80,
-  health: 25
-};
+const foo = () => console.log("First");
+const bar = () => setTimeout(() => console.log("Second"));
+const baz = () => console.log("Third");
 
-const data = JSON.stringify(settings, ["level", "health"]);
-console.log(data);
+bar();
+foo();
+baz();
 ```
 
-**Pista:** `JSON.stringify` convierte un objeto a cadena. 
+**Opciones:**
 
-* A. `'{"level":80, "health":25}'`
-* B. `'{"username": "asterion"}'`
-* C. `'["level", "health"]'`
-* D. `'{"username": "asterion", "level":80, "health":25}'`
+* A. `First`, `Second`, `Third`
+* B. `First`, `Third`, `Second`
+* C. `Second`, `First`, `Third`
+* D. `Second`, `Third`, `First`
 
-**[Ver solución](#sec-sol-cap9-reto1)**
+::: {.callout-tip title="Pista" collapse="true"}
+`setTimeout` es una Web API.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto1)**
+
 
 ---
 
-## Reto 9.2: Multiples maneras de expandir cadenas {#sec-cap9-reto2}
+## Reto 9.2: Uso de `setInterval` {#sec-cap4-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+**Básico**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-const name = "Pepe";
-
-console.log(name.split(""));
-console.log([...name]);
-console.log(Array.from(name));
+setInterval(() => console.log("Hi"), 1000);
 ```
 
-**Pista:** Existen muchos caminos para llegar a Roma.
+**Opciones:**
 
-* A. Los 3 imprimen: `['P','e','p','e']`
-* B. `['P','e','p','e']` , `[]`, 
-`['P','e','p','e']`
-* C. `['Pepe']` , `['P','e','p','e']`, 
-`['P','e','p','e']`
-* D. `Pepe`, `Pepe`, `Pepe`
+* A. `1000`
+* B. `Hi 1000 veces`
+* C. `Hi cada segundo`
+* D. `undefined`
+
+::: {.callout-tip title="Pista" collapse="true"}
+`setInterval` es una Web API que se ejecuta cada x milisegundos.
+:::
 
 **[Ver solución](#sec-sol-cap9-reto2)**
 
 ---
 
-## Reto 9.3: Invertir una cadena con `split`, `reverse` y `join` {#sec-cap9-reto3}
+## Reto 9.3: Funciones asíncronas {#sec-cap10-reto13}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+**Intermedio**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-console.log("hello".split("").reverse().join("")); 
+async function getData() {
+  return await Promise.resolve("I made it!");
+}
+
+const data = getData();
+console.log(data);
 ```
 
-**Pista:** Cuidado con imprimir una cadena o un arreglo. Ojo al método `join`.
+**Opciones:**
 
-* A. `['h','e','l','l','o'];`
-* B. `['o','l','l','e','h']`
-* C. `"hello"`
-* D. `"olleh"`
+* A. `"I made it!"`
+* B. `Promise {<resolved>: "I made it!"}`
+* C. `Promise {<pending>}`
+* D. `undefined`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Las promesas son objetos especiales de JavaScript que solo tienen tres posibles estados: promesa resuelta, promesa rechazada o promesa pendiente.
+:::
 
 **[Ver solución](#sec-sol-cap9-reto3)**
 
 ---
 
-## Reto 9.4: Redondeo de números con el objeto `Math` {#sec-cap9-reto4}
+## Reto 9.4: Promesas y funciones asíncronas {#sec-cap10-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+**Avanzado**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-console.log(Math.floor(9.8));
-console.log(Math.ceil(9.8));
-console.log(Math.round("9.8"));
+const myPromise = () => Promise.resolve('I have resolved!')
+
+function firstFunction() {
+  myPromise().then(res => console.log(res))
+  console.log('second')
+}
+
+async function secondFunction() {
+  console.log(await myPromise())
+  console.log('second')
+}
+
+firstFunction()
+secondFunction()
 ```
 
-**Pista:** Algunos métodos redondean hacia abajo, otros hacia arriba y otros redondean al número más cercano.
+**Opciones:**
 
-* A. `10`, `10`, `"10"`
-* B. `9`, `10`, `10`
-* C. `9`, `9`, `9`
-* D. `10`, `10`, `"9"`
+* A. `I have resolved!`, `second` y `I have resolved!`, `second`
+* B. `second`, `I have resolved!` y `second`, `I have resolved!`
+* C. `I have resolved!`, `second` y `second`, `I have resolved!`
+* D. `second`, `I have resolved!` y `I have resolved!`, `second`
 
-**[Ver solución](#sec-sol-cap9-reto4)**
+::: {.callout-tip title="Pista" collapse="true"}
+Recordar que cuando tenemos sintaxis `async await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.
+:::
 
----
-
+**[Ver solución](#sec-sol-cap10-reto2)**

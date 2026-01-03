@@ -1,78 +1,73 @@
-# Soluciones - Objetos Globales y Utilidades
+# Soluciones - Programación Asíncrona
 
-## Reto 9.1 {#sec-sol-cap9-reto1}
+## Reto 9.1 {#sec-sol-cap10-reto1}
 
-La respuesta del [Reto 9.1](#sec-cap9-reto1) es:
+La respuesta del [Reto 9.1](#sec-cap10-reto1) es:
 
-**A: `'{"level":19, "health":90}'`**
+**B. `First`, `Third`, `Second`**
 
 **Explicación:**
 
-`JSON.stringify` puede recibir un segundo parámetro opcional denominado `replacer`, puede ser una función o un arreglo, y se encarga de hacer un filtro de las propiedades del objeto que deseamos convertir a `string`, en el ejemplo solo deseamos convertir las propiedades `["level", "health"]`, ignorando `username`. 
+Para comprender la respuesta es necesario entender temas estructurales del lenjuage, es decir, ir a las bases de JavaScript y conocer conceptos como **Event Loop**, **Call Stack**, **Task Queue**, **Web API's** entre otros. 
+
+Para poder darse cuenta, el secreto que puedo compartirte es concentrarse en el orden de las llamadas a las funciones, es decir en estas líneas:
+
+```js
+bar(); // primero llamamos a bar()
+foo(); // luego a foo()
+baz(); // finalmente baz()
+```
+
+Primero, llamamos a la función `bar()` que tiene en su cuerpo un `setTimeout` puedes pensar que al carecer de delay en ms este código se ejecuta de inmediato, pero no es así, ya que `setTimeout` es una `Web API`, por este motivo este código debe almacenarse en lo que llamamos **Task Queue**.
+
+Segundo, llamamos a la función `foo()`, que contiene código síncrono, por ende pasa directamente al **Call Stack** y mostramos por consola `First`.
+
+Tercero, llamamos a la función `baz()`, que contiene código síncrono nuevamente, por ello pasa al **Call Stack** y mostramos por consola `Third`.
+
+Ahora, el algotirmo del **Even Loop** se da cuenta que no hay mas funciones por llamar, y verifica que el **Call Stack** esta vacio, entonces busca si hay algo en el **Task Queue**, y oh sorpresa, esta nuestro `setTimeout`, entonces lo pasa al **Call Stack** para finalmente mostrar por consola `Second`
+
+Es complicado de entender al principio, te dejo una [demostración gráfica](https://www.jsv9000.app/?code=Y29uc3QgZm9vID0gKCkgPT4gY29uc29sZS5sb2coIkZpcnN0Iik7CmNvbnN0IGJhciA9ICgpID0%2BIHNldFRpbWVvdXQoKCkgPT4gY29uc29sZS5sb2coIlNlY29uZCIpKTsKY29uc3QgYmF6ID0gKCkgPT4gY29uc29sZS5sb2coIlRoaXJkIik7CgpiYXIoKTsKZm9vKCk7CmJheigpOw%3D%3D) 
+
 
 ---
 
-## Reto 9.2 {#sec-sol-cap9-reto2}
+## Reto 9.2 {#sec-sol-cap4-reto5}
 
 La respuesta del [Reto 9.2](#sec-cap9-reto2) es:
 
-**A. Los 3 imprimen: `['P','e','p','e']`**
+**C. `Hi cada segundo`**
 
 **Explicación:**
 
-* `split` es un **String Method** que se encarga de convertir una cadena en arreglo, donde cada elemento del arreglo lo determina el separador que recibe `split` como parámetro. 
-Como le pasamos una cadena vacía entonces `Pepe` se convierte en `['P','e','p','e']`.
-
-* Spread Operator (`...`) expandirá o propagará la cadena `Pepe` en `['P','e','p','e']`. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
-
-* `Array.from` es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa `['P','e','p','e']`.
-
+La función `setInterval` es una `Web API` que recibe un intervalo en milisegundos, e imprime el cuerpo de la función en dicho intervalo.
 
 ---
 
-## Reto 9.3 {#sec-sol-cap9-reto3}
+## Reto 9.3 {#sec-sol-cap10-reto13}
 
 La respuesta del [Reto 9.3](#sec-cap9-reto3) es:
 
-**D. `"olleh"`**
+**C. `Promise {<pending>}`**
 
 **Explicación:**
 
-Estos 3 métodos de cadenas se preguntan mucho en entrevistas.
+Una función asíncrona siempre regresa una **promesa** pero dicha promesa no basta con ser devuelta sino que debe ser consumida, una posible solución es usar las palabras reservadas `then` y `catch`.
 
-Veamos paso por paso que sucede:
-
-* Aplicamos `split`:
-
-`split` convierte una cadena en arreglo dependiendo del parámetro que se le pase, en este caso una cedena vacía: `['h','e','l','l','o']`.
-
-* Aplicamos `reverse`:
-
-`reverse` es un método de arreglos, invierte todos los elementos del arreglo: `['o','l','l','e','h']`.
-
-* Aplicamos `join`:
-
-`join` es un método de arreglos que convierte un arreglo en cadena nuevamente dependiendo del parámetro que se le pase, en este caso una cadena vacía:  `"olleh"`
+Cuando llamamos `getData()` no consumimos la promesa con `then`, solo llamamos a la función por ende no podemos afirmar que la promesa esta en **estado resuelto** o **estado rechazado**, en conclusión inevitablemente la promesa esta en **estado pendiente**.
 
 ---
 
-## Reto 9.4 {#sec-sol-cap9-reto4}
+## Reto 9.4 {#sec-sol-cap10-reto2}
 
-La respuesta del [Reto 9.4](#sec-cap9-reto4) es:
+La respuesta del [Reto 9.4](#sec-cap10-reto2) es:
 
-**B. `9`, `10`, `10`**
+**D. `second`, `I have resolved!` y `I have resolved!`, `second`**
 
 **Explicación:**
 
-Javascript tiene 3 métodos pertenecientes al objecto `Math` útiles para redondeo de números.
+`firstFunction` es una función simple que llama a `myPromise` usando el método `then` propio de las promesas. Por **Event Loop** las promesas pasan al **Task Queue** entonces primero ejecutamos el `console.log` y mostramos `second` por consola, ahora el **Call Stack** esta vacío y la promesa que estaba en la **Task Queue** pasa al **Call Stack** y resolvemos la promesa mostrando `'I have resolved!'`.
 
-* `Math.floor()` Siempre redondea el valor hacía abajo.
 
-* `Math.ceil()` Siempre redondea el valor hacía arriba.
+`secondFunction` es una función asíncrona, al llamar a `myPromise` con `await` esperamos el tiempo necesario para que la promesa se ejecute, entonces mostramos primero por consola `'I have resolved!'` y luego `second`.
 
-* `Math.round()` Redondea el valor de una manera un poco mas inteligente, siguiendo las reglas de redondeo que nos enseñaron en colegio.
-
-Los 3 métodos tienen inferencia de tipos, esto quiere decir que sino le pasamos un valor numérico como parámetro, javascript intentará hacer su mejor esfuerzo para poder realizar la operación.
-
----
-
+Cuando tenemos sintaxis `async await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.

@@ -1,116 +1,223 @@
-# Objetos
+# Arreglos
 
-## Reto 5.1: Copia de objetos por referencia  {#sec-cap5-reto1}
+## Reto 5.1: Desestructuración de arreglos {#sec-cap10-reto1}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué crees que imprime el siguiente código?**
+
+```js
+const fruits = ["Mango", "Manzana", "Naranja", "Pera"];
+const { 3:pear } = fruits;
+console.log(pear);
+```
+
+**Opciones:**
+
+* A. `Uncaught TypeError : cannot read property`
+* B. `TypeError: null is not an object (evaluating)`
+* C. `Naranja`
+* D. `Pera`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Es simplemente una desestructuración de arreglos.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto1)**
+
+
+
+---
+
+## Reto 5.2: Parámetros REST {#sec-cap7-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
 :::
 
-**¿Puedes explicar el siguiente código?**
+**¿Qué imprime este código?**
 
 ```js
-let c = { greeting: "Hey!" };
-let d;
+function getAge(...args) {
+  console.log(typeof args);
+}
 
-d = c;
-c.greeting = "Hello";
-console.log(d.greeting);
+getAge(21);
 ```
 
-**Pista:** Recordar las diferencias de las copias por valor y copias por referencia.
+**Opciones:**
 
-* A. `Hello`
-* B. `undefined`
-* C. `ReferenceError`
-* D. `TypeError`
+* A. `number`
+* B. `array`
+* C. `objet`
+* D. `NaN`
 
-**[Ver solución](#sec-sol-cap5-reto1)**
+::: {.callout-tip title="Pista" collapse="true"}
+Los parámetros REST permiten pasar un número variable de argumentos a una función.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto2)**
 
 ---
 
-## Reto 5.2: Objetos y conjuntos {#sec-cap5-reto2}
+## Reto 5.3: Posiciones indexadas de un arreglo {#sec-cap7-reto3}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Avanzado**
+**Básico**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-const obj = { 1: "a", 2: "b", 3: "c" };
-const set = new Set([1, 2, 3, 4, 5]);
-
-obj.hasOwnProperty("1");
-obj.hasOwnProperty(1);
-set.has("1");
-set.has(1);
+const numbers = [1, 2, 3];
+numbers[10] = 11;
+console.log(numbers);
 ```
 
-**Pista:** Recuerda que un `set` no es lo mismo que un objeto.
+**Opciones:**
 
-* A. `false`, `true`, `false`, `true`
-* B. `false`, `true`, `true`, `true`
-* C. `true`, `true`, `false`, `true`
-* D. `true`, `true`, `true`, `true`
-
-**[Ver solución](#sec-sol-cap5-reto2)**
-
----
-
-## Reto 5.3: Una curiosidad sobre los objetos {#sec-cap5-reto3}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const obj = { a: "one", b: "two", a: "three" };
-console.log(obj);
-```
-
-**Pista:** Los objetos son estructuras de datos no indexadas.
-
-* A. `{ a: "one", b: "two" }`
-* B. `{ b: "two", a: "three" }`
-* C. `{ a: "three", b: "two" }`
+* A. `[1, 2, 3, 7 x null, 11]`
+* B. `[1, 2, 3, 11]`
+* C. `[1, 2, 3, 7 x empty, 11]`
 * D. `SyntaxError`
 
-**[Ver solución](#sec-sol-cap5-reto3)**
+::: {.callout-tip title="Pista" collapse="true"}
+Los arreglos en JavaScript son muy permisivos.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto3)**
 
 ---
 
-## Reto 5.4: Hablemos sobre prototipos  {#sec-cap5-reto4}
+## Reto 5.4: Entendiendo `reduce` con matrices {#sec-cap7-reto4}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+**Básico**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-String.prototype.giveLydiaPizza = () => {
-  return "Just give Lydia pizza already!";
-};
-
-const name = "Lydia";
-
-name.giveLydiaPizza();
+[[0, 1], [2, 3]].reduce(
+  (acc, cur) => {
+    return acc.concat(cur);
+  },
+  [1, 2]
+);
 ```
 
-**Pista:** Los objetos son estructuras de datos no indexadas.
+**Opciones:**
 
-* A. `"Just give Lydia pizza already!"`
-* B. `TypeError: not a function`
-* C. `SyntaxError`
+* A. `[0, 1, 2, 3, 1, 2]`
+* B. `[6, 1, 2]`
+* C. `[1, 2, 0, 1, 2, 3]`
+* D. `[1, 2, 6]`
+
+::: {.callout-tip title="Pista" collapse="true"}
+El segundo parámetro de `reduce` es el valor inicial de `acc`.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto4)**
+
+---
+
+## Reto 5.5: Transformaciones de arreglos con `map()` {#sec-cap7-reto5}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+[1, 2, 3].map(num => {
+  if (typeof num === "number") return;
+  return num * 2;
+});
+```
+
+**Opciones:**
+
+* A. `[]`
+* B. `[null, null, null]`
+* C. `[undefined, undefined, undefined]`
+* D. `[ 3 huecos vacíos ]`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Ojo con la sentencia `return`
+:::
+
+**[Ver solución](#sec-sol-cap7-reto5)**
+
+---
+
+## Reto 5.6: Otra desestructuración de arreglos {#sec-cap7-reto6}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const fn = () => {
+  return [1000, 9000+1]
+}
+
+const [, second] = fn()
+console.log(second.toString())
+```
+
+**Opciones:**
+
+* A. `1000`
+* B. `9001`
+* C. `"9001"`
+* D. `SyntaxError`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Es posible omitir posiciones no deseadas del arreglo usando `,` en la desestructuración.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto6)**
+
+---
+
+## Reto 5.7: `Array.push` {#sec-cap7-reto7}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+function addToList(item, list) {
+  return list.push(item);
+}
+
+const result = addToList("apple", ["banana"]);
+console.log(result);
+```
+
+**Opciones:**
+
+* A. `['banana', 'apple']`
+* B. `2`
+* C. `true`
 * D. `undefined`
 
-**[Ver solución](#sec-sol-cap5-reto4)**
+::: {.callout-tip title="Pista" collapse="true"}
+¿El método `push` de los arreglos solo agrega un elemento al final de un arreglo?
+:::
+
+**[Ver solución](#sec-sol-cap7-reto7)**
 
 ---
 
-## Reto 5.5: Objeto por referencia {#sec-cap5-reto5}
+## Reto 5.8: `for...of` vs `for...in` {#sec-cap6-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -119,55 +226,33 @@ name.giveLydiaPizza();
 **¿Qué imprime este código?**
 
 ```js
-let person = { name: "Carmen" };
-const members = [person];
-person = null;
+const bands = ["Radiohead", "Coldplay", "Nirvana"]
 
-console.log(members);
-```
+for (let item in bands) {
+  console.log(item)
+}
 
-**Pista:** Los objetos pasan sus valores por referencia.
-
-* A. `null`
-* B. `[null]`
-* C. `[{}]`
-* D. `[{ name: "Carmen" }]`
-
-**[Ver solución](#sec-sol-cap5-reto5)**
-
----
-
-## Reto 5.6: El bucle `for...in` con objetos {#sec-cap5-reto6}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const person = {
-  name: "Carla",
-  age: 26
-};
-
-for (const item in person) {
-  console.log(item);
+for (let item of bands) {
+  console.log(item)
 }
 ```
 
-**Pista:** El bucle `for...in` no itera sobre los valores de un objeto.
+**Opciones:**
 
-* A. `{ name: "Carla" }`, `{ age: 26 }`
-* B. `"name"`, `"age"`
-* C. `"Carla"`, `26`
-* D. `["name", "Carla"]`, `["age", 26]`
+* A. `0 1 2` y `"Radiohead" "Coldplay" "Nirvana"`
+* B. `"Radiohead" "Coldplay" "Nirvana"` y `"Radiohead" "Coldplay" "Nirvana"`
+* C. `"Radiohead" "Coldplay" "Nirvana"` y `0 1 2`
+* D. `0 1 2` y `{0: "Radiohead", 1: "Coldplay", 2: "Nirvana"}`
 
-**[Ver solución](#sec-sol-cap5-reto6)**
+::: {.callout-tip title="Pista" collapse="true"}
+Ambos sirven para iterar pero no son lo mismo.
+:::
+
+**[Ver solución](#sec-sol-cap6-reto8)**
 
 ---
 
-## Reto 5.7: Spread operator con objetos {#sec-cap5-reto7}
+## Reto 5.9: Expresiones en elementos de arreglos {#sec-cap6-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -176,24 +261,26 @@ for (const item in person) {
 **¿Qué imprime este código?**
 
 ```js
-const user = { name: "Hernan", age: 21 };
-const admin = { admin: true, ...user };
-
-console.log(admin);
+const list = [1 + 2, 1 * 2, 1 / 2]
+console.log(list)
 ```
 
-**Pista:** El **spread operator** expande las propiedades del objeto. 
+**Opciones:**
 
-* A. `{ admin: true, user: { name: "Hernan", age: 21 } }`
-* B. `{ admin: true, name: "Hernan", age: 21 }`
-* C. `{ admin: true, user: ["Hernan", 21] }`
-* D. `{ admin: true }`
+* A. `["1 + 2", "1 * 2", "1 / 2"]`
+* B. `["12", 2, 0.5]`
+* C. `[3, 2, 0.5]`
+* D. `[1, 1, 1]`
 
-**[Ver solución](#sec-sol-cap5-reto7)**
+::: {.callout-tip title="Pista" collapse="true"}
+Los elementos de un arreglo pueden contener expresiones a ser evaluadas por el interprete de JavaScript.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto10)**
 
 ---
 
-## Reto 5.8: Multiples llamadas a una función {#sec-cap5-reto8}
+## Reto 5.10: Otra vez el método `push` {#sec-cap10-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -202,30 +289,126 @@ console.log(admin);
 **¿Qué imprime este código?**
 
 ```js
-const value = { number: 10 };
+let newList = [1, 2, 3].push(4)
 
-const multiply = (x = { ...value }) => {
-  console.log((x.number *= 2));
-};
-
-multiply();
-multiply();
-multiply(value);
-multiply(value);
+console.log(newList.push(5))
 ```
 
-**Pista:** Atención al objeto como parámetro en la función y los valores por defecto.
+**Opciones:**
 
-* A. `20`, `40`, `80`, `160`
-* B. `20`, `40`, `20`, `40`
-* C. `20`, `20`, `20`, `40`
-* D. `NaN`, `NaN`, `20`, `40`
+* A. `[1, 2, 3, 4, 5]`
+* B. `[1, 2, 3, 5]`
+* C. `[1, 2, 3, 4]`
+* D. `TypeError: newList.push is not a function`
 
-**[Ver solución](#sec-sol-cap5-reto8)**
+::: {.callout-tip title="Pista" collapse="true"}
+Notar que no estamos imprimiendo el arreglo `newList` suelto, sino usando el método `push`.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto11)**
 
 ---
 
-## Reto 5.9: `Object.entries` para iterar objetos {#sec-cap5-reto9}
+## Reto 5.11: Parámetros REST en funciones modernas {#sec-cap10-reto11}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+function getItems(fruitList, ...args, favoriteFruit) {
+  return [...fruitList, ...args, favoriteFruit]
+}
+
+getItems(["banana", "apple"], "pear", "orange")
+```
+
+**Opciones:**
+
+* A. `["banana", "apple", "pear", "orange"]`
+* B. `[["banana", "apple"], "pear", "orange"]`
+* C. `["banana", "apple", ["pear"], "orange"]`
+* D. `SyntaxError`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Cuidado con el orden de los parámetros en las funciones.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto12)**
+
+---
+
+## Reto 5.12: Cuidado con el return implícito de las funciones {#sec-cap10-reto12}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const getList = ([x, ...y]) => [x, y]
+const getUser = user => { name: user.name, age: user.age }
+
+const list = [1, 2, 3, 4]
+const user = { name: "Messi", age: 40 }
+
+console.log(getList(list))
+console.log(getUser(user))
+```
+
+**Opciones:**
+
+* A. `[1, [2, 3, 4]]` y `SyntaxError`
+* B. `[1, [2, 3, 4]]` y `{ name: "Messi", age: 40 }`
+* C. `[1, 2, 3, 4]` y `{ name: "Messi", age: 40 }`
+* D. `SyntaxError` y `{ name: "Messi", age: 40 }`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Cuidado con la sintaxis de **return implícito** en las funciones flecha.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto13)**
+
+---
+
+## Reto 5.13: Métodos de arreglo inmutables {#sec-cap10-reto13}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Cuál o cuales de estos métodos modifica el array original?**
+
+```js
+const points = ['.', '..', '...']
+
+emojis.map(x => x + '.')
+emojis.filter(x => x !== '..')
+emojis.find(x => x !== '..')
+emojis.reduce((acc, cur) => acc + '.')
+emojis.slice(1, 2, '.') 
+emojis.splice(1, 2, '.')
+```
+
+**Opciones:**
+
+* A. `Todos los anteriores`
+* B. `map`, `reduce`, `slice`, `splice`
+* C. `map`, `slice`, `splice`
+* D. `splice`
+
+::: {.callout-tip title="Pista" collapse="true"}
+Los métodos inmutables no modifican el arreglo original.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto14)**
+
+---
+
+## Reto 5.14: `length` como un setter {#sec-cap10-reto14}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -234,60 +417,27 @@ multiply(value);
 **¿Qué imprime este código?**
 
 ```js
-const person = {
-  name: "Robert",
-  age: 30
-}
-
-for (const [x, y] of Object.entries(person)) {
-  console.log(x, y)
-}
+const numbers = [1, 2, 3, 4, 5];
+numbers.length = 0;
+console.log(numbers);
 ```
 
-**Pista:** Notar la desestructuración de variables en el bucle `for...of`.
+**Opciones:**
 
-* A. `name Robert` y `age 30`
-* B. `["name", "Robert"]` y `["age", 30]`
-* C. `["name", "age"]` y `undefined`
-* D. `SyntaxError`
+* A. `1`
+* B. `0`
+* C. `[]`
+* D. `[1]`
 
-
-**[Ver solución](#sec-sol-cap5-reto9)**
-
----
-
-## Reto 5.10: Conjuntos en JavaScript {#sec-cap5-reto10}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Avanzado**
+::: {.callout-tip title="Pista" collapse="true"}
+`length` no solo sirve para calcular la longitud de un iterable, también puede usarse para establecer el número de elementos.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-const set = new Set()
-
-set.add(1)
-set.add("Cris")
-set.add({ name: "Cris" })
-
-for (let item of set) {
-  console.log(item + 2)
-}
-```
-
-**Pista:** Recordar que el operador `+` puede ser usado para sumar números y para concatenar cadenas de texto.
-
-* A. `3`, `NaN`, `NaN`
-* B. `3`, `7`, `NaN`
-* C. `3`, `Cris2`, `[Object object]2`
-* D. `"12"`, `Cris2`, `[Object object]2`
-
-**[Ver solución](#sec-sol-cap5-reto10)**
+**[Ver solución](#sec-sol-cap10-reto15)**
 
 ---
 
-## Reto 5.11: Objetos y sus referencias {#sec-cap5-reto11}
+## Reto 5.15: ¿`typeof` para arreglos? {#sec-cap10-reto15}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -296,86 +446,26 @@ for (let item of set) {
 **¿Qué imprime este código?**
 
 ```js
-function compareMembers(person1, person2 = person) {
-  if (person1 !== person2) {
-    console.log("Not the same!")
-  } else {
-    console.log("They are the same!")
-  }
-}
-
-const person = { name: "Allan" }
-
-compareMembers(person)
+const arr = [];
+console.log(Array.isArray(arr));
 ```
 
-**Pista:** Cuidado con las referencias de los objetos.
+**Opciones:**
 
-* A. `Not the same!`
-* B. `They are the same!`
-* C. `ReferenceError`
-* D. `SyntaxError`
-
-**[Ver solución](#sec-sol-cap5-reto11)**
-
----
-
-## Reto 5.12: Acceso a propiedades de objetos y elementos de arreglos {#sec-cap5-reto12}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const food = ['pizza', 'chocolat', 'avocat', 'egg']
-const info = { favoriteFood: food[0] }
-
-info.favoriteFood = 'apple'
-
-console.log(food)
-```
-
-**Pista:** La notación de punto sirve para acceder a propiedades de objetos y la notación de corchetes para acceder a elementos de arreglos.
-
-* A. `['pizza', 'chocolat', 'avocat', 'egg']`
-* B. `['apple', 'chocolat', 'avocat', 'egg']`
-* C. `['apple', 'pizza', 'chocolat', 'avocat', 'egg']`
+* A. `true`
+* B. `false`
+* C. `[]`
 * D. `ReferenceError`
 
-**[Ver solución](#sec-sol-cap5-reto12)**
-
----
-
-## Reto 5.13: Logical Nullish Assignment {#sec-cap5-reto13}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+::: {.callout-tip title="Pista" collapse="true"}
+`Array.isArray` es un método que nos permite comprobar si una variable es un arreglo o no.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-const getName = (obj) => {
-  obj.name ??= "not name";
-  return obj;
-}
-console.log(getName({}))
-```
-
-**Pista:** Recuerda que un valor **nullish** es aquel que evalua `undefined` o `null`.
-
-* A. `undefined`
-* B. `{}`
-* C. `{ name:"not name" }`
-* D. `Ninguno de los anteriores`
-
-**[Ver solución](#sec-sol-cap5-reto13)**
+**[Ver solución](#sec-sol-cap10-reto16)**
 
 ---
 
-## Reto 5.14: Actulizar propiedades de objetos {#sec-cap5-reto14}
+## Reto 5.16: El método `flat` de los arreglos {#sec-cap10-reto16}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -384,116 +474,26 @@ console.log(getName({}))
 **¿Qué imprime este código?**
 
 ```js
-const person = {
-  id: 1,
-  name:"Fernando",
-};
-person.name = "Pedro";
-console.log(persona.nombre);
+const numbers = [1, 2, [3, 4], 5, 6, [7, 8], 9, 0];
+console.log(numbers.flat());
 ```
 
-**Pista:** Podemos actualizar valores de una propiedad de un objeto con la notación de punto.
+**Opciones:**
 
-* A. `Pedro`
-* B. `Fernando`
-* C. `null`
-* D. `TypeError`
+* A. `Error, el método flat no existe.`
+* B. `[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]`
+* C. `[1, 2, 3, 4, 5, 6, [7, 8], 9, 0]`
+* D. `[1, 2, [3, 4], 5, 7, 8, 9, 0]`
 
-**[Ver solución](#sec-sol-cap5-reto14)**
-
----
-
-## Reto 5.15: Operador `in` y eliminación de propiedades {#sec-cap5-reto15}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+::: {.callout-tip title="Pista" collapse="true"}
+`flat` permite aplanar arreglos en JavaScript.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-const band = {
-  id:1,
-  name: "Radiohead",
-  "type of music": "Rock",
-  albums: ["Pablo Honey", "Ok Computer", "In Rainbows"]
-};
-
-band.voice = undefined;
-console.log("voice" in band);
-delete band["type of music"];
-console.log("type of music" in band);
-```
-
-**Pista:** `in` sirve para poder verificar si una propiedad existe en un objeto.
-
-* A. `false`, `false`
-* B. `true`, `false`
-* C. `false`, `true`
-* D. `undefined`, `true`
-
-**[Ver solución](#sec-sol-cap5-reto15)**
+**[Ver solución](#sec-sol-cap10-reto17)**
 
 ---
 
-## Reto 5.16: Propiedades dinámicas de objetos {#sec-cap5-reto16}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const band = {
-  id:1,
-  name: "Radiohead",
-  "tipe of music": "Rock",
-  albums: ["Pablo Honey", "Ok Computer", "In Rainbows"]
-};
-
-console.log(band["na"+"me"])
-```
-
-**Pista:** La notación de corchetes en los objetos permite acceder a propiedades usando una expresión como clave.
-
-* A. `Radiohead`
-* B. `undefined`
-* C. `name`
-* D. `SyntaxError`
-
-**[Ver solución](#sec-sol-cap5-reto16)**
-
----
-
-## Reto 5.17: Trailing commas {#sec-cap5-reto17}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
-:::
-
-**Explica este código JavaScript**
-
-Nota que en la línea `age:7,` termina con `,` pero no hay ninguna sentencia del objeto `dog` después 😯
-
-```js
-const dog = {
-  id:1,
-  name:"Boby",
-  age:7,
-};
-```
-
-**Pista:** Esta sintaxis es común en lenguajes modernos para facilitar el control de versiones al añadir nuevos elementos sin modificar líneas anteriores.
-
-* A. `El código es incorrecto, no es posible escribir una , al final de una sentencia de objeto.`
-* B. `El código es correcto, esta característica de JavaScript se denomina Trailing commas y es perfectamente válido.`
-
-**[Ver solución](#sec-sol-cap5-reto17)**
-
----
-
-## Reto 5.18: Algo raro pasa con las palabras reservadas {#sec-cap5-reto18}
+## Reto 5.17: `forEach` y `console.count` {#sec-cap10-reto17}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -502,56 +502,124 @@ const dog = {
 **¿Qué imprime este código?**
 
 ```js
-const test = {
-  if:"It's a conditional",
-  let: "It's a way to declare variables",
-  for: "It's a loop",
-};
-console.log(test.for); 
+const fruits  = ["orange", "pear", "watermelon", "banana", "strawberries"];
+fruits.forEach(() => {
+  console.count();
+});
 ```
 
-**Pista:** Cuidado con el uso de palabras reservadas como nombres de `keys` en objetos.
+**Opciones:**
 
-* A. `SyntaxError: unexpected token: keyword 'for'`
-* B. `It's a loop`
-* C. `ReferenceError`
+* A. `5`
+* B. `SyntaxisError`
+* C. 
+
+```js
+default:1
+default:2
+default:3
+default:4
+default:5
+```
+
 * D. `Ninguna de las anteriores`
 
-**[Ver solución](#sec-sol-cap5-reto18)**
+::: {.callout-tip title="Pista" collapse="true"}
+`console.count` es un método que cuenta las veces que se ejecuta una acción, en este caso una función.
+:::
+
+**[Ver solución](#sec-sol-cap10-reto18)**
 
 ---
 
-## Reto #98: El tipo `Symbol` como llaves de objetos {#sec-array-98-en}
+## Reto 5.18: Conociendo `at` {#sec-cap10-reto18}
 
-::: {.callout-caution title="Difficulty" collapse="true"}
-**Avanzado**
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
 :::
 
 **¿Qué imprime este código?**
 
 ```js
-const firstName = Symbol("first name");
-const lastName = Symbol("last name");
+const teachers = ["Oscar", "Nico", "Freddy", "Christian", "Angela"];
 
-const person = {
-  id: 1,
-  [firstName]: "Cristian",
-  [lastName]: "Villca",
-  weight: 82,
-  height: 180,
-};
-
-console.log(Object.keys(person));
+console.log(teachers.at(1));
+console.log(teachers.at(-1));
+console.log(teachers.at(10));
+console.log(teachers.at(3.8));
+console.log(teachers.at(-3.3));
 ```
 
-**Pista:** Los valores `Symbol` son únicos en un programa, muy útiles para crear propiedades privadas en objetos.
+**Opciones:**
 
-* A. `[ 'id', 'weight', 'height' ]`
-* B. `[ 'id', 'firstName', 'lastName', 'weight', 'height' ]`
-* C. `[ 'firstName', 'lastName' ]`
-* D. `Ninguna de las anteriores`
+* A. `Nico, Angela, undefined, Christian, Freddy`
+* B. `Oscar, undefined, undefined, Freddy, undefined`
+* C. `Nico, SyntaxError, null, Christian, SyntaxError`
+* D. `Nico, null, undefined, undefined, null`
 
-**[Ver solución](#sec-sol-cap5-reto19)**
+::: {.callout-tip title="Pista" collapse="true"}
+`at` es un método relativamente nuevo que permite acceder a un elemento de un array por su índice. 
+:::
+
+**[Ver solución](#sec-sol-cap10-reto19)**
 
 ---
 
+## Reto 5.19: Verificar si un arreglo esta vacío {#sec-cap10-reto19}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Básico**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const f = arr => Array.isArray(arr) && !arr.length;
+
+console.log(f([1,2,3]));
+console.log(f([0])); 
+console.log(f([])); 
+
+```
+
+**Opciones:**
+
+* A. `true`, `false`, `true`
+* B. `false`, `false`, `false`
+* C. `true`, `true`, `true`
+* D. `false`, `false`, `true`
+
+::: {.callout-tip title="Pista" collapse="true"}
+`length` verifica cuantos elementos tiene un arreglo.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto20)**
+
+---
+
+## Reto 5.20: ¿Suma de arreglos? {#sec-cap7-reto20}
+
+::: {.callout-caution title="Dificultad" collapse="true"}
+**Intermedio**
+:::
+
+**¿Qué imprime este código?**
+
+```js
+const a = [1, 2, 3];
+let b = [4, 5, 6];
+console.log(a + b);
+```
+
+**Opciones:**
+
+* A. `[1, 2, 3, 4, 5, 6]`
+* B. `[1, 2, 3, [4, 5, 6]]`
+* C. `"1, 2, 3, 4, 5, 6"`
+* D. `"1, 2, 34, 5, 6"`
+
+::: {.callout-tip title="Pista" collapse="true"}
+REcuerda que el operador `+` concatena cadenas de texto o hace sumas aritmeticas.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto21)**

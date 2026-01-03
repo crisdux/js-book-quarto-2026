@@ -1,185 +1,282 @@
-# Soluciones - Operadores de Igualdad y Comparación
+# Soluciones - Cadenas
 
-## Reto 2.1 {#sec-sol-cap2-reto1}
+
+
+---
+
+## Reto 2.1 {#sec-sol-cap10-reto1}
+
+La respuesta del [Reto 2.1](#sec-cap10-reto1) es:
+
+**B. `"I"`**
 
 **Explicación:**
 
-JavaScript tiene una peculiaridad que se denomina **coerción de tipos**. Al intentar realizar algún tipo de operación o comparación ambigua el lenguaje tratará de realizar una conversión de tipos implícita para poder devolver un resultado más o menos lógico, el problema acá radica en que muchas veces el resultado obtenido será diferente al esperado.
+Las cadenas de texto en JavaScript son iterables, por ello, al igual que con los arreglos es posible acceder a sus caracteres individuales con la notación de corchetes.
 
-Veamos el primer ejemplo:
+---
+
+## Reto 2.2 {#sec-sol-cap7-reto2}
+
+La respuesta del [Reto 2.2](#sec-cap7-reto2) es:
+
+**A. `I love to program`**
+
+**Explicación:**
+
+Al usar los **backtiks de ES6**, las expresiones se evaluan primero.
+
+En este caso la expresión completa es:
 
 ```js
-console.log(false == 0)
+${(x => x)('I love')}
 ```
 
-En JavaScript existen lo que denomina **valores `falsy`** y son los siguientes:
+Donde:
+* `(x => x)` es una función anónima de tipo flecha, que recibe un parámetro `x` y con un **return implícito** lo devuelve.
 
-* `0`
-* `-0`
-* `0n`
+* `('I love')` es la llamada a la función anónima, acá pasamos como argumento a la función la cadena `I love`.
+
+Entonces, la función es llamada y regresa únicamente el parámetro que se le pasa. Por ello la respuesta es `I love to program`.
+
+---
+
+## Reto 2.3 {#sec-sol-cap7-reto3}
+
+La respuesta del [Reto 2.3](#sec-cap7-reto3) es:
+
+**C. `Mi nombre es Cris y tengo 25`**
+
+**Explicación:**
+
+En JavaScript como en Java y otros lenguajes de programación es posible usar **sustituciones de variables** con el operador `%` seguido de un caracter que especifica el tipo de dato que se pretende imprimir.
+
+En este caso, `$s` reemplaza un `string` (`"Cris"`) y `%d` reemplaza un valor decimal o dígito numérico (`25`). 
+
+Este método de imprimir por consola no es muy usado, ni siquiera es conocido, pero esta bueno saber que existe.
+
+---
+
+## Reto 2.4 {#sec-sol-cap7-reto4}
+
+La respuesta del [Reto 2.4](#sec-cap7-reto4) es:
+
+**A. `["O", "s", "c", "a", "r"]`**
+
+**Explicación:**
+
+Un `string` es un elemento iterable en JavaScript, por ende es posible usar el `spread operator` directamente obteniendo la propagación de la cadena letra por letra.
+
+---
+
+## Reto 2.5 {#sec-sol-cap4-reto5}
+
+La respuesta del [Reto 2.5](#sec-cap4-reto5) es:
+
+**A. Los 3 imprimen: `['P','e','p','e']`**
+
+**Explicación:**
+
+* `split` es un **String Method** que se encarga de convertir una cadena en arreglo, donde cada elemento del arreglo lo determina el separador que recibe `split` como parámetro. 
+Como le pasamos una cadena vacía entonces `Pepe` se convierte en `['P','e','p','e']`.
+
+* Spread Operator (`...`) expandirá o propagará la cadena `Pepe` en `['P','e','p','e']`. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
+
+* `Array.from` es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa `['P','e','p','e']`.
+
+---
+
+## Reto 2.6 {#sec-sol-cap7-reto5}
+
+La respuesta del [Reto 2.6](#sec-cap7-reto5) es:
+
+**B. `Impossible! You should see a therapist after so much JavaScript lol`**
+
+**Explicación:**
+
+Muchas cosas que analizar en este ejemplo.
+
+La sintaxis de backticks, comillas simples invertidas o comillas francesas (alt+96) sirven para evaluar expresiones dentro de cadenas de texto.
+
+**Primera expresión a evaluar:** 
+
+En `${[] && 'Im'}` tenemos el operador de **corto circuito** `&&`. 
+
+Para usar los operadores de corto circuito debemos tener en cuanta los valores `truthy` y `falsy`. 
+
+Si la primera parte de la expresión evalua como `truthy` entonces ejecutamos la segunda parte de la expresión. 
+
+Los valores `truthy` son:
+
+* `true`
+* `{}`
+* `[]`
+* Cualquier valor de tipo `number` (`42`, `-56`, `1.5`, `-6.33`)
+* Cualquier `string` que no sea vacío (`"0"`, `"Hola mundo"`, `"false"`)
+* El objeto `Date` (`new Date()`)
+
+Volviendo al ejemplo, un arreglo vacio `[]` es `truthy` entonces se ejecuta la segunda parte de la expresión, osea, el `string` `'Im'`.
+
+**Segunda expresión a evaluar:** 
+
+En `${'' && `n't`}` nuevamente tenemos el **operador de corto circuito** `&&`, esta vez la primera parte de la expresión es un valor `falsy`.
+
+Los valores `falsy` son:
+
 * `false`
-* `null`
+* `0`
+* `""` (cualquier cadena vacía)
 * `undefined`
+* `null`
 * `NaN`
-* Cualquier tipo de cadena vacía: `'', ""`
 
-Todos estos valores son considerados como falsos para el lenguaje.
+La primera parte de la expresión es una cadena vacia que vendría a representar un valor `falsy` y por ello la segunda parte de la expresión `n't` no se ejecuta.
 
-Como `0` es un **valor falsy** entonces, aunque no lo veamos, JavaScript hace algo como esto tras bambalinas:
-
-```js
-console.log(false == false)
-```
-
-Y como estamos usando el operador de comparación débil `==` nos limitamos a comparar los valores **más NO los tipos de datos**.
-
-En conclusión, la respuesta es `true` por **coerción de tipos**
-
-Pasemos al siguiente ejemplo:
-
-```js
-console.log(false === 0)
-```
-
-Al usar el **operador estricto de comparación** `===` comparamos tanto el **valor** como el **tipo de dato**, `false` es de tipo `boolean` y `0` es de tipo `number` ergo, la respuesta es `false`.
-
-En otras palabras, también es correcto afirmar que al usar el `===` JavaScript no hace **coerciones de tipo**, por ello es ampliamente sugerido usarlo.
-
---- 
-
-## Reto 2.2 {#sec-sol-cap2-reto2}
-
-**Explicación:**
-
-Si bien `null` y `undefined` son valores `falsy` al momento de que JavaScript haga **coerciones de tipo** pasa algo raro, esto se debe a que tanto `null` como `undefined` sólo son **iguales** a sí mismos y entre ellos:
-
-```js
-console.log(null == null); // true
-console.log(undefined == undefined); // true
-console.log(undefined == null); // true
-```
-
-Solo en estos casos obtendremos como salida un `true`.
-
-Pero es recomendable usar siempre el **operador estricto de igualdad** `===`:
-
-```js
-console.log(null === null); // true
-console.log(undefined === undefined); // true
-console.log(undefined === null); // false
-```
-
-Esto para evitar que JavaScript haga **coerciones de tipos** y obtengamos resultados no esperados.
-
---- 
-
-## Reto 2.3 {#sec-sol-cap2-reto3}
-
-**Explicación:**
-
-`NaN` o "Not a Number" es el resultado que nos brinda JavaScript cuando intentamos hacer una operación que no tiene sentido, y por ende el resultado no será un número, por ejemplo:
-
-```js
-console.log(Math.sqrt(-1)) // NaN
-console.log(10 / "hola") // NaN
-console.log(Number("hola")) // NaN
-```
-
-Obtener la raiz cuadrada de `-1`, dividir un entero entre una cadena y convertir una cadena a un número son algunas operaciones que nos dan `NaN`.
-
-Ahora bien, cuando intentamos hacer `console.log(NaN === NaN)`, aún usando el operador `===` obtenemos `false` ya que el `NaN` de una operación no puede ser igual al `NaN` de otra. Dos `NaN` nunca serán iguales por este motivo. 
-
-En conclusión, no existe ningún valor en JavaScript que igualado a `NaN` sea `true`, ni siquiera el mismo `NaN`. Esto es una característica propia del lenguaje.
+En conclusión, la respuesta es: `Impossible! You should see a therapist after so much JavaScript lol`
 
 ---
 
-## Reto 2.4 {#sec-sol-cap2-reto4}
+## Reto 2.7 {#sec-sol-cap2-reto7}
 
-La respuesta del [Reto 2.1](#sec-cap2-reto1) es:
+La respuesta del [Reto 2.7](#sec-cap2-reto7) es:
 
-**C. `true`, `false`, `false`**
-
-**Explicación:**
-
-En el primer `console.log`:
-
-```js
-console.log(a == b);
-```
-
-Vemos que hacemos una comparación débil con el operador `==`, esto significa que **solo compararemos los valores de `a` y `b`**, por ende obtendremos un `true`.
-
-En el segundo `console.log`:
-
-```js
-console.log(a === b);
-```
-
-Hacemos una comparación estricta usando el operador `===`, esto significa que compararemos **valores** y **tipos de datos**, `a` y `b` tienen el mismo valor, pero `a` es de tipo `number` y `b` esta siendo inicializada usando el contructor `Number`, por ende es un objeto; entonces obtendremos un `false`.
-
-En el tercer `console.log`
-
-```js
-console.log(b === c);
-```
-
-Al igual que el caso anterior, intentamos comparar de manera estricta un objeto contra un número, entonces tendremos como resultado un `false`.
-
-**Conclusión: trata de usar simpre `===`**
-
----
-
-## Reto 2.5 {#sec-sol-cap2-reto5}
-
-La respuesta del [Reto 2.2](#sec-cap2-reto2) es:
-
-**C. `Hmm... You don't have an age I guess`**
+**B. `"75"`**
 
 **Explicación:**
 
-Cuando comparamos objetos hay que tener mucho cuidado.
+El código JavaScript se ejecuta de arriba hacia abajo y de izquierda a derecha.
 
-Comparar primitivos es sencillo, pero recuerda que los objetos se almacenan en memoria teniendo en cuenta su **referencia** y no su **valor**.
+Primero realizamos la suma `3 + 4`, puesto que ambos son  de tipo `number` obtenemos `7`.
 
-Dicho esto, el objeto que pasamos como argumento a `checkAge` es el objeto `{ age: 18 }`, este es diferente al objeto que evaluamos en los `if` de la función, por más que usemos comparación estricta, seguirán siendo objetos diferentes **por que sus referencias son diferentes**:
-
-```js
-{ age: 18 } == { age: 18 } //false
-{ age: 18 } === { age: 18 } //false
-```
-
-Entonces nunca se cumple ni la condición del `if` ni del `else if` y se ejecuta el `else` directamente, imprimiendo `Hmm... You don't have an age I guess` como resultado final.
+Ahora tenemos `7 + "5"`, como `"5"` es de tipo `string`, ahora realizamos una concatenación de valores y por `coerción de tipos` el resultado final es `"75"` como `string`.
 
 ---
 
-## Reto 2.6 {#sec-sol-cap2-reto6}
+## Reto 2.8 {#sec-sol-cap2-reto8}
 
-La respuesta del [Reto 2.3](#sec-cap2-reto3) es:
+La respuesta del [Reto 2.8](#sec-cap2-reto8) es:
 
-**A. `true`, `false`, `15`, `10`**
+**A. `number`**
 
 **Explicación:**
 
-Al trabajar con objetos en JavaScript hay que difereciar 2 aspectos fundamentales: **tener 2 referencias la mismo objeto** y **tener 2 objetos diferentes pero con las mismas propiedades**.
+Podemos convertir un `string` valido a `number` tan solo restandole `0`.
 
-Al crear `object1` estamos reservando un espacio en memoria para guardar dicho objeto.
+Es un hack interesante y una alternativa valida a usar el objeto `Number`, la función `parseInt` o el operador `+`.
 
-Cuando asignamos `object1` a `object2` lo único que hacemos es que ambos objetos apunten a la misma dirección de memoria donde esta almacenado el `object1`. En otras palabras, tanto `object1` y `object2` no son independientes el uno del otro, si modificamos uno el otro también se vera afectado.
+El operador `-` solo cumple la tarea de realizar una resta en JavaScript, cuando se lo aplicamos a un `string` valido entonces el interprete tiene que convertir dicha cadena a `number` y luego realizar la operación, entonces nos aprovechamos de que el `0` es neutro aditivo para que la conversión sea exitosa.
 
-Como ambos apuntan a la misma dirección de memoria entonces al usar el operador débil de comparación `==` obtenemos `true`.
-
-Pero si comparamos el `object1` contra el `object3` tendremos `false` puesto que si bien ambos tienen las mismas propiedades, estan almacenados en direcciones de memoria diferentes.
-
-Para finalizar, cuando hacemos:
+Si intentamos usar este hack con cadenas no numéricas la conversión se realiza pero obtendremos un `NaN` como resultado, así que mucho ojo con eso.
 
 ```js
-object1.value = 15;
-console.log(object2.value);
-console.log(object3.value);
+console.log(typeof("aaa" - 0)); // number
+console.log(("aaa" - 0)); // NaN
 ```
-Modificamos `value` de `object1` pero como apuntan a la misma dirección de momoria entonces también modificamos el valor del `object2` a `15`.
 
-El `object3` no sufre ningún cambio. 
+Personalmente no recomiendo hacer conversiones de tipos usando este hack, hay mejores maneras de hacerlo. Considera a este reto meramente ilustrativo y didáctico.
 
 ---
 
+## Reto 2.9 {#sec-sol-cap2-reto9}
+
+La respuesta del [Reto 2.9](#sec-cap2-reto9) es:
+
+**C. `"11111"`, `10`**
+
+**Explicación:**
+
+Vayamos por partes.
+
+En el primer `console.log(x + y)`:
+Intentamos sumar las variables `x` y `y`, pero `x` es una cadena y `y` es un número, por **coersión de tipos** la operación ya no será una suma aritmética sino una concatenación de cadenas. Dicho en otras palabras la variable `y` sera convetida implicitamente por el interprete de JavaScript a cadena, por lo que el resultado será `"11111"`.
+
+En el segundo `console.log(y - z)`:
+Intentamos restar las variables `y` y `z`, pero `y` es una cadena y `z` es un número, por **coersión de tipos** la operación será una resta artimética de toda la vida. Dicho en otras palabras la variable `z` sera convetida implicitamente por el interprete de JavaScript a número, por lo que el resultado será `10`.
+
+::: {.callout-tip}
+## Tip
+En JavaScript el operador `+` puede significar una suma o una concatenación según el caso de uso, pero el operador `-` siempre significara una resta artimética.
+:::
+
+---
+
+## Reto 2.10 {#sec-sol-cap10-reto10}
+
+La respuesta del [Reto 2.10](#sec-cap10-reto10) es:
+
+**D. `string`**
+
+**Explicación:**
+
+El operador `+` por lo general intentará realizar una concateneción, en este caso, el interprete de JavaScript, por **coerción de tipos** intentará convertir los arreglos a cadenas de texto, haciendo algo como esto aunque no lo veamos:
+
+```js
+console.log(typeof ([].toString() + [].toString())); 
+console.log(typeof ("" + ""));
+console.log(typeof ("")); //string
+```
+
+---
+
+## Reto 2.11 {#sec-sol-cap10-reto11}
+
+La respuesta del [Reto 2.11](#sec-cap10-reto11) es:
+
+**C. `8`, `3`**
+
+**Explicación:**
+
+Tanto cadenas como arreglos son iterables, entonces podemos usar la nomenclatura de corchetes para acceder a sus valores.
+
+Todo lo que este dentro de los corchetes será evaluado como expresión, entonces ambos casos se ejecutaran correctamente, el primero solo ejecuta el método `length` y el segundo concatena lascadenas `"len"+"gth"` para finalmente ejecutar `length` para el arreglo y calcular su correspondiente longitud.
+
+---
+
+## Reto 2.12 {#sec-sol-cap10-reto12}
+
+La respuesta del [Reto 2.12](#sec-cap10-reto12) es:
+
+**A.** 
+
+```js
+--- Menu ---
+tea.....:$1.50
+coffee..:$3.75
+RangeError: repeat count must be non-negative
+```
+
+**Explicación:**
+
+El método `repeat` se encarga como su nombre lo dice de repetir `n` veces una cadena bajo ciertas condiciones:
+
+* `n` debe ser un número entre `0` e infinito que no desborde el tamaño máximo para una cadena (`2^28 - 1`).
+
+* Sí `n` es un decimal (como en el ejemplo) entonces JavaScript redondea **hacia abajo** dicho número y ejecuta la operación con normalidad.
+
+* Sí `n` es un número negativo lanzará un `RangeError` indicando que no se pueden usar negativos.
+
+---
+
+## Reto 2.13 {#sec-sol-cap10-reto13}
+
+La respuesta del [Reto 2.13](#sec-cap10-reto13) es:
+
+**D. `"olleh"`**
+
+**Explicación:**
+
+Estos 3 métodos de cadenas se preguntan mucho en entrevistas.
+
+Veamos paso por paso que sucede:
+
+* Aplicamos `split`:
+
+`split` convierte una cadena en arreglo dependiendo del parámetro que se le pase, en este caso una cedena vacía: `['h','e','l','l','o']`.
+
+* Aplicamos `reverse`:
+
+`reverse` es un método de arreglos, invierte todos los elementos del arreglo: `['o','l','l','e','h']`.
+
+* Aplicamos `join`:
+
+`join` es un método de arreglos que convierte un arreglo en cadena nuevamente dependiendo del parámetro que se le pase, en este caso una cadena vacía:  `"olleh"`

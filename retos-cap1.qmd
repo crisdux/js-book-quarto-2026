@@ -6,7 +6,7 @@
 **Intermedio**
 :::
 
-**¿Qué crees que imprime el siguiente código?**
+**¿Qué imprime este código?**
 
 ```js
 const array = [true, 33, 9, "-2"];
@@ -14,22 +14,28 @@ const array = [true, 33, 9, "-2"];
 const f = (arr) => {
   return arr.map(Number)
 }
+
 const result = f(array)
 console.log(result)
 ```
 
-**Pista:** Piensa en cómo `Number()` convierte diferentes tipos.
+**Opciones:**
 
 * A. `[1, 33, 9, -2]`
 * B. `[boolean, 33, 9, string]`
 * C. `[null, 33, 9, null]`
 * D. `[undefined, 33, 9, undefined]`
 
+::: {.callout-tip title="Pista" collapse="true"}
+Piensa en cómo `Number()` convierte diferentes tipos de datos.
+:::
+
+
 **[Ver solución](#sec-sol-cap1-reto1)**
 
 ---
 
-## Reto 1.2: El operador `+` y `!`  {#sec-cap1-reto2}
+## Reto 1.2: El operador `+` y `!` {#sec-cap1-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -42,69 +48,22 @@ console.log(+true);
 console.log(!"Messi")
 ```
 
-**Pista:** Recuerda los conceptos de valores falsy y truthy.
+**Opciones:**
 
 * A. `1`, `false`
 * B. `false`, `NaN`
 * C. `false`, `false`
 * D. `Ninguno de los anteriores`
 
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda los conceptos de valores falsy y truthy.
+:::
+
 **[Ver solución](#sec-sol-cap1-reto2)**
 
 ---
 
-## Reto 1.3: Operadores `+` y `-` con cadenas y números {#sec-cap1-reto3}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-const x = "111"
-const y = 11
-let z = "1"
-
-console.log(x + y)
-console.log(y - z)
-```
-
-**Pista:** Diferenciar una suma artimética de una concatenación de cadenas.
-
-* A. `122`, `10`
-* B. `"11111"`, `1`
-* C. `"11111"`, `10`
-* D. `122`, `"111"`
-
-**[Ver solución](#sec-sol-cap1-reto3)**
-
----
-
-## Reto 1.4: `typeof` de expresiones extrañas {#sec-cap1-reto4}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-console.log(typeof([] + []));
-```
-
-**Pista:** Recuerda el el operador `+` sirve para hacer concatenaciones de cadenas.
-
-* A. `undefined`
-* B. `number`
-* C. `object`
-* D. `string`
-
-**[Ver solución](#sec-sol-cap1-reto4)**
-
----
-
-## Reto 1.5: `typeof` de `typeof` {#sec-cap1-reto5}
+## Reto 1.3: `typeof` de `typeof` {#sec-cap2-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -116,18 +75,22 @@ console.log(typeof([] + []));
 console.log(typeof typeof 1);
 ```
 
-**Pista:** `typeof` retorna un primitivo. ¿Pero cuál?
+**Opciones:**
 
 * A. `number`
 * B. `string`
 * C. `object`
 * D. `undefined`
 
-**[Ver solución](#sec-sol-cap1-reto5)**
+::: {.callout-tip title="Pista" collapse="true"}
+`typeof` retorna un primitivo. ¿Pero cuál?
+:::
+
+**[Ver solución](#sec-sol-cap2-reto9)**
 
 ---
 
-## Reto 1.6: El operador de doble negación  {#sec-cap1-reto6}
+## Reto 1.4: El operador de doble negación {#sec-cap10-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -141,41 +104,22 @@ console.log(!!"");
 console.log(!!1);
 ```
 
-**Pista:** El operador `!!` convierte un valor en su equivalente booleano.
+**Opciones:**
 
 * A. `false`, `true`, `false`
 * B. `false`, `false`, `true`
 * C. `false`, `true`, `true`
 * D. `true`, `true`, `false`
 
-**[Ver solución](#sec-sol-cap1-reto6)**
-
----
-
-## Reto 1.7: ¿Concatenaciones o sumas aritméticas? {#sec-cap1-reto7}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+::: {.callout-tip title="Pista" collapse="true"}
+El operador `!!` convierte un valor en su equivalente booleano.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-console.log(3 + 4 + "5");
-```
-
-**Pista:** Los números se suman, las cadenas se concatenan.
-
-* A. `"345"`
-* B. `"75"`
-* C. `12`
-* D. `75`
-
-**[Ver solución](#sec-sol-cap1-reto7)**
+**[Ver solución](#sec-sol-cap10-reto10)**
 
 ---
 
-## Reto 1.8: Conversiones con `parseInt()` {#sec-cap1-reto8}
+## Reto 1.5: Conversiones con `parseInt()` {#sec-cap2-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -188,18 +132,22 @@ const num = parseInt("7*6", 10);
 console.log(num); 
 ```
 
-**Pista:** `parseInt()` convierte un número a una base númerica dada.
+**Opciones:**
 
 * A. `42`
 * B. `"42"`
 * C. `7`
 * D. `NaN`
 
-**[Ver solución](#sec-sol-cap1-reto8)**
+::: {.callout-tip title="Pista" collapse="true"}
+`parseInt()` convierte un número a una base númerica dada.
+:::
+
+**[Ver solución](#sec-sol-cap1-reto5)**
 
 ---
 
-## Reto 1.9: `Number`, `Boolean`, `Symbol` {#sec-cap1-reto9}
+## Reto 1.6: `Number`, `Boolean`, `Symbol` {#sec-cap10-reto10}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -213,41 +161,22 @@ console.log(Boolean(false) === Boolean(false))
 console.log(Symbol('foo') === Symbol('foo'))
 ```
 
-**Pista:** Cuidado con las comparaciones entre primitivos `Symbol`.
+**Opciones:**
 
 * A. `true`, `true`, `false`
 * B. `false`, `true`, `false`
 * C. `true`, `false`, `true`
 * D. `true`, `true`, `true`
 
-**[Ver solución](#sec-sol-cap1-reto9)**
-
----
-
-## Reto 1.10: Quiero pizza {#sec-cap1-reto10}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+::: {.callout-tip title="Pista" collapse="true"}
+Cuidado con las comparaciones entre primitivos `Symbol`.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-console.log("I want pizza"[0])
-```
-
-**Pista:** Las cadenas, al igual que los arreglos, son elementos iterables.
-
-* A. `"""`
-* B. `"I"`
-* C. `SyntaxError`
-* D. `undefined`
-
-**[Ver solución](#sec-sol-cap1-reto10)**
+**[Ver solución](#sec-sol-cap1-reto6)**
 
 ---
 
-## Reto 1.11: El primitivo `Symbol` {#sec-cap1-reto11}
+## Reto 1.7: El primitivo `Symbol` {#sec-cap2-reto7}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Avanzado**
@@ -264,42 +193,22 @@ console.log(info)
 console.log(Object.keys(info))
 ```
 
-**Pista:** `Symbol` es un primitivo relativamente nuevo en JavaScript que permite crear valores únicos e irrepetibles. 
+**Opciones:**
 
 * A. `{Symbol('a'): 'b'}` y `["{Symbol('a')"]`
 * B. `{}` y `[]`
 * C. `{ a: "b" }` y `["a"]`
 * D. `{Symbol('a'): 'b'}` y `[]`
 
-**[Ver solución](#sec-sol-cap1-reto11)**
-
----
-
-## Reto 1.12: Backticks y el operador de corto circuito `and` {#sec-cap1-reto12}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+::: {.callout-tip title="Pista" collapse="true"}
+`Symbol` es un primitivo relativamente nuevo en JavaScript que permite crear valores únicos e irrepetibles.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-const output = `${[] && 'Im'}possible!
-You should${'' && `n't`} see a therapist after so much JavaScript lol`
-```
-
-**Pista:** Recordar las tablas de verdad para saber cuando se ejecuta el operador de corto circuito.
-
-* A. `possible! You should see a therapist after so much JavaScript lol`
-* B. `Impossible! You should see a therapist after so much JavaScript lol`
-* C. `possible! You shouldn't see a therapist after so much JavaScript lol`
-* D. `Impossible! You shouldn't see a therapist after so much JavaScript lol`
-
-**[Ver solución](#sec-sol-cap1-reto12)**
+**[Ver solución](#sec-sol-cap2-reto7)**
 
 ---
 
-## Reto 1.13: El operador de corto circuito `or` {#sec-cap1-reto13}
+## Reto 1.8: El operador de corto circuito `or` {#sec-cap1-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -315,18 +224,22 @@ const three = ([] || 0 || true)
 console.log(one, two, three)
 ```
 
-**Pista:** El operador de corto circuito `or` se ejecuta con valores **falsy**.
+**Opciones:**
 
 * A. `false`, `null`, `[]`
 * B. `null`, `""`, `true`
 * C. `{}`, `""`, `[]`
 * D. `null`, `null`, `true`
 
-**[Ver solución](#sec-sol-cap1-reto13)**
+::: {.callout-tip title="Pista" collapse="true"}
+El operador de corto circuito `or` se ejecuta con valores **falsy**.
+:::
+
+**[Ver solución](#sec-sol-cap1-reto8)**
 
 ---
 
-## Reto 1.14: Acceso a propiedades de objetos {#sec-cap1-reto14}
+## Reto 1.9: Acceso a propiedades de objetos {#sec-cap1-reto6}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -348,41 +261,22 @@ const colors = ["pink", "red", "blue"]
 console.log(colorConfig.colors[1])
 ```
 
-**Pista:** Recuerda que las propiedades de los objetos son accedidas por medio de notación de punto `.` y los arreglos son accedidos por medio de notación de corchetes `[]`.
+**Opciones:**
 
 * A. `true`
 * B. `false`
 * C. `undefined`
 * D. `TypeError`
 
-**[Ver solución](#sec-sol-cap1-reto14)**
-
----
-
-## Reto 1.15: Interpolación de cadenas {#sec-cap1-reto15}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+::: {.callout-tip title="Pista" collapse="true"}
+Recuerda que las propiedades de los objetos son accedidas por medio de notación de punto `.` y los arreglos son accedidos por medio de notación de corchetes `[]`.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-console.log(`${(x => x)('I love')} to program`)
-```
-
-**Pista:** En las plantillas con backticks, todo lo que este dentro de `{}` se evalua como una expresión de JavaScript.
-
-* A. `I love to program`
-* B. `undefined to program`
-* C. `${(x => x)('I love') to program`
-* D. `TypeError`
-
-**[Ver solución](#sec-sol-cap1-reto15)**
+**[Ver solución](#sec-sol-cap1-reto9)**
 
 ---
 
-## Reto 1.16: `typeof` y funciones {#sec-cap1-reto16}
+## Reto 1.10: `typeof` y funciones {#sec-cap10-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -398,46 +292,22 @@ const sayHi = () => {
 console.log(typeof sayHi());
 ```
 
-**Pista:** Ojo con el valor de retorno de la función `sayHi`.
+**Opciones:**
 
 * A. `number`
 * B. `object`
 * C. `string`
 * D. `TypeError`
 
-**[Ver solución](#sec-sol-cap1-reto16)**
-
----
-
-## Reto 1.17: `length` en cadenas y arreglos {#sec-cap1-reto17}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+::: {.callout-tip title="Pista" collapse="true"}
+Ojo con el valor de retorno de la función `sayHi`.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-const band = "Coldplay";
-const songs = ["Yellow", "Fix You", "Trouble"];
-
-console.log(band["length"]);
-console.log(songs["len"+"gth"]);
-```
-
-**Pista:** `length` sirve para calcular la longitud de un iterable como una cadena o un arreglo.
-
-* A. `length`, `3`
-* B. `8`, `SyntaxError`
-* C. `8`, `3`
-* D. `SyntaxError`, `SyntaxError`
-
-
-**[Ver solución](#sec-sol-cap1-reto17)**
+**[Ver solución](#sec-sol-cap10-reto1)**
 
 ---
 
-## Reto 1.18: Corto circuito y nullish coalescing operator  {#sec-cap1-reto18}
+## Reto 1.11: Corto circuito y nullish coalescing operator {#sec-cap2-reto7}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -449,41 +319,22 @@ console.log(songs["len"+"gth"]);
 console.log(undefined || "0" || null || (undefined ?? 0))
 ```
 
-**Pista:** El operador `??` se ejecuta solo si evalua como `undefined` o `null`.
+**Opciones:**
 
 * A. `0`
 * B. `"0"`
 * C. `undefined`
 * D. `null`
 
-**[Ver solución](#sec-sol-cap1-reto18)**
-
----
-
-## Reto 1.19: Restas de cadenas y números {#sec-cap1-reto19}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+::: {.callout-tip title="Pista" collapse="true"}
+El operador `??` se ejecuta solo si evalua como `undefined` o `null`.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-console.log(typeof("22" - 0))
-```
-
-**Pista:** El operdor `-` siempre representa una resta aritmética en JavaScript.
-
-* A. `number`
-* B. `string`
-* C. `object`
-* D. `TypeError`
-
-**[Ver solución](#sec-sol-cap1-reto19)**
+**[Ver solución](#sec-sol-cap1-reto11)**
 
 ---
 
-## Reto 1.20: `null` vs `object`  {#sec-cap1-reto20}
+## Reto 1.12: `null` vs `object` {#sec-cap7-reto5}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -495,91 +346,22 @@ console.log(typeof("22" - 0))
 console.log(typeof null == 'object');
 ```
 
-**Pista:** Este reto representa un bug clásico de JavaScript. Cuidado al comparar `null` con `object`.
+**Opciones:**
 
 * A. `true`
 * B. `false`
 * C. `TypeError`
 * D. `undefined`
 
-**[Ver solución](#sec-sol-cap1-reto20)**
-
----
-
-## Reto 1.21: El método `repeat` de las cadenas {#sec-cap1-reto21}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Intermedio**
+::: {.callout-tip title="Pista" collapse="true"}
+Este reto representa un bug clásico de JavaScript. Cuidado al comparar `null` con `object`.
 :::
 
-**¿Qué imprime este código?**
-
-```js
-console.log("--- Menu ---");
-console.log("tea" + ".".repeat(5) + ":" + "$1.50");
-console.log("coffee" + ".".repeat(3.2) + ":" + "$3.75");
-console.log("beer" + ".".repeat(-1) + ":" + "$5.00");
-```
-
-**Pista:** `repeat` es un método de cadenas poco conocido pero muy útil para repetir cadenas de manera controlada.
-
-* A. 
-
-```js
---- Menu ---
-tea.....:$1.50
-coffee..:$3.75
-RangeError: repeat count must be non-negative
-```
-* B. 
-
-```js
---- Menu ---
-tea.....:$1.50
-coffee..:$3.75
-beer....:$5.00
-```
-
-* C. 
-
-```js
---- Menú ---
-té.....:$1.50
-RangeError: repeat count must be non-decimal numbers
-RangeError: repeat count must be non-negative numbers
-```
-
-**[Ver solución](#sec-sol-cap1-reto21)**
+**[Ver solución](#sec-sol-cap7-reto5)**
 
 ---
 
-## Reto 1.22: Interpolación de cadenas clásico {#sec-cap1-reto22}
-
-::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
-:::
-
-**¿Qué imprime este código?**
-
-```js
-let name = "Cris";
-let age = 25;
-
-console.log("My name is %s and I am %d", name, age);
-```
-
-**Pista:** Cuidado con los comodines `%s` y `%d`.
-
-* A. `My name is %s and I am %d`
-* B. `SyntaxError`
-* C. `My name is Cris and I am 25`
-* D. `Ninguna de las anteriores`
-
-**[Ver solución](#sec-sol-cap1-reto22)**
-
----
-
-## Reto 1.23: Desestructuración de arreglos y `length` {#sec-cap1-reto23}
+## Reto 1.13: Desestructuración de arreglos y `length` {#sec-cap1-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -593,19 +375,23 @@ const [, , , myName] = names;
 console.log(myName["length"]);
 ```
 
-**Pista:** En una desestructuración de arreglos es muy importante tener en cuenta que los elementos estan debidamente indexados y el orden de los mismos si importan.
+**Opciones:**
 
 * A. `SyntaxError`
 * B. `6`
 * C. `5`
 * D. `4`
 
+::: {.callout-tip title="Pista" collapse="true"}
+En una desestructuración de arreglos es muy importante tener en cuenta que los elementos estan debidamente indexados y el orden de los mismos si importan.
+:::
 
-**[Ver solución](#sec-sol-cap1-reto23)**
+
+**[Ver solución](#sec-sol-cap1-reto13)**
 
 ---
 
-## Reto 1.24: `JSON.stringify` para convertir objetos a cadenas {#sec-cap1-reto24}
+## Reto 1.14: `JSON.stringify` para convertir objetos a cadenas {#sec-cap1-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -622,18 +408,22 @@ console.log(JSON.stringify(a) === JSON.stringify(b));
 console.log(JSON.stringify(a) === JSON.stringify(c)); 
 ```
 
-**Pista:** `JSON.stringify` convierte un objeto en una cadena de texto.
+**Opciones:**
 
 * A. `true`, `false`
 * B. `false`, `false`
 * C. `false`, `true`
 * D. `true`, `true`
 
-**[Ver solución](#sec-sol-cap1-reto24)**
+::: {.callout-tip title="Pista" collapse="true"}
+`JSON.stringify` convierte un objeto en una cadena de texto.
+:::
+
+**[Ver solución](#sec-sol-cap1-reto14)**
 
 ---
 
-## Reto 1.25: Comparación de `NaN` con `Object.is` {#sec-cap1-reto25}
+## Reto 1.15: Comparación de `NaN` con `Object.is` {#sec-cap7-reto2}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -649,18 +439,22 @@ console.log( a === b );
 console.log(Object.is(a, b)); 
 ```
 
-**Pista:** 
+**Opciones:**
 
 * A. `true`, `false`
 * B. `false`, `true`
 * C. `true`, `NaN`
 * D. `true`, `undefined`
 
-**[Ver solución](#sec-sol-cap1-reto25)**
+::: {.callout-tip title="Pista" collapse="true"}
+`Object.is()` y `===` manejan `NaN` de formas diferentes.
+:::
+
+**[Ver solución](#sec-sol-cap7-reto2)**
 
 ---
 
-## Reto 1.26: Trabajando con `undefined` {#sec-cap1-reto26}
+## Reto 1.16: Trabajando con `undefined` {#sec-cap10-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -695,19 +489,23 @@ function y(){
 console.log(y())
 ```
 
-**Pista:** `undefined` es un valor que se asigna por defecto a las variables que no se inicializan entre otros muchos casos.
+**Opciones:**
 
 * A. `Solo el ejemplo #1`
 * B. `Ejemplo #2 y Ejemplo #3`
 * C. `Ejemplo #3 y Ejemplo #4`
 * D. `Todos los ejemplos`
 
+::: {.callout-tip title="Pista" collapse="true"}
+`undefined` es un valor que se asigna por defecto a las variables que no se inicializan entre otros muchos casos.
+:::
 
-**[Ver solución](#sec-sol-cap1-reto26)**
+
+**[Ver solución](#sec-sol-cap1-reto16)**
 
 ---
 
-## Reto 1.27: El objeto `Error` {#sec-cap1-reto27}
+## Reto 1.17: El objeto `Error` {#sec-cap10-reto11}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -728,19 +526,23 @@ console.log(add(2, true));
 console.log(add(2, 0));
 ```
 
-**Pista:** Tener en cuenta los valores `falsy` y la coersión de tipos.
+**Opciones:**
 
 * A. `4`, `"2true"`, `2`
 * B. `4`, `3`, `Error: missing parameters`
 * C. `"22"`, `"3true"`, `"20"`
 * D. `4`, `3`, `2`
 
+::: {.callout-tip title="Pista" collapse="true"}
+Tener en cuenta los valores `falsy` y la coersión de tipos.
+:::
 
-**[Ver solución](#sec-sol-cap1-reto27)**
+
+**[Ver solución](#sec-sol-cap10-reto11)**
 
 ---
 
-## Reto 1.28: Convirtiendo valores a booleanos {#sec-cap1-reto28}
+## Reto 1.18: Convirtiendo valores a booleanos {#sec-cap1-reto11}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -758,18 +560,22 @@ console.log(toBolean({}));
 console.log(toBolean(Symbol("I'am a symbol")));
 ```
 
-**Pista:** El objeto `Boolean` permite convertir valores a tipo boolean basandose en los valores `falsy` y `truthy`.
+**Opciones:**
 
 * A. `true`, `false`, `false`, `true`, `true`
 * B. `false`, `false`, `true`, `true`, `false`
 * C. `true`, `true`, `false`, `false`, `false`
 * D. `false`, `ReferenceError`, `false`, `false`, `true`
 
-**[Ver solución](#sec-sol-cap1-reto28)**
+::: {.callout-tip title="Pista" collapse="true"}
+El objeto `Boolean` permite convertir valores a tipo boolean basandose en los valores `falsy` y `truthy`.
+:::
+
+**[Ver solución](#sec-sol-cap1-reto18)**
 
 ---
 
-## Reto 1.29: Operadores de corto circuito {#sec-cap1-reto29}
+## Reto 1.19: Operadores de corto circuito {#sec-cap2-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -784,14 +590,15 @@ console.log(typeof (undefined || null || 0 || ("0" ?? 0)));
 console.log((() => "hi")() || (false && true));
 ```
 
-**Pista:** Los valores falsy y truthy son clave para resolver este reto.
+**Opciones:**
 
 * A. `{}`, `2n`, `number`, `false`
 * B. `undefined`, `Symbol("hi")`, `string`, `"hi"`
 * C. `null`, `Symbol("hi")`, `string`, `"hi"`
 * D. `null`, `0`, `number`, `true`
 
-**[Ver solución](#sec-sol-cap1-reto29)**
+::: {.callout-tip title="Pista" collapse="true"}
+Los valores falsy y truthy son clave para resolver este reto.
+:::
 
----
-
+**[Ver solución](#sec-sol-cap2-reto8)**
