@@ -10,13 +10,13 @@ La respuesta del [Reto 4.1](#sec-cap4-reto1) es:
 
 En la primera línea declaramos `let greeting;`, al declarar una variable con `let` sin inicializarla, esta toma el valor de `undefined`.
 
-En la segunda línea, se comete un error de tipeo `greetign = {};`, pero como la variable no esta declarada ni con `var`, `let` o `const`; Javascript tras bambalinas hace algo como lo siguiente aunque el programador no lo vea:
+En la segunda línea, se comete un error de tipeo `greetign = {};`, pero como la variable no esta declarada ni con [var](#glos-var), [let](#glos-let) o [const](#glos-const); Javascript tras bambalinas hace algo como lo siguiente aunque el programador no lo vea:
 
 ```js
 var greetign = {}; // Typo!
 ```
 
-Entonces `greetign` se crea como **variable global**, en el navegador en el objeto `window` y en un entorno de Node.js en el objeto `global`.
+Entonces `greetign` se crea como **variable global**, en el navegador en el objeto [window](#glos-window) y en un entorno de [Node.js](#glos-nodejs) en el objeto [global](#glos-global).
 
 El código final se veria así:
 
@@ -43,7 +43,7 @@ La respuesta del [Reto 4.2](#sec-cap4-reto2) es:
 
 **Explicación:**
 
-Las variables declaradas con `let` y `const` tienen un contexto de bloque, esto significa que solo podrán ser accedidas dentro del bloque de llaves donde fueron declaradas, por ejemplo dentro de un bloque `if` o dentro de una función.
+Las variables declaradas con `let` y `const` tienen un [ámbito de bloque](#glos-ambito_de_bloque), esto significa que solo podrán ser accedidas dentro del bloque de llaves donde fueron declaradas, por ejemplo dentro de un bloque `if` o dentro de una función.
 
 Esta premisa se cumple siempre y cuando esten declaradas dentro de un bloque, si una variable esta fuera de todo bloque entonces se dice que es una variable global y por ende puede ser accedida desde cualquier parte del código.
 
@@ -63,7 +63,7 @@ console.log(x + z);
 ```
 La variable `x` esta en el contexto global, por ende accedemos a su valor sin problema alguno.
 
-La variable `z` esta dentro del bloque `if` y no deberiamos poder acceder a ella, pero `z` esta declarada con `var`, esto la convierte en una variable con **contexto de función** y no de bloque, entonces accedemos a su valor, para poder sumar `x + z` que sería `40`.
+La variable `z` esta dentro del bloque `if` y no deberiamos poder acceder a ella, pero `z` esta declarada con `var`, esto la convierte en una variable con [ambito de función](#glos-ambito_de_funcion) y no de bloque, entonces accedemos a su valor, para poder sumar `x + z` que sería `40`.
 
 ---
 
@@ -75,7 +75,7 @@ La respuesta del [Reto 4.3](#sec-cap4-reto3) es:
 
 **Explicación:**
 
-La primera función en llamarse es `increaseNumber` que solo se encarga de retornar la variable `num` y luego la incrementa; `num` no esta en el scope de la función por eso pasamos a buscar la variable en el scope global. Esta función regresará `10`.
+La primera función en llamarse es `increaseNumber` que solo se encarga de retornar la variable `num` y luego la incrementa; `num` no esta en el scope de la [función](#glos-funcion) por eso pasamos a buscar la variable en el scope global. Esta función regresará `10`.
 
 `num1` se pasa como parámetro a `increasePassedNumber` que hace lo mismo que `increaseNumber`, regresa primero el valor de la variable y luego la incrementa, por ello obtenemos nuevamente como salida el valor `10`.
 
@@ -89,7 +89,7 @@ La respuesta del [Reto 4.4](#sec-cap4-reto4) es:
 
 **Explicación:**
 
-Al llamar a `getStatus` debemos tener el cuenta el scope de las variables, recuerda que tanto `let` como `const` tienen scope de bloque, por ende buscara una variable `status` dentro del bloque de `data` y regresara la cadena `"C"`.
+Al llamar a `getStatus` debemos tener el cuenta el [scope](#glos-scope) de las variables (ámbito de las variable en español), recuerda que tanto `let` como `const` tienen scope de bloque, por ende buscara una variable `status` dentro del bloque de `data` y regresara la cadena `"C"`.
 
 ---
 
