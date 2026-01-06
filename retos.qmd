@@ -1,4 +1,4 @@
-# Retos {.unnumbered}
+# Retos
 
 ## Reto #1: Conversión rápida a number {#sec-array-1}
 
@@ -1222,7 +1222,7 @@ console.log(checkAge(21))
 
 ---
 
-## Reto #46: I want pizza {#sec-array-46}
+## Reto #46: Quiero pizza {#sec-array-46}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -1328,7 +1328,7 @@ for (const [x, y] of Object.entries(person)) {
 
 ---
 
-## Reto #50: Parametros REST en funciones modernas {#sec-array-50}
+## Reto #50: Parámetros REST en funciones modernas {#sec-array-50}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -1378,11 +1378,11 @@ console.log(nums(4, 2))
 console.log(nums(1, 2))
 ```
 
-**Pista:** Notar que no existe ningún punto y coma en núnguna línea de código de la función.
+**Pista:** Notar que no existe ningún punto y coma en ninguna línea de código de la función.
 
-* A. `a is bigger, 6 y b is bigger, 3`
-* B. `a is bigger, undefined y b is bigger, undefined`
-* C. `undefined y undefined`
+* A. `a is bigger, 6` y `b is bigger, 3`
+* B. `a is bigger, undefined` y `b is bigger, undefined`
+* C. `undefined` y `undefined`
 * D. `SyntaxError`
 
 **[Ver solución](#sec-sol-array-51)**
@@ -1417,7 +1417,7 @@ console.log(Object.keys(info))
 
 ---
 
-## Reto #53: Cuidado con el return implicito de las funciones {#sec-array-53}
+## Reto #53: Cuidado con el return implícito de las funciones {#sec-array-53}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -1447,9 +1447,6 @@ console.log(getUser(user))
 
 ---
 
-
-
-
 ## Reto #54: Invocar una variable como función {#sec-array-54}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
@@ -1465,10 +1462,10 @@ console.log(name())
 
 **Pista:** Las variables no pueden ser invocadas como funciones, ¿o si pueden?
 
-* A. ´SyntaxError`
-* B. ´ReferenceError`
-* C. ´TypeError`
-* D. ´undefined`
+* A. `SyntaxError`
+* B. `ReferenceError`
+* C. `TypeError`
+* D. `undefined`
 
 **[Ver solución](#sec-sol-array-54)**
 
@@ -1514,12 +1511,12 @@ const three = ([] || 0 || true)
 console.log(one, two, three)
 ```
 
-**Pista:** El operador de corto circuito ´or´ se ejecuta con valores **falsy**.
+**Pista:** El operador de corto circuito `or` se ejecuta con valores **falsy**.
 
-* A. `false` `null` `[]`
-* B. `null` `""` `true`
-* C. `{}` `""` `[]`
-* D. `null` `null` `true`
+* A. `false`, `null`, `[]`
+* B. `null`, `""`, `true`
+* C. `{}`, `""`, `[]`
+* D. `null`, `null`, `true`
 
 **[Ver solución](#sec-sol-array-56)**
 
@@ -1647,7 +1644,7 @@ const colors = ["pink", "red", "blue"]
 console.log(colorConfig.colors[1])
 ```
 
-**Pista:** Recuerda que las propiedades de los objetos son accedidas por medio de `.` y los arreglos son accedidos por medio de `[]`.
+**Pista:** Recuerda que las propiedades de los objetos son accedidas por medio de notación de punto `.` y los arreglos son accedidos por medio de notación de corchetes `[]`.
 
 * A. `true`
 * B. `false`
@@ -1923,16 +1920,16 @@ console.log(band["na"+"me"])
 **¿Qué imprime este código?**
 
 ```js
-let objeto1 = { valor: 10 };
-let objeto2 = objeto1;
-let objeto3 = { valor: 10 };
+let object1 = { value: 10 };
+let object2 = object1;
+let object3 = { value: 10 };
 
-console.log(objeto1 == objeto2);
-console.log(objeto1 == objeto3);
+console.log(object1 == object2);
+console.log(object1 == object3);
 
-objeto1.valor = 15;
-console.log(objeto2.valor);
-console.log(objeto3.valor);
+object1.value = 15;
+console.log(object2.value);
+console.log(object3.value);
 ```
 
 **Pista:** Recuerda cómo funcionan las referencias en JavaScript con los objetos. Piensa en cómo se comportan las asignaciones de objetos y las comparaciones de igualdad con el operador `==`.
@@ -2057,7 +2054,7 @@ console.log(typeof("22" - 0))
 ## Reto #75: `length` como un setter {#sec-array-75}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
-**Básico**
+**Intermedio**
 :::
 
 **¿Qué imprime este código?**
@@ -2135,7 +2132,7 @@ console.log(typeof null == 'object');
 **¿Qué imprime este código?**
 
 ```js
-const name = "Alejandro";
+const name = "Pepe";
 
 console.log(name.split(""));
 console.log([...name]);
@@ -2144,11 +2141,12 @@ console.log(Array.from(name));
 
 **Pista:** Existen muchos caminos para llegar a Roma.
 
-* A. Los 3 imprimen: `['A','l','e','j','a','n','d','r','o']`
-* B. `['A','l','e','j','a','n','d','r','o']` , `[]`, `['A','l','e','j','a','n','d','r','o']`
-* C. `['Alejandro']` , `['A','l','e','j','a','n','d','r','o']`, 
-`['A','l','e','j','a','n','d','r','o']`
-* D. `Alejandro`, `Alejandro`, `Alejandro`
+* A. Los 3 imprimen: `['P','e','p','e']`
+* B. `['P','e','p','e']` , `[]`, 
+`['P','e','p','e']`
+* C. `['Pepe']` , `['P','e','p','e']`, 
+`['P','e','p','e']`
+* D. `Pepe`, `Pepe`, `Pepe`
 
 **[Ver solución](#sec-sol-array-78)**
 
@@ -2166,7 +2164,7 @@ console.log(Array.from(name));
 console.log("hello".split("").reverse().join("")); 
 ```
 
-**Pista:** Cuidado con imprimir una cadena o un arreglo. Ojo al ḿetodo `join`.
+**Pista:** Cuidado con imprimir una cadena o un arreglo. Ojo al método `join`.
 
 * A. `['h','e','l','l','o'];`
 * B. `['o','l','l','e','h']`
@@ -2193,6 +2191,7 @@ const multiply = a => b => a * b ;
 const test = (name, action) => {
   return action(name); 
 }
+
 console.log(test("Ana", console.log)); 
 //Ana (por consola)
 ```
@@ -2279,7 +2278,7 @@ RangeError: repeat count must be non-negative numbers
 
 ---
 
-## Reto #83: `var`, `let` y `const` y el alcance global {#sec-array-83}
+## Reto #83: `var`, `let`, `const` y el alcance global {#sec-array-83}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -2359,7 +2358,7 @@ console.log(test.for);
 **Pista:** Cuidado con el uso de palabras reservadas como nombres de `keys` en objetos.
 
 * A. `SyntaxError: unexpected token: keyword 'for'`
-* B. `Es un bucle`
+* B. `It's a loop`
 * C. `ReferenceError`
 * D. `Ninguna de las anteriores`
 
@@ -2494,19 +2493,20 @@ console.log(test());
 
 ```js
 const teachers = ["Oscar", "Nico", "Freddy", "Christian", "Angela"];
-console.log(teachers.at(1)); //?
-console.log(teachers.at(-1)); //?
-console.log(teachers.at(10)); //?
-console.log(teachers.at(3.8)); //?
-console.log(teachers.at(-3.3)); //?
+
+console.log(teachers.at(1));
+console.log(teachers.at(-1));
+console.log(teachers.at(10));
+console.log(teachers.at(3.8));
+console.log(teachers.at(-3.3));
 ```
 
 **Pista:** `at` es un método relativamente nuevo que permite acceder a un elemento de un array por su índice. 
 
-* A. `Nico Angela undefined Christian Freddy`
-* B. `Oscar undefined undefined Freddy undefined`
-* C. `Nico SyntaxError null Christian SyntaxError`
-* D. `Nico null undefined undefined null`
+* A. `Nico, Angela, undefined, Christian, Freddy`
+* B. `Oscar, undefined, undefined, Freddy, undefined`
+* C. `Nico, SyntaxError, null, Christian, SyntaxError`
+* D. `Nico, null, undefined, undefined, null`
 
 **[Ver solución](#sec-sol-array-90)**
 
@@ -2531,10 +2531,10 @@ console.log(f([]));
 
 **Pista:** `length` verifica cuantos elementos tiene un arreglo.
 
-* A. `true` `false` `true`
-* B. `false` `false` `false`
-* C. `true` `true` `true`
-* D. `false` `false` `true`
+* A. `true`, `false`, `true`
+* B. `false`, `false`, `false`
+* C. `true`, `true`, `true`
+* D. `false`, `false`, `true`
 
 **[Ver solución](#sec-sol-array-91)**
 
@@ -2559,10 +2559,10 @@ console.log(JSON.stringify(a) === JSON.stringify(c));
 
 **Pista:** `JSON.stringify` convierte un objeto en una cadena de texto.
 
-* A. `true` `false`
-* B. `false` `false`
-* C. `false` `true`
-* D. `true` `true`
+* A. `true`, `false`
+* B. `false`, `false`
+* C. `false`, `true`
+* D. `true`, `true`
 
 **[Ver solución](#sec-sol-array-92)**
 
@@ -2582,7 +2582,7 @@ let b = [4, 5, 6];
 console.log(a + b);
 ```
 
-**Pista:** Cuidado con el operador `+`, especialmente cuando se usan arreglos.
+**Pista:** REcuerda que el operador `+` concatena cadenas de texto o hace sumas aritmeticas.
 
 * A. `[1, 2, 3, 4, 5, 6]`
 * B. `[1, 2, 3, [4, 5, 6]]`
@@ -2676,7 +2676,7 @@ console.log(y())
 **¿Qué imprime este código?**
 
 ```js
-const add = (a,b) => {
+const add = (a, b) => {
   if(!a || !b){
     throw new Error("missing parameters");
   }
@@ -2729,47 +2729,13 @@ console.log(toBolean(Symbol("I'am a symbol")));
 
 ---
 
-## Reto #98: {#sec-array-98}
+## Reto #98: El tipo `Symbol` como llaves de objetos {#sec-array-98-en}
 
-::: {.callout-caution title="Dificultad" collapse="true"}
+::: {.callout-caution title="Difficulty" collapse="true"}
 **Avanzado**
 :::
 
 **¿Qué imprime este código?**
-
-```js
-const nombre = Symbol("primer nombre");
-const apellido = Symbol("apellido paterno");
-
-const persona = {
-  id: 1,
-  [nombre]: "Cristian",
-  [apellido]: "Villca",
-  peso: 82,
-  estatura: 180,
-};
-
-console.log(Object.keys(persona));
-```
-
-**Pista:** 
-
-A. [ 'id', 'peso', 'estatura' ]
-B. [ 'id', 'nombre', 'apellido', 'peso', 'estatura' ]
-C. [ 'nombre', 'apellido' ]
-D. Ninguno de los anteriores
-
-**[Ver solución](#sec-sol-array-98)**
-
----
-
-## Challenge #98: El tipo `Symbol` como llaves de objetos {#sec-array-98-en}
-
-::: {.callout-caution title="Difficulty" collapse="true"}
-**Advanced**
-:::
-
-**What does this code print?**
 
 ```js
 const firstName = Symbol("first name");
@@ -2786,14 +2752,14 @@ const person = {
 console.log(Object.keys(person));
 ```
 
-**Hint:** Los valores `Symbol` son únicos en un programa, muy útiles para crear propiedades privadas en objetos.
+**Pista:** Los valores `Symbol` son únicos en un programa, muy útiles para crear propiedades privadas en objetos.
 
 * A. `[ 'id', 'weight', 'height' ]`
 * B. `[ 'id', 'firstName', 'lastName', 'weight', 'height' ]`
 * C. `[ 'firstName', 'lastName' ]`
 * D. `Ninguna de las anteriores`
 
-**[See solution](#sec-sol-array-98)**
+**[Ver solución](#sec-sol-array-98)**
 
 ---
 
@@ -2823,7 +2789,7 @@ console.log((() => "hi")() || (false && true));
 
 ---
 
-## Reto #100: Redondeo de números con el objeto `Math`{#sec-array-100}
+## Reto #100: Redondeo de números con el objeto `Math` {#sec-array-100}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
