@@ -3,16 +3,46 @@ project:
 
 book:
   chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - agradecimientos.qmd
-    - about.qmd
-    - references.qmd
-    - retos.qmd
-    - soluciones.qmd
+    # Secciones Preliminares (sin numerar)
+    - index.qmd              # Prefacio
+    - prologo.qmd            # Prólogo
+    - resumen.qmd            # Resumen
+    - agradecimientos.qmd    # Agradecimientos
+    - autor.qmd              # Acerca del Autor
+    
+    # Capítulos Principales (numerados)
+    - intro.qmd              # Introducción
+    - part: "Retos"
+      chapters:
+        - retos-cap1.qmd
+        - retos-cap2.qmd
+        - retos-cap3.qmd
+        - retos-cap4.qmd
+        - retos-cap5.qmd
+        - retos-cap6.qmd
+        - retos-cap7.qmd
+        - retos-cap8.qmd
+        - retos-cap9.qmd
+        - retos-cap10.qmd
+    - part: "Soluciones"
+      chapters:
+        - soluciones-cap1.qmd
+        - soluciones-cap2.qmd
+        - soluciones-cap3.qmd
+        - soluciones-cap4.qmd
+        - soluciones-cap5.qmd
+        - soluciones-cap6.qmd
+        - soluciones-cap7.qmd
+        - soluciones-cap8.qmd
+        - soluciones-cap9.qmd
+        - soluciones-cap10.qmd
+    
+    # Apéndices y Referencias (sin numerar)
+    - glosario.qmd           # Glosario
+    - references.qmd         # Referencias
 
 bibliography: references.bib
+nocite: '@*'
 
 format:
   html:
