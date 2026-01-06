@@ -350,6 +350,24 @@ const miFuncion = function() {
 
 ## I 
 
+### Igualdad débil {#glos-igualdad_débil}
+
+**Inglés:** Weak Equality
+
+**Tipo:** Concepto
+
+**Definición:**
+Operador que compara dos valores para verificar si son iguales, convirtiendo los valores si es necesario para que tengan el mismo tipo.
+
+**Ejemplo:**
+
+```javascript
+console.log(1 == "1"); // true
+console.log(true == 1); // true
+```
+
+**Referencias:** @mdn_equality_comparisons
+
 ### Igualdad estricta {#glos-igualdad_estricta}
 
 **Inglés:** Strict Equality
@@ -362,8 +380,8 @@ Operador que compara dos valores para verificar si son iguales y del mismo tipo.
 **Ejemplo:**
 
 ```javascript
-1 === 1; // true
-1 === "1"; // false
+console.log(1 === 1);   // true
+console.log(1 === "1"); // false
 ```
 
 **Referencias:** @mdn_strict_equality

@@ -14,7 +14,7 @@ console.log(false === 0) // false
 ```
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Notar la comparación de variables con igualdad débil e igualdad estricta.
+Notar la comparación de variables con [igualdad débil](#glos-igualdad_débil) e [igualdad estricta](#glos-igualdad_estricta).
 :::
 
 **[Ver solución](#sec-sol-cap3-reto1)**
