@@ -56,6 +56,49 @@ Definiciones de términos técnicos utilizados en este libro para facilitar la c
 
 ## A
 
+### Asignación por referencia {#glos-asignacion_por_referencia}
+
+**Inglés:** Assignment by reference
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Proceso mediante el cual se copia la dirección de memoria de una variable a otra. En JavaScript, esto ocurre con los tipos de datos complejos (como objetos y arreglos). Al realizar la asignación, ambas variables apuntan al mismo objeto en memoria, por lo que cualquier modificación en uno de los objetos afectará a ambos.
+
+**Ejemplo:**
+
+```javascript
+let obj1 = { a: 1 };
+let obj2 = obj1;
+obj2.a = 2;
+console.log(obj1.a); // 2
+```
+
+**Referencias:** @lupomontero_valor_vs_referencia
+
+### Asignación por valor {#glos-asignacion_por_valor}
+
+**Inglés:** Assignment by value
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Proceso mediante el cual se copia el contenido real de una variable a otra. En JavaScript, esto ocurre con los tipos de datos primitivos (como números, cadenas de texto y booleanos). Al realizar la asignación, se crea una copia independiente en memoria, por lo que cualquier modificación posterior en una de las variables no afectará a la otra.
+
+
+**Ejemplo:**
+
+```javascript
+let a = 1;
+let b = a;
+b = 2;
+console.log(a); // 1
+```
+
+**Referencias:** @lupomontero_valor_vs_referencia
+
 ### Array.from {#glos-array_from}
 
 **Inglés:** Array.from
@@ -446,6 +489,28 @@ console.log(globalThis); // Global object
 ```
 
 **Referencias:** @mdn_global_object
+
+---
+
+## H
+
+### Hoisting {#glos-hoisting}
+
+**Inglés:** Hoisting
+
+**Tipo:** Concepto
+
+**Definición:**
+Comportamiento de JavaScript en el que las declaraciones de variables, funciones, clases o importaciones se mueven conceptualmente a la parte superior de su ámbito (scope) durante la fase de compilación, antes de que se ejecute el código. Esto permite que ciertos elementos sean referenciados antes de su declaración formal, aunque su disponibilidad e inicialización dependen de la forma en que fueron declarados.
+
+**Ejemplo:**
+
+```javascript
+console.log(x); // ReferenceError: x is not defined
+let x = 1;
+```
+
+**Referencias:** @freecodecamp_hoisting
 
 ---
 
@@ -858,6 +923,24 @@ Number.parseInt("5") // 5
 
 ## R 
 
+### ReferenceError {#glos-referenceerror}
+
+**Inglés:** ReferenceError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta acceder a una variable, función o objeto que no ha sido declarado o que no está en el scope actual.
+
+**Ejemplo:**
+
+```javascript
+const y = "Node.js"
+console.log(x); // ReferenceError: x is not defined
+```
+
+**Referencias:** @mdn_referenceerror
+
 ### repeat {#glos-repeat}
 
 **Inglés:** repeat
@@ -955,6 +1038,28 @@ console.log(x); // 10
 
 **Referencias:** @mdn_scope_glosario
 
+### Scope Global {#glos-scope_global}
+
+**Inglés:** Global scope
+
+**Tipo:** Concepto
+
+**Definición:**
+Ámbito global es el contexto en el que se definen variables y funciones que son accesibles desde cualquier parte del código.
+
+**Ejemplo:**
+
+```javascript
+let x = 10;
+function myFunction() {
+    let x = 20;
+    console.log(x); // 20
+}
+console.log(x); // 10
+```
+
+**Referencias:** @freecodecamp_scope_guide
+
 ### split {#glos-split}
 
 **Inglés:** split
@@ -1032,6 +1137,23 @@ console.log(`Hola ${nombre}`); // "Hola Mundo"
 
 **Referencias:** @freecodecamp_dot_vs_bracket
 
+### Temporal Dead Zone {#glos-temporal_dead_zone}
+
+**Inglés:** Temporal Dead Zone
+
+**Tipo:** Concepto
+
+**Definición:**
+Zona en la que una variable está declarada pero no es posible acceder a ella.
+
+**Ejemplo:**
+
+```javascript
+console.log(miVariable); // ReferenceError: Cannot access 'miVariable' before initialization
+let miVariable = "Hola";
+```
+
+**Referencias:** @yt_temporal_dead_zone_2021
 
 ### Truthy {#glos-truthy}
 
@@ -1054,6 +1176,25 @@ Boolean(Infinity);  // true
 ```
 
 **Referencias:** @mdn_truthy
+
+### TypeError {#glos-typeerror}
+
+**Inglés:** TypeError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta realizar una operación con un tipo de dato inapropiado.
+
+**Ejemplo:**
+
+```javascript
+const num = 123;
+num.toUpperCase(); 
+// TypeError: num.toUpperCase is not a function
+```
+
+**Referencias:** @mdn_typeerror
 
 ### typeof {#glos-typeof}
 
