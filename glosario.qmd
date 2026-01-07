@@ -56,6 +56,49 @@ Definiciones de términos técnicos utilizados en este libro para facilitar la c
 
 ## A
 
+### Asignación por referencia {#glos-asignacion_por_referencia}
+
+**Inglés:** Assignment by reference
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Proceso mediante el cual se copia la dirección de memoria de una variable a otra. En JavaScript, esto ocurre con los tipos de datos complejos (como objetos y arreglos). Al realizar la asignación, ambas variables apuntan al mismo objeto en memoria, por lo que cualquier modificación en uno de los objetos afectará a ambos.
+
+**Ejemplo:**
+
+```javascript
+let obj1 = { a: 1 };
+let obj2 = obj1;
+obj2.a = 2;
+console.log(obj1.a); // 2
+```
+
+**Referencias:** @lupomontero_valor_vs_referencia
+
+### Asignación por valor {#glos-asignacion_por_valor}
+
+**Inglés:** Assignment by value
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Proceso mediante el cual se copia el contenido real de una variable a otra. En JavaScript, esto ocurre con los tipos de datos primitivos (como números, cadenas de texto y booleanos). Al realizar la asignación, se crea una copia independiente en memoria, por lo que cualquier modificación posterior en una de las variables no afectará a la otra.
+
+
+**Ejemplo:**
+
+```javascript
+let a = 1;
+let b = a;
+b = 2;
+console.log(a); // 1
+```
+
+**Referencias:** @lupomontero_valor_vs_referencia
+
 ### Array.from {#glos-array_from}
 
 **Inglés:** Array.from
@@ -74,6 +117,48 @@ console.log(Array.from("JavaScript"));
 ```
 
 **Referencias:** @mdn_array_from
+
+### Ámbito de bloque {#glos-ambito_de_bloque}
+
+**Inglés:** Block scope
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Ámbito de bloque es un concepto que se refiere a la visibilidad y accesibilidad de las variables dentro de un bloque de código, como un bucle o una condición.
+
+**Ejemplo:**
+
+```javascript
+if (true) {
+    let x = 1;
+}
+console.log(x); // ReferenceError: x is not defined
+```
+
+**Referencias:** @cardillo_function_vs_block_scope
+
+### Ámbito de función {#glos-ambito_de_funcion}
+
+**Inglés:** Function scope
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Ámbito de función es un concepto que se refiere a la visibilidad y accesibilidad de las variables dentro de una función.
+
+**Ejemplo:**
+
+```javascript
+function miFuncion() {
+    var x = 10;
+}
+console.log(x); // ReferenceError: x is not defined
+```
+
+**Referencias:** @aprendejavascript_funciones_scope
 
 ### Arreglo {#glos-arreglo}
 
@@ -214,6 +299,24 @@ let result = string1 + ", " + string2; // "Hello, world"
 
 **Referencias:** @mdn_strings_concat
 
+### const {#glos-const}
+
+**Inglés:** const
+
+**Tipo:** Concepto
+
+**Definición:**
+Declaración de una variable que no puede ser reasignada.
+
+**Ejemplo:**
+
+```javascript
+const a = 1;
+a = 2; // Error
+```
+
+**Referencias:** @mdn_const_statement
+
 ### Corto circuito {#glos-corto_circuito}
 
 **Inglés:** Short-circuit
@@ -327,6 +430,25 @@ Boolean(NaN);       // false
 
 **Referencias:** @mdn_falsy
 
+### Función {#glos-funcion}
+
+**Inglés:** Function
+
+**Tipo:** Objeto
+
+**Definición:**
+Función es una unidad de código que puede ser invocada para realizar una tarea específica. En JavaScript, las funciones son ciudadanos de primera clase, lo que significa que pueden ser asignadas a variables, pasadas como argumentos a otras funciones y retornadas como valores.
+
+**Ejemplo:**
+
+```javascript
+function myFunction() {
+    console.log("Hello, world!");
+}
+```
+
+**Referencias:** @mdn_funciones_guia
+
 ### Función anónima {#glos-funcion_anonima}
 
 **Inglés:** Anonymous Function
@@ -348,7 +470,69 @@ const miFuncion = function() {
 
 ---
 
+## G 
+
+### Global {#glos-global}
+
+**Inglés:** Global
+
+**Tipo:** Concepto
+
+**Definición:**
+Objeto que reside en el ámbito de mayor nivel y es accesible desde cualquier parte de la aplicación sin necesidad de declaraciones explícitas. En Node.js, este objeto se denomina `global` y proporciona acceso a variables y funciones del sistema (como `process` o `__dirname`). El estándar moderno `globalThis` unifica el acceso a este objeto global independientemente de si el código se ejecuta en un servidor o en un navegador.
+
+
+**Ejemplo:**
+
+```javascript
+console.log(globalThis); // Global object
+```
+
+**Referencias:** @mdn_global_object
+
+---
+
+## H
+
+### Hoisting {#glos-hoisting}
+
+**Inglés:** Hoisting
+
+**Tipo:** Concepto
+
+**Definición:**
+Comportamiento de JavaScript en el que las declaraciones de variables, funciones, clases o importaciones se mueven conceptualmente a la parte superior de su ámbito (scope) durante la fase de compilación, antes de que se ejecute el código. Esto permite que ciertos elementos sean referenciados antes de su declaración formal, aunque su disponibilidad e inicialización dependen de la forma en que fueron declarados.
+
+**Ejemplo:**
+
+```javascript
+console.log(x); // ReferenceError: x is not defined
+let x = 1;
+```
+
+**Referencias:** @freecodecamp_hoisting
+
+---
+
 ## I 
+
+### Igualdad débil {#glos-igualdad_débil}
+
+**Inglés:** Weak Equality
+
+**Tipo:** Concepto
+
+**Definición:**
+Operador que compara dos valores para verificar si son iguales, convirtiendo los valores si es necesario para que tengan el mismo tipo.
+
+**Ejemplo:**
+
+```javascript
+console.log(1 == "1"); // true
+console.log(true == 1); // true
+```
+
+**Referencias:** @mdn_equality_comparisons
 
 ### Igualdad estricta {#glos-igualdad_estricta}
 
@@ -362,8 +546,8 @@ Operador que compara dos valores para verificar si son iguales y del mismo tipo.
 **Ejemplo:**
 
 ```javascript
-1 === 1; // true
-1 === "1"; // false
+console.log(1 === 1);   // true
+console.log(1 === "1"); // false
 ```
 
 **Referencias:** @mdn_strict_equality
@@ -599,6 +783,23 @@ const a = new Number(2);
 
 **Referencias:** @mdn_new_operator
 
+### Node.js {#glos-nodejs}
+
+**Inglés:** Node.js
+
+**Tipo:** Entorno de ejecución
+
+**Definición:**
+Entorno de ejecución que permite ejecutar JavaScript fuera del navegador, utilizando el motor V8 de Google Chrome.
+
+**Ejemplo:**
+
+```javascript
+console.log("Hello Node.js");
+```
+
+**Referencias:** @mdn_nodejs_glossary
+
 ### Notación de corchetes {#glos-notacion_corchetes}
 
 **Inglés:** Bracket Notation
@@ -722,6 +923,24 @@ Number.parseInt("5") // 5
 
 ## R 
 
+### ReferenceError {#glos-referenceerror}
+
+**Inglés:** ReferenceError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta acceder a una variable, función o objeto que no ha sido declarado o que no está en el scope actual.
+
+**Ejemplo:**
+
+```javascript
+const y = "Node.js"
+console.log(x); // ReferenceError: x is not defined
+```
+
+**Referencias:** @mdn_referenceerror
+
 ### repeat {#glos-repeat}
 
 **Inglés:** repeat
@@ -795,6 +1014,51 @@ console.info([1, 2, 3].reverse()); // [3, 2, 1]
 ---
 
 ## S
+
+### scope {#glos-scope}
+
+**Inglés:** Scope
+
+**Tipo:** Concepto
+
+**Definición:**
+Contexto que determina la accesibilidad (visibilidad) de las variables, funciones y objetos en una parte específica del código durante el tiempo de ejecución.
+
+
+**Ejemplo:**
+
+```javascript
+let x = 10;
+function myFunction() {
+    let x = 20;
+    console.log(x); // 20
+}
+console.log(x); // 10
+```
+
+**Referencias:** @mdn_scope_glosario
+
+### Scope Global {#glos-scope_global}
+
+**Inglés:** Global scope
+
+**Tipo:** Concepto
+
+**Definición:**
+Ámbito global es el contexto en el que se definen variables y funciones que son accesibles desde cualquier parte del código.
+
+**Ejemplo:**
+
+```javascript
+let x = 10;
+function myFunction() {
+    let x = 20;
+    console.log(x); // 20
+}
+console.log(x); // 10
+```
+
+**Referencias:** @freecodecamp_scope_guide
 
 ### split {#glos-split}
 
@@ -873,6 +1137,23 @@ console.log(`Hola ${nombre}`); // "Hola Mundo"
 
 **Referencias:** @freecodecamp_dot_vs_bracket
 
+### Temporal Dead Zone {#glos-temporal_dead_zone}
+
+**Inglés:** Temporal Dead Zone
+
+**Tipo:** Concepto
+
+**Definición:**
+Zona en la que una variable está declarada pero no es posible acceder a ella.
+
+**Ejemplo:**
+
+```javascript
+console.log(miVariable); // ReferenceError: Cannot access 'miVariable' before initialization
+let miVariable = "Hola";
+```
+
+**Referencias:** @yt_temporal_dead_zone_2021
 
 ### Truthy {#glos-truthy}
 
@@ -895,6 +1176,25 @@ Boolean(Infinity);  // true
 ```
 
 **Referencias:** @mdn_truthy
+
+### TypeError {#glos-typeerror}
+
+**Inglés:** TypeError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta realizar una operación con un tipo de dato inapropiado.
+
+**Ejemplo:**
+
+```javascript
+const num = 123;
+num.toUpperCase(); 
+// TypeError: num.toUpperCase is not a function
+```
+
+**Referencias:** @mdn_typeerror
 
 ### typeof {#glos-typeof}
 
@@ -981,5 +1281,26 @@ undefined // undefined
 ```
 
 **Referencias:** @mdn_primitive
+
+---
+
+## W 
+
+### window {#glos-window}
+
+**Inglés:** window
+
+**Tipo:** Objeto
+
+**Definición:**
+Objeto global que representa la ventana del navegador.
+
+**Ejemplo:**
+
+```javascript
+console.log(window.innerWidth); // Ancho de la ventana
+```
+
+**Referencias:** @mdn_window_api
 
 :::
