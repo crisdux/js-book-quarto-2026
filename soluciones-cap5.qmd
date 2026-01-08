@@ -4,11 +4,11 @@
 
 La respuesta del [Reto 5.1](#sec-cap5-reto1) es:
 
-**D. `Pera`**
+**D. `pear`**
 
 **Explicación:**
 
-Para usar la desestructuración en arreglos es importante tener en cuenta los índices de los elementos. Por ello para acceder a `Pera` en el arreglo `fruits` haríamos algo como:
+Para usar la [desestructuración](#glos-desestructuración) en [arreglos](#glos-arreglo) es importante tener en cuenta los índices de los elementos. Por ello para acceder a `pear` en el arreglo `fruits` haríamos algo como:
 
 ```js
 const [, , , pear]  = fruits;
@@ -27,8 +27,6 @@ Donde el `3` representa las posiciones que deseamos saltar.
 Nota que aunque frutas sea un arreglo usamos `{}` para la desestructuración.
 
 
-
-
 ---
 
 ## Reto 5.2 {#sec-sol-cap5-reto2}
@@ -39,7 +37,7 @@ La respuesta del [Reto 5.2](#sec-cap5-reto2) es:
 
 **Explicación:**
 
-Cuando usamos la sintaxis de `...` en los parámetros de una función (REST parameter desde ES6) convertimos a dicho parámetro en un arreglo. Entonces es tentador marcar la opción **B. `"array"`** pero esto sería un **error de novato**. En JavaScript no existe el tipo de dato `array`, para **tipos no primitivos** el lenguaje los evalua como `object`. Por ese motivo la respuesta correcta es la opción **C. `object`**.
+Cuando usamos la sintaxis de `...` en los parámetros de una función ([parámetros REST ](#glos-parametros-rest) desde ES6) convertimos a dicho parámetro en un arreglo. Entonces es tentador marcar la opción **B. `"array"`** pero esto sería un **error de novato**. En JavaScript no existe el tipo de dato `array`, para **tipos no primitivos** el lenguaje los evalua como `object`. Por ese motivo la respuesta correcta es la opción **C. `object`**.
 
 ---
 
@@ -51,7 +49,7 @@ La respuesta del [Reto 5.3](#sec-cap5-reto3) es:
 
 **Explicación:**
 
-JavaScript no arroja ningún error, crea valores `undefined` hasta completar los índices pertinentes, luego muestra el último valor creado, en este caso `11`.
+JavaScript no arroja ningún error, crea valores [undefined](#glos-undefined) hasta completar los índices pertinentes, luego muestra el último valor creado, en este caso `11`.
 
 Dependiendo en que entorno de ejecución se ejecute el código puede variar un poco la salida, una respuesta valida también sería:
 
@@ -82,9 +80,9 @@ La respuesta del [Reto 5.5](#sec-cap5-reto5) es:
 
 **Explicación:**
 
-El método `map` es propio del paradigma de la programación funcional. Este método siempre retorna una nuevo arreglo de longitud igual al arreglo original.
+El método [map](#glos-map) es propio del paradigma de la [programación funcional](#glos-programación-funcional). Este método siempre retorna una nuevo arreglo de longitud igual al arreglo original.
 
-En el ejemplo, puesto que estamos iterando sobre un arreglo de números, la condición evaluará `true` para cada uno de los elementos del arreglo, pero hay 2 sentencias `return`. JavaScript ignora todo el código que esta después del primer `return` que encuntra. Dicho esto, tenemos algo así:
+En el ejemplo, puesto que estamos iterando sobre un arreglo de números, la condición evaluará `true` para cada uno de los elementos del arreglo, pero hay 2 sentencias `return`. JavaScript ignora todo el código que esta después del primer `return` que encuentra. Dicho esto, tenemos algo así:
 
 ```js
 [1, 2, 3].map(num => {
@@ -133,7 +131,7 @@ La respuesta del [Reto 5.7](#sec-cap5-reto7) es:
 
 **Explicación:**
 
-El método `push` regresa la longitud del arreglo. Inicialmente el arreglo `["banana"]` tiene langitud `1`, al hacer el `push` del item `apple` la longitud será de `2` y ojo, no hacemos un `return` de `list` sino de `list.push(item)` por ello regresamos la longitud que es `2`.
+El método [push](#glos-push) regresa la longitud del arreglo. Inicialmente el arreglo `["banana"]` tiene langitud `1`, al hacer el `push` del item `apple` la longitud será de `2` y ojo, no hacemos un `return` de `list` sino de `list.push(item)` por ello regresamos la longitud que es `2`.
 
 Si quisieramos regresar el arreglo resultante completo deberiamos hacer:
 
@@ -154,9 +152,9 @@ La respuesta del [Reto 5.8](#sec-cap5-reto8) es:
 
 **Explicación:**
 
-Con el bucle _for...in_, podemos iterar sobre propiedades **enumerables**. Los enumerables en el arreglo son justamente sus índices. Por ello el resultado es `0` `1` `2`.
+Con el bucle [for...in](#glos-for-in), podemos iterar sobre propiedades **enumerables**. Los enumerables en el arreglo son justamente sus índices. Por ello el resultado es `0` `1` `2`.
 
-Con un bucle _for...of_, podemos recorrer sobre **iterables**. Un arreglo por definición es un iterable, en cada iteración la variable `item` es igual al elemento sobre el cual se itera en ese momento. Por ello el resultado es `"Radiohead"` `"Coldplay"` `"Nirvana"`.
+Con un bucle [for...of](#glos-for_of), podemos recorrer sobre **iterables**. Un arreglo por definición es un iterable, en cada iteración la variable `item` es igual al elemento sobre el cual se itera en ese momento. Por ello el resultado es `"Radiohead"` `"Coldplay"` `"Nirvana"`.
 
 En la practica los bucles _for...of_ son más usados y usualmente en raras ocaciones se ven bucles _for...in_.
 
