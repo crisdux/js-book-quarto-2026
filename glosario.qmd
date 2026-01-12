@@ -179,6 +179,24 @@ console.log(myArray[0]); // "JavaScript"
 
 **Referencias:** @mdn_array 
 
+### at {#glos-at}
+
+**Inglés:** at
+
+**Tipo:** Método
+
+**Definición:**
+Método que retorna el elemento en la posición especificada de un arreglo o cadena.
+
+**Ejemplo:**
+
+```javascript
+const myArray = ["JavaScript", 2026, true];
+console.log(myArray.at(0)); // "JavaScript"
+```
+
+**Referencias:** @mdn_array_at
+
 ---
 
 ## B
@@ -279,6 +297,45 @@ Conversión automática o implícita de valores de un tipo de dato a otro realiz
 ```
 
 **Referencias:** @mdn_type_coercion
+
+### concat {#glos-concat}
+
+**Inglés:** concat
+
+**Tipo:** Método
+
+**Definición:**
+Método que concatena dos o más arreglos en uno nuevo.
+
+**Ejemplo:**
+
+```javascript
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const array3 = array1.concat(array2);
+console.log(array3); // [1, 2, 3, 4, 5, 6]
+```
+
+**Referencias:** @mdn_array_concat
+
+### console.count {#glos-console_count}
+
+**Inglés:** console.count
+
+**Tipo:** Método
+
+**Definición:**
+Método que registra el número de veces que se llama a la función `console.count()`.
+
+**Ejemplo:**
+
+```javascript
+console.count("foo"); // foo: 1
+console.count("foo"); // foo: 2
+console.count("bar"); // bar: 1
+```
+
+**Referencias:** @mdn_console_count
 
 ### Concatenación {#glos-concatenacion}
 
@@ -452,6 +509,27 @@ Boolean(NaN);       // false
 ```
 
 **Referencias:** @mdn_falsy
+
+### flat {#glos-flat}
+
+**Inglés:** flat
+
+**Tipo:** Método
+
+**Definición:**
+Método que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada. Dicho eb otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces.
+
+**Ejemplo:**
+
+```javascript
+const arr = [1, 2, [3, 4, [5]]];
+const flatArr = arr.flat(2); // [1, 2, 3, 4, 5]
+console.log(flatArr);
+```
+
+**Referencias:** @mdn_array_flat
+
+
 
 ### Función {#glos-funcion}
 
@@ -643,6 +721,23 @@ console.log("The interpreter processes this line");
 
 **Referencias:** @geeksforgeeks_interpreted_compiled
 
+### isArray {#glos-isarray}
+
+**Inglés:** isArray
+
+**Tipo:** Método
+
+**Definición:**
+Método que verifica si un valor es un arreglo.
+
+**Ejemplo:**
+
+```javascript
+console.log(Array.isArray([])); // true
+console.log(Array.isArray({})); // false
+```
+
+**Referencias:** @mdn_array_isarray
 
 
 ### Iterador {#glos-iterador}
@@ -1088,6 +1183,25 @@ console.log(list.length); // 2
 
 ## R 
 
+### reduce {#glos-reduce}
+
+**Inglés:** reduce
+
+**Tipo:** Método
+
+**Definición:**
+Método que aplica una función a cada elemento de un arreglo, acumulando el resultado en un valor final.
+
+**Ejemplo:**
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, val) => acc + val, 0);
+console.log(sum); // 15
+```
+
+**Referencias:** @mdn_array_reduce
+
 ### ReferenceError {#glos-referenceerror}
 
 **Inglés:** ReferenceError
@@ -1225,6 +1339,25 @@ console.log(x); // 10
 
 **Referencias:** @freecodecamp_scope_guide
 
+### splice {#glos-splice}
+
+**Inglés:** splice
+
+**Tipo:** Método
+
+**Definición:**
+Método que modifica el contenido de un array, agregando o eliminando elementos en posiciones específicas.
+
+**Ejemplo:**
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+arr.splice(2, 2); // [1, 2, 5]
+console.log(arr);
+```
+
+**Referencias:** @mdn_array_splice
+
 ### split {#glos-split}
 
 **Inglés:** split
@@ -1279,6 +1412,25 @@ Symbol("foo") // Symbol("foo")
 ```
 
 **Referencias:** @mdn_symbol
+
+
+### SyntaxError {#glos-syntaxerror}
+
+**Inglés:** SyntaxError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta ejecutar código JavaScript que tiene una sintaxis incorrecta.
+
+**Ejemplo:**
+
+```javascript
+console.log("Bye world"
+// SyntaxError: missing ) after argument list
+```
+
+**Referencias:** @mdn_syntaxerror
 
 ---
 
