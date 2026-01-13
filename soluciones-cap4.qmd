@@ -10,13 +10,13 @@ La respuesta del [Reto 4.1](#sec-cap4-reto1) es:
 
 En la primera línea declaramos `let greeting;`, al declarar una variable con `let` sin inicializarla, esta toma el valor de `undefined`.
 
-En la segunda línea, se comete un error de tipeo `greetign = {};`, pero como la variable no esta declarada ni con `var`, `let` o `const`; Javascript tras bambalinas hace algo como lo siguiente aunque el programador no lo vea:
+En la segunda línea, se comete un error de tipeo `greetign = {};`, pero como la variable no esta declarada ni con [var](#glos-var), [let](#glos-let) o [const](#glos-const); Javascript tras bambalinas hace algo como lo siguiente aunque el programador no lo vea:
 
 ```js
 var greetign = {}; // Typo!
 ```
 
-Entonces `greetign` se crea como **variable global**, en el navegador en el objeto `window` y en un entorno de Node.js en el objeto `global`.
+Entonces `greetign` se crea como **variable global**, en el navegador en el objeto [window](#glos-window) y en un entorno de [Node.js](#glos-nodejs) en el objeto [global](#glos-global).
 
 El código final se veria así:
 
@@ -43,7 +43,7 @@ La respuesta del [Reto 4.2](#sec-cap4-reto2) es:
 
 **Explicación:**
 
-Las variables declaradas con `let` y `const` tienen un contexto de bloque, esto significa que solo podrán ser accedidas dentro del bloque de llaves donde fueron declaradas, por ejemplo dentro de un bloque `if` o dentro de una función.
+Las variables declaradas con `let` y `const` tienen un [ámbito de bloque](#glos-ambito_de_bloque), esto significa que solo podrán ser accedidas dentro del bloque de llaves donde fueron declaradas, por ejemplo dentro de un bloque `if` o dentro de una función.
 
 Esta premisa se cumple siempre y cuando esten declaradas dentro de un bloque, si una variable esta fuera de todo bloque entonces se dice que es una variable global y por ende puede ser accedida desde cualquier parte del código.
 
@@ -63,7 +63,7 @@ console.log(x + z);
 ```
 La variable `x` esta en el contexto global, por ende accedemos a su valor sin problema alguno.
 
-La variable `z` esta dentro del bloque `if` y no deberiamos poder acceder a ella, pero `z` esta declarada con `var`, esto la convierte en una variable con **contexto de función** y no de bloque, entonces accedemos a su valor, para poder sumar `x + z` que sería `40`.
+La variable `z` esta dentro del bloque `if` y no deberiamos poder acceder a ella, pero `z` esta declarada con `var`, esto la convierte en una variable con [ambito de función](#glos-ambito_de_funcion) y no de bloque, entonces accedemos a su valor, para poder sumar `x + z` que sería `40`.
 
 ---
 
@@ -75,7 +75,7 @@ La respuesta del [Reto 4.3](#sec-cap4-reto3) es:
 
 **Explicación:**
 
-La primera función en llamarse es `increaseNumber` que solo se encarga de retornar la variable `num` y luego la incrementa; `num` no esta en el scope de la función por eso pasamos a buscar la variable en el scope global. Esta función regresará `10`.
+La primera función en llamarse es `increaseNumber` que solo se encarga de retornar la variable `num` y luego la incrementa; `num` no esta en el scope de la [función](#glos-funcion) por eso pasamos a buscar la variable en el scope global. Esta función regresará `10`.
 
 `num1` se pasa como parámetro a `increasePassedNumber` que hace lo mismo que `increaseNumber`, regresa primero el valor de la variable y luego la incrementa, por ello obtenemos nuevamente como salida el valor `10`.
 
@@ -89,7 +89,7 @@ La respuesta del [Reto 4.4](#sec-cap4-reto4) es:
 
 **Explicación:**
 
-Al llamar a `getStatus` debemos tener el cuenta el scope de las variables, recuerda que tanto `let` como `const` tienen scope de bloque, por ende buscara una variable `status` dentro del bloque de `data` y regresara la cadena `"C"`.
+Al llamar a `getStatus` debemos tener el cuenta el [scope](#glos-scope) de las variables (ámbito de las variable en español), recuerda que tanto `let` como `const` tienen scope de bloque, por ende buscara una variable `status` dentro del bloque de `data` y regresara la cadena `"C"`.
 
 ---
 
@@ -101,7 +101,7 @@ La respuesta del [Reto 4.5](#sec-cap4-reto5) es:
 
 **Explicación:**
 
-`const` tiene scope de bloque para las variables, cuando intentamos hacer `return message` la variable `message` no puede ser accedida. Tanto `message` en el bloque `if` como en el `else` son variables diferentes por que estan en bloques diferentes pese a que se llaman igual. Como no es posible acceder a la variable la respuesta es `ReferenceError`.
+`const` tiene scope de bloque para las variables, cuando intentamos hacer `return message` la variable `message` no puede ser accedida. Tanto `message` en el bloque `if` como en el `else` son variables diferentes por que estan en bloques diferentes pese a que se llaman igual. Como no es posible acceder a la variable la respuesta es [ReferenceError](#glos-referenceerror).
 
 ---
 
@@ -115,7 +115,7 @@ La respuesta del [Reto 4.6](#sec-cap4-reto6) es:
 
 Las variables declaradas con `let` y `const` tienen **scope de bloque** es por este motivo que si bien tenemos 2 variables con el nombre `name`, ambas son diferentes e independientes en sus respectivos scopes.
 
-La función `getName` intenta imprimir por consola `name` antes de ser declarada, por **hoisting** el interprete de JavaScript hará que `name` entre en lo que se denomina **Temporal Dead Zone**, una región del código donde la variable esta declarada pero no es posible acceder a ella.
+La función `getName` intenta imprimir por consola `name` antes de ser declarada, por [hoisting](#glos-hoisting) el interprete de JavaScript hará que `name` entre en lo que se denomina [Temporal Dead Zone](#glos-temporal_dead_zone), una región del código donde la variable esta declarada pero no es posible acceder a ella.
 
 Todo esto producirá un `ReferenceError`.
 
@@ -139,11 +139,13 @@ La respuesta del [Reto 4.7](#sec-cap4-reto7) es:
 
 **Explicación:**
 
-Cuando declaramos variables primitivas con `const` estas deben ser como su nombre lo indica valores contantes, por ende no podemos motificar su valor, si intenamos cambiarlo obtendremos un `TypeError`.
+Cuando declaramos variables primitivas con `const` estas deben ser como su nombre lo indica valores contantes, por ende no podemos motificar su valor, si intenamos cambiarlo obtendremos un [TypeError](#glos-typeerror).
+
+Para la documentación de la @mdn_typeerror un TypeError es un objeto que representa un error cuando no se pudo realizar una operación, normalmente (pero no exclusivamente) cuando un valor no es del tipo esperado.
 
 Lo anterior mencionado no pasa con los objetos, si declaramos un objeto con `const` luego podemos tranquilamente modificar sus propiedades. ¿Por que pasa esto?
 
-Las variables primitivas tienen **asignación por valor**, pero las variables complejas como los objetos tienen **asignación por referencia**, entonces cuando se intenta cambiar las propiedades de un objeto declarado con `const` estamos alterando sus propiedades pero no al objeto en si, en el ejemplo el objeto `persona` al ser creado reservamos un espacio en memoria que lo almacene, pero no cambiamos dicho espacio, solo sus propiedades.
+Las variables primitivas tienen [asignación por valor](#glos-asignacion_por_valor), pero las variables complejas como los objetos tienen [asignación por referencia](#glos-asignacion_por_referencia), entonces cuando se intenta cambiar las propiedades de un objeto declarado con `const` estamos alterando sus propiedades pero no al objeto en si, en el ejemplo el objeto `persona` al ser creado reservamos un espacio en memoria que lo almacene, pero no cambiamos dicho espacio, solo sus propiedades.
 
 Haciendo una analogía para comprederlo mejor, una persona, yo por ejemplo: Cristian; desde que naci soy Cristian, a medida que paso el tiempo varias cosas cambiaron en mi, aumento mi estatura, ahora uso lentes, mi cabello esta mas largo, etc., pero sigo siendo yo, pueden cambiar mis propiedades pero en el fondo sigo siendo yo.
 
@@ -157,7 +159,7 @@ La respuesta del [Reto 4.8](#sec-cap4-reto8) es:
 
 **Explicación:**
 
-Independientemente de la palabra reservada con la que declaremos una variable (`var`, `let`, `const`), esta tendrá **scope global** siempre y cuando no este dentro de un bloque o dentro de una función. 
+Independientemente de la palabra reservada con la que declaremos una variable (`var`, `let`, `const`), esta tendrá [scope global](#glos-scope_global) siempre y cuando no este dentro de un bloque o dentro de una función. 
 
 Por este motivo, `name`, `lastName` y `age` son **variables de scope global** y por ello pueden ser accedidas desde la función `getPersonalData`.
 
