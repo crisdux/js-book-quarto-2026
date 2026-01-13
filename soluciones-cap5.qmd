@@ -353,6 +353,8 @@ Recibe como parámetro un número que representa en este ejemplo el índice al c
 * `.at(3.8)` y `.at(-3.3)` solo tomaran la parte entera del parámetro, por ende tendremos `.at(3)` que regresa "Christian".
  * `at.(-3)` que regresa "Freddy".
 
+Particularmente encuentro este método muy útil y reemplaza el uso de `length` para acceder al último item de un arreglo.
+
 ---
 
 ## Reto 5.19 {#sec-sol-cap5-reto19}
