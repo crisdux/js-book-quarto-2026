@@ -93,8 +93,8 @@ La respuesta del [Reto 3.3](#sec-cap3-reto3) es:
 
 ```js
 console.log(Math.sqrt(-1)) // NaN
-console.log(10 / "hola") // NaN
-console.log(Number("hola")) // NaN
+console.log(10 / "hello") // NaN
+console.log(Number("hello")) // NaN
 ```
 
 Obtener la raiz cuadrada de `-1`, dividir un entero entre una cadena y convertir una cadena a un número son algunas operaciones que nos dan `NaN`.
