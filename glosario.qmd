@@ -173,11 +173,29 @@ Una colección ordenada de valores donde cada elemento tiene una posición numé
 **Ejemplo:**
 
 ```javascript
-const miArreglo = ["JavaScript", 2024, true];
-console.log(miArreglo[0]); // "JavaScript"
+const myArray = ["JavaScript", 2026, true];
+console.log(myArray[0]); // "JavaScript"
 ```
 
 **Referencias:** @mdn_array 
+
+### at {#glos-at}
+
+**Inglés:** at
+
+**Tipo:** Método
+
+**Definición:**
+Método que retorna el elemento en la posición especificada de un arreglo o cadena.
+
+**Ejemplo:**
+
+```javascript
+const myArray = ["JavaScript", 2026, true];
+console.log(myArray.at(0)); // "JavaScript"
+```
+
+**Referencias:** @mdn_array_at
 
 ---
 
@@ -280,6 +298,45 @@ Conversión automática o implícita de valores de un tipo de dato a otro realiz
 
 **Referencias:** @mdn_type_coercion
 
+### concat {#glos-concat}
+
+**Inglés:** concat
+
+**Tipo:** Método
+
+**Definición:**
+Método que concatena dos o más arreglos en uno nuevo.
+
+**Ejemplo:**
+
+```javascript
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const array3 = array1.concat(array2);
+console.log(array3); // [1, 2, 3, 4, 5, 6]
+```
+
+**Referencias:** @mdn_array_concat
+
+### console.count {#glos-console_count}
+
+**Inglés:** console.count
+
+**Tipo:** Método
+
+**Definición:**
+Método que registra el número de veces que se llama a la función `console.count()`.
+
+**Ejemplo:**
+
+```javascript
+console.count("foo"); // foo: 1
+console.count("foo"); // foo: 2
+console.count("bar"); // bar: 1
+```
+
+**Referencias:** @mdn_console_count
+
 ### Concatenación {#glos-concatenacion}
 
 **Inglés:** Concatenation
@@ -338,6 +395,29 @@ Comportamiento de los operadores lógicos en el que el segundo operando es evalu
 ---
 
 ## D
+
+### Desestructuración {#glos-desestructuración}
+
+**Inglés:** Destructuring
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Sintaxis que permite extraer valores de arreglos o propiedades de objetos y asignarlos a variables individuales de forma compacta. En el caso de los arreglos, se utiliza la posición de los elementos para determinar qué valor se asigna a cada variable.
+
+**Ejemplo:**
+
+```javascript
+// Array destructuring
+const fruits = ["apple", "pear", "grape"];
+const [first, second] = fruits;
+console.log(first);  // "apple"
+console.log(second); // "pear"
+```
+
+**Referencias:** @duxtech_destructuracion_arreglos
+
 
 ### Doble negación {#glos-doble-negacion}
 
@@ -430,6 +510,27 @@ Boolean(NaN);       // false
 
 **Referencias:** @mdn_falsy
 
+### flat {#glos-flat}
+
+**Inglés:** flat
+
+**Tipo:** Método
+
+**Definición:**
+Método que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada. Dicho eb otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces.
+
+**Ejemplo:**
+
+```javascript
+const arr = [1, 2, [3, 4, [5]]];
+const flatArr = arr.flat(2); // [1, 2, 3, 4, 5]
+console.log(flatArr);
+```
+
+**Referencias:** @mdn_array_flat
+
+
+
 ### Función {#glos-funcion}
 
 **Inglés:** Function
@@ -467,6 +568,57 @@ const miFuncion = function() {
 ```
 
 **Referencias:** @geeksforgeeks_anonymous
+
+### for...of {#glos-for_of}
+
+**Inglés:** for...of
+
+**Tipo:** Sentencia
+
+**Definición:**
+Sentencia que itera sobre los elementos de un iterable.
+
+**Ejemplo:**
+
+```javascript
+const array = [1, 2, 3];
+for (const item of array) {
+    console.log(item);
+}
+// 1
+// 2
+// 3
+```
+
+**Referencias:** @mdn_for_of
+
+### for...in {#glos-for_in}
+
+**Inglés:** for...in
+
+**Tipo:** Sentencia
+
+**Definición:**
+Sentencia que itera sobre las propiedades de un objeto.
+
+**Ejemplo:**
+
+```javascript
+const user = {
+  name: "Alice",
+  role: "Developer",
+  country: "Bolivia"
+};
+
+for (const key in user) {
+  console.log(`${key}: ${user[key]}`);
+}
+// name: Alice
+// role: Developer
+// country: Bolivia
+```
+
+**Referencias:** @mdn_for_in
 
 ---
 
@@ -569,6 +721,23 @@ console.log("The interpreter processes this line");
 
 **Referencias:** @geeksforgeeks_interpreted_compiled
 
+### isArray {#glos-isarray}
+
+**Inglés:** isArray
+
+**Tipo:** Método
+
+**Definición:**
+Método que verifica si un valor es un arreglo.
+
+**Ejemplo:**
+
+```javascript
+console.log(Array.isArray([])); // true
+console.log(Array.isArray({})); // false
+```
+
+**Referencias:** @mdn_array_isarray
 
 
 ### Iterador {#glos-iterador}
@@ -746,6 +915,29 @@ let b = 2;
 
 ---
 
+## M 
+
+### map {#glos-map}
+
+**Inglés:** map
+
+**Tipo:** Método
+
+**Definición:**
+Método que crea un nuevo arreglo aplicando una función a cada uno de los elementos del arreglo original.
+
+**Ejemplo:**
+
+```javascript
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6]
+```
+
+**Referencias:** @lenguajejs_map_weakmap
+
+---
+
 ## N 
 
 ### NaN {#glos-nan}
@@ -902,6 +1094,28 @@ Object.keys({ a: 1, b: 2 }) // ["a", "b"]
 
 ## P
 
+### Parámetro REST {#glos-parametros_rest}
+
+**Inglés:** Rest parameters
+
+**Tipo:** Concepto
+
+**Definición:**
+Parámetro de una función que permite recibir un número variable de argumentos como un arreglo.
+
+**Ejemplo:**
+
+```javascript
+function sum(...args) {
+  return args.reduce((acc, val) => acc + val, 0);
+}
+
+console.log(sum(1, 2, 3)); // 6
+console.log(sum(10, 20));   // 30
+```
+
+**Referencias:** @mdn_rest_params
+
 ### parseInt {#glos-parseint}
 
 **Inglés:** parseInt
@@ -919,9 +1133,74 @@ Number.parseInt("5") // 5
 
 **Referencias:** @mdn_parseint
 
+### Programación Funcional {#glos-programacion_funcional}
+
+**Inglés:** Functional programming
+
+**Tipo:** Concepto
+
+**Definición:**
+
+Programación funcional es un paradigma de programación que se centra en el uso de funciones como ciudadanos de primera clase, lo que significa que las funciones pueden ser tratadas como cualquier otro valor, como ser pasadas como argumentos a otras funciones, retornadas como valores y almacenadas en variables.
+
+**Ejemplo:**
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+// Funciones como ciudadanos de primera clase y composición
+const double = x => x * 2;
+const isEven = x => x % 2 === 0;
+
+const result = numbers.filter(isEven).map(double);
+
+console.log(result); // [4, 8]
+
+```
+
+**Referencias:** @freecodecamp_funcional
+
+### push {#glos-push}
+
+**Inglés:** push
+
+**Tipo:** Método
+
+**Definición:**
+Método mutable que agrega un elemento al final de un arreglo.
+
+**Ejemplo:**
+
+```javascript
+const list = ["banana"];
+list.push("apple");
+console.log(list.length); // 2
+```
+
+**Referencias:** @mdn_array_push
+
 ---
 
 ## R 
+
+### reduce {#glos-reduce}
+
+**Inglés:** reduce
+
+**Tipo:** Método
+
+**Definición:**
+Método que aplica una función a cada elemento de un arreglo, acumulando el resultado en un valor final.
+
+**Ejemplo:**
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, val) => acc + val, 0);
+console.log(sum); // 15
+```
+
+**Referencias:** @mdn_array_reduce
 
 ### ReferenceError {#glos-referenceerror}
 
@@ -1060,6 +1339,25 @@ console.log(x); // 10
 
 **Referencias:** @freecodecamp_scope_guide
 
+### splice {#glos-splice}
+
+**Inglés:** splice
+
+**Tipo:** Método
+
+**Definición:**
+Método que modifica el contenido de un array, agregando o eliminando elementos en posiciones específicas.
+
+**Ejemplo:**
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+arr.splice(2, 2); // [1, 2, 5]
+console.log(arr);
+```
+
+**Referencias:** @mdn_array_splice
+
 ### split {#glos-split}
 
 **Inglés:** split
@@ -1114,6 +1412,25 @@ Symbol("foo") // Symbol("foo")
 ```
 
 **Referencias:** @mdn_symbol
+
+
+### SyntaxError {#glos-syntaxerror}
+
+**Inglés:** SyntaxError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta ejecutar código JavaScript que tiene una sintaxis incorrecta.
+
+**Ejemplo:**
+
+```javascript
+console.log("Bye world"
+// SyntaxError: missing ) after argument list
+```
+
+**Referencias:** @mdn_syntaxerror
 
 ---
 
