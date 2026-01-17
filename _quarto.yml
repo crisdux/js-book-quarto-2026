@@ -51,9 +51,23 @@ format:
       - brand
   pdf:
     documentclass: scrreprt
+    keep-tex: true
     include-in-header:
       - text: |
           \usepackage{pdfpages}
+          \usepackage{hyperref}
+          \hypersetup{
+            colorlinks=true,
+            linkcolor=blue,
+            filecolor=magenta,
+            urlcolor=cyan,
+            pdftitle={Quarto JS Book},
+            pdfpagemode=FullScreen,
+            bookmarks=true,
+            bookmarksnumbered=true
+          }
+          \let\oldsubsection\subsection
+          \renewcommand{\subsection}{\phantomsection\oldsubsection}
     include-before-body:
       - text: |
           \includepdf[pages=-, noautoscale=true, width=\paperwidth, height=\paperheight]{photos/portada2.png}
