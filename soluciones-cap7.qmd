@@ -47,13 +47,13 @@ La respuesta del [Reto 7.2](#sec-cap7-reto2) es:
 Con una función como la primera es posible hacer esto:
 
 ```js
-console.log(addTraditional(3,5)); //8
+console.log(addTraditional(3, 5)); //8
 function addTraditional(a, b){
   return a + b;
 }
 ```
 
-Podemos llamar a la función antes de su declaración, caracteristica que se denomina **hoisting**.
+Podemos llamar a la función antes de su declaración, caracteristica que se denomina [hoisting](#glos-hoisting).
 
 Con una función de flecha esto no es posible:
 
@@ -91,7 +91,7 @@ La respuesta del [Reto 7.4](#sec-cap7-reto4) es:
 
 **Explicación:**
 
-Desde ES6 es posible usar parámetros por defecto siempre y cuando sean los últimos declarados en la función.
+Desde [ES6](#glos-es6) es posible usar [parámetros por defecto](#glos-parametros_por_defecto) siempre y cuando sean los últimos declarados en la función.
 
 En este caso el parámetro por defecto `num1` es el mismo que el primer parámetro, no hay ningún problema simpre y cuando este declarado al final de la lista de parámetros de la función.
 
@@ -116,7 +116,7 @@ return
 a + b
 ```
 
-Pero el interprete reconoce la palabra `return` con el fin de una expresión, por lo tanto, aunque no lo veas, JavaScript hará esto:
+Pero el interprete reconoce la palabra [return](#glos-return) con el fin de una expresión, por lo tanto, aunque no lo veas, JavaScript hará esto:
 
 ```js
   return;
@@ -139,11 +139,11 @@ La respuesta del [Reto 7.6](#sec-cap7-reto6) es:
 
 `name` no es ni hace referencia a una función, no tiene sentido intentar invocar a un `string` como si fuera una función. 
 
-No pude ser un `SyntaxError` porque no se cometio ningún error de tipeo, el código no esta mal escrito pero tampoco es un código valido.
+No pude ser un [SyntaxError](#glos-syntaxerror) porque no se cometio ningún error de tipeo, el código no esta mal escrito pero tampoco es un código valido.
 
-No puede ser `ReferenceError` porque no hay problemas de referencia al intentar acceder a la variable `name`.
+No puede ser [ReferenceError](#glos-referenceerror) porque no hay problemas de referencia al intentar acceder a la variable `name`.
 
-Se genera una excepción de tipo `TypeError` cuando un valor no es del tipo esperado, entonces se lanza un `TypeError: name is not a function!`
+Se genera una excepción de tipo [TypeError](#glos-typeerror) cuando un valor no es del tipo esperado, entonces se lanza un `TypeError: name is not a function!`
 
 ---
 
@@ -155,7 +155,7 @@ La respuesta del [Reto 7.7](#sec-cap7-reto7) es:
 
 **Explicación:**
 
-Por definición una Higher Order Function es:
+Por definición una [Higher Order Function](#glos-higher_order_function) es:
 
 * Una función que regresa otra función.
 * Una función que puede tener funciones en sus parámetros.
@@ -184,7 +184,7 @@ La respuesta del [Reto 7.8](#sec-cap7-reto8) es:
 
 **Explicación:**
 
-La función `sayHi` regresa una otra función de tipo flecha, dicha función es anónima y solo devuelve la cadena `Hi JavaScript`, el detalle acá es que esta función anónima una vez regresada es inmediatamente llamada.
+La función `sayHi` regresa una otra [función de tipo flecha](#glos-funcion_flecha), dicha función es anónima y solo devuelve la cadena `Hi JavaScript`, el detalle acá es que esta función anónima una vez regresada es inmediatamente llamada.
 
 Entonces `sayHi` será igual a la cadena `Hi Javascript` y en conclusión su `typeof` igual a `string`.
 

@@ -596,6 +596,24 @@ function myFunction() {
 
 **Referencias:** @mdn_funciones_guia
 
+### Función flecha {#glos-funcion_flecha}
+
+**Inglés:** Arrow Function
+
+**Tipo:** Concepto
+
+**Definición:**
+Sintaxis compacta para escribir expresiones de funciones en JavaScript, introducida en ES6. Se caracteriza por omitir la palabra clave `function` y utilizar el operador `=>`. A diferencia de las funciones tradicionales, no posee sus propios enlaces para `this`, `arguments`, `super` o `new.target`, heredando estos valores del contexto léxico circundante.
+
+
+**Ejemplo:**
+
+```javascript
+const add = (a, b) => a + b;
+```
+
+**Referencias:** @mdn_arrow_functions
+
 ### Función anónima {#glos-funcion_anonima}
 
 **Inglés:** Anonymous Function
@@ -711,6 +729,27 @@ console.log(user.hasOwnProperty("toString")); // false (es heredada)
 ```
 
 **Referencias:** @mdn_hasownproperty
+
+### Higher Order Function {#glos-higher_order_function}
+
+**Inglés:** Higher Order Function
+
+**Tipo:** Concepto
+
+**Definición:**
+Función que recibe como parámetro otra función o retorna una función.
+
+**Ejemplo:**
+
+```javascript
+function higherOrderFunction(callback) {
+  callback();
+}
+
+higherOrderFunction(() => console.log("Hello!"));
+```
+
+**Referencias:** @freecodecamp_higher_order_functions
 
 ### Hoisting {#glos-hoisting}
 
@@ -1248,6 +1287,28 @@ Object.keys({ a: 1, b: 2 }) // ["a", "b"]
 
 ## P
 
+### Parámetro por defecto {#glos-parametros_por_defecto}
+
+**Inglés:** Default parameters
+
+**Tipo:** Concepto
+
+**Definición:**
+Parámetro de una función que permite recibir un valor por defecto en caso de que no se le pase un argumento.
+
+**Ejemplo:**
+
+```javascript
+function add(a, b = 0) {
+  return a + b;
+}
+
+console.log(add(3)); // 3
+console.log(add(3, 5)); // 8
+```
+
+**Referencias:** @mdn_default_parameters
+
 ### Parámetro REST {#glos-parametros_rest}
 
 **Inglés:** Rest parameters
@@ -1376,6 +1437,23 @@ console.log(list.length); // 2
 ---
 
 ## R 
+
+### ReferenceError {#glos-referenceerror}
+
+**Inglés:** ReferenceError
+
+**Tipo:** Error
+
+**Definición:**
+Error que ocurre cuando se intenta acceder a una variable o función que no ha sido declarada.
+
+**Ejemplo:**
+
+```javascript
+console.log(x); // ReferenceError: x is not defined
+```
+
+**Referencias:** @mdn_reference_error
 
 ### reduce {#glos-reduce}
 
