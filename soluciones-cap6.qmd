@@ -8,9 +8,9 @@ La respuesta del [Reto 6.1](#sec-cap6-reto1) es:
 
 **Explicación:**
 
-Cuando aplicamos el operador de asignación `=` entre objetos pensado que así lograremos obtener una copia del mismo estamos cayendo en un **error de novato**.
+Cuando aplicamos el operador de asignación (`=`) entre objetos pensado que así lograremos obtener una copia del mismo estamos cayendo en un **error de novato**.
 
-Recuerda que los objetos se manejan segun su **referencia** y no por su **valor** como lo hacen los tipos primitivos del lenguaje, esto significa que al hacer esto:
+Recuerda que los objetos se manejan según su [referencia](#glos-referencia) y no por su [valor](#glos-valor) como lo hacen los tipos primitivos del lenguaje, esto significa que al hacer esto:
 
 ```js
 let c = { greeting: "Hey!" };
@@ -19,7 +19,7 @@ let d;
 d = c;
 ```
 
-No solo estamos copiando los valores del objeto `c` al objeto `d` sino que también copiamos su **referencia en memoria**. Esta referencia es la dirección donde dicho objeto se almacenerá en el disco duro del ordenador; en JavaScript al ser un lenguaje de alto nivel no podemos acceder a dichas direcciones como en lenguajes de bajo nivel como por ejemplo **lenguaje ensamblador** (aunque en Python si se pude con la función `id()` pero este no es un libro de Python).
+No solo estamos copiando los valores del objeto `c` al objeto `d` sino que también copiamos su **referencia en memoria**. Esta referencia es la dirección donde dicho objeto se almacenerá en el disco duro del ordenador; JavaScript al ser un lenguaje de alto nivel no podemos acceder a dichas direcciones como en lenguajes de bajo nivel como por ejemplo [lenguaje ensamblador](#glos-lenguaje_ensamblador) (aunque en Python si se pude con la función `id()` pero este no es un libro de Python).
 
 Dicho en otras palabras, las direcciones de memoria del objeto `c` y del objeto `d` son las mismas, apuntan a la misma dirección, por ello, cuando intentamos modificar el objeto `c`:
 
@@ -42,7 +42,7 @@ console.log(d.greeting); // Hey!
 console.log(c.greeting); // Hello
 ```
 
-Este método solo sirve para copiar objetos en el primer nivel, si deseamos realizar copias de objetos anidados se puede recurrir a otras alternativas como por ejemplo `JSON.stringify`.
+Este método solo sirve para copiar objetos en el primer nivel, si deseamos realizar copias de objetos anidados se puede recurrir a otras alternativas como por ejemplo [JSON.stringify](#glos-json_stringify).
 
 
 ---
@@ -63,19 +63,15 @@ obj.hasOwnProperty("1"); //true
 obj.hasOwnProperty(1); //true
 ```
 
-El método `hasOwnProperty` propio de los objetos retorna un `boolean` dependiendo **si la key del objeto existe o no**.
+El método [hasOwnProperty](#glos-hasownproperty) propio de los objetos retorna un `boolean` dependiendo **si la key del objeto existe o no**.
 
 Lo que hay que tener en cuenta es que las claves de un objeto siempre son de tipo `string` aunque no lo especifiquemos.
 
 En el `set`:
 
 ```js
-const set = new Set([1, 2, 3, 4, 5]);
-set.has("1"); //false
-set.has(1); //true
-```
 
-Esto no funciona como en un objeto, recuerda que un `set` es como un tipo de arreglo de valores no repetidos. Por ello `1` `string` no concuerda con `1` `number`.
+Esto no funciona como en un objeto, recuerda que un [Set](#glos-set) es como un tipo de arreglo de valores no repetidos. Por ello `1` como `string` no concuerda con `1` como `number`.
 
 ---
 
@@ -99,7 +95,7 @@ La respuesta del [Reto 6.4](#sec-cap6-reto4) es:
 
 **Explicación:**
 
-`String` es el contructor que tiene JavaScript para gestionar las cadenas de texto. En el ejemplo se agrega la función `giveLydiaPizza` al prototipo de las cadenas, con ello, esta función estará disponible para todas las cadenas.
+[String](#glos-String) es el contructor que tiene JavaScript para gestionar las cadenas de texto. En el ejemplo se agrega la función `giveLydiaPizza` al prototipo de las cadenas, con ello, esta función estará disponible para todas las cadenas.
 
 Si intentamos hacer algo como lo siguiente:
 
@@ -193,7 +189,7 @@ La respuesta del [Reto 6.7](#sec-cap6-reto7) es:
 
 El **spread operator** en este ejemplo se encarga de propagar el objeto `user` dentro del objeto `admin`.
 
-**Sin** usar el `spread operator` tendriamos un objeto anidado:
+Sin usar el `spread operator` tenemos un objeto anidado:
 
 ```js
 { admin: true, { name: "Hernan", age: 21 } }
@@ -211,7 +207,7 @@ La respuesta del [Reto 6.8](#sec-cap6-reto8) es:
 
 **Explicación:**
 
-El método `entries` del constructor `Object` regresa un arreglo anidado donde cada sub arreglo corresponde a la llave y valor del objeto:
+El método [entries](#glos-entries) del constructor `Object` regresa un arreglo anidado donde cada sub arreglo corresponde a la llave y valor del objeto:
 
 ```js
 [ [ 'name', 'Robert' ], [ 'age', 30 ] ]
@@ -269,7 +265,7 @@ La respuesta del [Reto 6.11](#sec-cap6-reto11) es:
 
 Tenemos un arreglo `food` y un objeto `info` independiente uno del otro.
 
-`info` solo tiene la propiedad `favoriteFood` que apunta al índice `0` del arreglo `food`, por lo tanto `info` seria igual a:
+El objeto `info` solo tiene la propiedad `favoriteFood` que apunta al índice `0` del arreglo `food`, por lo tanto `info` seria igual a:
 
 ```js
 const info = { favoriteFood:'pizza'}
@@ -299,7 +295,7 @@ La respuesta del [Reto 6.12](#sec-cap6-reto12) es:
 
 **Explicación:**
 
-El operador `??=` se llama **Logical Nullish Assignment** es un operador de corto circuito moderno que consiste en ejecutar porciones de código si evaluamos una condición como **nullish**, osea, como valor `null` o `undefined`.
+El operador `??=` se llama [Logical Nullish Assignment](#glos-logical-nullish-assignment) es un operador de corto circuito moderno que consiste en ejecutar porciones de código si evaluamos una condición como **nullish**, osea, como valor `null` o `undefined`.
 
 Entonces, en el ejemplo, si `obj.name` evalua como **nullish**, ejecutamos `"not name"`.
 
@@ -329,7 +325,7 @@ La respuesta del [Reto 6.14](#sec-cap6-reto14) es:
 
 **Explicación:**
 
-Existe diferencias entre declarar la propiedad de un objeto como `undefined` o eliminarla con el operador unario `delete`.
+Existe diferencias entre declarar la propiedad de un objeto como `undefined` o eliminarla con el operador unario [delete](#glos-delete)
 
 El objeto `band` original no tiene la propiedad `voice`, pero lo agregamos con el valor `undefined`, entonces el objeto quedaria así:
 
@@ -338,17 +334,10 @@ const band = {
   id:1,
   name: "Radiohead",
   "type of music": "Rock",
-  albums: ["Pablo Honey", "Ok Computer", "In Rainbows"],
-  voice: undefined
-};
-```
-
-Pese a que el valor de `voice` es `undefined` la propiedad existe como tal dentro del objeto, es por ello que al verificarlo con el operador `in` obtenemos `true`.
+  
+Pese a que el valor de `voice` es `undefined` la propiedad existe como tal dentro del objeto, es por ello que al verificarlo con el operador [in](#glos-in) obtenemos `true`.
 
 Algo diferente pasa cuando eliminamos con `delete` la propiedad `tipe of music`, esta deja de existir en el objeto, no tiene ningún tipo de valor, ni siquiera `undefined`, el objeto quedaría así:
-
-```js
-const band = {
   id:1,
   name: "Radiohead",
   albums: ["Pablo Honey", "Ok Computer", "In Rainbows"],
@@ -369,7 +358,7 @@ La respuesta del [Reto 6.15](#sec-cap6-reto15) es:
 
 **Explicación:**
 
-En JavaScript hay dos maneras de acceder a las propiedades de un objeto, con la **notación de punto** por ejemplo `object.value` y con la **notación de corchetes** por ejemplo `object["value"]`.
+En JavaScript hay dos maneras de acceder a las propiedades de un objeto, con la [notación de punto](#glos-dot-notation) por ejemplo `object.value` y con la [notación de corchetes](#glos-notacion_corchetes) por ejemplo `object["value"]`.
 
 Usamos la **notación de punto** cuando conocemos el nombre literal de la propiedad a la que queremos acceder. 
 
@@ -389,7 +378,7 @@ La respuesta del [Reto 6.16](#sec-cap6-reto16) es:
 
 **Explicación:**
 
-**Trailing commas** es una peculiaridad de ES2015.
+[Trailing commas](#glos-trailing_commas) es una peculiaridad de ES2015.
 
 Si deseas agregar una nueva propiedad, puede agregar una nueva línea sin modificar la última línea anterior si esa línea ya usa una coma final. Esto hace que las diferencias de control de versiones sean más limpias y que la edición del código sea menos problemática. 
 
@@ -442,7 +431,7 @@ La respuesta del [Reto 6.18](#sec-cap6-reto18) es:
 
 **Explicación:**
 
-Las variables de tipo `Symbol` son relativamente nuevas y tienen peculiaridades muy interesantes, una de ellas es la creación de propiedades ocultas o privadas dentro de los objetos.
+Las variables de tipo [Symbol](#glos-symbol) son relativamente nuevas y tienen peculiaridades muy interesantes, una de ellas es la creación de propiedades ocultas o privadas dentro de los objetos.
 
 Por este motivo las propiedades `name` y `lastname` no se muestran al ejecutar `Object.keys(person)`, esto puede ser de mucha útilidad para no contaminar nuestros objetos de manera arbitraria y poder tener un código mas profesional y limpio en nuestros desarrollos aprovechando las últimas caracteristicas del lenguaje.
 

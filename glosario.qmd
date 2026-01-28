@@ -396,6 +396,28 @@ Comportamiento de los operadores lógicos en el que el segundo operando es evalu
 
 ## D
 
+### delete {#glos-delete}
+
+**Inglés:** delete
+
+**Tipo:** Operador
+
+**Definición:**
+Operador que elimina una propiedad de un objeto. Si la propiedad se elimina con éxito, devuelve `true`; de lo contrario, devuelve `false`. Es importante notar que no libera memoria directamente, sino que rompe la conexión entre el objeto y la propiedad.
+
+**Ejemplo:**
+
+```javascript
+const user = { name: "Alice", role: "Developer" };
+
+delete user.role;
+console.log(user); // { name: "Alice" }
+console.log("role" in user); // false
+```
+
+**Referencias:** @mdn_delete_operator
+
+
 ### Desestructuración {#glos-desestructuración}
 
 **Inglés:** Destructuring
@@ -443,25 +465,30 @@ Uso de dos operadores de negación lógica (`!`) consecutivos para convertir un 
 
 ## E
 
-### Expresión {#glos-expresion}
+### entries {#glos-entries}
 
-**Inglés:** Expression
+**Inglés:** entries
 
-**Tipo:** Concepto
+**Tipo:** Método
 
 **Definición:**
-Cualquier unidad de código válida que se resuelve en un valor. En JavaScript, las expresiones pueden consistir en valores literales, variables, operadores o llamadas a funciones que el intérprete evalúa para producir un resultado único.
+Método que devuelve un nuevo objeto iterador que contiene los pares clave/valor para cada índice en el arreglo.
 
 **Ejemplo:**
 
 ```javascript
-console.log(5 + 3);          // Expresión aritmética
-console.log("Hello" + "!");  // Expresión de cadena
-console.log(true && false);  // Expresión lógica
+const arr = ["a", "b", "c"];
+const iterator = arr.entries();
+
+for (const [index, element] of iterator) {
+  console.log(index, element);
+}
+// 0 "a"
+// 1 "b"
+// 2 "c"
 ```
 
-**Referencias:** @mdn_expressions_operators
-
+**Referencias:** @mdn_object_entries
 
 
 ### ES6 {#glos-es6}
@@ -482,6 +509,25 @@ console.log(saludar("JavaScript")); // "Hola, JavaScript!"
 ```
 
 **Referencias:** @w3schools_es6
+
+### Expresión {#glos-expresion}
+
+**Inglés:** Expression
+
+**Tipo:** Concepto
+
+**Definición:**
+Cualquier unidad de código válida que se resuelve en un valor. En JavaScript, las expresiones pueden consistir en valores literales, variables, operadores o llamadas a funciones que el intérprete evalúa para producir un resultado único.
+
+**Ejemplo:**
+
+```javascript
+console.log(5 + 3);          // Expresión aritmética
+console.log("Hello" + "!");  // Expresión de cadena
+console.log(true && false);  // Expresión lógica
+```
+
+**Referencias:** @mdn_expressions_operators
 
 ---
 
@@ -646,6 +692,26 @@ console.log(globalThis); // Global object
 
 ## H
 
+### hasOwnProperty {#glos-hasownproperty}
+
+**Inglés:** hasOwnProperty
+
+**Tipo:** Método
+
+**Definición:**
+
+Método que devuelve un booleano indicando si el objeto tiene la propiedad especificada como una propiedad propia (no heredada). Es una herramienta fundamental para verificar la existencia de claves en un objeto antes de intentar acceder a ellas, evitando recorrer propiedades del prototipo.
+
+**Ejemplo:**
+
+```javascript
+const user = { name: "Alice", role: "Developer" };
+console.log(user.hasOwnProperty("name")); // true
+console.log(user.hasOwnProperty("toString")); // false (es heredada)
+```
+
+**Referencias:** @mdn_hasownproperty
+
 ### Hoisting {#glos-hoisting}
 
 **Inglés:** Hoisting
@@ -703,6 +769,28 @@ console.log(1 === "1"); // false
 ```
 
 **Referencias:** @mdn_strict_equality
+
+### in {#glos-in}
+
+**Inglés:** in
+
+**Tipo:** Operador
+
+**Definición:**
+Operador que devuelve `true` si la propiedad especificada existe en el objeto (o en su cadena de prototipos). Se utiliza frecuentemente para verificar la existencia de una clave en un objeto antes de intentar acceder a su valor.
+
+**Ejemplo:**
+
+```javascript
+const user = { name: "Alice", role: "Developer" };
+
+console.log("name" in user);   // true
+console.log("salary" in user); // false
+console.log("toString" in user); // true (propiedad heredada)
+```
+
+**Referencias:** @mdn_in_operator
+
 
 ### Interprete de JavaScript {#glos-interpreter}
 
@@ -875,7 +963,25 @@ JSON.stringify({ a: 1, b: 2 }) // "{"a":1,"b":2}"
 
 ---
 
-## L 
+## L
+
+### Lenguaje ensamblador {#glos-lenguaje_ensamblador}
+
+**Inglés:** Assembly language
+
+**Tipo:** Lenguaje de programación
+
+**Definición:**
+Lenguaje de programación que se compone de instrucciones directas al procesador, es decir, que se compone de código máquina. 
+
+**Ejemplo:**
+
+```assembly
+mov ax, 1
+mov bx, 2
+add ax, bx
+```
+**Referencias:** @euroinnova_lenguaje_ensamblador
 
 ### length {#glos-length}
 
@@ -912,6 +1018,30 @@ let b = 2;
 ```
 
 **Referencias:** @mdn_let
+
+### Logical Nullish Assignment {#glos-logical-nullish-assignment}
+
+**Inglés:** Logical nullish assignment
+
+**Tipo:** Operador
+
+**Definición:**
+Operador que realiza una asignación únicamente si la variable de la izquierda es nula o indefinida (`null` o `undefined`).
+
+**Ejemplo:**
+
+```javascript
+let a = null;
+a ??= 20;
+console.log(a); // 20
+
+let b = 10;
+b ??= 20;
+console.log(b); // 10
+```
+
+**Referencias:** @mdn_nullish_coalescing_assignment
+
 
 ---
 
@@ -1015,6 +1145,30 @@ console.log(persona["edad"]); // 30
 ```
 
 **Referencias:** @freecodecamp_dot_vs_bracket
+
+### Notación de punto {#glos-dot-notation}
+
+**Inglés:** Dot Notation
+
+**Tipo:** Concepto
+
+**Definición:**
+Sintaxis que permite acceder a las propiedades de un objeto o a los elementos de un arreglo utilizando un punto `.`. En los objetos, esta notación es la más común y legible, especialmente cuando el nombre de la propiedad es simple y no contiene espacios, caracteres especiales o comienza con un número.
+
+
+**Ejemplo:**
+
+```javascript
+const person = {
+  name: "Juan",
+  age: 30
+};
+
+console.log(person.name); // "Juan"
+console.log(person.age); // 30
+```
+
+**Referencias:** @mdn_object_basics_dot_notation
 
 ### null {#glos-null}
 
@@ -1132,6 +1286,46 @@ Number.parseInt("5") // 5
 ```
 
 **Referencias:** @mdn_parseint
+
+### Paso de variables por referencia {#glos-referencia}
+
+**Inglés:** Pass by reference
+
+**Tipo:** Concepto
+
+**Definición:**
+Mecanismo por el cual, al asignar una variable a otra o pasarla como argumento a una función, se crea una copia independiente del dato original. Este comportamiento es característico de los objetos en JavaScript, lo que garantiza que cualquier modificación realizada sobre la copia no tenga impacto en el valor de la variable inicial.
+
+**Ejemplo:**
+
+```javascript
+let a = { greeting: "Hey!" };
+let b = a;
+b.greeting = "Hello!";
+console.log(a.greeting); // "Hello!"
+```
+
+**Referencias:** @geeks_pass_by_value_reference
+
+### Paso de variables por valor {#glos-valor}
+
+**Inglés:** Pass by value
+
+**Tipo:** Concepto
+
+**Definición:**
+Mecanismo por el cual, al asignar una variable a otra o pasarla como argumento a una función, se crea una copia independiente del dato original. Este comportamiento es característico de los tipos de datos primitivos en JavaScript, lo que garantiza que cualquier modificación realizada sobre la copia no tenga impacto en el valor de la variable inicial.
+
+**Ejemplo:**
+
+```javascript
+let a = 5;
+let b = a;
+b = 10;
+console.log(a); // 5
+``` 
+
+**Referencias:** @geeks_pass_by_value_reference
 
 ### Programación Funcional {#glos-programacion_funcional}
 
@@ -1294,6 +1488,28 @@ console.info([1, 2, 3].reverse()); // [3, 2, 1]
 
 ## S
 
+### Set {#glos-set}
+
+**Inglés:** Set
+
+**Tipo:** Objeto / Estructura de datos
+
+**Definición:**
+
+Colección de valores donde cada elemento es único; un valor en un `Set` no puede repetirse. A diferencia de los arreglos, los `Set` no garantizan un orden de acceso basado en índices numéricos, aunque mantienen el orden de inserción al iterar sobre ellos. Son ideales para almacenar listas de elementos únicos y realizar operaciones de conjunto (como uniones o intersecciones).
+
+**Ejemplo:**
+
+```javascript
+const mySet = new Set([1, 2, 2, 3]);
+console.log(mySet.size); // 3 (el 2 duplicado se ignora)
+console.log(mySet.has(1)); // true
+```
+
+**Referencias:** @mdn_set
+
+
+
 ### scope {#glos-scope}
 
 **Inglés:** Scope
@@ -1396,9 +1612,30 @@ const array2 = [...array1, 4, 5]; // [1, 2, 3, 4, 5]
 
 **Referencias:** @packt_mastering_javascript
 
+### String {#glos-String}
+
+**Inglés:** String
+
+**Tipo:** Objeto
+
+**Definición:**
+Objeto global que actúa como un envoltorio (wrapper) para valores primitivos de tipo cadena de texto, permitiendo el acceso a métodos y propiedades para manipular y consultar secuencias de caracteres.
+
+
+**Ejemplo:**
+
+```javascript
+const strObj = new String("Hola");
+console.log(typeof strObj); // "object"
+console.log(strObj.length); // 4
+
+```
+
+**Referencias:** @mdn_string_object
+
 ### Symbol {#glos-symbol}
 
-**Inglés:** Symbol
+**Inglés:** Symbol 
 
 **Tipo:** Objeto
 
@@ -1471,6 +1708,28 @@ let miVariable = "Hola";
 ```
 
 **Referencias:** @yt_temporal_dead_zone_2021
+
+### Trailing commas {#glos-trailing_commas}
+
+**Inglés:** Trailing commas
+
+**Tipo:** Concepto
+
+**Definición:**
+Comas finales en las listas de argumentos, propiedades de objetos y elementos de arreglos.
+
+**Ejemplo:**
+
+```javascript
+const person = {
+  name: "Juan",
+  age: 30,
+};
+
+const numbers = [1, 2, 3,];
+```
+
+**Referencias:** @mdn_trailing_commas
 
 ### Truthy {#glos-truthy}
 
