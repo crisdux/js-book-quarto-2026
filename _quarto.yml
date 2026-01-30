@@ -23,7 +23,7 @@ book:
         - retos-cap7.qmd
         - retos-cap8.qmd
         - retos-cap9.qmd
-        - retos-cap10.qmd
+
     - part: "Soluciones"
       chapters:
         - soluciones-cap1.qmd
@@ -35,7 +35,7 @@ book:
         - soluciones-cap7.qmd
         - soluciones-cap8.qmd
         - soluciones-cap9.qmd
-        - soluciones-cap10.qmd
+
     
     # Apéndices y Referencias (sin numerar)
     - glosario.qmd           # Glosario
