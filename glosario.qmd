@@ -1160,6 +1160,60 @@ console.log(doubled); // [2, 4, 6]
 
 **Referencias:** @lenguajejs_map_weakmap
 
+### Math.floor {#glos-math_floor}
+
+**Inglés:** Math.floor
+
+**Tipo:** Método
+
+**Definición:**
+Método que redondea un número hacia abajo al entero más cercano.
+
+**Ejemplo:**
+
+```javascript
+console.log(Math.floor(4.7)); // 4
+console.log(Math.floor(-4.7)); // -5
+```
+
+**Referencias:** @mdn_math_floor
+
+### Math.ceil {#glos-math_ceil}
+
+**Inglés:** Math.ceil
+
+**Tipo:** Método
+
+**Definición:**
+Método que redondea un número hacia arriba al entero más cercano.
+
+**Ejemplo:**
+
+```javascript
+console.log(Math.ceil(4.7)); // 5
+console.log(Math.ceil(-4.7)); // -4
+```
+
+**Referencias:** @mdn_math_ceil
+
+### Math.round {#glos-math_round}
+
+**Inglés:** Math.round
+
+**Tipo:** Método
+
+**Definición:**
+Método que redondea un número al entero más cercano, siguiendo las reglas de redondeo matemático.
+
+**Ejemplo:**
+
+```javascript
+console.log(Math.round(4.7)); // 5
+console.log(Math.round(-4.7)); // -5
+```
+
+**Referencias:** @mdn_math_round
+
 ---
 
 ## N 
@@ -1514,23 +1568,6 @@ console.log(list.length); // 2
 ---
 
 ## R 
-
-### ReferenceError {#glos-referenceerror}
-
-**Inglés:** ReferenceError
-
-**Tipo:** Error
-
-**Definición:**
-Error que ocurre cuando se intenta acceder a una variable o función que no ha sido declarada.
-
-**Ejemplo:**
-
-```javascript
-console.log(x); // ReferenceError: x is not defined
-```
-
-**Referencias:** @mdn_reference_error
 
 ### reduce {#glos-reduce}
 
@@ -2044,45 +2081,6 @@ undefined // undefined
 
 ## W 
 
-### Web API {#glos-web_api}
-
-**Inglés:** Web API
-
-**Tipo:** Concepto
-
-**Definición:**
-
-Conjunto de interfaces y funcionalidades proporcionadas por el navegador (o el entorno de ejecución como Node.js) que no forman parte del núcleo del lenguaje JavaScript. Permiten realizar tareas asíncronas, manipular el DOM, realizar peticiones HTTP (`fetch`), o manejar temporizadores (`setTimeout`), delegando el trabajo al sistema operativo para no bloquear el hilo principal.
-
-**Ejemplo:**
-
-```javascript
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
-```
-
-**Referencias:** @mdn_web_api
-
-### window {#glos-window}
-
-**Inglés:** window
-
-**Tipo:** Objeto
-
-**Definición:**
-Objeto global que representa la ventana del navegador.
-
-**Ejemplo:**
-
-```javascript
-console.log(window.innerWidth); // Ancho de la ventana
-```
-
-**Referencias:** @mdn_window_api
-
-## W
-
 ### Web APIs {#glos-web_apis}
 
 **Inglés:** Web APIs
@@ -2103,5 +2101,23 @@ fetch('https://api.example.com/data')
 ```
 
 **Referencias:** @w3schools_js_api_intro
+
+
+### window {#glos-window}
+
+**Inglés:** window
+
+**Tipo:** Objeto
+
+**Definición:**
+Objeto global que representa la ventana del navegador.
+
+**Ejemplo:**
+
+```javascript
+console.log(window.innerWidth); // Ancho de la ventana
+```
+
+**Referencias:** @mdn_window_api
 
 :::

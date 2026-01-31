@@ -8,7 +8,7 @@ La respuesta del [Reto 9.1](#sec-cap9-reto1) es:
 
 **Explicación:**
 
-`JSON.stringify` puede recibir un segundo parámetro opcional denominado `replacer`, puede ser una función o un arreglo, y se encarga de hacer un filtro de las propiedades del objeto que deseamos convertir a `string`, en el ejemplo solo deseamos convertir las propiedades `["level", "health"]`, ignorando `username`. 
+[JSON.stringify](#glos-json_stringify) puede recibir un segundo parámetro opcional denominado `replacer`, puede ser una función o un arreglo, y se encarga de hacer un filtro de las propiedades del objeto que deseamos convertir a `string`, en el ejemplo solo deseamos convertir las propiedades `["level", "health"]`, ignorando `username`. 
 
 
 ---
@@ -23,11 +23,11 @@ La respuesta del [Reto 9.2](#sec-cap9-reto2) es:
 
 Javascript tiene 3 métodos pertenecientes al objecto `Math` útiles para redondeo de números.
 
-* `Math.floor()` Siempre redondea el valor hacía abajo.
+* [Math.floor](#glos-math_floor) Siempre redondea el valor hacía abajo.
 
-* `Math.ceil()` Siempre redondea el valor hacía arriba.
+* [Math.ceil](#glos-math_ceil) Siempre redondea el valor hacía arriba.
 
-* `Math.round()` Redondea el valor de una manera un poco mas inteligente, siguiendo las reglas de redondeo que nos enseñaron en colegio.
+* [Math.round](#glos-math_round) Redondea el valor de una manera un poco mas inteligente, siguiendo las reglas de redondeo que nos enseñaron en colegio.
 
 Los 3 métodos tienen inferencia de tipos, esto quiere decir que sino le pasamos un valor numérico como parámetro, javascript intentará hacer su mejor esfuerzo para poder realizar la operación.
 
