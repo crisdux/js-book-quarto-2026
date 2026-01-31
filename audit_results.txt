@@ -1,0 +1,5 @@
+Summary for glosario.qmd:
+Triple backticks (code blocks): 194
+Double stars (bold): 966
+Brackets: [ 44, ] 44
+Parens: ( 212, ) 212

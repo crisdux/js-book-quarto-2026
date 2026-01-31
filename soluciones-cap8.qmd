@@ -8,7 +8,7 @@ La respuesta del [Reto 8.1](#sec-cap8-reto1) es:
 
 **Explicación:**
 
-Para comprender la respuesta es necesario entender temas estructurales del lenjuage, es decir, ir a las bases de JavaScript y conocer conceptos como **Event Loop**, **Call Stack**, **Task Queue**, **Web API's** entre otros. 
+Para comprender la respuesta es necesario entender temas estructurales del lenjuage, es decir, ir a las bases de JavaScript y conocer conceptos como [Event Loop](#glos-event_loop), [Call Stack](#glos-call_stack), [Task Queue](#glos-task_queue), [Web API's](#glos-web_apis) entre otros. 
 
 Para poder darse cuenta, el secreto que puedo compartirte es concentrarse en el orden de las llamadas a las funciones, es decir en estas líneas:
 
@@ -51,7 +51,7 @@ La respuesta del [Reto 8.3](#sec-cap8-reto3) es:
 
 **Explicación:**
 
-Una función asíncrona siempre regresa una **promesa** pero dicha promesa no basta con ser devuelta sino que debe ser consumida, una posible solución es usar las palabras reservadas `then` y `catch`.
+Una función asíncrona siempre regresa una [promesa](#glos-promesa) pero dicha promesa no basta con ser devuelta sino que debe ser consumida, una posible solución es usar las palabras reservadas `then` y `catch`.
 
 Cuando llamamos `getData()` no consumimos la promesa con `then`, solo llamamos a la función por ende no podemos afirmar que la promesa esta en **estado resuelto** o **estado rechazado**, en conclusión inevitablemente la promesa esta en **estado pendiente**.
 

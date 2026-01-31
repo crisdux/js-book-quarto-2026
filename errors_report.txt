@@ -1,0 +1,72 @@
+ERROR: Header found inside code block! Block started at line 505, header at line 513: ### Event Loop {#glos-event-loop}
+ERROR: Header found inside code block! Block started at line 505, header at line 539: ### Expresión {#glos-expresion}
+ERROR: Header found inside code block! Block started at line 554, header at line 564: ### Falsy {#glos-falsy}
+ERROR: Header found inside code block! Block started at line 581, header at line 585: ### flat {#glos-flat}
+ERROR: Header found inside code block! Block started at line 600, header at line 606: ### Función {#glos-funcion}
+ERROR: Header found inside code block! Block started at line 621, header at line 625: ### Función flecha {#glos-funcion_flecha}
+ERROR: Header found inside code block! Block started at line 639, header at line 643: ### Función anónima {#glos-funcion_anonima}
+ERROR: Header found inside code block! Block started at line 658, header at line 662: ### for...of {#glos-for_of}
+ERROR: Header found inside code block! Block started at line 681, header at line 685: ### for...in {#glos-for_in}
+ERROR: Header found inside code block! Block started at line 709, header at line 717: ### Global {#glos-global}
+ERROR: Header found inside code block! Block started at line 731, header at line 739: ### hasOwnProperty {#glos-hasownproperty}
+ERROR: Header found inside code block! Block started at line 755, header at line 759: ### Higher Order Function {#glos-higher_order_function}
+ERROR: Header found inside code block! Block started at line 776, header at line 780: ### Hoisting {#glos-hoisting}
+ERROR: Header found inside code block! Block started at line 794, header at line 802: ### Igualdad débil {#glos-igualdad_débil}
+ERROR: Header found inside code block! Block started at line 816, header at line 820: ### Igualdad estricta {#glos-igualdad_estricta}
+ERROR: Header found inside code block! Block started at line 834, header at line 838: ### in {#glos-in}
+ERROR: Header found inside code block! Block started at line 855, header at line 860: ### Interprete de JavaScript {#glos-interpreter}
+ERROR: Header found inside code block! Block started at line 873, header at line 877: ### isArray {#glos-isarray}
+ERROR: Header found inside code block! Block started at line 891, header at line 896: ### Iterador {#glos-iterador}
+ERROR: Header found inside code block! Block started at line 919, header at line 928: ### Java {#glos-java}
+ERROR: Header found inside code block! Block started at line 945, header at line 949: ### JavaScript {#glos-javascript}
+ERROR: Header found inside code block! Block started at line 962, header at line 966: ### join {#glos-join}
+ERROR: Header found inside code block! Block started at line 980, header at line 984: ### JSON {#glos-json}
+ERROR: Header found inside code block! Block started at line 1008, header at line 1012: ### JSON.stringify {#glos-json_stringify}
+ERROR: Header found inside code block! Block started at line 1025, header at line 1033: ### Lenguaje ensamblador {#glos-lenguaje_ensamblador}
+ERROR: Header found inside code block! Block started at line 1048, header at line 1051: ### length {#glos-length}
+ERROR: Header found inside code block! Block started at line 1065, header at line 1069: ### let {#glos-let}
+ERROR: Header found inside code block! Block started at line 1083, header at line 1087: ### Logical Nullish Assignment {#glos-logical-nullish-assignment}
+ERROR: Header found inside code block! Block started at line 1106, header at line 1115: ### map {#glos-map}
+ERROR: Header found inside code block! Block started at line 1130, header at line 1138: ### NaN {#glos-nan}
+ERROR: Header found inside code block! Block started at line 1152, header at line 1156: ### new {#glos-new}
+ERROR: Header found inside code block! Block started at line 1169, header at line 1173: ### Node.js {#glos-nodejs}
+ERROR: Header found inside code block! Block started at line 1186, header at line 1190: ### Notación de corchetes {#glos-notacion_corchetes}
+ERROR: Header found inside code block! Block started at line 1210, header at line 1214: ### Notación de punto {#glos-dot-notation}
+ERROR: Header found inside code block! Block started at line 1234, header at line 1238: ### null {#glos-null}
+ERROR: Header found inside code block! Block started at line 1252, header at line 1256: ### Number {#glos-number}
+ERROR: Header found inside code block! Block started at line 1269, header at line 1273: ### Nullish coalescing operator {#glos-nullish_coalescing}
+ERROR: Header found inside code block! Block started at line 1287, header at line 1295: ### Object.keys {#glos-object_keys}
+ERROR: Header found inside code block! Block started at line 1308, header at line 1316: ### Parámetro por defecto {#glos-parametros_por_defecto}
+ERROR: Header found inside code block! Block started at line 1334, header at line 1338: ### Parámetro REST {#glos-parametros_rest}
+ERROR: Header found inside code block! Block started at line 1356, header at line 1360: ### parseInt {#glos-parseint}
+ERROR: Header found inside code block! Block started at line 1373, header at line 1377: ### Paso de variables por referencia {#glos-referencia}
+ERROR: Header found inside code block! Block started at line 1393, header at line 1397: ### Paso de variables por valor {#glos-valor}
+ERROR: Header found inside code block! Block started at line 1413, header at line 1417: ### Programación Funcional {#glos-programacion_funcional}
+ERROR: Header found inside code block! Block started at line 1440, header at line 1444: ### push {#glos-push}
+ERROR: Header found inside code block! Block started at line 1459, header at line 1467: ### ReferenceError {#glos-referenceerror}
+ERROR: Header found inside code block! Block started at line 1480, header at line 1484: ### reduce {#glos-reduce}
+ERROR: Header found inside code block! Block started at line 1499, header at line 1503: ### ReferenceError {#glos-referenceerror}
+ERROR: Header found inside code block! Block started at line 1517, header at line 1521: ### repeat {#glos-repeat}
+ERROR: Header found inside code block! Block started at line 1534, header at line 1538: ### return {#glos-return}
+ERROR: Header found inside code block! Block started at line 1553, header at line 1557: ### return implícito {#glos-return_implícito}
+ERROR: Header found inside code block! Block started at line 1570, header at line 1574: ### reverse {#glos-reverse}
+ERROR: Header found inside code block! Block started at line 1587, header at line 1595: ### Set {#glos-set}
+ERROR: Header found inside code block! Block started at line 1611, header at line 1617: ### scope {#glos-scope}
+ERROR: Header found inside code block! Block started at line 1636, header at line 1640: ### Scope Global {#glos-scope_global}
+ERROR: Header found inside code block! Block started at line 1658, header at line 1662: ### splice {#glos-splice}
+ERROR: Header found inside code block! Block started at line 1677, header at line 1681: ### split {#glos-split}
+ERROR: Header found inside code block! Block started at line 1697, header at line 1701: ### Spread Operator {#glos-spread_operator}
+ERROR: Header found inside code block! Block started at line 1715, header at line 1719: ### String {#glos-String}
+ERROR: Header found inside code block! Block started at line 1736, header at line 1740: ### Symbol {#glos-symbol}
+ERROR: Header found inside code block! Block started at line 1753, header at line 1758: ### SyntaxError {#glos-syntaxerror}
+ERROR: Header found inside code block! Block started at line 1772, header at line 1780: ### Template Literals {#glos-template_literals}
+ERROR: Header found inside code block! Block started at line 1794, header at line 1798: ### Temporal Dead Zone {#glos-temporal_dead_zone}
+ERROR: Header found inside code block! Block started at line 1812, header at line 1816: ### Trailing commas {#glos-trailing_commas}
+ERROR: Header found inside code block! Block started at line 1834, header at line 1838: ### Truthy {#glos-truthy}
+ERROR: Header found inside code block! Block started at line 1856, header at line 1860: ### TypeError {#glos-typeerror}
+ERROR: Header found inside code block! Block started at line 1875, header at line 1879: ### typeof {#glos-typeof}
+ERROR: Header found inside code block! Block started at line 1899, header at line 1907: ### undefined {#glos-undefined}
+ERROR: Header found inside code block! Block started at line 1921, header at line 1927: ### var {#glos-var}
+ERROR: Header found inside code block! Block started at line 1940, header at line 1944: ### Valor primitivo {#glos-primitivo}
+ERROR: Header found inside code block! Block started at line 1961, header at line 1969: ### window {#glos-window}
+STILL OPEN: Block starting on line 1982 was never closed.
