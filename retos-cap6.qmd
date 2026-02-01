@@ -25,7 +25,7 @@ console.log(d.greeting);
 * D. `TypeError`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Recordar las diferencias de las copias por valor y copias por referencia.
+Recuerda las diferencias de las copias por valor y copias por referencia.
 :::
 
 **[Ver solución](#sec-sol-cap6-reto1)**
@@ -120,7 +120,7 @@ name.giveLydiaPizza();
 * D. `undefined`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Los objetos son estructuras de datos no indexadas.
+Los prototipos permiten añadir métodos y propiedades a todos los objetos de un cierto tipo.
 :::
 
 **[Ver solución](#sec-sol-cap6-reto4)**
@@ -387,14 +387,14 @@ console.log(getName({}))
 * D. `Ninguno de los anteriores`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Recuerda que un valor **nullish** es aquel que evalua `undefined` o `null`.
+Recuerda que un valor **nullish** es aquel que evalúa `undefined` o `null`.
 :::
 
 **[Ver solución](#sec-sol-cap6-reto12)**
 
 ---
 
-## Reto 6.13: Actulizar propiedades de objetos {#sec-cap6-reto13}
+## Reto 6.13: Actualizar propiedades de objetos {#sec-cap6-reto13}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -408,7 +408,7 @@ const person = {
   name:"Fernando",
 };
 person.name = "Pedro";
-console.log(persona.nombre);
+console.log(person.name);
 ```
 
 **Opciones:**
@@ -475,7 +475,7 @@ console.log("type of music" in band);
 const band = {
   id:1,
   name: "Radiohead",
-  "tipe of music": "Rock",
+  "type of music": "Rock",
   albums: ["Pablo Honey", "Ok Computer", "In Rainbows"]
 };
 
@@ -664,7 +664,7 @@ console.log(add(2, 0));
 * D. `4`, `3`, `2`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Tener en cuenta los valores `falsy` y la coersión de tipos.
+Tener en cuenta los valores `falsy` y la coerción de tipos.
 :::
 
 
@@ -703,7 +703,7 @@ console.log(result);
 * D. `Ninguna de las anteriores`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Recordar que los objetos se almacenan en memoria teniendo en cuenta su **referencia** and no su **valor**.
+Recordar que los objetos se almacenan en memoria teniendo en cuenta su **referencia** y no su **valor**.
 :::
 
 **[Ver solución](#sec-sol-cap6-reto21)**
