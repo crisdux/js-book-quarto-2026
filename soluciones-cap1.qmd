@@ -76,9 +76,9 @@ La respuesta del [Reto 1.5](#sec-cap1-reto5) es:
 
 Según la @mdn_parseint, [parseInt](#glos-parseint) convierte un valor a tipo `number` de una base concreta ([base binaria](#glos-binaria), [base octal](#glos-octal), [base decimal](#glos-decimal), etc).
 
-En el ejemplo intentamos convertir `"7*6"` a base `10`, osea, a base decimal.
+En el ejemplo intentamos convertir `"7*6"` a base `10`, o sea, a base decimal.
 
-`parseInt` toma los valores válidos de izquierda a derecha, dicho esto, solo tomará el valor `7` (el `*` y todo lo que le precede no es un valor válido para `parseInt`).
+`parseInt` toma los valores válidos de izquierda a derecha, dicho esto, solo tomará el valor `7` (el `*` y todo lo que le sigue no es un valor válido para `parseInt`).
 
 En conclusión, solo convierte al `7` de `string` a `number`.
 
@@ -105,7 +105,7 @@ const a = new Number(2);
 const b = new Boolean(true);
 ```
 
-Ambas variables serán objetos creados por medio de estos contructores y no solo conversiones como en este reto.
+Ambas variables serán objetos creados por medio de estos constructores y no solo conversiones como en este reto.
 
 ---
 
@@ -226,7 +226,7 @@ Este bug es muy antiguo y se determinó que no vale la pena arreglarlo al día d
 
 Este bug es bastante conocido en programadores experimentados y usado en entrevistas laborales para estimar tu conocimiento del lenguaje.
 
-Según @mdn_null el valor `null` es un literal de Javascript que representa intencionalmente un valor nulo o "vacío". Es uno de los valores primitivos de Javascript.
+Según @mdn_null el valor `null` es un literal de JavaScript que representa intencionalmente un valor nulo o "vacío". Es uno de los valores primitivos de JavaScript.
 
 ---
 
@@ -340,7 +340,7 @@ Tabla 1: Conversión de valores a Boolean
 
 La respuesta del [Reto 1.15](#sec-cap1-reto15) es:
 
-**C. `null`, `Symbol("hola")`, `string`, `"hi"`**
+**C. `null`, `Symbol("hi")`, `string`, `"hi"`**
 
 **Explicación:**
 
