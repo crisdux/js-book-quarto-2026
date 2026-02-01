@@ -38,7 +38,7 @@ console.log(false == undefined); // false
 Siendo `null` y `undefined` valores falsy, ¿por qué pasa esto?
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Notar que todos los valores de la comparación son considerados valores falsy para el interprete de JavaScript 
+Notar que todos los valores de la comparación son considerados valores falsy para el intérprete de JavaScript.
 :::
 
 **[Ver solución](#sec-sol-cap3-reto2)**
