@@ -66,7 +66,7 @@ En las plantillas con backticks, todo lo que esté dentro de `{}` se evalúa com
 let name = "Cris";
 let age = 25;
 
-console.log("My name is %s and I am %d", name, age);
+console.log("Mi nombre es %s y tengo %d", name, age);
 ```
 
 **Opciones:**

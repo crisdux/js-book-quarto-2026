@@ -166,11 +166,11 @@ La respuesta del [Reto 2.8](#sec-cap2-reto8) es:
 
 **Explicación:**
 
-Podemos convertir un `string` valido a `number` tan solo restandole `0`.
+Podemos convertir un `string` válido a `number` tan solo restándole `0`.
 
-Es un hack interesante y una alternativa valida a usar el objeto `Number`, la función `parseInt` o el operador `+`.
+Es un hack interesante y una alternativa válida a usar el objeto `Number`, la función `parseInt` o el operador `+`.
 
-El operador `-` solo cumple la tarea de realizar una resta en JavaScript, cuando se lo aplicamos a un `string` valido entonces el interprete tiene que convertir dicha cadena a `number` y luego realizar la operación, entonces nos aprovechamos de que el `0` es neutro aditivo para que la conversión sea exitosa.
+El operador `-` solo cumple la tarea de realizar una resta en JavaScript, cuando se lo aplicamos a un `string` válido entonces el intérprete tiene que convertir dicha cadena a `number` y luego realizar la operación, entonces nos aprovechamos de que el `0` es neutro aditivo para que la conversión sea exitosa.
 
 Si intentamos usar este hack con cadenas no numéricas la conversión se realiza pero obtendremos un `NaN` como resultado, así que mucho ojo con eso.
 
@@ -259,9 +259,9 @@ El método [repeat](#glos-repeat) se encarga como su nombre lo dice de repetir `
 
 * `n` debe ser un número entre `0` e infinito que no desborde el tamaño máximo para una cadena (`2^28 - 1`).
 
-* Sí `n` es un decimal (como en el ejemplo) entonces JavaScript redondea **hacia abajo** dicho número y ejecuta la operación con normalidad.
+* Si `n` es un decimal (como en el ejemplo) entonces JavaScript redondea **hacia abajo** dicho número y ejecuta la operación con normalidad.
 
-* Sí `n` es un número negativo lanzará un [RangeError](#glos-rangeerror) indicando que no se pueden usar negativos.
+* Si `n` es un número negativo lanzará un [RangeError](#glos-rangeerror) indicando que no se pueden usar negativos.
 
 ---
 
