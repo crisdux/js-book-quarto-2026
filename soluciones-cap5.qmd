@@ -16,7 +16,7 @@ const [, , , pear]  = fruits;
 
 Donde cada `,` representa el salto de un índice del arreglo.
 
-Para una sistaxis mas breve podemos usar esto:
+Para una sintaxis más breve podemos usar esto:
 
 ```js
 const { 3:pear } = fruits;
@@ -37,7 +37,7 @@ La respuesta del [Reto 5.2](#sec-cap5-reto2) es:
 
 **Explicación:**
 
-Cuando usamos la sintaxis de `...` en los parámetros de una función ([parámetros REST ](#glos-parametros-rest) desde ES6) convertimos a dicho parámetro en un arreglo. Entonces es tentador marcar la opción **B. `"array"`** pero esto sería un **error de novato**. En JavaScript no existe el tipo de dato `array`, para **tipos no primitivos** el lenguaje los evalua como `object`. Por ese motivo la respuesta correcta es la opción **C. `object`**.
+Cuando usamos la sintaxis de `...` en los parámetros de una función ([parámetros REST ](#glos-parametros-rest) desde ES6) convertimos a dicho parámetro en un arreglo. Entonces es tentador marcar la opción **B. `"array"`** pero esto sería un **error de novato**. En JavaScript no existe el tipo de dato `array`, para **tipos no primitivos** el lenguaje los evalúa como `object`. Por ese motivo la respuesta correcta es la opción **C. `object`**.
 
 ---
 
@@ -51,7 +51,7 @@ La respuesta del [Reto 5.3](#sec-cap5-reto3) es:
 
 JavaScript no arroja ningún error, crea valores [undefined](#glos-undefined) hasta completar los índices pertinentes, luego muestra el último valor creado, en este caso `11`.
 
-Dependiendo en que entorno de ejecución se ejecute el código puede variar un poco la salida, una respuesta valida también sería:
+Dependiendo en qué entorno de ejecución se ejecute el código puede variar un poco la salida, una respuesta válida también sería:
 
 ```js
 [1, 2, 3, undefined, undefined, undefined, undefined, 
@@ -80,16 +80,16 @@ La respuesta del [Reto 5.5](#sec-cap5-reto5) es:
 
 **Explicación:**
 
-El método [map](#glos-map) es propio del paradigma de la [programación funcional](#glos-programación-funcional). Este método siempre retorna una nuevo arreglo de longitud igual al arreglo original.
+El método [map](#glos-map) es propio del paradigma de la [programación funcional](#glos-programación-funcional). Este método siempre retorna un nuevo arreglo de longitud igual al arreglo original.
 
-En el ejemplo, puesto que estamos iterando sobre un arreglo de números, la condición evaluará `true` para cada uno de los elementos del arreglo, pero hay 2 sentencias `return`. JavaScript ignora todo el código que esta después del primer `return` que encuentra. Dicho esto, tenemos algo así:
+En el ejemplo, puesto que estamos iterando sobre un arreglo de números, la condición evaluará `true` para cada uno de los elementos del arreglo, pero hay 2 sentencias `return`. JavaScript ignora todo el código que está después del primer `return` que encuentra. Dicho esto, tenemos algo así:
 
 ```js
 [1, 2, 3].map(num => {
   if (typeof num === "number") return;
 });
 ```
-Ahora, si bien la condición se evalua a `true`, el `return` no devuelve nada, simplemente hace que el código se salga del `map`.
+Ahora, si bien la condición se evalúa a `true`, el `return` no devuelve nada, simplemente hace que el código se salga del `map`.
 
 Cuando no devolvemos nada en la sentencia `return`, `map` regresa siempre `undefined`.
 
@@ -105,7 +105,7 @@ La respuesta del [Reto 5.6](#sec-cap5-reto6) es:
 
 **Explicación:**
 
-Cuando una función regresa un arreglo en Javascript es muy usual utilizar la sintaxis de desestructuración para poder acceder a sus elementos por separado. 
+Cuando una función regresa un arreglo en JavaScript es muy usual utilizar la sintaxis de desestructuración para poder acceder a sus elementos por separado. 
 
 En este ejemplo accedemos a la segunda posición del arreglo de la siguiente manera: 
 
@@ -133,7 +133,7 @@ La respuesta del [Reto 5.7](#sec-cap5-reto7) es:
 
 El método [push](#glos-push) regresa la longitud del arreglo. Inicialmente el arreglo `["banana"]` tiene langitud `1`, al hacer el `push` del item `apple` la longitud será de `2` y ojo, no hacemos un `return` de `list` sino de `list.push(item)` por ello regresamos la longitud que es `2`.
 
-Si quisieramos regresar el arreglo resultante completo deberiamos hacer:
+Si quisiéramos regresar el arreglo resultante completo deberíamos hacer:
 
 ```js
 function addToList(item, list) {
@@ -156,7 +156,7 @@ Con el bucle [for...in](#glos-for-in), podemos iterar sobre propiedades **enumer
 
 Con un bucle [for...of](#glos-for_of), podemos recorrer sobre **iterables**. Un arreglo por definición es un iterable, en cada iteración la variable `item` es igual al elemento sobre el cual se itera en ese momento. Por ello el resultado es `"Radiohead"` `"Coldplay"` `"Nirvana"`.
 
-En la practica los bucles _for...of_ son más usados y usualmente en raras ocaciones se ven bucles _for...in_.
+En la práctica los bucles _for...of_ son más usados y usualmente en raras ocasiones se ven bucles _for...in_.
 
 ---
 
@@ -180,7 +180,7 @@ La respuesta del [Reto 5.10](#sec-cap5-reto10) es:
 
 **Explicación:**
 
-El método `push` regresa la longitud de un arreglo y no el arreglo en si mismo, podemos ver este comportamiento si hacemos lo siguiente:
+El método `push` regresa la longitud de un arreglo y no el arreglo en sí mismo, podemos ver este comportamiento si hacemos lo siguiente:
 
 ```js
 let newList = [1, 2, 3].push(4)
@@ -199,7 +199,7 @@ La respuesta del [Reto 5.11](#sec-cap5-reto11) es:
 
 **Explicación:**
 
-Cuando vemos en la lista de parámetros de una función la sintaxis de tres puntos `...` nos referimos a lo que se denomina un **paramétro de tipo REST**. En el cuerpo de la función este tipo de parámetro se trata como un arreglo pero **siempre debe estar declarado al final de la lista de parámetros**, caso contrario tendremos un error de sintaxis.
+Cuando vemos en la lista de parámetros de una función la sintaxis de tres puntos `...` nos referimos a lo que se denomina un **parámetro de tipo REST**. En el cuerpo de la función este tipo de parámetro se trata como un arreglo pero **siempre debe estar declarado al final de la lista de parámetros**, caso contrario tendremos un error de sintaxis.
 
 Si volvemos a escribir la función pero esta vez teniendo en cuenta lo anterior dicho:
 
@@ -210,7 +210,7 @@ function getItems(fruitList, favoriteFruit, ...args) {
 
 console.log(getItems(["banana", "apple"], "pear", "orange"))
 ```
-Obtemos por consola: `["banana", "apple", "orange", "pear"]`
+Obtenemos por consola: `["banana", "apple", "orange", "pear"]`
 
 ---
 
@@ -226,7 +226,7 @@ La respuesta del [Reto 5.12](#sec-cap5-reto12) es:
 
 Tenemos una desestructuración de arreglos en la lista de parámetros de la función y además `y` es un parámetro de tipo REST. 
 
-Por ende, al pasar el argumento `list`, `x` será igual al primer elemento del arreglo, ósea, `1`. Entonces como `y` es de tipo REST será un arreglo con todos los elementos restantes de `list`, ósea, `[2, 3, 4]`.
+Por ende, al pasar el argumento `list`, `x` será igual al primer elemento del arreglo, o sea, `1`. Entonces como `y` es de tipo REST será un arreglo con todos los elementos restantes de `list`, o sea, `[2, 3, 4]`.
 
 La función regresa un nuevo arreglo `[x, y]`, entonces tendríamos un arreglo anidado y como resultado `[1, [2, 3, 4]]`
 
@@ -234,7 +234,7 @@ La función regresa un nuevo arreglo `[x, y]`, entonces tendríamos un arreglo a
 
 Recibe un único parámetro `user` que es un objeto y luego lo regresa. 
 
-Las funciones de tipo flecha tiene la característica denominada **return implícito** con esto se logra escribir funciones más compactas y de una sola línea, pero cuando intentamos usar un **return implícito** para devolver un objeto es **obligatorio** usar paréntesis para envolver al objeto en cuestión, sino hacemos esto el interprete nos arrojará un [SyntaxError](#glos-syntaxerror).
+Las funciones de tipo flecha tiene la característica denominada **return implícito** con esto se logra escribir funciones más compactas y de una sola línea, pero cuando intentamos usar un **return implícito** para devolver un objeto es **obligatorio** usar paréntesis para envolver al objeto en cuestión, si no hacemos esto el intérprete nos arrojará un [SyntaxError](#glos-syntaxerror).
 
 Para que el **return implícito** tenga sentido tendríamos que usar paréntesis para envolver el objeto:
 
@@ -268,11 +268,11 @@ La respuesta del [Reto 5.14](#sec-cap5-reto14) es:
 
 **Explicación:**
 
-El método `lenght` es un getter y un setter al mismo tiempo, esto quiere decir que podemos obtener valores y podemos establecer los mismos dependiendo a lo que se necesite.
+El método `length` es un getter y un setter al mismo tiempo, esto quiere decir que podemos obtener valores y podemos establecer los mismos dependiendo a lo que se necesite.
 
-En este caso usar `length` y setterlo a `0` es una buena manera de borrar todos los elementos de un arreglo. 
+En este caso usar `length` y setearlo a `0` es una buena manera de borrar todos los elementos de un arreglo. 
 
-Saber esto es muy útil cuando tengamos qu eliminar algunos o todos los elementos de un arreglo.
+Saber esto es muy útil cuando tengamos que eliminar algunos o todos los elementos de un arreglo.
 
 ---
 
@@ -304,7 +304,7 @@ La respuesta del [Reto 5.16](#sec-cap5-reto16) es:
 
 [flat](#glos-flat) es un **array method** que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada.
 
-Dicho en otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces. Es una buena alernativa a usar por ejemplo [reduce](#glos-reduce) para hacer lo mismo. 
+Dicho en otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces. Es una buena alternativa a usar por ejemplo [reduce](#glos-reduce) para hacer lo mismo. 
 
 No muchos desarrolladores conocen esta característica en el lenguaje.
 
@@ -326,9 +326,7 @@ default:5
 
 **Explicación:**
 
-[console.count()](#glos-consolecount) se encarga como su nombre lo dice de contar acciones que ocurren en el código, desde cuantas veces se repite un bucle (como en el ejemplo) hasta poder determinar cuantas veces se llamo a una función. 
-
-Puede llegar a ser útil para hacer un debbuging básico, no esta de más conocerla, quiza te saque de un apaño.
+Puede llegar a ser útil para hacer un debbuging básico, no está de más conocerla, quizá te saque de un apaño.
 
 ---
 
@@ -336,7 +334,7 @@ Puede llegar a ser útil para hacer un debbuging básico, no esta de más conoce
 
 La respuesta del [Reto 5.18](#sec-cap5-reto18) es:
 
-**A. `Nico Angela undefined Christian Freddy`**
+**A. `Nico, Angela, undefined, Christian, Freddy`**
 
 **Explicación:**
 
@@ -348,9 +346,9 @@ Recibe como parámetro un número que representa en este ejemplo el índice al c
 
 * `.at(-1)` regresa el item "Angela", es una manera elegante de acceder al último item de un arreglo.
 
-* `.at(10)` regresa `undefiend` puesto que no existe un item con dicho índice en el arreglo.
+* `.at(10)` regresa `undefined` puesto que no existe un item con dicho índice en el arreglo.
 
-* `.at(3.8)` y `.at(-3.3)` solo tomaran la parte entera del parámetro, por ende tendremos `.at(3)` que regresa "Christian".
+* `.at(3.8)` y `.at(-3.3)` solo tomarán la parte entera del parámetro, por ende tendremos `.at(3)` que regresa "Christian".
  * `at.(-3)` que regresa "Freddy".
 
 Particularmente encuentro este método muy útil y reemplaza el uso de `length` para acceder al último item de un arreglo.
@@ -367,22 +365,22 @@ La respuesta del [Reto 5.19](#sec-cap5-reto19) es:
 
 Este ejemplo es bien sencillo pero abarca varios temas interesantes de JavaScript.
 
-La función se encarga de verificar si un arreglo esta vacío o no, para ello hacemos una doble verificación:
+La función se encarga de verificar si un arreglo está vacío o no, para ello hacemos una doble verificación:
 
-Primero, corroboramos que el parámetro `arr` sea un arreglo, la manera más eficiente de hacerlo es usando el método `isArray` del objeto `Array` el cual regresa `true` si es un arreglo y `false` sino lo es. 
+Primero, corroboramos que el parámetro `arr` sea un arreglo, la manera más eficiente de hacerlo es usando el método `isArray` del objeto `Array` el cual regresa `true` si es un arreglo y `false` si no lo es. 
 
-Segundo, corroboramos que la longitud del arreglo sea 0 y convertimos esa salida a boolean para poder hacer una comparación de boeleanos con el operador de corto circuito `&&`
+Segundo, corroboramos que la longitud del arreglo sea 0 y convertimos esa salida a boolean para poder hacer una comparación de booleanos con el operador de corto circuito `&&`
 
 Veamos caso por caso:
 
-* `[1,2,3]`, es un arreglo pero no esta vacío. 
-Entonces tendriamos: `true` && `false`, que evalua a `false`.
+* `[1,2,3]`, es un arreglo pero no está vacío. 
+Entonces tendríamos: `true` && `false`, que evalúa a `false`.
 
-* `[0]`, es un arreglo y tampoco esta vacío.
-Entonces tendríamos: `true` && `false`, que evalua a `false`.
+* `[0]`, es un arreglo y tampoco está vacío.
+Entonces tendríamos: `true` && `false`, que evalúa a `false`.
 
-* `[]` es un arreglo y si esta vacío.
-Entonces tendríamos: `true` && `true`, que evalua a `true`.
+* `[]` es un arreglo y sí está vacío.
+Entonces tendríamos: `true` && `true`, que evalúa a `true`.
 
 Conclusión: `false`, `false`, `true`.
 
@@ -400,7 +398,7 @@ Los operadores de JavaScript, como por ejemplo el operador suma (+), están dise
 
 Cuando intentamos usar dichos operadores para tipos no primitivos, JavaScript hará su mayor esfuerzo para devolver un resultado lógico, pero la mayoría de las veces obtendremos salidas no esperadas o ambiguas.
 
-Lo primero que tratará de hacer el interprete de JavaScript es tratar de convertir los arreglos a cadenas, aunque no lo veamos hará algo como esto:
+Lo primero que tratará de hacer el intérprete de JavaScript es tratar de convertir los arreglos a cadenas, aunque no lo veamos hará algo como esto:
 
 ```js
 const a = [1, 2, 3];
@@ -427,4 +425,4 @@ Cuando pretendemos hacer una desestructuración de arreglos es súper importante
 
 En el ejemplo usamos 3 veces `,` por ello saltamos 3 posiciones del arreglo `names` para poder obtener (con spread operator) la cadena `Cris` del arreglo anidado.
 
-Finalmente aplicamos el método `length` con sintaxis de corchete.
+Finalmente aplicamos el método `["length"]` con sintaxis de corchete.

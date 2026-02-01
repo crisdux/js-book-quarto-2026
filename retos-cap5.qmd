@@ -51,7 +51,7 @@ getAge(21);
 
 * A. `number`
 * B. `array`
-* C. `objet`
+* C. `object`
 * D. `NaN`
 
 ::: {.callout-tip title="Pista" collapse="true"}
@@ -163,7 +163,7 @@ Ojo con la sentencia `return`
 
 ```js
 const fn = () => {
-  return [1000, 9000+1]
+  return [1000, 9000 + 1]
 }
 
 const [, second] = fn()
@@ -245,7 +245,7 @@ for (let item of bands) {
 * D. `0 1 2` y `{0: "Radiohead", 1: "Coldplay", 2: "Nirvana"}`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Ambos sirven para iterar pero no son lo mismo.
+Ambos sirven para iterar, pero no son lo mismo.
 :::
 
 **[Ver solución](#sec-sol-cap5-reto8)**
@@ -273,7 +273,7 @@ console.log(list)
 * D. `[1, 1, 1]`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Los elementos de un arreglo pueden contener expresiones a ser evaluadas por el interprete de JavaScript.
+Los elementos de un arreglo pueden contener expresiones a ser evaluadas por el intérprete de JavaScript.
 :::
 
 **[Ver solución](#sec-sol-cap5-reto9)**
@@ -380,10 +380,10 @@ Cuidado con la sintaxis de **return implícito** en las funciones flecha.
 **Intermedio**
 :::
 
-**¿Cuál o cuales de estos métodos modifica el array original?**
+**¿Cuál o cuáles de estos métodos modifica el array original?**
 
 ```js
-const points = ['.', '..', '...']
+const emojis = ['.', '..', '...']
 
 emojis.map(x => x + '.')
 emojis.filter(x => x !== '..')
@@ -511,7 +511,7 @@ fruits.forEach(() => {
 **Opciones:**
 
 * A. `5`
-* B. `SyntaxisError`
+* B. `SyntaxError`
 * C. 
 
 ```js
@@ -565,7 +565,7 @@ console.log(teachers.at(-3.3));
 
 ---
 
-## Reto 5.19: Verificar si un arreglo esta vacío {#sec-cap5-reto19}
+## Reto 5.19: Verificar si un arreglo está vacío {#sec-cap5-reto19}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -590,7 +590,7 @@ console.log(f([]));
 * D. `false`, `false`, `true`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-`length` verifica cuantos elementos tiene un arreglo.
+`length` verifica cuántos elementos tiene un arreglo.
 :::
 
 **[Ver solución](#sec-sol-cap5-reto19)**
@@ -619,7 +619,7 @@ console.log(a + b);
 * D. `"1, 2, 34, 5, 6"`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-REcuerda que el operador `+` concatena cadenas de texto o hace sumas aritmeticas.
+Recuerda que el operador `+` concatena cadenas de texto o hace sumas aritméticas.
 :::
 
 **[Ver solución](#sec-sol-cap5-reto20)**
@@ -648,7 +648,7 @@ console.log(myName["length"]);
 * D. `4`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-En una desestructuración de arreglos es muy importante tener en cuenta que los elementos estan debidamente indexados y el orden de los mismos si importan.
+En una desestructuración de arreglos es muy importante tener en cuenta que los elementos están debidamente indexados y el orden de los mismos sí importan.
 :::
 
 
