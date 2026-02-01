@@ -131,7 +131,7 @@ setTimeout(() => {
 * D. `ReferenceError`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-`var` tiene scope de función mientras que `const`scope de bloque.
+`var` tiene scope de función mientras que `const` scope de bloque.
 :::
 
 **[Ver solución](#sec-sol-cap4-reto4)**
@@ -238,7 +238,7 @@ console.log(person.name);
 * D. `TypeError`, `Fernando`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-`const` actua diferente en objetos y primitivos.
+`const` actúa diferente en objetos y primitivos.
 :::
 
 **[Ver solución](#sec-sol-cap4-reto7)**
@@ -282,7 +282,7 @@ Diferenciar entre alcance global y de bloque.
 
 ---
 
-## Reto 4.9: Nuavamente la Temporal Dead Zone {#sec-cap4-reto9}
+## Reto 4.9: Nuevamente la Temporal Dead Zone {#sec-cap4-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -294,7 +294,7 @@ Diferenciar entre alcance global y de bloque.
 function test(){
   let name = "Alex";
   if(true){
-    console.log(nombre);
+    console.log(name);
     let name = "Oscar";
   }
 }
