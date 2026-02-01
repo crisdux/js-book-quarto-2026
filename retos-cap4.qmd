@@ -264,7 +264,7 @@ const getPersonalData = () => {
   console.log(age);
 }
 
-console.log(getPersonalData());
+getPersonalData();
 ```
 
 **Opciones:**

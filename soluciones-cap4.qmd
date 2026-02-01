@@ -45,7 +45,7 @@ La respuesta del [Reto 4.2](#sec-cap4-reto2) es:
 
 Las variables declaradas con `let` y `const` tienen un [ámbito de bloque](#glos-ambito_de_bloque), esto significa que solo podrán ser accedidas dentro del bloque de llaves donde fueron declaradas, por ejemplo dentro de un bloque `if` o dentro de una función.
 
-Esta premisa se cumple siempre y cuando estén declaradas dentro de un bloque, si una variable esté fuera de todo bloque entonces se dice que es una variable global y por ende puede ser accedida desde cualquier parte del código.
+Esta premisa se cumple siempre y cuando estén declaradas dentro de un bloque, si una variable está fuera de todo bloque entonces se dice que es una variable global y por ende puede ser accedida desde cualquier parte del código.
 
 `let x = 10` es una variable global, puesto que no está encerrada en ningún tipo de bloque.
 
@@ -89,7 +89,7 @@ La respuesta del [Reto 4.4](#sec-cap4-reto4) es:
 
 **Explicación:**
 
-Al llamar a `getStatus` debemos tener el cuenta el [scope](#glos-scope) de las variables (ámbito de las variable en español), recuerda que tanto `let` como `const` tienen scope de bloque, por ende buscará una variable `status` dentro del bloque de `data` y regresará la cadena `"C"`.
+Al llamar a `getStatus` debemos tener en cuenta el [scope](#glos-scope) de las variables (ámbito de las variable en español), recuerda que tanto `let` como `const` tienen scope de bloque, por ende buscará una variable `status` dentro del bloque de `data` y regresará la cadena `"C"`.
 
 ---
 
