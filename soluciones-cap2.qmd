@@ -24,7 +24,7 @@ La respuesta del [Reto 2.2](#sec-cap2-reto2) es:
 
 **Explicación:**
 
-Al usar los [template literals](#glos-template_literals) de [ES6](#glos-es6), las expresiones se evaluan primero.
+Al usar los [template literals](#glos-template_literals) de [ES6](#glos-es6), las expresiones se evalúan primero.
 
 En este caso la expresión completa es:
 
@@ -39,7 +39,7 @@ Donde:
 
 Entonces, la función es llamada y regresa únicamente el parámetro que se le pasa. Por ello la respuesta es `I love to program`.
 
-Para la @mdn_template_literals son cadenas que estan delimitadas por comillas francesas o por backticks (`) que permiten crear cadenas multilineas y también evaluar expresiones dentro de ellas con **interpolación de cadenas**.
+Para la @mdn_template_literals son cadenas que están delimitadas por comillas francesas o por backticks (`) que permiten crear cadenas multilíneas y también evaluar expresiones dentro de ellas con **interpolación de cadenas**.
 
 Por otro lado la documentación de @geeksforgeeks_anonymous explica que las funciones anónimas son aquellas que no tienen nombre y que son muy útiles como callbacks.
 
@@ -55,9 +55,9 @@ La respuesta del [Reto 2.3](#sec-cap2-reto3) es:
 
 En JavaScript como en [Java](#glos-java) y otros lenguajes de programación es posible usar **sustituciones de variables** con el operador `%` seguido de un caracter que especifica el tipo de dato que se pretende imprimir.
 
-En este caso, `$s` reemplaza un `string` (`"Cris"`) y `%d` reemplaza un valor decimal o dígito numérico (`25`). 
+En este caso, `%s` reemplaza un `string` (`"Cris"`) y `%d` reemplaza un valor decimal o dígito numérico (`25`). 
 
-Este método de imprimir por consola no es muy usado, ni siquiera es conocido, pero esta bueno saber que existe.
+Este método de imprimir por consola no es muy usado, ni siquiera es conocido, pero está bueno saber que existe.
 
 Nota: No confundir JavaScript con Java son lenguajes de programación diferentes.
 
@@ -88,7 +88,7 @@ Como le pasamos una cadena vacía entonces `Pepe` se convierte en `['P','e','p',
 
 * [Spread Operator](#glos-spread_operator) expandirá o propagará la cadena `Pepe` en `['P','e','p','e']`. El Spread Operator no solo funciona con arreglos, también puede ser usado con cadenas.
 
-* [Array.from](#glos-array_from) es desde ES6 una manera más de convertir cadenas a arreglos, tambiém regresa `['P','e','p','e']`.
+* [Array.from](#glos-array_from) es desde ES6 una manera más de convertir cadenas a arreglos, también regresa `['P','e','p','e']`.
 
 ---
 
@@ -106,11 +106,11 @@ La sintaxis de backticks, comillas simples invertidas o comillas francesas (alt+
 
 **Primera expresión a evaluar:** 
 
-En `${[] && 'Im'}` tenemos el operador de **corto circuito** `&&`. 
+En `${[] && 'Im'}` tenemos el operador de **cortocircuito** `&&`. 
 
-Para usar los operadores de corto circuito debemos tener en cuanta los valores `truthy` y `falsy`. 
+Para usar los operadores de cortocircuito debemos tener en cuenta los valores `truthy` y `falsy`. 
 
-Si la primera parte de la [expresión](#glos-expresion) evalua como `truthy` entonces ejecutamos la segunda parte de la expresión. 
+Si la primera parte de la [expresión](#glos-expresion) evalúa como `truthy` entonces ejecutamos la segunda parte de la expresión. 
 
 Los valores `truthy` son:
 
@@ -121,7 +121,7 @@ Los valores `truthy` son:
 * Cualquier `string` que no sea vacío (`"0"`, `"Hola mundo"`, `"false"`)
 * El objeto `Date` (`new Date()`)
 
-Volviendo al ejemplo, un arreglo vacio `[]` es `truthy` entonces se ejecuta la segunda parte de la expresión, osea, el `string` `'Im'`.
+Volviendo al ejemplo, un arreglo vacío `[]` es `truthy` entonces se ejecuta la segunda parte de la expresión, es decir, el `string` `'Im'`.
 
 **Segunda expresión a evaluar:** 
 
@@ -136,7 +136,7 @@ Los valores `falsy` son:
 * `null`
 * `NaN`
 
-La primera parte de la expresión es una cadena vacia que vendría a representar un valor `falsy` y por ello la segunda parte de la expresión `n't` no se ejecuta.
+La primera parte de la expresión es una cadena vacía que vendría a representar un valor `falsy` y por ello la segunda parte de la expresión `n't` no se ejecuta.
 
 En conclusión, la respuesta es: `Impossible! You should see a therapist after so much JavaScript lol`
 
@@ -195,15 +195,15 @@ Vayamos por partes.
 
 En el primer `console.log(x + y)`:
 
-Intentamos sumar las variables `x` y `y`, pero `x` es una cadena y `y` es un número, por **coersión de tipos** la operación ya no será una suma aritmética sino una [concatenación](#glos-concatenacion) de cadenas. Dicho en otras palabras la variable `y` sera convetida implicitamente por el interprete de JavaScript a cadena, por lo que el resultado será `"11111"`.
+Intentamos sumar las variables `x` y `y`, pero `x` es una cadena y `y` es un número, por **coerción de tipos** la operación ya no será una suma aritmética sino una [concatenación](#glos-concatenacion) de cadenas. Dicho en otras palabras la variable `y` será convertida implícitamente por el intérprete de JavaScript a cadena, por lo que el resultado será `"11111"`.
 
 En el segundo `console.log(y - z)`:
 
-Intentamos restar las variables `y` y `z`, pero `y` es una cadena y `z` es un número, por **coersión de tipos** la operación será una resta artimética de toda la vida. Dicho en otras palabras la variable `z` sera convetida implicitamente por el interprete de JavaScript a número, por lo que el resultado será `10`.
+Intentamos restar las variables `y` y `z`, pero `y` es una cadena y `z` es un número, por **coerción de tipos** la operación será una resta aritmética de toda la vida. Dicho en otras palabras la variable `z` será convertida implícitamente por el intérprete de JavaScript a número, por lo que el resultado será `10`.
 
 ::: {.callout-tip}
 ## Tip
-En JavaScript el operador `+` puede significar una suma o una concatenación según el caso de uso, pero el operador `-` siempre significara una resta artimética.
+En JavaScript el operador `+` puede significar una suma o una concatenación según el caso de uso, pero el operador `-` siempre significará una resta aritmética.
 :::
 
 ---
@@ -216,7 +216,7 @@ La respuesta del [Reto 2.10](#sec-cap2-reto10) es:
 
 **Explicación:**
 
-El operador `+` por lo general intentará realizar una concateneción, en este caso, el [interprete de JavaScript](#glos-interpreter), por **coerción de tipos** intentará convertir los arreglos a cadenas de texto, haciendo algo como esto aunque no lo veamos:
+El operador `+` por lo general intentará realizar una concatenación, en este caso, el [intérprete de JavaScript](#glos-interpreter), por **coerción de tipos** intentará convertir los arreglos a cadenas de texto, haciendo algo como esto aunque no lo veamos:
 
 ```js
 console.log(typeof ([].toString() + [].toString())); 
@@ -236,7 +236,7 @@ La respuesta del [Reto 2.11](#sec-cap2-reto11) es:
 
 Tanto cadenas como arreglos son iterables, entonces podemos usar la nomenclatura de corchetes para acceder a sus valores.
 
-Todo lo que este dentro de los corchetes será evaluado como expresión, entonces ambos casos se ejecutaran correctamente, el primero solo ejecuta el método [length](#glos-length) y el segundo concatena lascadenas `"len"+"gth"` para finalmente ejecutar `length` para el arreglo y calcular su correspondiente longitud.
+Todo lo que esté dentro de los corchetes será evaluado como expresión, entonces ambos casos se ejecutarán correctamente, el primero solo ejecuta el método [length](#glos-length) y el segundo concatena las cadenas `"len"+"gth"` para finalmente ejecutar `length` para el arreglo y calcular su correspondiente longitud.
 
 ---
 
@@ -279,7 +279,7 @@ Veamos paso por paso que sucede:
 
 * Aplicamos `split`:
 
-El método [split](#glos-split) convierte una cadena en arreglo dependiendo del parámetro que se le pase, en este caso una cedena vacía: `['h','e','l','l','o']`.
+El método [split](#glos-split) convierte una cadena en arreglo dependiendo del parámetro que se le pase, en este caso una cadena vacía: `['h','e','l','l','o']`.
 
 * Aplicamos `reverse`:
 
