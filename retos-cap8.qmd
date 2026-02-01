@@ -1,6 +1,6 @@
 # Programación Asíncrona
 
-## Reto 8.1: Simulando asincronía con `setTimeOut()` {#sec-cap8-reto1}
+## Reto 8.1: Simulando asincronía con `setTimeout()` {#sec-cap8-reto1}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
@@ -126,7 +126,7 @@ secondFunction()
 * D. `second`, `I have resolved!` y `I have resolved!`, `second`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Recordar que cuando tenemos sintaxis `async await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.
+Recordar que cuando tenemos sintaxis `async/await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.
 :::
 
 **[Ver solución](#sec-sol-cap8-reto4)**

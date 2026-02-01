@@ -8,9 +8,9 @@ La respuesta del [Reto 8.1](#sec-cap8-reto1) es:
 
 **Explicación:**
 
-Para comprender la respuesta es necesario entender temas estructurales del lenjuage, es decir, ir a las bases de JavaScript y conocer conceptos como [Event Loop](#glos-event_loop), [Call Stack](#glos-call_stack), [Task Queue](#glos-task_queue), [Web API's](#glos-web_apis) entre otros. 
+Para comprender la respuesta es necesario entender temas estructurales del lenguaje, es decir, ir a las bases de JavaScript y conocer conceptos como [Event Loop](#glos-event_loop), [Call Stack](#glos-call_stack), [Task Queue](#glos-task_queue), [Web API's](#glos-web_apis) entre otros. 
 
-Para poder darse cuenta, el secreto que puedo compartirte es concentrarse en el orden de las llamadas a las funciones, es decir en estas líneas:
+Para poder darse cuenta, el secreto que puedo compartirte es concentrarse en el orden de las llamadas a las funciones, es decir, en estas líneas:
 
 ```js
 bar(); // primero llamamos a bar()
@@ -24,7 +24,7 @@ Segundo, llamamos a la función `foo()`, que contiene código síncrono, por end
 
 Tercero, llamamos a la función `baz()`, que contiene código síncrono nuevamente, por ello pasa al **Call Stack** y mostramos por consola `Third`.
 
-Ahora, el algotirmo del **Even Loop** se da cuenta que no hay mas funciones por llamar, y verifica que el **Call Stack** esta vacio, entonces busca si hay algo en el **Task Queue**, y oh sorpresa, esta nuestro `setTimeout`, entonces lo pasa al **Call Stack** para finalmente mostrar por consola `Second`
+Ahora, el algoritmo del **Event Loop** se da cuenta que no hay más funciones por llamar, y verifica que el **Call Stack** está vacío, entonces busca si hay algo en el **Task Queue**, y oh sorpresa, está nuestro `setTimeout`, entonces lo pasa al **Call Stack** para finalmente mostrar por consola `Second`
 
 Es complicado de entender al principio, te dejo una [demostración gráfica](https://www.jsv9000.app/?code=Y29uc3QgZm9vID0gKCkgPT4gY29uc29sZS5sb2coIkZpcnN0Iik7CmNvbnN0IGJhciA9ICgpID0%2BIHNldFRpbWVvdXQoKCkgPT4gY29uc29sZS5sb2coIlNlY29uZCIpKTsKY29uc3QgYmF6ID0gKCkgPT4gY29uc29sZS5sb2coIlRoaXJkIik7CgpiYXIoKTsKZm9vKCk7CmJheigpOw%3D%3D) 
 
@@ -53,7 +53,7 @@ La respuesta del [Reto 8.3](#sec-cap8-reto3) es:
 
 Una función asíncrona siempre regresa una [promesa](#glos-promesa) pero dicha promesa no basta con ser devuelta sino que debe ser consumida, una posible solución es usar las palabras reservadas `then` y `catch`.
 
-Cuando llamamos `getData()` no consumimos la promesa con `then`, solo llamamos a la función por ende no podemos afirmar que la promesa esta en **estado resuelto** o **estado rechazado**, en conclusión inevitablemente la promesa esta en **estado pendiente**.
+Cuando llamamos `getData()` no consumimos la promesa con `then`, solo llamamos a la función por ende no podemos afirmar que la promesa está en **estado resuelto** o **estado rechazado**, en conclusión inevitablemente la promesa está en **estado pendiente**.
 
 ---
 
@@ -65,9 +65,9 @@ La respuesta del [Reto 8.4](#sec-cap8-reto4) es:
 
 **Explicación:**
 
-`firstFunction` es una función simple que llama a `myPromise` usando el método `then` propio de las promesas. Por **Event Loop** las promesas pasan al **Task Queue** entonces primero ejecutamos el `console.log` y mostramos `second` por consola, ahora el **Call Stack** esta vacío y la promesa que estaba en la **Task Queue** pasa al **Call Stack** y resolvemos la promesa mostrando `'I have resolved!'`.
+`firstFunction` es una función simple que llama a `myPromise` usando el método `then` propio de las promesas. Por **Event Loop** las promesas pasan al **Task Queue** entonces primero ejecutamos el `console.log` y mostramos `second` por consola, ahora el **Call Stack** está vacío y la promesa que estaba en la **Task Queue** pasa al **Call Stack** y resolvemos la promesa mostrando `'I have resolved!'`.
 
 
 `secondFunction` es una función asíncrona, al llamar a `myPromise` con `await` esperamos el tiempo necesario para que la promesa se ejecute, entonces mostramos primero por consola `'I have resolved!'` y luego `second`.
 
-Cuando tenemos sintaxis `async await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.
+Cuando tenemos sintaxis `async/await` escribimos código de manera síncrona pero se ejecuta de manera asíncrona.
