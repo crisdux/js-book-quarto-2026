@@ -49,7 +49,7 @@ Por otro lado la documentación de @geeksforgeeks_anonymous explica que las func
 
 La respuesta del [Reto 2.3](#sec-cap2-reto3) es:
 
-**C. `Mi nombre es Cris y tengo 25`**
+**C. `My name is Cris and I am 25`**
 
 **Explicación:**
 
