@@ -4,7 +4,7 @@
 
 La respuesta del [Reto 9.1](#sec-cap9-reto1) es:
 
-**A: `'{"level":19, "health":90}'`**
+**A: `'{"level":80, "health":25}'`**
 
 **Explicación:**
 
@@ -21,15 +21,15 @@ La respuesta del [Reto 9.2](#sec-cap9-reto2) es:
 
 **Explicación:**
 
-Javascript tiene 3 métodos pertenecientes al objecto `Math` útiles para redondeo de números.
+JavaScript tiene 3 métodos pertenecientes al objeto `Math` útiles para redondeo de números.
 
-* [Math.floor](#glos-math_floor) Siempre redondea el valor hacía abajo.
+* [Math.floor](#glos-math_floor) Siempre redondea el valor hacia abajo.
 
-* [Math.ceil](#glos-math_ceil) Siempre redondea el valor hacía arriba.
+* [Math.ceil](#glos-math_ceil) Siempre redondea el valor hacia arriba.
 
-* [Math.round](#glos-math_round) Redondea el valor de una manera un poco mas inteligente, siguiendo las reglas de redondeo que nos enseñaron en colegio.
+* [Math.round](#glos-math_round) Redondea el valor de una manera un poco más inteligente, siguiendo las reglas de redondeo que nos enseñaron en colegio.
 
-Los 3 métodos tienen inferencia de tipos, esto quiere decir que sino le pasamos un valor numérico como parámetro, javascript intentará hacer su mejor esfuerzo para poder realizar la operación.
+Los 3 métodos tienen inferencia de tipos, esto quiere decir que si no le pasamos un valor numérico como parámetro, JavaScript intentará hacer su mejor esfuerzo para poder realizar la operación.
 
 
 ---
@@ -38,10 +38,10 @@ Los 3 métodos tienen inferencia de tipos, esto quiere decir que sino le pasamos
 
 La respuesta del [Reto 9.3](#sec-cap9-reto3) es:
 
-**D: `"Oh no an error! Hello world!`**
+**D: `"Oh no an error! Hello world!"`**
 
 **Explicación:**
 
 La función `greeting` con la palabra reservada `throw` genera una excepción de tipo `string` en el código.
 
-La función `sayHi` consta de una sentencia `try...catch`, recordemos que si no hay ningún tipo de excepción el código ejecuta el bloque `try` pero como si generamos una excepción entonces entramos al bloque `catch` donde el parámetro `e` adopta el valor de la excepción, osea, `Hello world!`. Por eso el resultado es `"Oh no an error! Hello world!"`
+La función `sayHi` consta de una sentencia `try...catch`, recordemos que si no hay ningún tipo de excepción el código ejecuta el bloque `try` pero como si generamos una excepción entonces entramos al bloque `catch` donde el parámetro `e` adopta el valor de la excepción, o sea, `Hello world!`. Por eso el resultado es `"Oh no an error! Hello world!"`
