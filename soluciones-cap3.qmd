@@ -16,7 +16,7 @@ Veamos el primer ejemplo:
 console.log(false == 0)
 ```
 
-En JavaScript existen lo que denomina **valores `falsy`** y son los siguientes:
+En JavaScript existen lo que se denomina **valores `falsy`** y son los siguientes:
 
 * `0`
 * `-0`
@@ -55,11 +55,11 @@ En otras palabras, también es correcto afirmar que al usar el `===` JavaScript 
 
 La respuesta del [Reto 3.2](#sec-cap3-reto2) es:
 
-**B. `true`, `false`**
+**Ambas comparaciones devuelven `false`**
 
 **Explicación:**
 
-Si bien `null` y `undefined` son valores `falsy` al momento de que JavaScript haga **coerciones de tipo** pasa algo raro, esto se debe a que tanto `null` como `undefined` sólo son **iguales** a sí mismos y entre ellos:
+Si bien `null` y `undefined` son valores `falsy` al momento en que JavaScript haga **coerciones de tipo** pasa algo raro, esto se debe a que tanto `null` como `undefined` sólo son **iguales** a sí mismos y entre ellos:
 
 ```js
 console.log(null == null); // true
@@ -138,4 +138,4 @@ console.log(b === c);
 
 Al igual que el caso anterior, intentamos comparar de manera estricta un objeto contra un número, entonces tendremos como resultado un `false`.
 
-**Conclusión: trata de usar siempre `===`**
+**Conclusión: trata de usar siempre `===`.**
