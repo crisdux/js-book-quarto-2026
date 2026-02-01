@@ -139,7 +139,7 @@ console.log(num);
 * D. `NaN`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-`parseInt()` convierte un número a una base númerica dada.
+`parseInt()` convierte un número a una base numérica dada.
 :::
 
 **[Ver solución](#sec-sol-cap1-reto5)**
@@ -207,7 +207,7 @@ console.log(Object.keys(info))
 
 ---
 
-## Reto 1.8: El operador de corto circuito `or` {#sec-cap1-reto8}
+## Reto 1.8: El operador de cortocircuito `or` {#sec-cap1-reto8}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -231,7 +231,7 @@ console.log(one, two, three)
 * D. `null`, `null`, `true`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-[El operador de corto circuito](#glos-corto_circuito) `or` se ejecuta con valores **falsy**.
+[El operador de cortocircuito](#glos-corto_circuito) `or` se ejecuta con valores **falsy**.
 :::
 
 **[Ver solución](#sec-sol-cap1-reto8)**
@@ -240,7 +240,7 @@ console.log(one, two, three)
 
 
 
-## Reto 1.9: Corto circuito y nullish coalescing operator {#sec-cap1-reto9}
+## Reto 1.9: Cortocircuito y nullish coalescing operator {#sec-cap1-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Básico**
@@ -260,7 +260,7 @@ console.log(undefined || "0" || null || (undefined ?? 0))
 * D. `null`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-El operador `??` se ejecuta solo si evalua como `undefined` o `null`.
+El operador `??` se ejecuta solo si evalúa como `undefined` o `null`.
 :::
 
 **[Ver solución](#sec-sol-cap1-reto9)**
@@ -364,7 +364,7 @@ console.log(Object.is(a, b));
 **Intermedio**
 :::
 
-**¿Cúal de los siguientes ejemplos regresa `undefined` por consola?**
+**¿Cuál de los siguientes ejemplos regresa `undefined` por consola?**
 
 ```js
 //#1
@@ -378,7 +378,7 @@ function f(x) {
 console.log(f());
 
 //#3
-const obj= {
+const obj = {
   name:"Cris",
 }
 console.log(obj.age);
@@ -419,13 +419,13 @@ console.log(y())
 **¿Qué imprime este código?**
 
 ```js
-const toBolean = x => Boolean(x);
+const toBoolean = x => Boolean(x);
 
-console.log(toBolean(37));
-console.log(toBolean(0/0));
-console.log(toBolean(0));
-console.log(toBolean({}));
-console.log(toBolean(Symbol("I'am a symbol")));
+console.log(toBoolean(37));
+console.log(toBoolean(0/0));
+console.log(toBoolean(0));
+console.log(toBoolean({}));
+console.log(toBoolean(Symbol("I'm a symbol")));
 ```
 
 **Opciones:**
@@ -436,14 +436,14 @@ console.log(toBolean(Symbol("I'am a symbol")));
 * D. `false`, `ReferenceError`, `false`, `false`, `true`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-El objeto `Boolean` permite convertir valores a tipo boolean basandose en los valores `falsy` y `truthy`.
+El objeto `Boolean` permite convertir valores a tipo boolean basándose en los valores `falsy` y `truthy`.
 :::
 
 **[Ver solución](#sec-sol-cap1-reto14)**
 
 ---
 
-## Reto 1.15: Operadores de corto circuito {#sec-cap1-reto15}
+## Reto 1.15: Operadores de cortocircuito {#sec-cap1-reto15}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**

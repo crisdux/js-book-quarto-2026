@@ -8,7 +8,7 @@ La respuesta del [Reto 1.1](#sec-cap1-reto1) es:
 
 **Explicación:**
 
-El objeto [Number](#glos-number) de JavaScript puede convertir los los valores de un arreglo a números, pero hay que tener cuidado con tipos `boolean`, `undefined` o `null`.
+El objeto [Number](#glos-number) de JavaScript puede convertir los valores de un arreglo a números, pero hay que tener cuidado con tipos `boolean`, `undefined` o `null`.
 
 Este hack es muy útil cuando tenemos un arreglo de strings que queremos convertir a números.
 
@@ -42,7 +42,7 @@ Según la @mdn_typeof, [typeof](#glos-typeof) es un operador que regresa una cad
 
 Por ende, esta pregunta es un poco trampa. Pero la respuesta es chistosa:
 
-`typeof 1` regresa `"number"`, literalmente la cadena `"number"`, entonces tenemos `typeof "number"` y esto da obiamente `string`.
+`typeof 1` regresa `"number"`, literalmente la cadena `"number"`, entonces tenemos `typeof "number"` y esto da obviamente `string`.
 
 ---
 
@@ -78,7 +78,7 @@ Según la @mdn_parseint, [parseInt](#glos-parseint) convierte un valor a tipo `n
 
 En el ejemplo intentamos convertir `"7*6"` a base `10`, osea, a base decimal.
 
-`parseInt` toma los valores validos de izquierda a derecha, dicho esto, solo tomará el valor `7` (el `*` y todo lo que le precede no es un valor valido para `parseInt`).
+`parseInt` toma los valores válidos de izquierda a derecha, dicho esto, solo tomará el valor `7` (el `*` y todo lo que le precede no es un valor válido para `parseInt`).
 
 En conclusión, solo convierte al `7` de `string` a `number`.
 
@@ -94,11 +94,11 @@ La respuesta del [Reto 1.6](#sec-cap1-reto6) es:
 
 Primero, usamos el constructor `Number` para convertir `2` a `number`, como solo es una conversión de [valores primitivos](#glos-primitivo) entonces el resultado es `true`.
 
-Segundo, usamos el constructor `Boolean` para convertir `false` a boleano, nuevamente solo es una conversión, entonces el resultado de la comparación es `true`.
+Segundo, usamos el constructor `Boolean` para convertir `false` a booleano, nuevamente solo es una conversión, entonces el resultado de la comparación es `true`.
 
 Tercero, ningún `Symbol` es igual a otro `Symbol`, por más que en el ejemplo tengan los mismos placeholders `foo`, nunca serán iguales. Entonces siempre nos dará `false`.
 
-No debemos confundir el contructor `Number` y `Boolean` por sí mismos, con dichos costructores acompañados de la palabra [new](#glos-new), si hacemos lo siguiente:
+No debemos confundir el constructor `Number` y `Boolean` por sí mismos, con dichos constructores acompañados de la palabra [new](#glos-new), si hacemos lo siguiente:
 
 ```js
 const a = new Number(2);
@@ -125,7 +125,7 @@ Una variable de tipo `Symbol` cumple con 3 características principales:
 
 El primer `console.log` imprime el objeto en su totalidad, incluyendo los valores no enumerables, por ello podemos ver la `key` de tipo `Symbol` que es un `string` con valor `b`.
 
-Al intentar obtener las `keys` del objeto con [Object.keys](#glos-object_keys) obtendremos un arreglo vacío justamente por que el `Symbol` no es un elemento que se pueda enumerar, de esta manera es posible "ocultar" ciertas propiedades de un objeto.
+Al intentar obtener las `keys` del objeto con [Object.keys](#glos-object_keys) obtendremos un arreglo vacío justamente porque el `Symbol` no es un elemento que se pueda enumerar, de esta manera es posible "ocultar" ciertas propiedades de un objeto.
 
 ---
 
@@ -145,7 +145,7 @@ En JavaScript el código se lee de arriba hacia abajo y de izquierda a derecha.
 
 Primero evaluamos `false || {}` y obtenemos `{}`.
 
-Entonces nos queda `{} || null` y como las llaves vacías es un valor `truthy` entonces el `null` no se evalua dando como resultado `{}`.
+Entonces nos queda `{} || null` y como las llaves vacías es un valor `truthy` entonces el `null` no se evalúa dando como resultado `{}`.
 
 * **Para la variable `two`**:
 
@@ -173,7 +173,7 @@ La respuesta del [Reto 1.9](#sec-cap1-reto9) es:
 
 **Explicación:**
 
-El operador de corto circuito OR (`||`) solo se ejecuta si el primer operando es **falsy**.
+El operador de cortocircuito OR (`||`) solo se ejecuta si el primer operando es **falsy**.
 
 El [nullish coalescing operator](#glos-nullish_coalescing) (`??`) solo se ejecuta si el primer operando es **nullish** (`null` o `undefined`).
 
@@ -181,7 +181,7 @@ Vamos paso por paso:
 
 * `undefined || "0"`:
 
-`undefined` evalua como **falsy** entonces tendriamos `"0"`.
+`undefined` evalúa como **falsy** entonces tendríamos `"0"`.
 
 Nos quedaría el siguiente código:
 
@@ -190,7 +190,7 @@ console.log("0" || null || (undefined ?? 0))
 ```
 
 * `"0" || null`:
-`"0"` no evalua como **falsy** entonces no se ejecuta el operador de corto circuito.
+`"0"` no evalúa como **falsy** entonces no se ejecuta el operador de cortocircuito.
 
 Nos quedaría el siguiente código:
 
@@ -200,7 +200,7 @@ console.log("0" || (undefined ?? 0))
 
 * `undefined ?? 0`:
 
-Operando tenemos como resultado `0` por que `undefined` es un valor **nullish**.
+Operando tenemos como resultado `0` porque `undefined` es un valor **nullish**.
 
 Nos quedaría el siguiente código:
 
@@ -208,7 +208,7 @@ Nos quedaría el siguiente código:
 console.log("0" || 0)
 ```
 
-Finalmente `"0"` como cadena no es un valor **falsy** entonces no podemos ejecutar el operador de corto circuito dando como resultado final `"0"`.
+Finalmente `"0"` como cadena no es un valor **falsy** entonces no podemos ejecutar el operador de cortocircuito dando como resultado final `"0"`.
 
 ---
 
@@ -222,7 +222,7 @@ La respuesta del [Reto 1.10](#sec-cap1-reto10) es:
 
 Pese a que [null](#glos-null) es un primitivo, debido a un bug del lenguaje su tipo de dato es `object`.
 
-Este bug es muy antiguo y se determino que no vale la pena arreglarlo al día de hoy ya que se pueden romper muchos programas que dependen de este error.
+Este bug es muy antiguo y se determinó que no vale la pena arreglarlo al día de hoy ya que se pueden romper muchos programas que dependen de este error.
 
 Este bug es bastante conocido en programadores experimentados y usado en entrevistas laborales para estimar tu conocimiento del lenguaje.
 
@@ -266,7 +266,7 @@ La respuesta del [Reto 1.12](#sec-cap1-reto12) es:
 
 **Explicación:**
 
-El operador de [igualdad estricta](#glos-igualdad_estricta) es muy potente, pero ¿sabias que existe uno aún mejor?
+El operador de [igualdad estricta](#glos-igualdad_estricta) es muy potente, pero ¿sabías que existe uno aún mejor?
 
 [Object.is](#glos-object_is) recibe dos parámetros y hace una comparación profunda entre ellos, pero va un poco más lejos.
 
@@ -292,7 +292,7 @@ En JavaScript existen 4 maneras de obtener un [undefined](#glos-undefined) como 
 
 * Cuando en la llamada de una función omitimos parámetros obligatorios, como en el ejemplo #2.
 
-* Cuando intenamos acceder a una propiedad de un objeto que no existe, como en el ejemplo #3.
+* Cuando intentamos acceder a una propiedad de un objeto que no existe, como en el ejemplo #3.
 
 * Cuando llamamos a una función que no tiene la sentencia [return](#glos-return) en su cuerpo, como en el ejemplo #4.
 
@@ -350,4 +350,4 @@ El operador `&&` solo se ejecuta si el primer operando es un valor truthy.
 
 El operador `??` solo se ejecuta si el primer operando es `null` o `undefined`.
 
-Dicho todo esto y conociendo los valores truthy y los valores falsy no debería costarte llegar a que la respuesta correcta es C.
+Dicho todo esto y conociendo los valores truthy y los valores falsy no debería costarte llegar a que la respuesta correcta es la opción C.
