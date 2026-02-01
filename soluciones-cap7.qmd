@@ -8,9 +8,9 @@ La respuesta del [Reto 7.1](#sec-cap7-reto1) es:
 
 **Explicación:**
 
-WTF! Cuando vi que hacer esto es posible casi me caigo de la silla. Expliquemos por que:
+WTF! Cuando vi que hacer esto es posible casi me caigo de la silla. Expliquemos por qué:
 
-Oiste o leiste alguna vez esta frase: **"Todo en JavaScript es un objeto"** Dejame decirte que no es mentira, literalmente todo es un objeto, todo lo que no sea un tipo primitivo en JavaScript es un objeto, desde arreglos, los propios objetos claro, las promesas, y también las **funciones**.
+Oíste o leíste alguna vez esta frase: **"Todo en JavaScript es un objeto"** Déjame decirte que no es mentira, literalmente todo es un objeto, todo lo que no sea un tipo primitivo en JavaScript es un objeto, desde arreglos, los propios objetos claro, las promesas, y también las **funciones**.
 
 En el ejemplo, la función `bark()` funciona completamente bien:
 
@@ -31,7 +31,7 @@ function bark() {
 bark.animal = "dog";
 console.log(bark.animal); // dog
 ```
-Este es un comportamiento muy jocoso del lenguaje y esta bueno saber que es posible hacer estas cosas aunque no tenga muchos casos de uso.
+Este es un comportamiento muy jocoso del lenguaje y está bueno saber que es posible hacer estas cosas aunque no tenga muchos casos de uso.
 
 
 ---
@@ -53,7 +53,7 @@ function addTraditional(a, b){
 }
 ```
 
-Podemos llamar a la función antes de su declaración, caracteristica que se denomina [hoisting](#glos-hoisting).
+Podemos llamar a la función antes de su declaración, característica que se denomina [hoisting](#glos-hoisting).
 
 Con una función de flecha esto no es posible:
 
@@ -79,7 +79,7 @@ La respuesta del [Reto 7.3](#sec-cap7-reto3) es:
 
 **Explicación:**
 
-En JavaScript los parámetros tienen por defecto el valor `undefined`, esto quiere decir que sino pasamos ningún parámetro a una función que los necesite tendremos `undefined`.
+En JavaScript los parámetros tienen por defecto el valor `undefined`, esto quiere decir que si no pasamos ningún parámetro a una función que los necesite tendremos `undefined`.
 
 ---
 
@@ -93,9 +93,9 @@ La respuesta del [Reto 7.4](#sec-cap7-reto4) es:
 
 Desde [ES6](#glos-es6) es posible usar [parámetros por defecto](#glos-parametros_por_defecto) siempre y cuando sean los últimos declarados en la función.
 
-En este caso el parámetro por defecto `num1` es el mismo que el primer parámetro, no hay ningún problema simpre y cuando este declarado al final de la lista de parámetros de la función.
+En este caso el parámetro por defecto `num1` es el mismo que el primer parámetro, no hay ningún problema siempre y cuando esté declarado al final de la lista de parámetros de la función.
 
-Pasamos el argumento `10` a la función `sum`, esto significa que `num2` deberá usar su valor por defecto que sería el mismo de `num1`, osea `10`; entonces `10 + 10` nos da el resultado final `20`.
+Pasamos el argumento `10` a la función `sum`, esto significa que `num2` deberá usar su valor por defecto que sería el mismo de `num1`, o sea `10`; entonces `10 + 10` nos da el resultado final `20`.
 
 ---
 
@@ -107,7 +107,7 @@ La respuesta del [Reto 7.5](#sec-cap7-reto5) es:
 
 **Explicación:**
 
-Después de una expresión JavaScript pone automáticamente un punto y coma para indicar al interprete que dicha expresión finalizo en una línea de código en concreto. Esto se denomina **Inserción automática de punto y coma**.
+Después de una expresión JavaScript pone automáticamente un punto y coma para indicar al intérprete que dicha expresión finalizó en una línea de código en concreto. Esto se denomina **Inserción automática de punto y coma**.
 
 Al llegar al `return` el programador ve esto:
 
@@ -123,9 +123,9 @@ Pero el interprete reconoce la palabra [return](#glos-return) con el fin de una 
   a + b; // jamás llegamos a ejecutar esta línea
 ```
 
-Y ya sabemos que en una función al encontrar la palabra `return` todo el código posterior que pueda haber no se ejecuta, ni si quiera se evalua, entonces jamás se llegara a hacer la operación `a + b`.
+Y ya sabemos que en una función al encontrar la palabra `return` todo el código posterior que pueda haber no se ejecuta, ni siquiera se evalúa, entonces jamás se llegará a hacer la operación `a + b`.
 
-Cuando una función no retorna nada explicitamente, JavaScript hace que el `return` arroje un `undefined` de manera implicita.
+Cuando una función no retorna nada explícitamente, JavaScript hace que el `return` arroje un `undefined` de manera implícita.
 
 ---
 
@@ -186,13 +186,13 @@ La respuesta del [Reto 7.8](#sec-cap7-reto8) es:
 
 La función `sayHi` regresa una otra [función de tipo flecha](#glos-funcion_flecha), dicha función es anónima y solo devuelve la cadena `Hi JavaScript`, el detalle acá es que esta función anónima una vez regresada es inmediatamente llamada.
 
-Entonces `sayHi` será igual a la cadena `Hi Javascript` y en conclusión su `typeof` igual a `string`.
+Entonces `sayHi` será igual a la cadena `Hi JavaScript` y en conclusión su `typeof` igual a `string`.
 
-Podríamos ver también este ejemplo si extraemos la función anónima y escribimos en una función auxiliar por aparte, de la siguente manera:
+Podríamos ver también este ejemplo si extraemos la función anónima y escribimos una función auxiliar por aparte, de la siguiente manera:
 
 ```js
 const aux = () => {
-  return "Hi Javascript!"
+  return "Hi JavaScript!"
 }
 
 const sayHi = () => {

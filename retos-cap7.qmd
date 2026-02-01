@@ -188,7 +188,7 @@ console.log(name())
 * D. `undefined`
 
 ::: {.callout-tip title="Pista" collapse="true"}
-Las variables no pueden ser invocadas como funciones, ¿o si pueden?
+Las variables no pueden ser invocadas como funciones, ¿o sí pueden?
 :::
 
 **[Ver solución](#sec-sol-cap7-reto6)**
@@ -241,7 +241,7 @@ Las Higher Order Functions son aquellas que pueden recibir funciones como parám
 
 ```js
 const sayHi = () => {
-  return (() =>"Hi Javascript!")();
+  return (() =>"Hi JavaScript!")();
 }
 
 console.log(typeof sayHi());
@@ -262,7 +262,7 @@ Ojo con el valor de retorno de la función `sayHi`.
 
 ---
 
-## Reto 7.9: Multiples llamadas a una función {#sec-cap7-reto9}
+## Reto 7.9: Múltiples llamadas a una función {#sec-cap7-reto9}
 
 ::: {.callout-caution title="Dificultad" collapse="true"}
 **Intermedio**
