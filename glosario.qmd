@@ -618,7 +618,7 @@ Boolean(NaN);       // false
 **Tipo:** Método
 
 **Definición:**
-Método que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada. Dicho eb otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces.
+Método que crea un nuevo arreglo con los elementos concatenados recursivamente hasta una profundidad especificada. Dicho en otras palabras, permite "aplanar" un arreglo anidado un número determinado de veces.
 
 **Ejemplo:**
 
