@@ -152,7 +152,7 @@ console.log(x); // ReferenceError: x is not defined
 **Ejemplo:**
 
 ```javascript
-function miFuncion() {
+function test() {
     var x = 10;
 }
 console.log(x); // ReferenceError: x is not defined
@@ -214,8 +214,8 @@ Sistema numérico que utiliza solo dos símbolos para representar valores: 0 y 1
 **Ejemplo:**
 
 ```javascript
-let binario = 0b1010; // Representa el número 10 en decimal
-console.log(binario); // 10
+let bin = 0b1010; // Representa el número 10 en decimal
+console.log(bin); // 10
 ```
 
 **Referencias:** @loor_delgado_2018
@@ -273,8 +273,8 @@ Tipo de dato primitivo que representa una secuencia inmutable de caracteres util
 **Ejemplo:**
 
 ```javascript
-let cadena = "Hola, mundo!";
-console.log(cadena.length); // 13
+let str = "Hola, mundo!";
+console.log(str.length); // 13
 ```
 
 **Referencias:** @mdn_string
@@ -414,8 +414,8 @@ Comportamiento de los operadores lógicos en el que el segundo operando es evalu
 **Ejemplo:**
 
 ```javascript
-"Usuario" || "Invitado"; // "Usuario"
-0 && "No se evalúa"; // 0
+"User" || "Guest"; // "User"
+0 && "Test"; // 0
 ```
 
 **Referencias:** @geeksforgeeks_short_circuit
@@ -577,9 +577,9 @@ Cualquier unidad de código válida que se resuelve en un valor. En JavaScript, 
 **Ejemplo:**
 
 ```javascript
-console.log(5 + 3);          // Expresión aritmética
-console.log("Hello" + "!");  // Expresión de cadena
-console.log(true && false);  // Expresión lógica
+console.log(5 + 3);          // Arithmetic expression
+console.log("Hello" + "!");  // String expression
+console.log(true && false);  // Logical expression
 ```
 
 **Referencias:** @mdn_expressions_operators
@@ -681,8 +681,8 @@ Función que no tiene nombre y se puede asignar a una variable o pasar como argu
 **Ejemplo:**
 
 ```javascript
-const miFuncion = function() {
-    console.log("Hola, mundo!");
+const myFunction = function() {
+    console.log("Hello, world!");
 };
 ```
 
@@ -966,9 +966,9 @@ Lenguaje de programación orientado a objetos que se utiliza para crear aplicaci
 **Ejemplo:**
 
 ```java
-public class HolaMundo {
+public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hola, mundo!");
+        System.out.println("Hello, world!");
     }
 }
 ```
@@ -987,7 +987,7 @@ Lenguaje de programación interpretado, dinámico y orientado a prototipos que s
 **Ejemplo:**
 
 ```javascript
-console.log("Hola, mundo!");
+console.log("Hello, world!");
 ```
 
 **Referencias:** @mdn_javascript
@@ -1024,16 +1024,15 @@ Formato ligero de intercambio de datos, basado en texto y fácil de leer para lo
 
 ```javascript
 {
-  "nombre": "Juan Pérez",
-  "edad": 30,
-  "esEstudiante": false,
-  "hobbies": ["lectura", "programación"],
-  "direccion": {
-    "calle": "Calle Benito de los Palotes 123",
-    "ciudad": "Springfield"
+  "name": "John Doe",
+  "age": 30,
+  "isStudent": false,
+  "hobbies": ["reading", "programming"],
+  "address": {
+    "street": "123 Main Street",
+    "city": "Springfield"
   }
 }
-
 ```
 
 **Referencias:** @mdn_learn_json
@@ -1050,7 +1049,7 @@ Método estático que convierte un valor de JavaScript en una cadena JSON.
 **Ejemplo:**
 
 ```javascript
-JSON.stringify({ a: 1, b: 2 }) // "{"a":1,"b":2}"
+JSON.stringify({ a: 1, b: 2 }) // "{"a": 1,"b": 2}"
 ```
 
 **Referencias:** @mdn_json_stringify
@@ -1283,13 +1282,13 @@ Sintaxis que permite acceder a las propiedades de un objeto o a los elementos de
 **Ejemplo:**
 
 ```javascript
-const persona = {
-  nombre: "Juan",
-  edad: 30
+const person = {
+  name: "John",
+  age: 30
 };
 
-console.log(persona["nombre"]); // "Juan"
-console.log(persona["edad"]); // 30
+console.log(person["name"]); // "John"
+console.log(person["age"]); // 30
 ```
 
 **Referencias:** @freecodecamp_dot_vs_bracket
@@ -1308,11 +1307,11 @@ Sintaxis que permite acceder a las propiedades de un objeto o a los elementos de
 
 ```javascript
 const person = {
-  name: "Juan",
+  name: "John",
   age: 30
 };
 
-console.log(person.name); // "Juan"
+console.log(person.name); // "John"
 console.log(person.age); // 30
 ```
 
@@ -1330,8 +1329,8 @@ Valor especial que representa la ausencia de valor o un objeto que no existe.
 **Ejemplo:**
 
 ```javascript
-let usuario = null; // Representa la ausencia intencional de un objeto
-console.log(usuario); // null
+let user = null; // Represents the intentional absence of an object
+console.log(user); // null
 ```
 
 **Referencias:** @mdn_null
@@ -1365,8 +1364,8 @@ Operador que evalúa dos valores y regresa el primero si es **nullish** (es deci
 **Ejemplo:**
 
 ```javascript
-const a = null ?? "Valor por defecto"; // "Valor por defecto"
-const b = "Valor" ?? "Valor por defecto"; // "Valor"
+const a = null ?? "Default value"; // "Default value"
+const b = "Value" ?? "Default value"; // "Value"
 ```
 
 **Referencias:** @javascript_info_nullish
@@ -1534,7 +1533,7 @@ Programación funcional es un paradigma de programación que se centra en el uso
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
 
-// Funciones como ciudadanos de primera clase y composición
+// Functions as first-class citizens and composition
 const double = x => x * 2;
 const isEven = x => x % 2 === 0;
 
@@ -1694,7 +1693,7 @@ Colección de valores donde cada elemento es único; un valor en un `Set` no pue
 
 ```javascript
 const mySet = new Set([1, 2, 2, 3]);
-console.log(mySet.size); // 3 (el 2 duplicado se ignora)
+console.log(mySet.size); // 3 (duplicate 2 is ignored)
 console.log(mySet.has(1)); // true
 ```
 
@@ -1817,7 +1816,7 @@ Objeto global que actúa como un envoltorio (wrapper) para valores primitivos de
 **Ejemplo:**
 
 ```javascript
-const strObj = new String("Hola");
+const strObj = new String("Hello");
 console.log(typeof strObj); // "object"
 console.log(strObj.length); // 4
 
@@ -1904,8 +1903,8 @@ Literales de cadena que permiten expresiones incrustadas. Permiten el uso de cad
 **Ejemplo:**
 
 ```javascript
-const nombre = "Mundo";
-console.log(`Hola ${nombre}`); // "Hola Mundo"
+const name = "World";
+console.log(`Hello ${name}`); // "Hello World"
 ```
 
 **Referencias:** @freecodecamp_dot_vs_bracket
@@ -1922,8 +1921,9 @@ Zona en la que una variable está declarada pero no es posible acceder a ella.
 **Ejemplo:**
 
 ```javascript
-console.log(miVariable); // ReferenceError: Cannot access 'miVariable' before initialization
-let miVariable = "Hola";
+console.log(myVariable); 
+// ReferenceError: Cannot access 'myVariable' before initialization
+let myVariable = "Hi";
 ```
 
 **Referencias:** @yt_temporal_dead_zone_2021
@@ -2094,7 +2094,7 @@ Conjunto de interfaces y funcionalidades proporcionadas por el navegador (o el e
 **Ejemplo:**
 
 ```javascript
-// fetch es una Web API
+// fetch is a Web API
 fetch('https://api.example.com/data')
   .then(response => response.json())
   .then(data => console.log(data));
@@ -2115,7 +2115,7 @@ Objeto global que representa la ventana del navegador.
 **Ejemplo:**
 
 ```javascript
-console.log(window.innerWidth); // Ancho de la ventana
+console.log(window.innerWidth); // Window width
 ```
 
 **Referencias:** @mdn_window_api
