@@ -106,8 +106,7 @@ console.log(a); // 1
 **Tipo:** Método estático
 
 **Definición:**
-
-El método `Array.from()` crea una nueva instancia de `Array` a partir de un objeto iterable.
+Crea una nueva instancia de `Array` a partir de un objeto iterable o similar a un arreglo.
 
 **Ejemplo:**
 
@@ -125,8 +124,7 @@ console.log(Array.from("JavaScript"));
 **Tipo:** Concepto
 
 **Definición:**
-
-Ámbito de bloque es un concepto que se refiere a la visibilidad y accesibilidad de las variables dentro de un bloque de código, como un bucle o una condición.
+Visibilidad y accesibilidad de las variables dentro de un bloque de código, como un bucle o una condición.
 
 **Ejemplo:**
 
@@ -146,8 +144,7 @@ console.log(x); // ReferenceError: x is not defined
 **Tipo:** Concepto
 
 **Definición:**
-
-Ámbito de función es un concepto que se refiere a la visibilidad y accesibilidad de las variables dentro de una función.
+Visibilidad y accesibilidad de las variables dentro de una función.
 
 **Ejemplo:**
 
@@ -388,10 +385,10 @@ let result = string1 + ", " + string2; // "Hello, world"
 
 **Inglés:** const
 
-**Tipo:** Concepto
+**Tipo:** Palabra clave / Declaración
 
 **Definición:**
-Declaración de una variable que no puede ser reasignada.
+Palabra clave que permite declarar una variable que no puede ser reasignada.
 
 **Ejemplo:**
 
@@ -886,7 +883,7 @@ console.log("toString" in user); // true (propiedad heredada)
 **Referencias:** @mdn_in_operator
 
 
-### Interprete de JavaScript {#glos-interpreter}
+### Intérprete de JavaScript {#glos-interpreter}
 
 **Inglés:** JavaScript Interpreter
 
@@ -1088,7 +1085,7 @@ Propiedad que indica la longitud de una cadena de texto o un arreglo.
 **Ejemplo:**
 
 ```javascript
-console.log("hello".length); // 4
+console.log("hello".length); // 5
 console.log([1, 2, 3].length); // 3
 ```
 
@@ -1098,10 +1095,10 @@ console.log([1, 2, 3].length); // 3
 
 **Inglés:** let
 
-**Tipo:** Operador
+**Tipo:** Palabra clave / Declaración
 
 **Definición:**
-Operador que crea una variable con ámbito de bloque.
+Palabra clave que crea una variable con ámbito de bloque.
 
 **Ejemplo:**
 
@@ -1446,7 +1443,7 @@ console.log(sum(10, 20));   // 30
 **Tipo:** Función
 
 **Definición:**
-Función que convierte un valor a tipo `number` de una base concreta (base binaria, base octal, base decimal, etc).
+Función que convierte un valor a tipo `number` de una base concreta (base binaria, base octal, base decimal, etc.).
 
 **Ejemplo:**
 
@@ -1463,7 +1460,7 @@ Number.parseInt("5") // 5
 **Tipo:** Concepto
 
 **Definición:**
-Mecanismo por el cual, al asignar una variable a otra o pasarla como argumento a una función, se crea una copia independiente del dato original. Este comportamiento es característico de los objetos en JavaScript, lo que garantiza que cualquier modificación realizada sobre la copia no tenga impacto en el valor de la variable inicial.
+Mecanismo por el cual, al asignar un objeto a una variable o pasarlo como argumento a una función, se comparte la referencia a la dirección de memoria del dato original. A diferencia de los primitivos, cualquier modificación realizada a través de una referencia afectará al objeto compartido.
 
 **Ejemplo:**
 
@@ -1525,8 +1522,7 @@ const promesa = new Promise((resolve, reject) => {
 **Tipo:** Concepto
 
 **Definición:**
-
-Programación funcional es un paradigma de programación que se centra en el uso de funciones como ciudadanos de primera clase, lo que significa que las funciones pueden ser tratadas como cualquier otro valor, como ser pasadas como argumentos a otras funciones, retornadas como valores y almacenadas en variables.
+Paradigma de programación que se centra en el uso de funciones como ciudadanos de primera clase, permitiendo que sean tratadas como cualquier otro valor (pasadas como argumentos, retornadas o almacenadas en variables).
 
 **Ejemplo:**
 
@@ -1594,7 +1590,7 @@ console.log(sum); // 15
 **Tipo:** Error
 
 **Definición:**
-Error que ocurre cuando se intenta acceder a una variable, función o objeto que no ha sido declarado o que no está en el scope actual.
+Error que ocurre cuando se intenta acceder a una variable, función u objeto que no ha sido declarado o que no está en el scope actual.
 
 **Ejemplo:**
 
@@ -1626,7 +1622,7 @@ console.info("hello".repeat(3)); // "hellohellohello"
 
 **Inglés:** return
 
-**Tipo:** Operador
+**Tipo:** Palabra clave / Sentencia
 
 **Definición:**
 Operador que regresa un valor desde una función.
@@ -1828,7 +1824,7 @@ console.log(strObj.length); // 4
 
 **Inglés:** Symbol 
 
-**Tipo:** Objeto
+**Tipo:** Dato Primitivo
 
 **Definición:**
 Objeto global que proporciona propiedades y métodos para trabajar con símbolos. Muy útiles y comunes para crear propiedades privadas en objetos.
@@ -2043,10 +2039,10 @@ console.log(a); // undefined
 
 **Inglés:** var
 
-**Tipo:** Operador
+**Tipo:** Palabra clave / Declaración
 
 **Definición:**
-Operador que crea una variable con ámbito de función.
+Palabra clave que crea una variable con ámbito de función.
 
 **Ejemplo:**
 
