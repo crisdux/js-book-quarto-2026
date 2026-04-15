@@ -6,7 +6,6 @@ book:
     # Secciones Preliminares (sin numerar)
     - index.qmd              # Prefacio
     - prologo.qmd            # Prólogo
-    - resumen.qmd            # Resumen
     - agradecimientos.qmd    # Agradecimientos
     - autor.qmd              # Acerca del Autor
     

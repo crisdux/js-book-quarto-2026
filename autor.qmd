@@ -4,4 +4,18 @@
 \includegraphics[width=150px]{photos/foto-cris.png}
 \end{center}
 
-[Agregar bio del autor]
+Cristian Fernando Villca Gutierrez es ingeniero de sistemas y desarrollador Fullstack con una trayectoria marcada por la especialización en tecnologías de vanguardia como React.js, Node.js y la gestión de bases de datos relacionales y no relacionales. Su enfoque profesional se centra en la implementación de arquitecturas limpias y sistemas escalables.
+
+Su faceta como educador y divulgador comenzó a consolidarse en 2022, cuando colaboró con la plataforma Platzi en el proyecto JS Hero, desarrollando desafíos de programación diseñados para fortalecer las bases técnicas de miles de estudiantes. Esta vocación por la enseñanza lo ha llevado a cursar actualmente un Diplomado en Educación Superior en la Universidad del Valle (Univalle), con el objetivo de formalizar su camino hacia la docencia universitaria.
+
+En el ámbito comunitario, Cristian es una figura activa en el ecosistema tecnológico boliviano:
+
+**Mentoría y Liderazgo:** Desde 2024 forma parte de GDG El Alto, donde fue ascendido a Mentor en 2025. Ese mismo año, destacó como mentor en la Hackatón de la UNIFRANZ, liderando el proyecto "Futuro Legal", el cual obtuvo el segundo lugar al proponer una solución tecnológica para la inserción laboral de abogados.
+
+**Voluntariado y Organización:** En 2026, se integró como voluntario en la comunidad Microsoft User Group, colaborando en la organización de talleres y charlas técnicas en la ciudad de La Paz.
+
+**Conferencista:** Es un ponente recurrente en eventos de relevancia internacional y local, tales como el DevFest El Alto y el Festival Latinoamericano de Instalación de Software Libre (FLISOL).
+
+Como traductor técnico para freeCodeCamp y colaborador en Dev.to, Cristian traduce articulos tecnologicos del inglés al español y posee un nivel avanzado de francés, lo que le permite conectar con diversas corrientes de pensamiento tecnológico. En sus publicaciones, aborda temas críticos como la accesibilidad web, la ciberseguridad y la integración de la Inteligencia Artificial.
+
+Cristian escribe este libro bajo la firme convicción de que la democratización del conocimiento es la herramienta más poderosa para elevar el estándar técnico en Latinoamérica. Para él, compartir lo aprendido no es solo una pasión, sino una responsabilidad social para preparar a las nuevas generaciones de ingenieros frente a los desafíos de una realidad tecnológica en constante evolución.

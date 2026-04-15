@@ -1,5 +1,15 @@
 # Prefacio {.unnumbered} 
 
-This is a Quarto book.
+JavaScript es, posiblemente, uno de los lenguajes más incomprendidos y, a la vez, el más poderoso del ecosistema web. Durante mi trayectoria como desarrollador e ingeniero, he notado un patrón común: muchos programadores conocen la sintaxis, pero se sienten perdidos cuando el código se comporta de maneras inesperadas o cuando se enfrentan a un desafío lógico que no está en los manuales básicos.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Este libro no nació para ser un manual teórico más. La idea de recopilar estos 100 retos surgió de mis propias notas, de errores cometidos en producción y de las curiosidades que descubrí compartiendo conocimiento en comunidades tecnológicas y eventos de software libre. Mi objetivo es que este texto sea tu "gimnasio mental" para dominar JavaScript de verdad.
+
+## ¿Por qué este libro?
+Aprender a programar es como aprender a tocar un instrumento: puedes leer mil partituras, pero solo serás músico cuando pongas los dedos sobre las cuerdas. He diseñado cada reto para que te obligue a pensar, a dudar y, finalmente, a comprender el "porqué" de las cosas, desde la extraña coerción de tipos hasta la elegancia de la programación asíncrona.
+
+## ¿Cómo usar esta obra?
+Cada desafío está planteado para que intentes resolverlo por tu cuenta y de manera mental, osea, sin copiar y pegar el código en tu editor de código preferido, en un interprete de JavaScript o pidiendole ayuda al LLM de tu preferencia. Verás iconos que te indicarán la dificultad y pistas que te guiarán sin darte la respuesta de inmediato. Mi consejo es simple: no saltes a la solución. Lucha con el código, ve cade pregunta como el reto que es, duda, imagina los posibles esenarios de las opciones que te propongo como respuestas, solo después, revisa la explicación detallada que he preparado al final.
+
+Espero que disfrutes resolviendo estos retos tanto como yo disfruté creándolos. Dominar JavaScript es un viaje de persistencia y disciplina que vale totalmente la pena, y este libro es tu mapa para dar el siguiente gran paso en tu carrera profesional.
+
+Éxitos en tu aprendizaje.

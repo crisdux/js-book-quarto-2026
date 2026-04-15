@@ -1,1 +1,37 @@
 # Prologo {.unnumbered}
+ 
+JavaScript es uno de esos lenguajes que casi todo el mundo cree conocer hasta que una pequeña línea de código rompe por completo nuestra intuición. Un `typeof` inesperado, una comparación que devuelve un resultado imposible o una conversión automática que nadie pidió suelen ser el inicio de una pregunta mucho más interesante: ¿Realmente entiendo cómo funciona el lenguaje que uso todos los días?
+
+Este libro nace precisamente de esa inquietud.
+
+Aquí no encontrarás largas explicaciones teóricas ni capítulos cargados de definiciones formales. En su lugar, hallarás retos breves, directos y, en muchos casos, engañosamente simples. Cada ejercicio está diseñado para ponerte frente a situaciones reales y, a veces, incómodas del día a día en JavaScript: coerción de tipos, comparaciones, alcance de variables, arreglos, objetos, funciones y asincronía.
+
+El objetivo no es que memorices reglas, sino que entrenes tu forma de razonar sobre el comportamiento del lenguaje; que te equivoques, que dudes y que pruebes mentalmente el resultado antes de ejecutar el código. Porque en JavaScript, entender por qué ocurre algo es mucho más valioso que saber únicamente qué ocurre.
+
+Este libro está pensado tanto para quienes ya trabajan con JavaScript como para quienes están consolidando sus bases. Si alguna vez un resultado en consola te hizo fruncir el ceño, este recorrido es para ti.
+
+Prepárate para cuestionar supuestos, descubrir pequeños detalles que marcan grandes diferencias y, sobre todo, para desarrollar una comprensión más profunda y consciente del lenguaje.
+
+Bienvenido a una colección de retos pensada para aprender JavaScript desde donde realmente se aprende: desde sus comportamientos más sutiles.
+
+
+::: {style="text-align: right"}
+**Fernando Callisaya** \
+*Ingeniero de Software y miembro organizador de la comunidad GDG El Alto*
+:::
+
+---
+
+Bienvenido a Aprende JavaScript: Desafíos de código.
+
+Este libro nace con una premisa clara: la mejor forma de dominar JavaScript es programando. A través de 100 retos seleccionados, este texto te llevará de la mano desde las bases más elementales como la coerción de tipos y los operadores del lenguaje hasta conceptos que suelen confundir incluso a programadores con experiencia, como el hoisting, el event loop o la programación asíncrona.
+
+Cada reto está diseñado no solo para poner a prueba tus conocimientos, sino para enseñarte las particularidades del lenguaje mediante ejercicios prácticos y soluciones detalladas. Ya sea que estés dando tus primeros pasos o busques consolidar conceptos avanzados como la programación orientada a objetos y las funciones de orden superior, aquí encontrarás el entrenamiento necesario para destacar en el desarrollo moderno.
+
+¡Acepta el desafío, resuelve los 100 retos de programación y domina JavaScript!
+
+
+::: {style="text-align: right"}
+**Jorge Calderon** \
+*Miembro organizador de la comunidad GDG El Alto*
+:::
